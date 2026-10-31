@@ -14,8 +14,8 @@ The written exam on Monday 2 Nov is worth 70% of the grade. You get no AI, no in
 | --- | --- | --- |
 | 5 Oct | Intro and AI readiness | 5 maturity pillars, 5 readiness stages, Klarna case |
 | 12 Oct | Operating model and portfolio | CoE / hub-and-spoke / federated, 3 matching factors, Three Horizons, 70-20-10, dependency graph, build/buy/blend |
-| 19 Oct | Investment allocation | ROI, payback, NPV, IRR, hurdle rate |
-| 26 Oct | Change management and executive engagement | Not in your course folder: review your own notes |
+| 19 Oct | Investment allocation | ROI, payback, NPV, IRR, WACC + premium hurdle, 6 cost categories, 3-scenario ENPV, cost of inaction, J-curve, stage gates |
+| 26 Oct | Change management and executive engagement | 10-20-70, ADKAR, 4 failure modes, 4 stakeholder classes, cadence, 3 training tiers, kill criteria, the Comex memo |
 
 The course logic runs in order: diagnose readiness → pick the operating model → sequence the portfolio → prove it financially → manage the change.
 
