@@ -12,7 +12,7 @@ Projet de groupe (Albert School, M2) : Alexandre Waerniers, Vincent Lamy, Yoni M
 
 | Dossier | Rôle |
 | --- | --- |
-| [`course/`](course/) | PDF du cours, consignes et notes reçues. |
+| [`course/`](course/) | PDF du cours, consignes, fiches et [notes reformulées de Vincent](course/notes/vincent.md). |
 | [`sources/`](sources/) | Documents originaux, benchmarks, synthèses factuelles et [registre](sources/register.md). |
 | [`work/`](work/) | Recherche, options, projets, finances et analyses en cours. |
 | [`deliverables/`](deliverables/) | Rapport, mémo, slides et copies des versions remises. |
