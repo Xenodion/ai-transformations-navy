@@ -31,7 +31,7 @@ The pitch should cover every topic seen in class, following the course logic: di
 | 4 | Financial analysis: investment strategy and return | ROI, payback, NPV, IRR, hurdle rate | 3 |
 | 5 | Change-management approach for success | Change management and executive engagement | 4 |
 
-For details on each framework, see the cheat sheets in [docs/exam/](../exam/).
+For details on each framework, see the cheat sheets in [exam/](exam/).
 
 ### Portfolio one-pager: the sequencing canvas
 

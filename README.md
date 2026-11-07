@@ -1,26 +1,21 @@
-# ai-transformations-navy
+# AI Transformation Strategies — TotalEnergies
 
-Group project for the **AI Transformation Strategies** course (M2, Albert School): an AI strategy for **TotalEnergies**.
+Projet de groupe (Albert School, M2) : Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine et Nahel Bachriri. Soutenance le **16 novembre 2026** : 15 minutes de pitch et 5 minutes de questions face au professeur jouant le CEO. Documents à remettre le **10 novembre au soir** selon l'échéance communiquée par l'équipe.
 
-## The project
+## Point d'entrée
 
-Team 4: Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine and Nahel Bachriri.
+1. [Consignes du cours](course/guidelines.md) pour les attendus du professeur.
+2. [Roadmap du projet](work/roadmap.md) pour les étapes, dépendances et critères de fin.
+3. [Règles communes](AGENTS.md) et [conventions détaillées](.agents/README.md) avant toute contribution.
 
-On 16 Nov 2026 we pitch our AI strategy for TotalEnergies in 20 minutes (15 min pitch + 5 min Q&A), with the professor playing the CEO. The pitch covers:
+## Arborescence
 
-- a readiness assessment that names the bottleneck
-- an operating-model recommendation
-- a one-page portfolio plan
-- a financial analysis: investment, return, worst/base/best scenarios and the cost of doing nothing
-- a change-management approach
-
-The rules and the teacher's advice are in [docs/project/guidelines.md](docs/project/guidelines.md).
-
-## Repo layout
-
-| Folder | Contents |
+| Dossier | Rôle |
 | --- | --- |
-| [docs/project/](docs/project/) | Oral project guidelines |
-| [docs/lectures/](docs/lectures/) | Course slides |
-| [docs/notes/](docs/notes/) | Our course notes |
-| [docs/exam/](docs/exam/) | One cheat sheet per session for the written exam (2 Nov 2026) |
+| [`course/`](course/) | PDF du cours, consignes et notes reçues. |
+| [`sources/`](sources/) | Documents originaux, benchmarks, synthèses factuelles et [registre](sources/register.md). |
+| [`work/`](work/) | Recherche, options, projets, finances et analyses en cours. |
+| [`deliverables/`](deliverables/) | Rapport, mémo, slides et copies des versions remises. |
+| [`.agents/`](.agents/) | Conventions, gabarits et prompts de recherche externe. |
+
+Le [plan directeur ancien](work/legacy_plan_unverified.md) est un brouillon d'hypothèses non vérifiées ; il ne constitue pas une stratégie approuvée ni une source.

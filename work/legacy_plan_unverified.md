@@ -1,3 +1,5 @@
+> **BROUILLON HISTORIQUE NON VÉRIFIÉ — NE PAS CITER COMME SOURCE.** Les chiffres, diagnostics, benchmarks et choix de portefeuille ci-dessous doivent être audités avant toute reprise. Voir `work/roadmap.md` et `sources/register.md`.
+
 # Plan Directeur de Transformation IA — TotalEnergies SE
 ## Dossier Complet de Cadrage Stratégique, Modélisation & Comex Memo
 
