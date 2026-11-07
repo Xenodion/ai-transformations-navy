@@ -1,127 +1,55 @@
-# Roadmap Projet — Transformation IA TotalEnergies SE
+# Brief général et roadmap — projet TotalEnergies
 
-> **Membres de l'équipe :** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri  
-> **Entreprise :** TotalEnergies SE  
-> **Échéance :** Soutenance orale le 16 Novembre 2026 (15 min pitch + 5 min Q&A face au prof incarnant Patrick Pouyanné)  
-> **Livrables finaux :** Le Comex Memo (2 pages) + Le Support de Présentation (Slides) + Le Rapport de Fond de Référence
+**Mise à jour : 7 novembre 2026**
+**Équipe :** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
+**Remise des documents au professeur : 10 novembre 2026 au soir (heure de Paris)**
+**Soutenance : 16 novembre 2026, 15 minutes de présentation et 5 minutes de questions**
 
----
+## Objet et livrables
 
-## 1. Vision et Méthode de Travail
+Le travail consiste à proposer et défendre devant un professeur jouant le CEO une transformation IA crédible de TotalEnergies. Les livrables sont un **rapport de fond**, un **mémo Comex de deux pages** et des **slides**. Le professeur reçoit les documents le 10 novembre au soir pour préparer ses questions. Après cet envoi, les répétitions et corrections de forme restent possibles ; les conclusions, montants, projets et arguments structurants doivent être stabilisés.
 
-Pour réussir l'épreuve sans se perdre dans la complexité d'un groupe mondial de 100 000 salariés :
+Le cours fournit l'ordre de l'argument : readiness et bottleneck, operating model, portefeuille Three Horizons et séquençage, démonstration financière, conduite du changement. Les consignes demandent des scénarios bas/central/haut, le coût de l'inaction, des chiffres explicables et une préparation au benchmark concurrentiel.
 
-1. **Construire d'abord le Rapport de Fond Complet ("Conditions réelles") :**  
-   C'est notre socle de vérité. On y pose méthodiquement tous les diagnostics, les benchmarks concurrentiels, l'architecture des branches, les calculs financiers (CAPEX/OPEX, DCF) et la conduite du changement. Avoir ce document solide garantit que chaque affirmation orale aura une assise inattaquable.
-2. **Extraire ensuite le Comex Memo de 2 pages :**  
-   Une fois le fond maîtrisé, condenser en 2 pages exécutives (les 7/8 blocs officiels) devient un exercice direct de synthèse, sans jargon ni surcharge de chiffres, centré sur la décision d'investissement.
-3. **Concevoir enfin les Slides de Soutenance (15-20 min) :**  
-   Impossible de tout projeter : les slides mettront en scène l'arbitrage stratégique macro, le comparatif avec Shell/BP, et un focus narratif fort sur **3 à 4 cas emblématiques**, tout en étant armés pour répondre à n'importe quelle question pointue en Q&A grâce au rapport de fond.
+## Posture de recherche
 
----
+Nous ne partons d'aucune conclusion sur la maturité de TotalEnergies, sa stratégie data, son organisation ou la rentabilité d'un projet. Le dossier existant est un **inventaire de pistes à vérifier**. Nous cherchons d'abord ce que le groupe fait déjà, ce qui fonctionne, ce que les sources ne permettent pas de savoir et les arbitrages qui restent discutables. La taille du groupe et ses contraintes imposent de formuler toute recommandation comme une proposition argumentée, avec ses limites.
 
-## 2. Les 8 Étapes de la Roadmap
+L'expérience vécue chez Argedis sert à identifier des mécanismes et des questions de terrain. Elle doit être étiquetée **observation locale**, puis confrontée à des éléments plus larges avant toute généralisation au groupe. Les annonces de concurrents ne prouvent pas à elles seules un avantage opérationnel ou un retard de TotalEnergies.
 
-```
-  Phase 1 : Cadrage & Concurrence ──► Phase 2 : Diagnostic & Bottleneck
-                 │                                      │
-  Phase 4 : Portefeuille & Séquençage ◄── Phase 3 : Operating Model Cible
-                 │
-  Phase 5 : Modélisation Financière ──► Phase 6 : Change & Kill Criteria
-                                                        │
-  Phase 8 : Slides & Soutenance Oral ◄── Phase 7 : Memo Comex (2 pages)
-```
+Chaque affirmation importante aura un statut : **fait sourcé**, **calcul dérivé**, **hypothèse explicite** ou **observation locale**. Les recherches ne sont jamais sélectionnées pour justifier un plan décidé à l'avance. Un résultat contradictoire doit faire évoluer le diagnostic ou le portefeuille.
 
----
+## Règles communes aux livrables
 
-### ÉTAPE 1 : Cadrage du Groupe & Benchmark Concurrentiel
-* **Objectif :** Poser le contexte réel et la pression concurrentielle.
-* **Actions :**
-  * Cartographier les 5 branches de TotalEnergies (E&P, Integrated Power, Raffinage-Chimie, M&S, Trading) et leurs disparités géographiques et culturelles.
-  * Analyser le retard relatif de TotalEnergies face aux déploiements mondiaux de **Shell (partenariat C3 AI)** et de **BP (partenariat Palantir)**.
-  * Formaliser l'argument clé pour le Comex : pourquoi Total doit passer d'une logique de PoCs isolés (TDF/Pangea) à une standardisation industrielle.
+- Registre de preuves unique : affirmation, source précise, date, périmètre, citation/page ou URL, calcul, statut et limites.
+- Pour les chiffres estimés : formule, paramètres, unité, année, intervalle et sensibilité. Vérifier en priorité les hypothèses qui changent la décision.
+- Budget unique réconcilié à 100 %, avec CAPEX/OPEX, flux par année, scénarios et absence de double comptage.
+- Trois ou quatre projets représentatifs étudiés en profondeur ; horizon map et sequencing canvas plus larges mais synthétiques. Leur nombre et leur répartition se décident après recherche.
+- Toute classification H1/H2/H3 est justifiée par les critères du cours ; un H3 doit porter une réelle transformation du modèle d'affaires ou du marché.
+- Rapport de fond d'abord, mémo dérivé du rapport, puis slides dérivées du mémo et des projets représentatifs.
 
----
+## Roadmap cochable
 
-### ÉTAPE 2 : Diagnostic de Maturité & Identification du Bottleneck
-* **Objectif :** Diagnostiquer l'état actuel selon les frameworks du cours (Session 1).
-* **Actions :**
-  * Évaluer TotalEnergies sur les 5 Piliers de Maturité (Stratégie, Data/Tech, Expérience IA, Culture/Orga, Gouvernance).
-  * Positionner le groupe sur les 5 Stades (Constat : bloqué au stade 3 *Implementing*, ambition de basculer au stade 4 *Scaling*).
-  * Formuler le **Bottleneck structurel unique** : le cloisonnement des données industrielles temps réel (OT/IT) et les contraintes de sûreté critique (SEVESO / EU AI Act Annexe III).
+**Légende :** `D` dépendance ; `P` peut être mené en parallèle ; `Issue` est le suivi GitHub. Une case est cochée seulement quand le critère de sortie est rempli. Les identifiants d'issues sont à inscrire après création.
 
----
+| Fait | Étape / issue | Échéance cible | D / P | Critère de sortie |
+| --- | --- | --- | --- | --- |
+| [ ] | **01 — Corpus du cours et grille d'évaluation** · Issue #__ | 7 nov. | Départ ; P avec 02–04 | Liste des attentes du professeur et critères du cours utilisables comme grille de contrôle. |
+| [ ] | **02 — Portrait factuel de TotalEnergies** · Issue #__ | 8 nov. matin | Départ ; P avec 01, 03, 04 | Activités, priorités, dispositifs IA/data publics, organisation pertinente et limites documentés avec sources primaires. |
+| [ ] | **03 — Benchmark concurrentiel et sectoriel** · Issue #__ | 8 nov. matin | Départ ; P avec 01, 02, 04 | Comparaisons datées et de même périmètre ; résultats démontrés distingués des annonces. |
+| [ ] | **04 — Registre des sources et audit du brouillon** · Issue #__ | 8 nov. matin | Départ ; P avec 01–03 | Chaque chiffre/affirmation repris du brouillon classé : vérifié, à vérifier, hypothèse ou écarté. |
+| [ ] | **05 — Idéation et options de diagnostic** · Issue #__ | 8 nov. soir | D : 01–04 | Plusieurs diagnostics et idées de projets comparés, y compris contre-arguments et pistes rejetées. |
+| [ ] | **06 — Arbitrage : thèse, bottleneck et operating model** · Issue #__ | 9 nov. matin | D : 05 | Un enchaînement causal défendable, ses preuves, ses incertitudes et les raisons de rejeter les autres options. |
+| [ ] | **07 — Projets détaillés et horizon map** · Issue #__ | 9 nov. journée | D : 06 ; P avec 08, 09 | 3–4 fiches complètes, portefeuille plus large, classification des horizons, dépendances et sourcing. |
+| [ ] | **08 — Modèle financier et scénarios** · Issue #__ | 9 nov. journée | D : 05–06 ; P avec 07, 09 | Enveloppe, CAPEX/OPEX, flux 0–5 ans, NPV, IRR, payback, scénarios, coût de l'inaction et sensibilités réconciliés. |
+| [ ] | **09 — Gouvernance, risques et adoption** · Issue #__ | 9 nov. journée | D : 06 ; P avec 07–08 | Responsables, jalons, critères de passage/arrêt, risques, consultation et adoption liés aux projets. |
+| [ ] | **10 — Rapport de fond et revue contradictoire** · Issue #__ | 10 nov. matin | D : 07–09 | Argument complet, annexes, citations, calculs vérifiés ; objections de CEO traitées sans changer les faits. |
+| [ ] | **11 — Mémo Comex de deux pages** · Issue #__ | 10 nov. après-midi | D : 10 | Décision, raisons, portefeuille, financement, scénarios, risques et demande cohérents avec le rapport. |
+| [ ] | **12 — Slides, répétition de contrôle et remise** · Issue #__ | **10 nov. soir** | D : 10–11 | Slides lisibles en 15 minutes, mêmes chiffres que le mémo, documents remis au professeur. |
+| [ ] | **13 — Q&A et finitions non structurantes** · Issue #__ | 11–15 nov. | D : 12 | Questions pièges documentées, répétition chronométrée, corrections de forme tracées. |
 
-### ÉTAPE 3 : Définition de l'Operating Model Cible
-* **Objectif :** Structurer l'organisation humaine et technique selon les frameworks du cours (Session 2).
-* **Actions :**
-  * Justifier le modèle **Hub-and-Spoke par Horizons sur Shared Rails** (via l'arbre de décision : réglementation, dispersion des marchés, maturité).
-  * Définir le rôle du Hub (TDF Paris + CSTJF Pau / Pangea 5) vs les Spokes (les 5 branches).
-  * Cadrer le dispositif des **Forward Deployed Engineers (FDE)** projetés sur site.
-  * Instituer les doubles binômes hebdomadaires obligatoires :
-    * Binôme Opérationnel : AI Product Owner ↔ Lead Métier de branche (adoption).
-    * Binôme Financier : AI Product Owner ↔ Contrôleur de Gestion / Direction Financière (audit du P&L).
+**Point de gel du 10 novembre :** toute incohérence découverte après la remise doit être corrigée dans tous les livrables concernés et signalée à l'équipe ; aucune nouvelle thèse ou initiative majeure ne doit être introduite dans les slides seules.
 
----
+## Suivi des issues
 
-### ÉTAPE 4 : Architecture du Portefeuille & Séquençage
-* **Objectif :** Répartir les investissements selon les Three Horizons et établir le Sequencing Canvas (Session 2).
-* **Actions :**
-  * Justifier l'arbitrage macro **65% H1 / 25% H2 / 10% H3** (déviation raisonnée pour accélérer sur l'électricité intégrée).
-  * Sélectionner et caractériser les cas d'usage représentatifs par horizon (dont 3 ou 4 cas majeurs qui seront les stars de la présentation orale).
-  * Établir le **Sequencing Canvas** : rattachement des fondations par cas d'usage ("thin-slicing", *"a slice, not a lake"*), Build/Buy/Blend, jalons et owners Comex.
-
----
-
-### ÉTAPE 5 : Modélisation Financière Macro & Analyse du Risque
-* **Objectif :** Fournir les chiffres clés attendus par les C-levels (Session 3).
-* **Actions :**
-  * Définir l'enveloppe d'investissement 3 ans et la trajectoire 5 ans.
-  * **Isoler clairement la balance CAPEX vs OPEX** (règles comptables IFRS / IAS 38).
-  * Calibrer le **Hurdle Rate** (WACC TotalEnergies ~4.2% + prime de risque tech IA ~6.8% = 11.0%).
-  * Modéliser le tableau des flux de trésorerie (DCF) et calculer : NPV, TRI, Payback simple, Discounted Payback.
-  * Établir les 3 scénarios (Downside 20%, Base 60%, Upside 20%) avec l'Espérance de Valeur (EV).
-  * Chiffrer de manière robuste et défendable le **Coût de l'Inaction (Cost of Doing Nothing)** sur 3 ans.
-
----
-
-### ÉTAPE 6 : Conduite du Changement & Kill Criteria
-* **Objectif :** Démontrer que 70% de la valeur dépend des hommes et des règles de contrôle (Session 4 & Module 5).
-* **Actions :**
-  * Rédiger le Registre des Risques sur les **4 modes d'échec** (Talent flight, Sabotage middle-management, Retard gouvernance/CSE, Impatience Comex).
-  * Inverser la pyramide de communication (dashboard 1 page pour le Comex, huddles ultra-locaux et fréquents pour le terrain).
-  * Définir le plan de compétences en **3 Tiers** (All-employee literacy, Practitioners, Executive coaching).
-  * Formuler les **Kill Criteria contractuels** à M12, M18 et M24 (Métrique + Seuil + Date + Décideur + Action d'arrêt ferme).
-
----
-
-### ÉTAPE 7 : Rédaction du Comex Memo Exécutif (2 Pages)
-* **Objectif :** Produire le livrable écrit de synthèse décisionnelle (Slide 190).
-* **Actions :**
-  * Page 1 : Blocs 1 à 4 (Thesis, Portfolio, Envelope & CAPEX/OPEX, Scenarios).
-  * Page 2 : Blocs 5 à 8 (Financial clearance, Risks & Kill criteria, Operating Model & Change, The Ask).
-  * Respect strict des principes de rédaction : décision dès la première ligne, un chiffre par affirmation, zéro verbiage, aucun schéma d'architecture.
-
----
-
-### ÉTAPE 8 : Conception du Support de Pitch (15 min) & Préparation Board Q&A
-* **Objectif :** Préparer la prestation orale de 15 min + 5 min face à Patrick Pouyanné (Slide 203-206).
-* **Actions :**
-  * Scénariser les slides avec des titres d'assertion forts (*"Assertion headlines"*).
-  * Mettre en valeur le comparatif concurrentiel (Shell / BP) et les 3-4 cas d'usage phares.
-  * Répartir le temps de parole entre les membres de l'équipe (Alexandre, Vincent, Yoni, Nahel).
-  * Répéter et blinder les réponses aux 3 questions pièges du board (*"Quel est le pire des scénarios ?", "Qu'est-ce qui vous fait arrêter et quand ?", "Pourquoi ne pas attendre ?"*).
-
----
-
-## 3. État d'Avancement & Prochaine Étape Immédiate
-
-* [x] **Étape 0 :** Cadrage méthodologique et validation de la démarche globale.
-* [ ] **Étape 1 (En cours) :** Cadrage approfondi de l'organisation de TotalEnergies & Benchmark concurrentiel (Shell / BP / Equinor).
-* [ ] **Étape 2 :** Diagnostic de Maturité & Le Bottleneck.
-* [ ] **Étape 3 :** Operating Model Cible & Gouvernance.
-* [ ] **Étape 4 :** Portefeuille (Three Horizons) & Sequencing Canvas.
-* [ ] **Étape 5 :** Ingénierie Financière (CAPEX/OPEX, DCF, Scénarios, Coût d'inaction).
-* [ ] **Étape 6 :** Conduite du Changement & Kill Criteria.
-* [ ] **Étape 7 :** Rédaction du Comex Memo (2 pages).
-* [ ] **Étape 8 :** Support de Pitch (Slides 15 min) & Préparation Q&A.
+Une issue par ligne, avec responsable, liens vers livrables, checklist du critère de sortie et statut. Les issues 01–04 peuvent progresser en parallèle ; 07–09 également après l'arbitrage. Les recherches à coût réduit peuvent produire des **rapports de collecte** sur des périmètres bornés (entreprise, concurrents, benchmarks), mais chaque assertion retenue est ensuite vérifiée dans la source originale et relue pour les contradictions. Les issues restent la source de vérité pour l'avancement ; cette roadmap reflète leur état à chaque mise à jour.
