@@ -1,14 +1,15 @@
-# Règles de travail du projet
+# Project instructions
 
-Lire `README.md`, `work/roadmap.md` et `.agents/README.md` avant de contribuer. Ce dépôt produit un dossier documentaire, un mémo et des slides pour le cours AI Transformation Strategies.
+Read `README.md`, `work/roadmap.md`, and `.agents/README.md` before contributing. The project produces an evidence-based AI transformation report, a two-page executive memo, and a presentation for TotalEnergies.
 
-1. Ranger selon le rôle : `course/` pour les supports reçus, `sources/primary|benchmark/` pour les documents d'origine, `sources/synthesis/` pour les synthèses factuelles, `work/` pour analyses et décisions, `deliverables/` pour les versions prêtes à remettre. Ne jamais présenter `work/legacy_plan_unverified.md` comme un fait établi.
-2. Distinguer **fait vérifié**, **calcul dérivé**, **hypothèse**, **observation locale** et **inconnu**. Donner une référence précise (titre, organisme, date, URL ou fichier, page si possible), l'unité, l'année et le périmètre de tout chiffre important. Une réponse d'IA ou un benchmark nommé sans référence exploitable ne constitue pas une preuve.
-3. Chercher d'abord ce que TotalEnergies fait déjà et les éléments qui contredisent une hypothèse. L'expérience Argedis est une observation locale. Ne pas généraliser à tout le groupe ni déduire un retard d'une annonce concurrentielle.
-4. Conserver la trace des idées rejetées. Aucun projet, montant, classement H1/H2/H3, bottleneck ou operating model n'est décidé avant l'arbitrage documenté. Les chiffres de `work/legacy_plan_unverified.md` sont à vérifier ou remplacer.
-5. Pour chaque issue : périmètre, dépendances, fichier attendu, tâches, sources, critère de fin. Actualiser `work/roadmap.md` seulement quand ce critère est atteint. Les recherches parallèles peuvent collecter ; les décisions structurantes sont consolidées ensuite.
-6. Le portefeuille et les finances doivent se réconcilier : capital = 100 %, coûts et retours sans double comptage, CAPEX/OPEX justifiés, scénarios et hypothèses visibles. Un H3 sans payback défendable garde des jalons d'apprentissage et une valeur d'option explicitement non chiffrée.
-7. Produire dans cet ordre : analyse et rapport de fond, mémo dérivé du rapport, slides dérivées du mémo et du rapport. Une correction d'un chiffre doit se répercuter sur les trois. Gel du contenu structurant le 10 novembre 2026 au soir.
-8. Ne pas ajouter de sources ou de synthèses inventées. Ne pas modifier les PDF de cours. Ne pas publier, envoyer ou merger sans vérifier la version destinée à être remise et l'autorisation de l'équipe.
+1. **Language:** Write all new and active project documentation, issue titles and bodies, research prompts, report, memo, and slides in English. Keep received course PDFs and original source documents unchanged. `work/legacy_plan_unverified.md` is a historical French draft for audit only; do not extend or cite it as evidence.
+2. **Location:** `course/` holds course material; `sources/primary/` and `sources/benchmark/` hold original documents; `sources/synthesis/` holds factual research summaries; `work/` holds analysis and decisions; `deliverables/` holds submission-ready files.
+3. **Evidence:** Mark material claims as verified fact, derived calculation, explicit assumption, local observation, or unknown. Record the exact source, date, page or URL, unit, period, scope, formula, and limits. An AI answer or an unnamed benchmark is not evidence.
+4. **Research integrity:** Seek disconfirming evidence. First establish what TotalEnergies already does. Treat Vincent's Argedis experience as a local observation, not proof about the group. A competitor announcement alone does not establish a performance gap.
+5. **Decision discipline:** Keep rejected options and reasons. Do not fix the bottleneck, operating model, projects, horizon mix, or investment before the evidence-based decision. Audit every number reused from the historical draft.
+6. **Roadmap and issues:** Every roadmap step has one GitHub issue with the same number, scope, dependencies, owner, output file, checklist, and acceptance criterion. Update **both the issue and `work/roadmap.md`** when scope, status, owner, dependency, or deliverable changes. An issue closes and its roadmap box is checked only after its acceptance criterion is verified. Link the issue from the roadmap and the output file from the issue. Do not leave conflicting statuses.
+7. **Financial consistency:** Portfolio capital totals 100%; benefits and costs avoid double counting; CAPEX/OPEX and assumptions are justified. Use horizon-specific metrics. Do not fabricate a payback for an H3 option.
+8. **Delivery chain:** Complete the analytical report first, derive the memo from it, then derive slides from both. Propagate corrections to all affected files. Freeze structural content by the evening of 10 November 2026.
+9. **Change control:** Do not invent sources or modify received PDFs. Review the exact files before publishing, submitting, or merging. Follow the user's current authorization and repository permissions.
 
-Les conventions détaillées et les prompts externes sont dans `.agents/README.md`.
+See `.agents/README.md` for conventions and `.agents/prompts/` for external research prompts.

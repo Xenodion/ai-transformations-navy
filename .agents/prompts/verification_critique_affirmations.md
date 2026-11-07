@@ -1,5 +1,5 @@
-# Recherche : audit contradictoire d'affirmations
+# Research: adversarial claim audit
 
-Tu es chargé de vérifier, pas de défendre, les affirmations suivantes : [COLLER LES AFFIRMATIONS ET LEUR SOURCE PRÉSUMÉE]. Date de référence : [DATE]. Pour chacune, cherche le document original et la page exacte ; vérifie le chiffre, l'unité, l'année, le périmètre et le contexte. Recherche activement une source qui contredit ou nuance l'affirmation.
+Your task is to verify, not defend, these claims: [PASTE CLAIMS AND SUPPOSED SOURCES]. Reference date: [DATE]. For each, locate the original document and exact page; check the number, unit, year, scope, and context. Actively seek a source that contradicts or qualifies the claim.
 
-Rends un tableau : affirmation, verdict (confirmée / partielle / fausse / introuvable), preuve originale avec URL et page, contradiction, formulation corrigée et ce qu'on ne peut pas conclure. Signale les calculs non reproductibles, les doubles comptes et les citations circulaires. Ne remplace pas une source absente par une estimation présentée comme un fait.
+Return a table: claim, verdict (confirmed / partial / false / untraceable), original evidence with URL and page, contradiction, corrected wording, and what cannot be concluded. Flag calculations that cannot be reproduced, double counting, and circular citations. Do not replace a missing source with an estimate presented as fact.

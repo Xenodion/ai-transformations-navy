@@ -1,25 +1,25 @@
-# Projet : [nom provisoire]
+# Project: [working name]
 
-- Statut : idée / présélection / retenu / écarté
-- Horizon proposé et justification selon les quatre questions du cours :
-- Responsable métier envisagé :
+- Status: idea / shortlisted / selected / rejected
+- Proposed horizon and rationale under the course's four questions:
+- Proposed business owner:
 
-## Problème et baseline
+## Problem and baseline
 
-Périmètre, performance actuelle, capacité existante chez TotalEnergies, alternative sans IA.
+Scope, current performance, existing TotalEnergies capability, and non-AI alternative.
 
-## Solution, dépendances et sourcing
+## Solution, dependencies, and sourcing
 
-Données nécessaires, fondation minimale, dépendances dures/souples/politiques, build/buy/blend, sécurité et contrôle humain.
+Required data, minimum foundation slice, hard/soft/political dependencies, build/buy/blend, safety, and human control.
 
-## Économie et incertitude
+## Economics and uncertainty
 
-Formule du bénéfice incrémental, coût par année et CAPEX/OPEX, adoption, effets de chevauchement, source ou hypothèse de chaque paramètre. Scénarios bas/central/haut. Pour H3, jalons d'apprentissage et valeur d'option si le payback n'est pas défendable.
+Incremental-benefit formula, annual costs and CAPEX/OPEX, adoption, overlapping effects, and source or assumption for each parameter. Downside/base/upside scenarios. For H3, learning gates and option value if payback is not defensible.
 
-## Exécution
+## Execution
 
-Pilote, jalons, responsable, date, métrique, seuil de passage ou d'arrêt, risques et plan d'adoption.
+Pilot, milestones, owner, dates, metrics, go/stop thresholds, risks, and adoption plan.
 
-## Preuves, objections et décision
+## Evidence, objections, and decision
 
-Références précises, limites, objections possibles du CEO, décision retenir/réserver/écarter et raison.
+Precise references, limits, likely CEO objections, and keep/reserve/reject decision with reason.

@@ -1,18 +1,19 @@
-# [Étape numérotée] — [résultat attendu]
+# [Numbered step] — [expected result]
 
-- Label du livrable : `cadrage` / `pilotage` / `dossier` / `memo` / `slides` / `livraison` / `oral`
-- Responsable :
-- Échéance (heure de Paris) :
-- Dépend de :
-- Peut avancer en parallèle avec :
-- Fichier(s) attendus :
+- Output label: `scope` / `planning` / `report` / `memo` / `slides` / `submission` / `oral`
+- Owner:
+- Deadline (Paris time):
+- Dependencies:
+- Can run in parallel with:
+- Expected file(s):
 
-## Tâches
+## Tasks
 
-- [ ] Collecter et vérifier les éléments nécessaires.
-- [ ] Produire le fichier attendu selon les conventions du dépôt.
-- [ ] Vérifier sources, hypothèses, contradictions et cohérence avec les autres étapes.
+- [ ] Collect and verify required inputs.
+- [ ] Produce the expected file under repository conventions.
+- [ ] Check sources, assumptions, contradictions, and consistency with related work.
+- [ ] Update both this issue and `work/roadmap.md` when scope or status changes.
 
-## Critère de fin
+## Acceptance criterion
 
-Décrire un résultat vérifiable, pas simplement « document rédigé ». Cocher la ligne de `work/roadmap.md` seulement après cette vérification.
+Describe a verifiable result, not merely “document written.” Close this issue and check its roadmap row only after verification. Link the resulting file here.

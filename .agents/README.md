@@ -1,29 +1,29 @@
-# Mode d'emploi du dépôt
+# Repository conventions
 
-## Emplacements
+## Locations
 
-| Répertoire | Contenu | Règle |
+| Directory | Contents | Rule |
 | --- | --- | --- |
-| `course/` | Consignes, cours, notes et fiches d'examen reçus | Référence pédagogique ; conserver les originaux. |
-| `sources/primary/` | Documents TotalEnergies ou institutionnels originaux | Nom stable, date et provenance dans `sources/register.md`. |
-| `sources/benchmark/` | Documents concurrents, études sectorielles et benchmarks originaux | Même traçabilité ; distinguer communiqué et résultat mesuré. |
-| `sources/synthesis/` | Synthèses factuelles d'un corpus ou d'une question | Utiliser `spec-kit/source_synthesis.md` ; jamais une source primaire. |
-| `work/research/` | Notes d'enquête, vérifications, questions ouvertes | Travail intermédiaire. |
-| `work/options/` | Diagnostics concurrents, idées retenues/rejetées, arbitrages | Raisonnement de l'équipe. |
-| `work/projects/` | Liste longue, fiches projet et portefeuille | Une fiche par projet vedette ; autres projets plus courts. |
-| `work/finance/` | Hypothèses, modèle et contrôles de calcul | Réconcilier avec les fiches et le rapport. |
-| `deliverables/report/`, `memo/`, `slides/` | Versions prêtes à remettre | Numéros de version et même base de chiffres. |
-| `deliverables/archive/` | Copie immuable des fichiers envoyés | Date et heure de remise. |
+| `course/` | Received guidelines, lectures, notes, and exam sheets | Preserve original course materials. |
+| `sources/primary/` | Original TotalEnergies and institutional documents | Log title, date, and provenance in `sources/register.md`. |
+| `sources/benchmark/` | Original competitor and sector sources | Distinguish announcements from measured results. |
+| `sources/synthesis/` | Factual summaries of a source set or question | Use `spec-kit/source_synthesis.md`; these are not primary sources. |
+| `work/research/` | Investigations, checks, open questions | Intermediate work. |
+| `work/options/` | Competing diagnoses, accepted/rejected ideas, decisions | Team reasoning. |
+| `work/projects/` | Long list, case studies, portfolio | Full card for each featured case; short cards for the rest. |
+| `work/finance/` | Assumptions, model, calculation checks | Reconcile with project cards and report. |
+| `deliverables/report/`, `memo/`, `slides/` | Submission-ready versions | Version clearly and use the same figures. |
+| `deliverables/archive/` | Exact copies of submitted files | Record submission date and time. |
 
-`work/roadmap.md` pilote le travail. `work/legacy_plan_unverified.md` est un ancien brouillon à auditer. Les dossiers vides n'ont pas besoin de fichier de remplissage : ils apparaîtront dans Git avec leur premier contenu.
+`work/roadmap.md` and GitHub issues jointly track progress. `work/legacy_plan_unverified.md` is a French historical draft for audit only. Empty directories need no placeholder files.
 
-## Noms et traçabilité
+## Names and traceability
 
-- Fichiers de travail : `sujet_court.md` ; synthèses : `YYYY-MM-DD_sujet.md` ; sources originales : conserver un nom reconnaissable, ajouter l'année si nécessaire.
-- Chaque synthèse cite les documents d'origine, les pages ou sections et les liens exacts. Inscrire chaque source retenue dans `sources/register.md`.
-- Dans les notes et livrables, marquer les énoncés `Fait`, `Calcul`, `Hypothèse`, `Observation locale` ou `Inconnu` jusqu'à la révision éditoriale finale. Une hypothèse chiffrée donne sa formule et son intervalle plausible.
-- Les sorties de Perplexity ou d'autres IA externes sont des pistes de recherche. Vérifier les liens et lire les sources originales avant de reprendre une affirmation.
+- Work files: `short_topic.md`; syntheses: `YYYY-MM-DD_topic.md`; original sources: keep recognizable names, adding the year if useful.
+- Each synthesis cites original documents, pages or sections, and exact links. Enter every retained source in `sources/register.md`.
+- Until final editing, mark claims as `Fact`, `Calculation`, `Assumption`, `Local observation`, or `Unknown`. A quantified assumption needs a formula and plausible range.
+- Perplexity and other external AI outputs provide leads. Check links and read original sources before relying on a claim.
 
-## Kit et issues
+## Templates and issues
 
-`spec-kit/` contient les gabarits de synthèse, de fiche projet et d'issue. `prompts/` contient des instructions prêtes à copier dans des IA externes, spécialisées par question. Une issue GitHub correspond à une ligne de la roadmap et possède un label de livrable (`dossier`, `memo`, `slides`, etc.), un responsable et un critère de fin. Ne pas cocher une tâche parce qu'un texte existe : la preuve et la cohérence doivent être vérifiées.
+`spec-kit/` holds synthesis, project, and issue templates. `prompts/` holds topic-specific instructions for external research tools. Each GitHub issue matches one numbered roadmap step, has an output label (`report`, `memo`, `slides`, etc.), an owner and acceptance criterion, and links its output. Update the issue and roadmap together. Existence of a document alone does not meet its acceptance criterion.

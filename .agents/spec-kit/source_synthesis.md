@@ -1,26 +1,26 @@
-# Synthèse : [question précise]
+# Synthesis: [specific question]
 
-- Date de recherche :
-- Périmètre (activité, pays, période) :
-- Auteur de la vérification :
-- Documents originaux lus : [titre, organisme, date, URL ou chemin, pages]
+- Research date:
+- Scope (business, country, period):
+- Reviewer:
+- Original documents read: [title, organization, date, URL or path, pages]
 
-## Faits vérifiés
+## Verified facts
 
-| Affirmation | Valeur, unité et période | Source précise | Portée et limites |
+| Claim | Value, unit, and period | Exact source | Scope and limits |
 | --- | --- | --- | --- |
 
-## Contradictions et inconnus
+## Contradictions and unknowns
 
-- Sources qui divergent, raison possible et point à vérifier :
-- Ce que les sources ne permettent pas de conclure :
+- Sources that diverge, possible reason, and check needed:
+- Conclusions the sources do not support:
 
-## Hypothèses ou observations locales (séparées des faits)
+## Assumptions or local observations (separate from facts)
 
-| Énoncé | Type | Justification | Test nécessaire |
+| Statement | Type | Rationale | Test needed |
 | --- | --- | --- | --- |
 
-## Références à inscrire dans `sources/register.md`
+## References to enter in `sources/register.md`
 
-- [ ] Les liens ouvrent le document d'origine.
-- [ ] Les pages et dates ont été vérifiées.
+- [ ] Links open the original documents.
+- [ ] Pages and dates have been checked.

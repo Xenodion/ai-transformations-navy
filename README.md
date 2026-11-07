@@ -1,21 +1,21 @@
 # AI Transformation Strategies — TotalEnergies
 
-Projet de groupe (Albert School, M2) : Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine et Nahel Bachriri. Soutenance le **16 novembre 2026** : 15 minutes de pitch et 5 minutes de questions face au professeur jouant le CEO. Documents à remettre le **10 novembre au soir** selon l'échéance communiquée par l'équipe.
+Group project (Albert School, M2): Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, and Nahel Bachriri. Oral defense on **16 November 2026**: a 15-minute pitch and 5-minute Q&A with the professor acting as CEO. The team's submission deadline is the **evening of 10 November**.
 
-## Point d'entrée
+## Start here
 
-1. [Consignes du cours](course/guidelines.md) pour les attendus du professeur.
-2. [Roadmap du projet](work/roadmap.md) pour les étapes, dépendances et critères de fin.
-3. [Règles communes](AGENTS.md) et [conventions détaillées](.agents/README.md) avant toute contribution.
+1. [Course guidelines](course/guidelines.md) for the professor's requirements.
+2. [Project roadmap](work/roadmap.md) for steps, dependencies, and acceptance criteria.
+3. [Agent instructions](AGENTS.md) and [repository conventions](.agents/README.md) before contributing.
 
-## Arborescence
+## Repository layout
 
-| Dossier | Rôle |
+| Directory | Purpose |
 | --- | --- |
-| [`course/`](course/) | PDF du cours, consignes, fiches et [notes reformulées de Vincent](course/notes/vincent.md). |
-| [`sources/`](sources/) | Documents originaux, benchmarks, synthèses factuelles et [registre](sources/register.md). |
-| [`work/`](work/) | Recherche, options, projets, finances et analyses en cours. |
-| [`deliverables/`](deliverables/) | Rapport, mémo, slides et copies des versions remises. |
-| [`.agents/`](.agents/) | Conventions, gabarits et prompts de recherche externe. |
+| [`course/`](course/) | Course PDFs, guidelines, exam notes, and [Vincent's reformulated notes](course/notes/vincent.md). |
+| [`sources/`](sources/) | Original documents, benchmarks, factual syntheses, and the [source register](sources/register.md). |
+| [`work/`](work/) | Research, options, projects, financial models, and work in progress. |
+| [`deliverables/`](deliverables/) | Report, memo, slides, and archived submitted versions. |
+| [`.agents/`](.agents/) | Conventions, templates, and external research prompts. |
 
-Le [plan directeur ancien](work/legacy_plan_unverified.md) est un brouillon d'hypothèses non vérifiées ; il ne constitue pas une stratégie approuvée ni une source.
+The [historical master plan](work/legacy_plan_unverified.md) contains unverified hypotheses. It is neither an approved strategy nor a source.

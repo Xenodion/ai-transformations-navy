@@ -1,3 +1,3 @@
-# Synthèses de recherche
+# Research syntheses
 
-Une synthèse répond à une question bornée avec des liens vers les sources originales. Elle présente faits, contradictions, inconnus et hypothèses séparément. Nommer les fichiers `YYYY-MM-DD_sujet.md` et utiliser `.agents/spec-kit/source_synthesis.md`. Les recommandations stratégiques vont dans `work/options/`.
+Each synthesis answers a bounded question and links to original documents. Separate verified facts, contradictions, unknowns, and assumptions. Name files `YYYY-MM-DD_topic.md` and use `.agents/spec-kit/source_synthesis.md`. Strategic recommendations belong in `work/options/`.

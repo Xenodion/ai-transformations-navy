@@ -1,77 +1,71 @@
-# Brief général et roadmap — projet TotalEnergies
+# Project brief and delivery roadmap — TotalEnergies
 
-**Mise à jour : 7 novembre 2026**
-**Équipe :** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
-**Remise des documents au professeur : 10 novembre 2026 au soir (heure de Paris)**
-**Soutenance : 16 novembre 2026, 15 minutes de présentation et 5 minutes de questions**
+**Updated:** 7 November 2026
+**Team:** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
+**Submission deadline:** evening of 10 November 2026, Paris time
+**Oral defense:** 16 November 2026, 15-minute pitch and 5-minute Q&A
 
-## Objet et livrables
+## Purpose and outputs
 
-Le travail consiste à proposer et défendre devant un professeur jouant le CEO une transformation IA crédible de TotalEnergies. Les livrables sont un **rapport de fond**, un **mémo Comex de deux pages** et des **slides**. Le professeur reçoit les documents le 10 novembre au soir pour préparer ses questions. Après cet envoi, les répétitions et corrections de forme restent possibles ; les conclusions, montants, projets et arguments structurants doivent être stabilisés.
+Develop and defend a credible AI transformation proposal for TotalEnergies before a professor acting as CEO. Submit an evidence-based **full report**, a **two-page executive memo**, and a **slide deck**. The course sequence is readiness and bottleneck → operating model → Three Horizons portfolio and sequencing → financial case → change management. After submission, improve rehearsal and presentation quality without changing the core thesis, projects, amounts, or evidence base.
 
-Le cours fournit l'ordre de l'argument : readiness et bottleneck, operating model, portefeuille Three Horizons et séquençage, démonstration financière, conduite du changement. Les consignes demandent des scénarios bas/central/haut, le coût de l'inaction, des chiffres explicables et une préparation au benchmark concurrentiel.
+## Research stance
 
-## Posture de recherche
+No conclusion about TotalEnergies' maturity, data strategy, operating model, or project returns is predetermined. `work/legacy_plan_unverified.md` is an idea inventory to audit. First identify existing group capabilities, successes, knowledge gaps, and genuinely contestable choices. Vincent's Argedis experience raises questions but remains a **local observation** until corroborated. A competitor announcement does not by itself prove a performance lead.
 
-Nous ne partons d'aucune conclusion sur la maturité de TotalEnergies, sa stratégie data, son organisation ou la rentabilité d'un projet. Le dossier existant est un **inventaire de pistes à vérifier**. Nous cherchons d'abord ce que le groupe fait déjà, ce qui fonctionne, ce que les sources ne permettent pas de savoir et les arbitrages qui restent discutables. La taille du groupe et ses contraintes imposent de formuler toute recommandation comme une proposition argumentée, avec ses limites.
+Every material statement is a **verified fact**, **derived calculation**, **explicit assumption**, **local observation**, or **unknown**. Research that contradicts an initial hypothesis must change the diagnosis or portfolio. Keep precise sources, dates, scopes, units, formulas, and limitations in `sources/register.md` and the relevant synthesis.
 
-L'expérience vécue chez Argedis sert à identifier des mécanismes et des questions de terrain. Elle doit être étiquetée **observation locale**, puis confrontée à des éléments plus larges avant toute généralisation au groupe. Les annonces de concurrents ne prouvent pas à elles seules un avantage opérationnel ou un retard de TotalEnergies.
+## Shared quality rules
 
-Chaque affirmation importante aura un statut : **fait sourcé**, **calcul dérivé**, **hypothèse explicite** ou **observation locale**. Les recherches ne sont jamais sélectionnées pour justifier un plan décidé à l'avance. Un résultat contradictoire doit faire évoluer le diagnostic ou le portefeuille.
+- One reconciled budget totaling 100%, with justified CAPEX/OPEX, annual cash flows, scenarios, and no double counting.
+- About ten candidate projects in the long list; three or four representative projects receive full case studies. Other projects receive short estimates sufficient for selection and the portfolio map.
+- Classify H1/H2/H3 using the course questions. A proposed H3 must involve a credible new business model or market; use learning milestones and option value when payback cannot be estimated.
+- Build the report from research and calculations; derive the memo from the report; derive the slides from the memo and selected cases.
 
-## Règles communes aux livrables
+## Portfolio visual
 
-- Registre de preuves unique : affirmation, source précise, date, périmètre, citation/page ou URL, calcul, statut et limites.
-- Pour les chiffres estimés : formule, paramètres, unité, année, intervalle et sensibilité. Vérifier en priorité les hypothèses qui changent la décision.
-- Budget unique réconcilié à 100 %, avec CAPEX/OPEX, flux par année, scénarios et absence de double comptage.
-- Trois ou quatre projets représentatifs étudiés en profondeur ; horizon map et sequencing canvas plus larges mais synthétiques. Leur nombre et leur répartition se décident après recherche.
-- Toute classification H1/H2/H3 est justifiée par les critères du cours ; un H3 doit porter une réelle transformation du modèle d'affaires ou du marché.
-- Rapport de fond d'abord, mémo dérivé du rapport, puis slides dérivées du mémo et des projets représentatifs.
+Prepare a bubble chart of the **whole portfolio** to introduce the project cases. Proposed axes, based on the professor's whiteboard sketch as recalled by Vincent: potential gain (vertical), payback time (horizontal), bubble area for cost, color for horizon. Display units, time frame, scope, and uncertainty. Show H3 projects without defensible payback as options with learning gates, rather than assigning an invented coordinate. Beneath the chart, use two separate stacked bars for the **capital mix** and the **expected return mix** across H1/H2/H3. The course's illustrative return split is not a forecast for our portfolio.
 
-## Carte du portefeuille à produire
+## Checkable roadmap
 
-La liste longue d'environ dix projets précède la sélection. Après une première qualification, une carte montre **l'ensemble du portefeuille**, et non seulement les cas présentés. Proposition de lecture issue du schéma dessiné au tableau : gain potentiel en ordonnée, délai de retour en abscisse, coût représenté par la surface de la bulle, couleur H1/H2/H3. Les axes, unités et périmètres seront affichés ; les projets H3 sans payback crédible seront représentés comme options avec jalon d'apprentissage, sans leur inventer une coordonnée financière. Sous la carte, deux barres cumulées distinctes montreront le **mix de capital** et le **mix des retours espérés** par horizon, comme dans le cours. Ce visuel introduira le portefeuille général avant les 3 ou 4 projets détaillés dans les slides.
+Each numbered step maps to one GitHub issue. `D` means dependency; `P` lists work that can run in parallel. Check a box only when its acceptance criterion is verified, then close the corresponding issue. Record the issue link in the step after creation.
 
-## Roadmap cochable
-
-**Légende :** `D` dépendance ; `P` peut être mené en parallèle ; `Issue` est le suivi GitHub. Une case est cochée seulement quand le critère de sortie est rempli. Les identifiants d'issues sont à inscrire après création.
-
-| Fait | Étape / issue | Échéance cible | D / P | Critère de sortie |
+| Done | Step / issue label | Target | D / P | Acceptance criterion |
 | --- | --- | --- | --- | --- |
-| [x] | **01 — Confirmer les attentes et les rendus** · `cadrage` | 7 nov. | Départ | Vérifier dans le cours : format, contenu, mémo, plan détaillé, portefeuille et exigences de défense ; distinguer les consignes du cours de nos choix de travail. |
-| [ ] | **02 — Valider cette roadmap et préparer les issues** · `pilotage` | 7 nov. | D : 01 | Faire relire le découpage, puis créer une issue par étape avec responsable, dépendances, livrable, tâches, critère de fin et lien ; ne créer aucune issue avant validation. |
-| [ ] | **03 — Constituer le registre de preuves** · `dossier` | 8 nov. matin | D : 02 ; P : 04–06 | Définir les statuts fait/calcul/hypothèse/observation locale ; centraliser source précise, date, portée, formule et limite. |
-| [ ] | **04 — Recherche TotalEnergies : stratégie et activités** · `dossier` | 8 nov. matin | D : 02 ; P : 03, 05–06 | Relever activités, priorités, indicateurs économiques, géographies et contraintes dans les documents primaires ; produire un rapport de collecte sourcé. |
-| [ ] | **05 — Recherche TotalEnergies : IA, data et organisation** · `dossier` | 8 nov. matin | D : 02 ; P : 03–04, 06 | Recenser initiatives et résultats publics, capacités data/IA, gouvernance et organisation ; noter ce qu'on ne peut pas inférer du niveau groupe ou d'Argedis. |
-| [ ] | **06 — Recherche concurrents et benchmarks** · `dossier` | 8 nov. matin | D : 02 ; P : 03–05 | Comparer Shell, BP, Equinor et benchmarks pertinents sur dates et périmètres comparables ; séparer annonces, déploiements et résultats mesurés. |
-| [ ] | **07 — Auditer le dossier existant** · `dossier` | 8 nov. matin | D : 03–06 | Classer chaque affirmation ou chiffre réutilisable : vérifié, calcul à refaire, hypothèse, non démontré ou écarté ; relever incohérences de portefeuille et de finance. |
-| [ ] | **08 — Produire une liste longue d'environ dix projets** · `dossier` | 8 nov. midi | D : 04–07 | Pour chaque idée : problème métier, capacités déjà en place, horizon provisoire, valeur potentielle, coût et délai indicatifs, incertitudes ; conserver les projets rejetés. |
-| [ ] | **09 — Diagnostiquer readiness et bottleneck** · `dossier` | 8 nov. après-midi | D : 04–07 ; P : 10 | Évaluer les cinq piliers et le stade avec preuves et limites ; comparer plusieurs candidats au bottleneck, sans généraliser l'observation Argedis. |
-| [ ] | **10 — Comparer les operating models** · `dossier` | 8 nov. après-midi | D : 04–07 ; P : 09 | Comparer CoE, hub-and-spoke et fédéré selon taille, réglementation, talent et maturité ; décrire droits de décision, financement, contrôle et chemin d'évolution. |
-| [ ] | **11 — Choisir la thèse et les projets vedettes** · `dossier` | 8 nov. soir | D : 08–10 | Relier diagnostic, modèle et portefeuille ; sélectionner 3–4 projets représentatifs (H1, H2, H3 seulement si pertinent), documenter alternatives et objections. |
-| [ ] | **12 — Fiche approfondie : projet vedette 1** · `dossier` | 9 nov. matin | D : 11 ; P : 13–16 | Produire la fiche complète selon le gabarit ci-dessous, avec chiffres, sourcing, jalons et critères d'arrêt. |
-| [ ] | **13 — Fiche approfondie : projet vedette 2** · `dossier` | 9 nov. matin | D : 11 ; P : 12, 14–16 | Même gabarit ; vérifier les dépendances et gains communs avec le projet 1. |
-| [ ] | **14 — Fiche approfondie : projet vedette 3** · `dossier` | 9 nov. matin | D : 11 ; P : 12–13, 15–16 | Même gabarit ; adapter les KPI à son horizon. |
-| [ ] | **15 — Fiche approfondie : projet vedette 4, si retenu** · `dossier` | 9 nov. matin | D : 11 ; P : 12–14, 16 | Même gabarit ; si seuls trois projets sont choisis, clore l'issue comme non requise et expliquer pourquoi. |
-| [ ] | **16 — Estimer les autres projets de la liste longue** · `dossier` | 9 nov. matin | D : 08, 11 ; P : 12–15 | Fiches courtes : horizon, valeur/coût/payback indicatifs ou valeur d'option, source ou hypothèse, incertitude et décision retenir/réserver/écarter. |
-| [ ] | **17 — Consolider horizon map et sequencing canvas** · `dossier` | 9 nov. après-midi | D : 12–16 | Carte à bulles de tout le portefeuille, barres capital/retour par horizon ; canvas avec capital total 100 %, dépendances minimales, build/buy/partner, jalon, owner et date. |
-| [ ] | **18 — Modéliser l'économie du portefeuille** · `dossier` | 9 nov. après-midi | D : 12–17 ; P : 19–20 | Budget CAPEX/OPEX, flux 0–5 ans, NPV, IRR, payback, hurdle justifié, bas/central/haut, sensibilités et absence de double comptage. |
-| [ ] | **19 — Calculer le coût de l'inaction** · `dossier` | 9 nov. après-midi | D : 04–06, 12–17 ; P : 18, 20 | Définir le scénario sans programme, ses écarts incrémentaux, sources et hypothèses ; éviter de l'ajouter deux fois à la valeur du programme. |
-| [ ] | **20 — Définir gouvernance, adoption et kill criteria** · `dossier` | 9 nov. après-midi | D : 09–17 ; P : 18–19 | Pour chaque jalon critique : owner, date, métrique, seuil, décision ; traiter sûreté, collaborateurs, managers, compétences et reporting Comex. |
-| [ ] | **21 — Rédiger et contrôler le rapport de fond** · `dossier` | 10 nov. matin | D : 17–20 | Suivre l'ordre du cours, intégrer fiches et annexes de calcul, vérifier citations, contradictions, unités, cohérence et objections du CEO. |
-| [ ] | **22 — Extraire le mémo Comex de deux pages** · `memo` | 10 nov. midi | D : 21 | Ouvrir par la décision ; couvrir thèse, portefeuille, enveloppe, scénarios, clearance financière, risques/arrêts, changement et demande. |
-| [ ] | **23 — Revoir le mémo comme un CEO sceptique** · `memo` | 10 nov. après-midi | D : 22 | Vérifier chaque nombre contre le rapport, la lisibilité en deux pages, le downside et la réponse à « pourquoi maintenant ? ». |
-| [ ] | **24 — Scénariser les slides et la carte du portefeuille** · `slides` | 10 nov. après-midi | D : 21–23 | Fil de 15 minutes ; une idée par slide ; carte et mix des horizons avant les projets vedettes ; calculs détaillés en annexe. |
-| [ ] | **25 — Produire et vérifier les slides** · `slides` | 10 nov. fin d'après-midi | D : 24 | Vérifier chiffres et sources contre mémo/rapport, lisibilité, cohérence visuelle et durée ; aucune nouvelle hypothèse structurante. |
-| [ ] | **26 — Remettre les documents** · `livraison` | **10 nov. soir** | D : 21, 23, 25 | Remettre rapport de fond, mémo et slides dans les formats convenus ; conserver les versions remises et l'heure d'envoi. |
-| [ ] | **27 — Préparer Q&A et répéter** · `oral` | 11–15 nov. | D : 26 | Réponses sourcées au pire scénario, conditions d'arrêt, concurrence et coût d'attente ; répétition chronométrée et finitions sans changement structurel. |
+| [x] | **01 — Confirm course expectations and required outputs** · `scope` | 7 Nov | Start | Separate explicit course requirements from team decisions; document pitch, memo, detailed plan, portfolio, finance, and defense criteria. |
+| [ ] | **02 — Approve this roadmap and create GitHub issues** · `planning` | 7 Nov | D: 01 | Review the breakdown; create one English issue per step with owner, dependencies, output, tasks, acceptance criterion, label, and roadmap backlink. |
+| [ ] | **03 — Establish the evidence register** · `report` | 8 Nov AM | D: 02; P: 04–06 | Define fact/calculation/assumption/local observation/unknown; capture source, date, scope, formula, and limitation. |
+| [ ] | **04 — Research TotalEnergies' strategy and activities** · `report` | 8 Nov AM | D: 02; P: 03, 05–06 | Summarize businesses, priorities, economic metrics, geographies, and constraints from primary documents. |
+| [ ] | **05 — Research existing AI, data, and organization** · `report` | 8 Nov AM | D: 02; P: 03–04, 06 | Inventory existing group and subsidiary capabilities, deployment evidence, governance, results, and unknowns. |
+| [ ] | **06 — Research competitors and sector benchmarks** · `report` | 8 Nov AM | D: 02; P: 03–05 | Compare Shell, BP, Equinor, and relevant benchmarks with dates and comparable scopes; separate announcements from measured results. |
+| [ ] | **07 — Audit the historical draft** · `report` | 8 Nov AM | D: 03–06 | Classify reusable claims and numbers as verified, to recalculate, assumption, unsupported, or discarded; flag portfolio and financial inconsistencies. |
+| [ ] | **08 — Build a long list of about ten candidate projects** · `report` | 8 Nov noon | D: 04–07 | Record business problem, existing capability, provisional horizon, indicative value/cost/time, uncertainty, and rejected ideas. |
+| [ ] | **09 — Assess readiness and competing bottlenecks** · `report` | 8 Nov PM | D: 04–07; P: 10 | Score the five pillars and readiness stage with evidence and limits; compare bottleneck candidates without generalizing from Argedis. |
+| [ ] | **10 — Compare operating models** · `report` | 8 Nov PM | D: 04–07; P: 09 | Compare CoE, hub-and-spoke, and federated models against size, regulation, talent, and maturity; specify decision rights, funding, controls, and evolution. |
+| [ ] | **11 — Select the thesis and featured projects** · `report` | 8 Nov evening | D: 08–10 | Link diagnosis, operating model, and portfolio; select 3–4 representative projects; document alternatives, objections, and reasons. |
+| [ ] | **12 — Full case study: featured project 1** · `report` | 9 Nov AM | D: 11; P: 13–16 | Complete the case template below with evidence, economics, sourcing, milestones, and stop rule. |
+| [ ] | **13 — Full case study: featured project 2** · `report` | 9 Nov AM | D: 11; P: 12, 14–16 | Complete the same template; check shared dependencies and overlapping benefits. |
+| [ ] | **14 — Full case study: featured project 3** · `report` | 9 Nov AM | D: 11; P: 12–13, 15–16 | Complete the same template using metrics appropriate to its horizon. |
+| [ ] | **15 — Full case study: featured project 4, if selected** · `report` | 9 Nov AM | D: 11; P: 12–14, 16 | Complete the same template, or mark not required with a reason if three cases suffice. |
+| [ ] | **16 — Estimate remaining candidate projects** · `report` | 9 Nov AM | D: 08, 11; P: 12–15 | Short cards with horizon, indicative value/cost/payback or option value, source/assumption, uncertainty, and keep/reserve/reject decision. |
+| [ ] | **17 — Consolidate portfolio map and sequencing canvas** · `report` | 9 Nov PM | D: 12–16 | Produce full bubble chart and horizon mix bars; reconcile canvas capital to 100% with thin-slice dependencies, sourcing, owner, and date. |
+| [ ] | **18 — Model portfolio economics** · `report` | 9 Nov PM | D: 12–17; P: 19–20 | CAPEX/OPEX, year 0–5 flows, NPV, IRR, payback, justified hurdle, downside/base/upside, sensitivities, and double-counting check. |
+| [ ] | **19 — Model the cost of inaction** · `report` | 9 Nov PM | D: 04–06, 12–17; P: 18, 20 | Define the no-program baseline and incremental gap, with sources and assumptions; avoid adding its value twice. |
+| [ ] | **20 — Define governance, adoption, and kill criteria** · `report` | 9 Nov PM | D: 09–17; P: 18–19 | For each critical gate: owner, date, baseline, metric, threshold, decision; cover safety, workforce, managers, skills, and executive reporting. |
+| [ ] | **21 — Write and challenge the full report** · `report` | 10 Nov AM | D: 17–20 | Follow course logic; include cases and calculation annexes; check references, contradictions, units, consistency, and plausible CEO objections. |
+| [ ] | **22 — Derive the two-page executive memo** · `memo` | 10 Nov noon | D: 21 | Lead with the decision; cover thesis, portfolio, envelope, scenarios, hurdle clearance, risks/stops, change, and ask. |
+| [ ] | **23 — Review the memo as a skeptical CEO** · `memo` | 10 Nov PM | D: 22 | Match every number to the report; test two-page readability, downside, and the answer to “why now?”. |
+| [ ] | **24 — Storyboard slides and portfolio visual** · `slides` | 10 Nov PM | D: 21–23 | Plan a 15-minute narrative with one claim per slide; map and horizon mix precede featured cases; details move to appendix. |
+| [ ] | **25 — Produce and verify slides** · `slides` | 10 Nov late PM | D: 24 | Match numbers and sources to memo/report; check legibility, visual consistency, timing, and no new structural assumption. |
+| [ ] | **26 — Submit the documents** · `submission` | **10 Nov evening** | D: 21, 23, 25 | Send the report, memo, and slides in agreed formats; preserve exact submitted versions and send time. |
+| [ ] | **27 — Prepare Q&A and rehearse** · `oral` | 11–15 Nov | D: 26 | Source answers on worst case, stop rules, competition, and waiting cost; time the pitch and make only non-structural refinements. |
 
-**Point de gel du 10 novembre :** toute incohérence découverte après la remise doit être corrigée dans tous les livrables concernés et signalée à l'équipe ; aucune nouvelle thèse ou initiative majeure ne doit être introduite dans les slides seules.
+**Freeze rule:** after submission, correct an error in every affected output and tell the team. Do not introduce a new thesis or major initiative in the slides alone.
 
-## Gabarit de l'issue « projet vedette »
+## Featured-project issue template
 
-Chaque issue 12–15 contient : (1) problème, périmètre et baseline ; (2) raison de choisir l'IA et alternative sans IA ; (3) justification H1/H2/H3 ; (4) données et dépendances dures/souples ; (5) build/buy/blend ; (6) pilote, déploiement, owner et dates ; (7) coût CAPEX/OPEX et bénéfices avec formules et hypothèses ; (8) scénarios et métriques adaptées à l'horizon ; (9) adoption, risques, contrôles et kill criterion ; (10) sources précises et limites. Les issues 16 et 17 utilisent une estimation courte, avec niveau d'incertitude affiché.
+Issues 12–15 cover: (1) problem, scope, baseline; (2) why AI and non-AI alternative; (3) H1/H2/H3 justification; (4) data and hard/soft dependencies; (5) build/buy/blend; (6) pilot, rollout, owner, dates; (7) CAPEX/OPEX and benefit formulas; (8) scenarios and horizon-specific metrics; (9) adoption, risks, controls, stop rule; (10) precise sources and limits. Issues 16–17 use shorter estimates with visible uncertainty.
 
-## Suivi des issues
+## Issue tracking
 
-Une issue par ligne, créée **après validation de cette roadmap**, avec responsable, dépendances, liens vers livrables, checklist du critère de sortie et statut. Labels proposés : `cadrage`, `pilotage`, `dossier`, `memo`, `slides`, `livraison`, `oral`, plus `recherche`, `finance` ou `projet` selon la tâche. Les recherches à coût réduit peuvent produire des rapports de collecte sur des périmètres bornés, mais chaque assertion retenue est vérifiée dans sa source originale et relue pour les contradictions. Les issues seront la source de vérité pour l'avancement ; cette roadmap reflétera leur état à chaque mise à jour.
+Create issues after roadmap review. Use the output labels above, plus `research`, `finance`, or `project` when helpful. External AI tools may generate bounded research leads; read and verify the underlying sources. Keep issue status, owner, scope, dependencies, and outputs synchronized with this roadmap in both directions.

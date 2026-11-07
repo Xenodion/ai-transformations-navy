@@ -1,3 +1,3 @@
-# Travail en cours
+# Work in progress
 
-`roadmap.md` est le suivi du projet. `legacy_plan_unverified.md` est un ancien brouillon à auditer, jamais une source. `research/` contient l'enquête en cours, `options/` les diagnostics et arbitrages, `projects/` les fiches et le portefeuille, `finance/` les modèles et contrôles. Les synthèses factuelles de sources appartiennent à `sources/synthesis/`.
+`roadmap.md` tracks the project and must agree with its GitHub issues. `legacy_plan_unverified.md` is a historical draft to audit, never a source. `research/` holds investigations, `options/` diagnoses and decisions, `projects/` project cards and the portfolio, and `finance/` models and checks. Factual source summaries belong in `sources/synthesis/`.
