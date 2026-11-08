@@ -16,7 +16,7 @@ Running list of checks raised during research. Each item names the step it affec
 | Q08 | Official amount and scope of the Sept 2026 Mistral subsurface programme | Shows what H3 / subsurface AI is already funded, so we don't propose it again | 08, 11 | Official Business Wire release, 15 Sep 2026 | CLM-021 | Closed 8 Nov: "more than €100 million" over 3 years confirmed by the official release, SRC-027 (CLM-021 verified) |
 | Q09 | Official Copilot licence count and usage metrics | Adoption baseline for change management | 09, 20 | TotalEnergies or Microsoft official case study | CLM-023 | Open |
 | Q10 | Size of digital and data teams inside the segments (Integrated Power, E&P, Refining & Chemicals, Marketing & Services) | Hub-and-spoke vs federated evidence | 10 | Job postings by entity; segment pages of URD chapter 2 | — | Open |
-| Q11 | Record Vincent's Argedis observation as a local observation (observer, entity, period, what was seen) | Required before it can be used anywhere | 09 | Vincent | — | Open |
+| Q11 | Record Vincent's Argedis observation as a local observation (observer, entity, period, what was seen) | Required before it can be used anywhere | 09 | Vincent | CLM-072 | Closed 8 Nov: Recorded as CLM-072 (Local observation by Vincent Lamy, Argedis / M&S France). Highlights CoE delivery bottleneck ('au compte-goutte'), business passivity, DE friction, and shadow AI; proposed solution: agile delivery trios (DS + dedicated business champion + DE). Informs steps 09, 10, 20 |
 
 **Opened 8 Nov 2026 by step 06.** Source: [competitor and benchmark synthesis](../../sources/synthesis/2026-11-08_competitors_benchmarks.md).
 
