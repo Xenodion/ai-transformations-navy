@@ -1,6 +1,6 @@
 # Operating-model options
 
-- **Step:** 10 — [#10](https://github.com/Xenodion/ai-transformations-navy/issues/10). Drafted 8 November 2026 by Alexandre Waerniers, with Claude Code.
+- **Step:** 10 — [#10](https://github.com/Xenodion/ai-transformations-navy/issues/10). Co-authored by Alexandre Waerniers & Vincent Lamy, with Claude Code.
 - **Acceptance criterion:** compare CoE, hub-and-spoke and federated models against size, regulation, talent and maturity; specify decision rights, funding, controls and evolution.
 - **Inputs:** [S04](../../sources/synthesis/2026-11-08_totalenergies_strategy_activities.md), [S05](../../sources/synthesis/2026-11-08_totalenergies_ai_data_organization.md), [S06](../../sources/synthesis/2026-11-08_competitors_benchmarks.md), [readiness assessment](readiness_bottleneck.md) (step 09), [long list](../projects/long_list.md), [register](../../sources/register.md).
 - **Framework:** course session 2 ([cheat sheet](../../course/exam/session_2_cheat_sheet.md)): three archetypes, three matching factors, decision tree, evolution path. Funding phases come from course session 3 ([cheat sheet](../../course/exam/session_3_cheat_sheet.md)).
@@ -75,6 +75,18 @@ Course roles: the business signs the benefits, and Finance tracks them.
 | Workforce changes | — | Designs with managers | — | **Works council consulted early** (course session 4) |
 
 **Human control:** every high-impact decision stays with an expert, in line with the published principle of no fully autonomous decisions (CLM-026).
+
+### 4b. The Delivery Engine: Agile Delivery Trios (*Trinômes Exécutifs*)
+
+To break the execution throttle and delivery latency identified in Step 09 (CLM-074), each project inside a spoke is executed by an **Agile Delivery Trio**:
+
+| Role | Sourcing & Home | Allocation & Accountability | Core Deliverable |
+| :--- | :--- | :--- | :--- |
+| **Lead Data Scientist** | Digital Factory / Hub (seconded) | Full-time on project sprint | Model architecture, algorithmic performance, MLOps standards, code reuse across segments |
+| **Business Champion** | Branch P&L Operating Unit | **20% to 40% protected, ring-fenced time** (branch co-funded Day 1) | Operational specifications, user acceptance testing, frontline change leadership, and signing the P&L benefit |
+| **Branch Data Engineer** | Branch IT / Spoke | Dedicated during data-slice sprint | Branch telemetry ingestion, ERP/POS pipelines, resolving local data latency |
+
+**Operating Dynamic:** Replaces slow multi-BU weekly status reviews with high-velocity agile sprints (multi-weekly check-ins, joint sprint backlog). The Business Champion is a co-builder with protected time rather than an external spectator, directly resolving the frontline adoption lag and Shadow AI bypass observed in downstream operations (CLM-074).
 
 ## 5. Funding
 
