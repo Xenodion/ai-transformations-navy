@@ -55,6 +55,7 @@ Typical answers are H1 = N, N, Y, Y; H2 = Y, N, mostly, N; H3 = Y, Y, N, N. Hori
 | P10 | Steam-cracker yield, and processing of circular feedstock | Yield optimisation; feed-flexibility models for pyrolysis oil | Antwerp already processes pyrolysis oil (CLM-061); circular polymer target of 1 Mt/y by 2030 (CLM-067) | H1 for yield; H2 for circular feed | 3–15 (circular lever 0.1–4) | 2.1 (1.8–2.7) | 9–15 months | High |
 | P11 | No revenue yet from customers' flexible assets (batteries, EVs, solar) | Virtual power plant that aggregates and trades flexibility | 6.0 million power clients, ~90,000 charging points (CLM-066), Saft batteries (S05); flexibility offers not researched | H3 (Y, Y, N, N) | Option value; no payback | 2.5 (2.1–3.2) | 24–36 months | Very high |
 | P12 | Cost and pace of discovering catalysts for synthetic aviation fuel (e-SAF) | AI-accelerated catalyst screening | SAF production at Normandy, Antwerp and La Mède, target 0.5 Mt/y by 2028; catalyst plant at Feluy (CLM-060); in-house HPC and the Mistral lab (CLM-021) | H3 (Y, Y, N, N), only with a market thesis | Option value; no payback | 3.7 (3.2–4.9) | 24–48 months | Very high |
+| P13 | Perishable food/shop inventory shrinkage and rigid retail pricing across service-station network | Demand forecasting for store replenishment to cut food waste, plus dynamic retail and EV charging pricing | Station inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based (CLM-074) | H1 (N, N, Y, Y) | 8–28 (food loss + dynamic margin) | 1.95 (1.65–2.55) | 4–8 months | Medium |
 | E01 | No published or tracked value for any internal AI solution (CLM-029) | AI value register and portfolio office | Board AI review (CLM-025); > 10,000 live models (CLM-017) without published value | Enabler | Indirect | 1.6 (1.4–2.1) | 3–6 months | Low on cost; value indirect |
 
 **Do not add these rows up.** Several candidates overlap (section 5), the ranges are wide, and a long list is not a portfolio.
@@ -100,6 +101,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 | P10 | 0.75 | 0.75 | 0.60 | 2.11 | 1.79–2.74 | — | Process-model licences, 0.45 |
 | P11 | 0.55 | 1.20 | 0.70 | 2.46 | 2.09–3.20 | 0.50 (home devices) | Home devices, 0.50 |
 | P12 | 1.24 | 1.24 | 1.24 | 3.73 | 3.17–4.85 | — | Lab validation, 1.50 |
+| P13 | 0.65 | 0.65 | 0.65 | 1.95 | 1.65–2.55 | 0.25 (POS integration) | POS and ERP inventory connectors, 0.25 |
 | E01 | 0.55 | 0.55 | 0.55 | 1.64 | 1.39–2.13 | — | Register tooling, 0.30 |
 
 - **CAPEX:** only hardware and one-off integration are counted. Step 18 decides whether development-phase software is capitalised (course session 3, IAS 38). Everything else is OPEX.
@@ -322,6 +324,23 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 - **Time:** 24–48 months.
 - **Main uncertainties:** scientific risk; whether R&D already runs AI materials discovery (unknown).
 - **Owner (provisional):** OneTech R&D.
+
+### P13 — Retail station demand forecasting and perishables loss reduction (with dynamic pricing)
+
+- **Baseline:** Close to 13,000 service stations worldwide (SRC-002, p. 13; CLM-066), including motorway and expressway stations in France operated by Argedis (CLM-074). Network convenience store sales, food & beverage and perishables represent substantial working capital and recurring stock write-offs.
+- **Existing capability:** Station-level inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based and manual (CLM-074).
+- **Non-AI alternative:** Fixed weekly reorder points, standard supplier delivery schedules, manual markdowns.
+- **Value (calculation on assumed inputs):**
+  - Store food and perishables loss reduction (15–25% reduction in stock write-offs across company-operated motorway stations): $5–18M/yr.
+  - Dynamic pricing and margin optimization for non-fuel retail and highway EV charging: $3–10M/yr.
+  - Total indicative run-rate: **$8–28M/yr** (midpoint **$18.0M/yr**).
+- **Cost: $1.95M** (band $1.65–2.55M):
+  - a pilot squad (Lead DS + Retail Business Champion + Branch DE) in Year 1 deployed at Argedis French network;
+  - central rollout team in Years 2–3 across European highway network;
+  - POS and inventory ERP integration ($0.25M);
+  - forecasting cloud compute ($0.15M/yr).
+- **Time:** First value in 4–8 months (fast H1 payback).
+- **Owner (provisional):** Marketing & Services, retail network operations.
 
 ### E01 — AI value register and portfolio office (enabler)
 
