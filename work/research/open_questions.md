@@ -31,7 +31,7 @@ Running list of checks raised during research. Each item names the step it affec
 
 | # | Question | Why it matters | Affects step | Where to look | Register | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Q16 | Have the AI Act's application dates for high-risk systems been amended? EUR-Lex lists a consolidated version dated 27 Jul 2026 | The governance timeline and compliance costs depend on whether Annex III obligations apply from 2 Aug 2026 or later | 20 | EUR-Lex consolidated text of Regulation (EU) 2024/1689; amending regulation ("Digital Omnibus") in the Official Journal | SRC-029, CLM-058 | Open |
+| Q16 | Have the AI Act's application dates for high-risk systems been amended? EUR-Lex lists a consolidated version dated 27 Jul 2026 | The governance timeline and compliance costs depend on whether Annex III obligations apply from 2 Aug 2026 or later | 20 | EUR-Lex consolidated text of Regulation (EU) 2024/1689; amending regulation ("Digital Omnibus") in the Official Journal | SRC-029, CLM-058, CLM-072 | Partly answered 8 Nov: the course deck (PDF p. 64) gives 2 Dec 2027 for Annex III high-risk uses, citing the Commission timeline as amended by Reg. (EU) 2026/1744 (CLM-072). The amending regulation is not yet read |
 
 **Opened 8 Nov 2026 by step 08.** Source: [long list](../projects/long_list.md).
 
