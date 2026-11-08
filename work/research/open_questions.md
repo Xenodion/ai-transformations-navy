@@ -32,3 +32,13 @@ Running list of checks raised during research. Each item names the step it affec
 | # | Question | Why it matters | Affects step | Where to look | Register | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | Q16 | Have the AI Act's application dates for high-risk systems been amended? EUR-Lex lists a consolidated version dated 27 Jul 2026 | The governance timeline and compliance costs depend on whether Annex III obligations apply from 2 Aug 2026 or later | 20 | EUR-Lex consolidated text of Regulation (EU) 2024/1689; amending regulation ("Digital Omnibus") in the Official Journal | SRC-029, CLM-058 | Open |
+
+**Opened 8 Nov 2026 by step 08.** Source: [long list](../projects/long_list.md).
+
+| # | Question | Why it matters | Affects step | Where to look | Register | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Q17 | What third-party spend could procurement analytics address, and is it already covered by the $12.5bn plan's levers? | P06 has no usable baseline without it | 11, 16, 18 | URD chapter 5 (supplier and payment-practice disclosures); results presentations (with Q06) | CLM-067, CLM-007 | Open |
+| Q18 | Operated share of hydrocarbon production and of renewable capacity | Only operated assets are addressable by P02 and P04 | 11, 16, 18 | URD chapter 2 (operator status by asset); Integrated Power section | CLM-005, CLM-006 | Open |
+| Q19 | Share of E&P investment spent on drilling and completion; existing drilling AI tools | P03's value rests on an unsourced share | 11, 12–16 | URD E&P section; Digital Factory blog; Cognite case studies | CLM-004, CLM-019 | Open |
+| Q20 | LNG fleet and shipping share controlled by TotalEnergies | P09's value applies only to controlled voyages | 16 | URD Integrated LNG section (shipping) | CLM-065 | Open |
+| Q21 | Churn rate and margin per retail power and gas client | P08's value rests on two assumptions | 16 | URD Integrated Power section; French regulator (CRE) market reports | CLM-066 | Open |
