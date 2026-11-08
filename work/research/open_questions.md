@@ -26,3 +26,9 @@ Running list of checks raised during research. Each item names the step it affec
 | Q13 | bp's AI organisation, the Palantir AIP agreement (Sept 2024) and any GenAI deployment | bp.com blocks automated reading; the peer comparison is incomplete for bp | 10, 21 | Open bp.com manually in a browser; Palantir investor releases | CLM-042, CLM-043 | Partly answered 8 Nov: bp 2026 AGM speech read (SRC-028), no AI content; Palantir agreement still not found |
 | Q14 | Shell's AI governance and digital organisation (risk factors pp. 125–135 and governance chapter of the 2025 annual report) | Completes the governance row of the comparison | 10, 20 | Shell Annual Report 2025 (SEC 6-K, 12 Mar 2026) | CLM-040, CLM-041 | Closed 8 Nov: Shell 2025 report read (SRC-021, local PDF): Board review of AI risks, "AI compliance" in 2026 audit priorities, EVP Information and Digital Technology; no standalone AI policy found (CLM-050) |
 | Q15 | Peer production volumes (Shell, BP, Equinor FY2025) for any per-barrel normalisation | Avoids comparing absolute figures across companies of different sizes | 18 | Peers' 2025 annual reports | — | Open |
+
+**Opened 8 Nov 2026 by step 07.** Source: [legacy plan audit](legacy_plan_audit.md).
+
+| # | Question | Why it matters | Affects step | Where to look | Register | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Q16 | Have the AI Act's application dates for high-risk systems been amended? EUR-Lex lists a consolidated version dated 27 Jul 2026 | The governance timeline and compliance costs depend on whether Annex III obligations apply from 2 Aug 2026 or later | 20 | EUR-Lex consolidated text of Regulation (EU) 2024/1689; amending regulation ("Digital Omnibus") in the Official Journal | SRC-029, CLM-058 | Open |
