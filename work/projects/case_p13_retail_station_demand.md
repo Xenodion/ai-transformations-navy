@@ -145,9 +145,9 @@ Month 25-36: Wave 3 Optimization (Automated inventory replenishment & dynamic sh
 
 ## 7. Economic Model: CAPEX, OPEX, and Benefit Formulas
 
-### 7.1 Three-Year Investment Budget ($1.95M Total)
+### 7.1 Three-Year Investment Budget ($3.90M Total)
 
-Costs are built bottom-up using registered labor and vendor rates:
+Costs are built bottom-up using registered labor, hardware, and integration rates across ~1,500 French company-operated stores:
 - Lead Data Scientist: €70k gross × 1.437 employer charges × 1.15 overhead × 1.13 USD/EUR = **$131k/yr** (`CLM-069`, `CLM-070`, `CLM-071` `[Calculation]`).
 - Branch Data Engineer: €58k gross × 1.437 × 1.15 × 1.13 = **$108k/yr** (`CLM-069`, `CLM-070`, `CLM-071` `[Calculation]`).
 - Business Champion (30% time + backfill allowance): $98.5k × 0.30 + $50k backfill = **$79.5k/yr** (`CLM-062` `[Fact]`, `[Calculation]`).
@@ -155,10 +155,11 @@ Costs are built bottom-up using registered labor and vendor rates:
 
 | Cost Category | Year 0 ($M) | Year 1 ($M) | Year 2 ($M) | Year 3 ($M) | 3-Year Total ($M) | Classification | Accounting Basis & Assumptions |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Agile Delivery Trio Personnel** | 0.08 | 0.24 | 0.32 | 0.32 | **0.96** | OPEX | 1 Lead DS + 1 Branch DE + 1 Business Champion (co-funded). |
-| **Store Rollout & Field Training** | 0.05 | 0.11 | 0.15 | 0.15 | **0.46** | OPEX | Station manager training, digital tablet onboarding, change management. |
-| **Cloud Inference & POS Integration** | 0.22 | 0.10 | 0.18 | 0.03 | **0.53** | CAPEX (Y0-Y1) / OPEX | $0.25M POS API connectors (CAPEX); $0.10M–$0.15M/yr Azure ML hosting. |
-| **TOTAL PROJECT ENVELOPE** | **0.35** | **0.45** | **0.65** | **0.50** | **1.95** | **Band: $1.65M – $2.55M** | Clears within branch authority (`Factbook 2025`, p. 26 `[Fact]`). |
+| **Agile Delivery Trio Personnel** | 0.08 | 0.32 | 0.32 | 0.32 | **1.04** | OPEX | 1 Lead DS + 1 Branch DE + 1 Business Champion (co-funded). |
+| **Store Rollout & Field Training** | 0.22 | 0.35 | 0.35 | 0.25 | **1.17** | OPEX | 1,500 store manager trainings, digital tablet onboarding, change coaching. |
+| **Store Hardware & POS Connectors** | 0.90 | 0.15 | 0.15 | 0.10 | **1.30** | CAPEX (Y0) / OPEX | 1,500 rugged store tablets ($0.75M) + SAP POS API connectors ($0.45M). |
+| **Cloud Inference & MLOps Hosting** | 0.00 | 0.13 | 0.13 | 0.13 | **0.39** | OPEX | Azure ML time-series inference & daily automated replenishment. |
+| **TOTAL PROJECT ENVELOPE** | **1.20** | **0.95** | **0.95** | **0.80** | **3.90** | **Band: $3.20M – $4.80M** | Clears within branch authority (`Factbook 2025`, p. 26 `[Fact]`). |
 
 ### 7.2 Benefit Quantification Formula
 Annual economic value is calibrated with deliberate conservatism (*au ras des pâquerettes*), acknowledging that convenience store retail is a modest financial contributor at group scale compared to upstream hydrocarbons and power trading:
@@ -168,14 +169,14 @@ $$\text{Total Annual Value} = \Delta \text{Value}_{\text{shrinkage}} + \Delta \t
 1. **Lever 1: Food & Perishable Spoilage Reduction ($\Delta \text{Value}_{\text{shrinkage}}$):**
    $$\Delta \text{Value}_{\text{shrinkage}} = N_{\text{stations}} \times \text{Sales}_{\text{perishables}} \times \text{Rate}_{\text{spoilage}} \times \text{Reduction}_{\text{AI}}$$
    - Across ~1,500 French company-operated stores (including ~800 Argedis highway sites, `CLM-074`):
-     $$\Delta \text{Value}_{\text{shrinkage}} = 1,500 \times \$300,000 \times 4.0\% \times 13.9\% \approx \mathbf{\$2.50M/yr} \quad (\text{conservative range: } \$1.8\text{M} – \$3.5\text{M/yr})$$
+     $$\Delta \text{Value}_{\text{shrinkage}} = 1,500 \times \$300,000 \times 4.0\% \times 8.3\% \approx \mathbf{\$1.50M/yr} \quad (\text{conservative range: } \$1.0\text{M} – \$2.2\text{M/yr})$$
 2. **Lever 2: Emergency Logistics Delivery Avoidance & Peak Stock-Out Recapture ($\Delta \text{Value}_{\text{logistics}}$):**
    Eliminating emergency rush deliveries from central bakeries on holiday weekends and capturing unfulfilled demand during high-traffic surges:
-   $$\Delta \text{Value}_{\text{logistics}} = \mathbf{\$1.00M/yr} \quad (\text{conservative range: } \$0.6\text{M} – \$1.8\text{M/yr})$$
+   $$\Delta \text{Value}_{\text{logistics}} = \mathbf{\$0.50M/yr} \quad (\text{conservative range: } \$0.4\text{M} – \$0.8\text{M/yr})$$
 3. **Lever 3: Dynamic Expiry Markdowns ($\Delta \text{Value}_{\text{markdown}}$):**
    Automated short-dated price reductions (-30% at 12 hours, -50% at 4 hours prior to expiry) on near-expiration fresh food, recovering food cost that would otherwise be discarded at 100% loss:
-   $$\Delta \text{Value}_{\text{markdown}} = \mathbf{\$1.00M/yr} \quad (\text{conservative range: } \$0.6\text{M} – \$1.7\text{M/yr})$$
-4. **Total Steady-State Annual Run-Rate:** **$4.50M/yr** (Conservative range: $3.0M – $7.0M/yr) `[Calculation on assumed inputs]`.
+   $$\Delta \text{Value}_{\text{markdown}} = \mathbf{\$0.50M/yr} \quad (\text{conservative range: } \$0.4\text{M} – \$0.8\text{M/yr})$$
+4. **Total Steady-State Annual Run-Rate:** **$2.50M/yr** (Conservative range: $1.8M – $3.5M/yr) `[Calculation on assumed inputs]`.
 
 ---
 
@@ -185,30 +186,30 @@ Applying Course Session 3 financial standards (10.0% M&S hurdle rate, 5-year eva
 
 ### 8.1 Five-Year Cash Flow Waterfall (Base Case)
 
-- **Investment Phasing:** Year 0 upfront commitment of **$0.35M** (POS connectors & architecture).
-- **Ramp Assumption:** 25% of steady-state in Year 1 ($1.125M), 75% in Year 2 ($3.375M), 100% in Years 3–5 ($4.500M/yr).
-- **Run-Rate Opex after Year 3:** $0.25M/yr (cloud hosting, model maintenance, and data engineering support).
+- **Investment Phasing:** Year 0 upfront commitment of **$1.20M** (hardware tablets & POS telemetry connectors).
+- **Ramp Assumption:** 20% of steady-state in Year 1 ($0.50M), 60% in Year 2 ($1.50M), 100% in Years 3–5 ($2.50M/yr).
+- **Run-Rate Opex after Year 3:** $0.50M/yr (cloud hosting, model maintenance, and data engineering support).
 
 | Financial Metric ($M) | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 | 5-Year Total |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Gross Value Generated** | 0.00 | 1.125 | 3.375 | 4.500 | 4.500 | 4.500 | **$18.00M** |
-| **Project Expenditure (CAPEX+OPEX)** | -0.35 | -0.450 | -0.650 | -0.500 | -0.250 | -0.250 | **-$2.45M** |
-| **Net Operational Cash Flow** | **-0.35** | **+0.675** | **+2.725** | **+4.000** | **+4.250** | **+4.250** | **+$15.55M** |
+| **Gross Value Generated** | 0.00 | 0.50 | 1.50 | 2.50 | 2.50 | 2.50 | **$9.50M** |
+| **Project Expenditure (CAPEX+OPEX)** | -1.20 | -0.95 | -0.95 | -0.80 | -0.50 | -0.50 | **-$4.90M** |
+| **Net Operational Cash Flow** | **-1.20** | **-0.45** | **+0.55** | **+1.70** | **+2.00** | **+2.00** | **+$4.60M** |
 | **Discount Factor (10% M&S Hurdle)**| 1.000 | 0.909 | 0.826 | 0.751 | 0.683 | 0.621 | — |
-| **Discounted Cash Flow (DCF)** | -0.35 | +0.614 | +2.251 | +3.004 | +2.903 | +2.639 | **NPV = +$11.06M** |
+| **Discounted Cash Flow (DCF)** | -1.20 | -0.41 | +0.45 | +1.28 | +1.37 | +1.24 | **NPV = +$2.73M** |
 
-*Intra-Year Payback:* Cumulative cash turns positive during Year 2 (**payback period: 2.1 years**).
+*Intra-Year Payback:* Cumulative discounted cash turns positive right at Year 3 (**discounted payback period: 2.9 years**).
 
 ### 8.2 Three-Scenario Sensitivity Analysis
 
 | Scenario | Annual Value at Scale ($M/yr) | 5-Year Net Cash Flow | NPV @ 10% Hurdle ($M) | NPV @ 12% Hurdle ($M) | IRR (%) | Payback Period |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Downside Case (Pessimistic)** | $2.50M/yr | +$6.80M | **+$4.12M** | **+$3.58M** | **31.2%** | **2.8 years** |
-| **Base Case (Realistic Target)** | **$4.50M/yr** | **+$15.55M** | **+$11.06M** | **+$9.92M** | **59.4%** | **2.1 years** |
-| **Upside Case (Optimistic)** | $7.00M/yr | +$26.48M | **+$19.74M** | **+$17.85M** | **94.8%** | **1.5 years** |
+| **Downside Case (Pessimistic)** | $1.80M/yr | +$1.90M | **+$0.78M** | **+$0.57M** | **21.4%** | **3.8 years** |
+| **Base Case (Realistic Target)** | **$2.50M/yr** | **+$4.60M** | **+$2.73M** | **+$2.45M** | **47.1%** | **2.9 years** |
+| **Upside Case (Optimistic)** | $3.50M/yr | +$8.40M | **+$5.52M** | **+$5.14M** | **78.2%** | **2.2 years** |
 
 ### 8.3 Strategic Defense: Why Invest Despite Modest Standalone Scale?
-A skeptical CEO or CFO will argue: *"At group scale, $4.5M/yr is a drop in the ocean compared to our $9.3B E&P capex. Why should the Comex care?"*
+A skeptical CEO or CFO will argue: *"At group scale, $2.5M/yr is a drop in the ocean compared to our $9.3B E&P capex. Why should the Comex care?"*
 1. **The Public Face of TotalEnergies (*Le Visage du Groupe*):** The 13,000 service stations are TotalEnergies' primary daily physical touchpoint with millions of citizens. Highway stations are the brand flagship. A modern, AI-optimized store with zero food waste strengthens corporate brand equity.
 2. **Concession Renewal Mandate (ESG & Anti-Waste Compliance):** Motorway concession tenders (APRR, VINCI, SANEF) in France increasingly evaluate environmental performance, circularity, and food waste reduction. A certified 15% reduction in food waste provides a tangible competitive advantage during multi-million-euro highway station concession renewals.
 3. **The Agile Execution Flywheel Proof:** Delivering a visible operational win to frontline station managers within 6 months proves that Agile Delivery Trios work, creating the organizational credibility required to deploy complex engineering solutions in refining (P01) and offshore drilling (P03).
