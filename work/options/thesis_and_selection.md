@@ -43,13 +43,13 @@ This document establishes the **core transformation thesis** for TotalEnergies a
 | **Case 1** | **P01** | **Refining Predictive Maintenance** | Refining & Chemicals | **H1** | $4.83M | $15.0M/yr ($6–24M) | **$55.0M** | Peer-benchmarked industrial cornerstone (Equinor $20M/yr cross-check, `CLM-037` `[Fact]`); builds directly on active AspenTech Inmation rollout (`CLM-018` `[Fact]`). |
 | **Case 2** | **P03** | **Deepwater Drilling & Well Planning** | Exploration & Production | **H2** | $3.26M | $35.0M/yr ($20–60M) | **$96.5M** | Re-scoped to 8–12 operated deepwater rigs in Brazil/Angola (`URD 2025`, pp. 38, 89 `[Fact]`); high-margin process innovation reducing rig time by 2–4% on $9.26bn E&P capex (`CLM-004` `[Fact]`). |
 | **Case 3** | **P11** | **Virtual Power Plant (VPP)** | Integrated Power | **H3** | $2.46M | $60.0M/yr ($30–90M) | **$98.0M** *(Option Potential)* | Transformational aggregator business model monetizing flexibility across 2–4 GW of customer assets toward 100 TWh target (`CLM-009` `[Fact]`); governed via learning gates (Rule 7). |
-| **Case 4** | **P13** | **Retail Store Demand & Loss Optimization** | Marketing & Services | **H1** | $1.95M | $18.0M/yr ($8–28M) | **$70.5M** | Fast payback retail quick win; eliminates downstream blind spot across ~13,000 stations (`SRC-002`, p. 13 `[Fact]`); cuts perishables waste by 15–25% with dynamic pricing (`CLM-074` `[Local observation]`). |
+| **Case 4** | **P13** | **Retail Store Demand & Loss Optimization** | Marketing & Services | **H1** | $3.90M | $2.50M/yr ($1.8–3.5M) | **$9.50M** | Fast payback retail quick win; eliminates downstream blind spot across ~180 Argedis COCO motorway stations (`CLM-074` `[Local observation]`); cuts perishables waste by 15–20% with dynamic markdowns; justified as brand flagship. |
 | **Enabler** | **E01** | **AI Value Register & Portfolio Office** | Corporate Governance | **Enabler** | $1.64M | $5.5M/yr ($3–8M) | **$18.5M** | Comex control dashboard enforcing stage-gate kill criteria and verified P&L cash-flow realization; funded jointly across the 4 use cases. |
 
 *Note on Value Accounting & Ramp Logic (AGENTS.md Rule 7)*:
-- **Committed Operational Cash Flows (H1/H2: Cases 1, 2, 4 + E01)**: **$240.5M** cumulative over 5 years `[Calculation on assumed inputs]` based on a standard industrial ramp (H1: 25% Y1, 75% Y2, 100% Y3–Y5; H2: 0% Y1, 25% Y2, 60% Y3, 100% Y4–Y5).
+- **Committed Operational Cash Flows (H1/H2: Cases 1, 2, 4 + E01)**: **$179.5M** cumulative over 5 years `[Calculation on assumed inputs]` based on a standard industrial ramp (H1: 20–25% Y1, 60–75% Y2, 100% Y3–Y5; H2: 0% Y1, 25% Y2, 60% Y3, 100% Y4–Y5).
 - **H3 Commercial Option Potential (Case 3: P11)**: **$98.0M** over Years 4–5 `[Assumption / Option Value]`, strictly contingent on passing the Month 18 learning gate. It is tracked as strategic option value, not banked as guaranteed short-term cash.
-- **Envelope Sizing**: The 4 featured cases + Enabler E01 represent an initial **3-year investment envelope of $14.14M** `[Calculation]`. The remaining 9 candidates (**$22.70M** cost, `[Calculation]`) are preserved in the long list (Step 16) as secondary expansion waves unlocked as early stage-gates clear.
+- **Envelope Sizing**: The 4 featured cases + Enabler E01 represent an initial **3-year investment envelope of $16.09M** `[Calculation]`. The remaining 9 candidates (**$22.70M** cost, `[Calculation]`) are preserved in the long list (Step 16) as secondary expansion waves unlocked as early stage-gates clear. Total candidate pool = **$38.79M** `[Calculation]`.
 
 ---
 
@@ -158,7 +158,7 @@ $$\text{Agile Delivery Trios} \implies \text{Faster Delivery Velocity} + \text{H
 - **Why Selected:**
   1. *Frontline Grounding:* Directly addresses the operational reality witnessed by Vincent Lamy at Argedis (`CLM-074`).
   2. *Rapid Time-to-Value:* Delivers first cash flow in **4 to 8 months** (the fastest cash-flow engine in the entire portfolio).
-  3. *Economics:* $1.95M 3-yr cost; delivers **$18.0M/yr** (range $8–28M/yr) from 15–25% food waste reduction and non-fuel dynamic pricing.
+  3. *Economics:* $3.90M 3-yr cost; delivers **$2.50M/yr** (range $1.8–3.5M/yr) from 15–20% food waste reduction and dynamic markdowns across ~180 Argedis COCO motorway stations. Payback in 2.9 years, NPV +$2.73M @ 10% hurdle. Justified by brand roadside equity and ESG concession compliance.
 
 ---
 
@@ -184,10 +184,10 @@ The remaining 9 candidate initiatives from `work/projects/long_list.md` are not 
 
 During the oral defense, Patrick Pouyanné and the Comex will challenge this selection. We anticipate the four primary attacks:
 
-### CEO Objection 1: "Why only $14.1M on these 4 projects? Mistral alone is > €100M. Is this ambitious enough for TotalEnergies?"
+### CEO Objection 1: "Why only $16.1M on these 4 projects? Mistral alone is > €100M. Is this ambitious enough for TotalEnergies?"
 - **The Defense:**
   - *"Monsieur le Président, Mistral is a centralized technology R&D partnership. Our program is an **operational execution engine** that deploys AI directly into your operating assets (refineries, deepwater rigs, power networks, and retail stations)."*
-  - *"By ring-fencing $14.1M across 4 high-impact projects, we self-finance the entire transformation: Case 1 (Refining) and Case 4 (Retail) generate $33M/yr within 9 months, paying back the entire program envelope in year one. Once the Agile Trios prove delivery velocity, the remaining 9 projects ($22.70M) are funded out of generated cash."*
+  - *"By ring-fencing $16.09M across 4 high-impact projects, we self-finance the entire transformation: Case 1 (Refining) and Case 4 (Retail) generate initial cash within 9 months, paying back their initial commitments rapidly. Once the Agile Trios prove delivery velocity, the remaining 9 projects ($22.70M) are funded out of generated cash."*
   - *Anti-Double Counting Check:* Enabler E01 establishes a formal counterfactual baseline audit co-signed with Group Finance, ensuring that AI-driven savings are strictly incremental and isolated from non-AI contract renegotiations in the $12.5bn plan (`CLM-007` `[Fact]`).
 
 ### CEO Objection 2: "Your P03 drilling project was claiming $115M/yr on 4 fields. Are you hallucinating numbers?"
