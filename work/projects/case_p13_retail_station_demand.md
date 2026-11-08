@@ -20,9 +20,15 @@
 ### 1.1 The Business Problem
 TotalEnergies operates one of the world's largest branded mobility and retail networks, with **12,775 service stations worldwide at year-end 2025** (`Factbook 2025`, p. 145 `[Fact]`; `URD 2025`, p. 13 `[Fact]`), including **5,679 stations across Europe** and **3,256 stations in France** (`Factbook 2025`, p. 145 `[Fact]`). 
 
-Within France, the high-traffic motorway and expressway service stations (~800 company-owned sites) are operated by TotalEnergies' specialized downstream retail subsidiary, **Argedis** (`CLM-074` `[Local observation]`). On highway corridors, service stations are not merely fuel stops; they operate major food & beverage (F&B) and convenience store retail franchises (*Bonjour*, *Carrefour Express*, *Starbucks*, *Paul*). 
+#### Retail Operating Typology & Scope Discipline: COCO vs CODO / DODO
+In service station network management, three operating models coexist:
+1. **COCO (Company-Owned, Company-Operated):** TotalEnergies owns the real estate assets AND directly manages the station, the shop, and the personnel through its specialized retail operating subsidiary, **Argedis**. TotalEnergies directly holds the store inventory and bears **100% of the inventory shrinkage, food waste, and spoilage risk on its own P&L**. In France, Argedis operates the motorway and high-traffic expressway COCO network, representing approximately **150 to 200 service stations** (`CLM-074` `[Local observation]`).
+2. **CODO (Company-Owned, Dealer-Operated):** TotalEnergies owns the site/pumps, but an independent dealer or commercial franchisee operates the convenience store. The dealer purchases and owns the store inventory at their own risk.
+3. **DODO (Dealer-Owned, Dealer-Operated):** An independent owner operates under the TotalEnergies brand license and fuel supply contract; TotalEnergies has zero involvement in store inventory.
 
-As directly observed on the ground (`CLM-074` `[Local observation]`), **convenience store replenishment and perishable inventory management are currently managed through static, manual min/max reorder rules**. Station managers manually adjust replenishment orders based on subjective intuition. This operational setup creates severe commercial dysfunction:
+*Operational Scope Boundary:* Because CODO and DODO dealers own their own inventory, **an in-house inventory replenishment AI can only capture direct P&L value where TotalEnergies directly owns the stock—specifically the COCO network operated by Argedis**. On motorway corridors, these ~180 Argedis COCO stations are large-format highway retail plazas operating major food & beverage (F&B) and convenience franchises (*Bonjour*, *Carrefour Express*, *Starbucks*, *Paul*).
+
+As directly observed on the ground (`CLM-074` `[Local observation]`), **convenience store replenishment and perishable inventory management in Argedis COCO stations are currently managed through static, manual min/max reorder rules**. Station managers manually adjust replenishment orders based on subjective intuition. This operational setup creates severe commercial dysfunction:
 1. **Perishable Shrinkage and Food Spoilage:** Highly perishable goods (sandwiches, fresh meals, dairy, bakery) suffer high write-off rates (spoilage) when weekend highway traffic drops due to bad weather or traffic disruptions.
 2. **Stock-Outs during Peak Demand:** During major holiday departures (*chassé-croisé des vacances*), static thresholds fail to anticipate traffic surges, leading to empty shelves on high-margin F&B categories during peak customer footfall.
 3. **Rigid Store Pricing:** Highway retail prices are inflexible; near-expiry items are discarded at 100% loss rather than sold via automated dynamic markdowns.
@@ -30,19 +36,18 @@ As directly observed on the ground (`CLM-074` `[Local observation]`), **convenie
 ### 1.2 Baseline Financial and Operational Metrics
 - **Network Footprint in Scope & Corporate Scope Boundary:**
   - *Divestment Reality (URD 2025, p. 125 [Fact]):* On December 28, 2023, TotalEnergies completed the sale of 100% of its service station network in Germany (~1,200 stations) to Alimentation Couche-Tard, and on January 3, 2024, sold 100% of its network in the Netherlands (~380 stations), while placing Belgian and Luxembourg networks into a 60/40 JV operated by Couche-Tard (`URD 2025`, p. 125 `[Fact]`). Couche-Tard operates those convenience stores under its own proprietary IT and supply chain systems. TotalEnergies does **not** operate retail convenience stores in Germany or the Netherlands.
-  - *Phase 1 Pilot (Year 1):* French motorway and expressway network operated directly by TotalEnergies' specialized downstream retail subsidiary, **Argedis (~800 company-operated stations)** (`CLM-074` `[Local observation]`, count estimated `[Assumption]`).
-  - *Phase 2 Rollout (Years 2–3):* Expansion across TotalEnergies' **wholly-owned and company-operated flagship service stations in France (~1,500 company-operated stores total** out of 3,256 French branded stations, `Factbook 2025`, p. 145 `[Fact]`; `URD 2025`, p. 13 `[Fact]`), plus operated flagship European corridor sites where TotalEnergies retains company retail operations.
+  - *Phase 1 Pilot (Year 1):* The core **~100 flagship motorway COCO stations operated by Argedis** in France (`CLM-074` `[Local observation]`).
+  - *Phase 2 Rollout (Years 2–3):* Expansion across the complete **~180 Argedis COCO motorway and expressway network in France**, plus select high-volume company-operated urban flagship stations (~250 COCO stores total).
 - **Revenue Baseline:**
-  - Average non-fuel shop revenue per company-operated highway/flagship station: **$1.20M/yr** `[Assumption]`.
-  - Non-fuel retail sales across Phase 1 scope (800 Argedis motorway stations): **$960M/yr** `[Calculation on assumed inputs]`.
-  - Non-fuel retail sales across full Phase 2 scope (1,500 French company-operated stores): **$1,800M/yr** `[Calculation on assumed inputs]`.
-  - Share of perishable food and short shelf-life items in store sales: ~25% = **$450M/yr** across Phase 2 (`[Assumption]`).
+  - Average non-fuel shop turnover per large motorway COCO station: **$1.50M/yr** `[Assumption]` (high-traffic highway plazas with fresh food and bakery franchises).
+  - Non-fuel retail sales across Phase 1 scope (100 pilot Argedis stations): **$150M/yr** `[Calculation on assumed inputs]`.
+  - Non-fuel retail sales across full Argedis COCO network (180 stations): **$270M/yr** `[Calculation on assumed inputs]`.
+  - Share of perishable food and short shelf-life items in store sales: ~25% = **$67.5M/yr** `[Assumption]`.
 - **Loss / Shrinkage Baseline:**
   - Current food and perishable write-off rate (spoilage, obsolescence, damage): **4.5% of perishable sales** `[Assumption]`.
-  - Annual perishable food write-off cost in Phase 1 scope (Argedis): **$10.8M/yr** ($240M × 4.5%) `[Calculation on assumed inputs]`.
-  - Annual perishable food write-off cost in full Phase 2 scope (1,500 stores): **$20.25M/yr** ($450M × 4.5%) `[Calculation on assumed inputs]`.
+  - Annual perishable food write-off cost borne directly on Argedis COCO P&L: **$3.04M/yr** ($67.5M × 4.5%) `[Calculation on assumed inputs]`.
 - **Branch Capital Base:**
-  - Marketing & Services Net Investments: **$609M in 2025** (`Factbook 2025`, p. 26 `[Fact]`). P13's 3-year cost ($1.95M) represents less than 0.3% of annual branch capex.
+  - Marketing & Services Net Investments: **$609M in 2025** (`Factbook 2025`, p. 26 `[Fact]`). P13's 3-year cost ($3.90M) represents approximately 0.6% of annual branch capex.
 
 ---
 
@@ -168,14 +173,14 @@ $$\text{Total Annual Value} = \Delta \text{Value}_{\text{shrinkage}} + \Delta \t
 
 1. **Lever 1: Food & Perishable Spoilage Reduction ($\Delta \text{Value}_{\text{shrinkage}}$):**
    $$\Delta \text{Value}_{\text{shrinkage}} = N_{\text{stations}} \times \text{Sales}_{\text{perishables}} \times \text{Rate}_{\text{spoilage}} \times \text{Reduction}_{\text{AI}}$$
-   - Across ~1,500 French company-operated stores (including ~800 Argedis highway sites, `CLM-074`):
-     $$\Delta \text{Value}_{\text{shrinkage}} = 1,500 \times \$300,000 \times 4.0\% \times 8.3\% \approx \mathbf{\$1.50M/yr} \quad (\text{conservative range: } \$1.0\text{M} – \$2.2\text{M/yr})$$
+   - Across the core **~180 Argedis COCO motorway and expressway stations** in France (`CLM-074` `[Local observation]`), expanding to flagship company-operated stores (~250 COCO stores total):
+     $$\Delta \text{Value}_{\text{shrinkage}} = 180 \times \$375,000 \times 4.5\% \times 20.0\% \approx \mathbf{\$0.61M/yr} \quad (\text{direct food spoilage reduction; up to } \mathbf{\$0.85M/yr} \text{ across 250 COCO stores})$$
 2. **Lever 2: Emergency Logistics Delivery Avoidance & Peak Stock-Out Recapture ($\Delta \text{Value}_{\text{logistics}}$):**
-   Eliminating emergency rush deliveries from central bakeries on holiday weekends and capturing unfulfilled demand during high-traffic surges:
-   $$\Delta \text{Value}_{\text{logistics}} = \mathbf{\$0.50M/yr} \quad (\text{conservative range: } \$0.4\text{M} – \$0.8\text{M/yr})$$
+   Eliminating emergency rush deliveries from central bakeries on holiday weekends and capturing unfulfilled demand during high-traffic holiday departure surges (*chassé-croisé*):
+   $$\Delta \text{Value}_{\text{logistics}} = \mathbf{\$0.85M/yr} \quad (\text{conservative range: } \$0.5\text{M} – \$1.2\text{M/yr})$$
 3. **Lever 3: Dynamic Expiry Markdowns ($\Delta \text{Value}_{\text{markdown}}$):**
    Automated short-dated price reductions (-30% at 12 hours, -50% at 4 hours prior to expiry) on near-expiration fresh food, recovering food cost that would otherwise be discarded at 100% loss:
-   $$\Delta \text{Value}_{\text{markdown}} = \mathbf{\$0.50M/yr} \quad (\text{conservative range: } \$0.4\text{M} – \$0.8\text{M/yr})$$
+   $$\Delta \text{Value}_{\text{markdown}} = \mathbf{\$0.80M/yr} \quad (\text{conservative range: } \$0.5\text{M} – \$1.2\text{M/yr})$$
 4. **Total Steady-State Annual Run-Rate:** **$2.50M/yr** (Conservative range: $1.8M – $3.5M/yr) `[Calculation on assumed inputs]`.
 
 ---
