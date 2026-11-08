@@ -1,26 +1,21 @@
-# ai-transformations-navy
+# AI Transformation Strategies — TotalEnergies
 
-Group project for the **AI Transformation Strategies** course (M2, Albert School): an AI strategy for **TotalEnergies**.
+Group project (Albert School, M2): Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, and Nahel Bachriri. Oral defense on **16 November 2026**: a 15-minute pitch and 5-minute Q&A with the professor acting as CEO. The team's submission deadline is the **evening of 10 November**.
 
-## The project
+## Start here
 
-Team 4: Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine and Nahel Bachriri.
+1. [Course guidelines](course/guidelines.md) for the professor's requirements.
+2. [Project roadmap](work/roadmap.md) for steps, dependencies, and acceptance criteria.
+3. [Agent instructions](AGENTS.md) and [repository conventions](.agents/README.md) before contributing.
 
-On 16 Nov 2026 we pitch our AI strategy for TotalEnergies in 20 minutes (15 min pitch + 5 min Q&A), with the professor playing the CEO. The pitch covers:
+## Repository layout
 
-- a readiness assessment that names the bottleneck
-- an operating-model recommendation
-- a one-page portfolio plan
-- a financial analysis: investment, return, worst/base/best scenarios and the cost of doing nothing
-- a change-management approach
-
-The rules and the teacher's advice are in [docs/project/guidelines.md](docs/project/guidelines.md).
-
-## Repo layout
-
-| Folder | Contents |
+| Directory | Purpose |
 | --- | --- |
-| [docs/project/](docs/project/) | Oral project guidelines |
-| [docs/lectures/](docs/lectures/) | Course slides |
-| [docs/notes/](docs/notes/) | Our course notes |
-| [docs/exam/](docs/exam/) | One cheat sheet per session for the written exam (2 Nov 2026) |
+| [`course/`](course/) | Course PDFs, guidelines, exam notes, and [Vincent's reformulated notes](course/notes/vincent.md). |
+| [`sources/`](sources/) | Original documents, benchmarks, factual syntheses, and the [source register](sources/register.md). |
+| [`work/`](work/) | Research, options, projects, financial models, and work in progress. |
+| [`deliverables/`](deliverables/) | Report, memo, slides, and archived submitted versions. |
+| [`.agents/`](.agents/) | Conventions, templates, and external research prompts. |
+
+The [historical master plan](work/legacy_plan_unverified.md) contains unverified hypotheses. It is neither an approved strategy nor a source.

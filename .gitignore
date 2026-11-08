@@ -2,6 +2,7 @@
 docs/exam/practice_mcq_1_aw.md
 
 # Byte-compiled / optimized / DLL files
+tmp/
 __pycache__/
 *.py[codz]
 *$py.class
