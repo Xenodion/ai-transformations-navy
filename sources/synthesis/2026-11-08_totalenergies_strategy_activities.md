@@ -4,7 +4,7 @@
 - Scope (business, country, period): TotalEnergies group, all segments and geographies. FY2025 actuals, Q3 and 9M 2026 actuals, and stated targets to 2030.
 - Reviewer: Alexandre Waerniers, with Claude Code. Roadmap step 04, issue [#4](https://github.com/Xenodion/ai-transformations-navy/issues/4).
 - Original documents read (IDs in [`sources/register.md`](../register.md)):
-  - SRC-002: TotalEnergies, *Universal Registration Document 2025* (English translation), filed with the AMF on 27 March 2026. PDF pages 6, 13, 15, 29, 37, 39–43, 49–50, 74, 136, 138 read directly.
+  - SRC-002: TotalEnergies, *Universal Registration Document 2025* (English translation), filed with the AMF on 27 March 2026. PDF pages 6, 13, 15, 29, 37, 39–44, 49–50, 74–77, 136, 138, 474 read directly.
   - SRC-003: TotalEnergies press release, *Fourth quarter and full year 2025 results*, 11 February 2026. PDF pages 1–2, 4–6, 8–9, 13–14 read directly.
   - SRC-004: TotalEnergies press release, *2025 Strategy and Outlook Presentation*, 29 September 2025. SEC copy (Form 6-K, EX-99.17), read in full.
   - SRC-005: TotalEnergies press release, *Third quarter 2026 results*, 29 October 2026. SEC copy (Form 6-K, EX-99.9); sections 1–9 read verbatim.
@@ -24,13 +24,26 @@ Page numbers are PDF pages. For SRC-002, the PDF page number matches the printed
 | Workforce | 101,513 employees at 31 Dec 2025; nearly 170 nationalities | SRC-002, p. 6 | Group headcount. |
 | Workforce by area | France 34.9%, rest of Europe 27.3%, rest of the world 37.8% | SRC-002, p. 6 (chart) | Read from chart labels. The assignment of each % to its label was checked only by the sum (100%). |
 | Payroll and training | $10.0bn payroll (incl. social charges); close to €220M for training | SRC-002, p. 6 | Page 13 says "more than €210 million" for training: small inconsistency within the document. |
-| Sales | $201bn | SRC-002, p. 13 (infographic, "data as of Dec 31, 2025") | Infographic figure; audited income statement (chapter 8) not checked. |
+| Sales | $201bn ($201,196M external sales) | SRC-002, p. 13 (infographic); p. 474 (note 4, audited) | FY2025; 2024: $214,550M. |
 | Hydrocarbon production | 2,529 kboe/d in 2025 (2,434 in 2024; up nearly 4%) | SRC-003, p. 6; SRC-002, p. 74 | E&P + Integrated LNG production. |
 | Proved reserves, production cost | 11.2 Gboe proved reserves; production costs $5.0/boe (ASC 932) in 2025; reserve life > 12 years | SRC-002, p. 74 | SEC rules, Brent reference $69.51/b. |
 | LNG position | 43.9 Mt LNG sold in 2025, including 15.1 Mt from equity production; "3rd largest LNG player worldwide" | SRC-002, p. 13; SRC-003, p. 8 | Ranking is the company's own claim. |
 | Power | 48.1 TWh net power production in 2025 (31.4 TWh renewables, 16.7 TWh flexible gas); 34.1 GW gross installed renewable capacity at end-2025 (+31%) | SRC-003, p. 9 | Gross capacity includes shares of Adani Green, Clearway and Casa dos Ventos. |
 | Customers (power & gas) | 6.0 million power clients; 2.7 million gas clients (B2B and B2C), end-2025 | SRC-003, p. 9 | Client sites, not unique customers. |
 | Downstream assets | 14 refineries (incl. 1 biorefinery); 26 petrochemical sites incl. 6 integrated platforms; close to 13,000 service stations in about 60 countries; close to 90,000 EV charging points | SRC-002, p. 13 | Page 122 gives "almost 12,800 service stations" for Marketing & Services. |
+
+### 1b. Geographic breakdown
+
+| Claim | Value, unit, and period | Exact source | Scope and limits |
+| --- | --- | --- | --- |
+| External sales by area | France $45,866M; rest of Europe $90,558M; North America $14,463M; Africa $20,012M; rest of the world $30,297M; total $201,196M | SRC-002, p. 474 (consolidated financial statements, note 4) | FY2025, audited; by customer location. 2024 total $214,550M. Europe is 68% of sales: (45,866 + 90,558) / 201,196 (calculation). |
+| Fixed assets by area | Property, plant and equipment and intangibles, net: France $17,960M; rest of Europe $27,094M; North America $11,827M; Africa $38,731M; rest of the world $56,427M; total $152,039M | SRC-002, p. 474 | At 31 Dec 2025. Africa and the rest of the world hold 63% of fixed assets (calculation). |
+| Hydrocarbon production by zone | Africa (excl. North Africa) 431; Americas 449; Asia-Pacific 260; Europe 538; Middle East & North Africa 851 kboe/d; total 2,529 | SRC-002, p. 74 | FY2025. "Europe" includes Azerbaijan, Norway, Denmark, the UK, the Netherlands, Italy and Russia (p. 77). Middle East & North Africa is 34% of production (calculation), the area hit by the 2026 shut-ins. |
+| Proved reserves by zone | Africa (excl. North Africa) 1,806; Americas 1,918; Asia-Pacific 1,146; Europe 1,347; Middle East & North Africa 5,001 Mboe; total 11,218 | SRC-002, pp. 75–76 | At 31 Dec 2025, SEC rules. Middle East & North Africa is 45% of reserves (calculation): mainly the UAE, Qatar, Yemen, Iraq, Libya, Oman and Algeria. |
+| Refining and petrochemical hubs | Six integrated complexes: Port Arthur (US), Normandy and Antwerp (Europe), Jubail and Qatar (Middle East), Daesan (South Korea) | SRC-002, p. 43 | Antwerp is the largest in Europe. |
+| Long-standing core regions | "Europe, the Company's decision-making center; the Middle East … ; and Africa" | SRC-002, p. 44 | Company framing. |
+
+All four tables above add up exactly to their printed totals; that check confirmed the column alignment in the text extraction.
 
 ### 2. Economic baseline
 
@@ -91,8 +104,8 @@ Page numbers are PDF pages. For SRC-002, the PDF page number matches the printed
 - **Unknowns:**
   - The levers behind the $12.5bn savings plan: how much is opex, and whether digital or AI contributes.
   - Any AI-specific budget.
-  - Production and employees by segment.
-  - Audited 2025 revenue (only the $201bn infographic figure was checked).
+  - Employees by segment.
+  - Electricity production and renewable capacity by region (not extracted).
   - The 2026 sensitivity table (SRC-003, p. 13). Its layout is scrambled in text extraction, so it is not used.
 - **Conclusions the sources do not support:** none of these documents establishes TotalEnergies' AI maturity, a performance gap versus competitors, or the value of any AI use case.
 

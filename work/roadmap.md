@@ -1,6 +1,6 @@
 # Project brief and delivery roadmap — TotalEnergies
 
-**Updated:** 7 November 2026
+**Updated:** 8 November 2026
 **Team:** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
 **Submission deadline:** evening of 10 November 2026, Paris time
 **Oral defense:** 16 November 2026, 15-minute pitch and 5-minute Q&A
@@ -35,8 +35,8 @@ Each numbered step maps to one GitHub issue. `D` means dependency; `P` lists wor
 | [x] | **01 — Confirm course expectations and required outputs** · `scope` · [#1](https://github.com/Xenodion/ai-transformations-navy/issues/1) | Initial review | 7 Nov | Start | Separate explicit course requirements from team decisions; document pitch, memo, detailed plan, portfolio, finance, and defense criteria. |
 | [x] | **02 — Approve this roadmap and create GitHub issues** · `planning` · [#2](https://github.com/Xenodion/ai-transformations-navy/issues/2) | Project coordination | 7 Nov | D: 01 | Review the breakdown; create one English issue per step with owner, dependencies, output, tasks, acceptance criterion, label, and roadmap backlink. |
 | [x] | **03 — Establish the evidence register** · `report` · [#3](https://github.com/Xenodion/ai-transformations-navy/issues/3) | Project coordination | 8 Nov AM | D: 02; P: 04–06 | Define fact/calculation/assumption/local observation/unknown; capture source, date, scope, formula, and limitation. |
-| [ ] | **04 — Research TotalEnergies' strategy and activities** · `report` · [#4](https://github.com/Xenodion/ai-transformations-navy/issues/4) | Unassigned (`needs-owner`) | 8 Nov AM | D: 02; P: 03, 05–06 | Summarize businesses, priorities, economic metrics, geographies, and constraints from primary documents. |
-| [ ] | **05 — Research existing AI, data, and organization** · `report` · [#5](https://github.com/Xenodion/ai-transformations-navy/issues/5) | Unassigned (`needs-owner`) | 8 Nov AM | D: 02; P: 03–04, 06 | Inventory existing group and subsidiary capabilities, deployment evidence, governance, results, and unknowns. |
+| [x] | **04 — Research TotalEnergies' strategy and activities** · `report` · [#4](https://github.com/Xenodion/ai-transformations-navy/issues/4) | Alexandre Waerniers (`Xenodion`) | 8 Nov AM | D: 02; P: 03, 05–06 | Summarize businesses, priorities, economic metrics, geographies, and constraints from primary documents. |
+| [x] | **05 — Research existing AI, data, and organization** · `report` · [#5](https://github.com/Xenodion/ai-transformations-navy/issues/5) | Alexandre Waerniers (`Xenodion`) | 8 Nov AM | D: 02; P: 03–04, 06 | Inventory existing group and subsidiary capabilities, deployment evidence, governance, results, and unknowns. |
 | [ ] | **06 — Research competitors and sector benchmarks** · `report` · [#6](https://github.com/Xenodion/ai-transformations-navy/issues/6) | Unassigned (`needs-owner`) | 8 Nov AM | D: 02; P: 03–05 | Compare Shell, BP, Equinor, and relevant benchmarks with dates and comparable scopes; separate announcements from measured results. |
 | [ ] | **07 — Audit the historical draft** · `report` · [#7](https://github.com/Xenodion/ai-transformations-navy/issues/7) | Unassigned (`needs-owner`) | 8 Nov AM | D: 03–06 | Classify reusable claims and numbers as verified, to recalculate, assumption, unsupported, or discarded; flag portfolio and financial inconsistencies. |
 | [ ] | **08 — Build a long list of about ten candidate projects** · `report` · [#8](https://github.com/Xenodion/ai-transformations-navy/issues/8) | Unassigned (`needs-owner`) | 8 Nov noon | D: 04–07 | Record business problem, existing capability, provisional horizon, indicative value/cost/time, uncertainty, and rejected ideas. |
@@ -68,4 +68,4 @@ Issues 12–15 cover: (1) problem, scope, baseline; (2) why AI and non-AI altern
 
 ## Issue tracking
 
-All 27 numbered issues have been created and linked. Team ownership for steps 04–27 is still unassigned and marked `needs-owner`; record agreed assignments in both this table and the matching issues, then remove that label. Use the output labels above, plus `research`, `finance`, or `project` when helpful. External AI tools may generate bounded research leads; read and verify the underlying sources. Keep issue status, owner, scope, dependencies, and outputs synchronized with this roadmap in both directions.
+All 27 numbered issues have been created and linked. Steps 04–05 are owned by Alexandre Waerniers; ownership for steps 06–27 is still unassigned and marked `needs-owner`. Record agreed assignments in both this table and the matching issues, then remove that label. Use the output labels above, plus `research`, `finance`, or `project` when helpful. External AI tools may generate bounded research leads; read and verify the underlying sources. Keep issue status, owner, scope, dependencies, and outputs synchronized with this roadmap in both directions.
