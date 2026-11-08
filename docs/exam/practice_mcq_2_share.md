@@ -11,7 +11,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Scaling
 - D) Realizing
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -22,7 +22,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) 96%
 - D) 100%
 
-**Your answer:** 
+**Your answer:** A
 
 ---
 
@@ -33,7 +33,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Infrastructure
 - D) Culture
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
@@ -44,7 +44,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) To comply with the EU AI Act
 - D) To end data silos: data as the foundation
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -55,7 +55,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Healthcare
 - D) Manufacturing
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -66,7 +66,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Organization and culture
 - D) AI governance
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 ## Session 2: Operating model and portfolio
@@ -78,7 +78,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) 4
 - D) 20
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -89,7 +89,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) The strongest risk control
 - D) A single central team becoming a bottleneck
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -100,7 +100,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) H1, if it uses proven tech
 - D) H3
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
@@ -111,7 +111,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) 70-20-10
 - D) 90-10-0
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -122,7 +122,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Blend
 - D) Outsource entirely
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -133,7 +133,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) €20M or 4% of global turnover
 - D) A flat €1M
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 ## Session 3: Investment allocation
@@ -145,7 +145,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Go, as long as ROI is positive
 - D) No go: below the hurdle, and NPV < 0
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
@@ -156,7 +156,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) NPV
 - D) Payback
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -167,7 +167,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) +€4M
 - D) −€6M
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -178,7 +178,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) +€6M
 - D) +€8M
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
@@ -189,7 +189,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Governance
 - D) Model ops alone
 
-**Your answer:** 
+**Your answer:** A
 
 ---
 
@@ -200,7 +200,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Ignoring run costs
 - D) Using WACC alone
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -211,7 +211,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) €2M
 - D) €32M
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -222,7 +222,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Democratise → Test → Scale
 - D) Build → Run → Kill
 
-**Your answer:** 
+**Your answer:** A
 
 ---
 
@@ -233,7 +233,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) 0 / 100
 - D) 60 / 40
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 ## Session 4: Change management and the board
@@ -245,7 +245,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Awareness
 - D) Reinforcement
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
@@ -256,7 +256,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) Desire
 - D) Knowledge
 
-**Your answer:** 
+**Your answer:** B
 
 ---
 
@@ -267,7 +267,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) The resistant third
 - D) The Comex
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -278,7 +278,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) The Comex and top leaders
 - D) HR only
 
-**Your answer:** 
+**Your answer:** C
 
 ---
 
@@ -289,7 +289,7 @@ One correct answer per question. Type your letter after **Your answer:**, save, 
 - C) General Counsel + CHRO
 - D) BU heads + HR
 
-**Your answer:** 
+**Your answer:** D
 
 ---
 
