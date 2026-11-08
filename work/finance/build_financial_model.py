@@ -340,17 +340,17 @@ create_project_sheet(
     branch="Marketing & Services",
     horizon="H1 (Core Optimization / Brand Flagship)",
     hurdle_ref="Variables!C10",  # M&S hurdle 10%
-    capex_y0=0.35,
-    opex_y1=0.30,
-    opex_y2=0.65,
-    opex_y3=0.50,
-    opex_post=0.25,
-    val_y1=1.125,
-    val_y2=3.375,
-    val_y3=4.500,
-    val_y4=4.500,
-    val_y5=4.500,
-    strategic_note="Calibrated conservative ('au ras des pâquerettes'): 1,500 French company-operated stores (incl. Argedis, CLM-074). Spoilage cut $2.5M, markdowns $1M, logistics $1M. Clears 10% hurdle modestly (IRR ~17%); justified by brand reputation and ESG."
+    capex_y0=1.20,
+    opex_y1=0.95,
+    opex_y2=0.95,
+    opex_y3=0.80,
+    opex_post=0.50,
+    val_y1=0.50,
+    val_y2=1.50,
+    val_y3=2.50,
+    val_y4=2.50,
+    val_y5=2.50,
+    strategic_note="Calibrated strictly 'au ras des pâquerettes': Total 3-yr investment $3.90M ($1.20M CAPEX for 1,500 store tablets + POS connectors; $2.70M OPEX for squad & field onboarding). Steady value $2.50M/yr. Modest standalone return (NPV +$2.73M @ 10%, Payback 2.9 yrs); justified as the public face of TotalEnergies and ESG food waste reduction for highway concessions."
 )
 
 

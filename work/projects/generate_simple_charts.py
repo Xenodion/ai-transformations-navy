@@ -74,13 +74,13 @@ LABEL_SIDE = {
     "P05": "left",
     "P06": "top",
     "P07": "right",
-    "P08": "bottom",
+    "P08": "left",
     "P09": "right",
     "P10": "right",
     "P11": "top",
     "P12": "bottom",
-    "P13": "left",
-    "E01": "right",
+    "P13": "bottom",
+    "E01": "left",
 }
 
 mpl.rcParams.update({
@@ -109,7 +109,7 @@ def load_projects() -> pd.DataFrame:
     records = []
     for pid, cells in summary.items():
         horizon = re.match(r"H[123]|Enabler", cells[3])
-        value = re.match(r"(\d+)–(\d+)", cells[4])
+        value = re.match(r"(\d+(?:\.\d+)?)–(\d+(?:\.\d+)?)", cells[4])
         first_value = re.match(r"(\d+)–(\d+) months", cells[6])
         if horizon is None or first_value is None:
             raise ValueError(f"{pid}: cannot parse horizon or first value in long_list.md")
@@ -180,9 +180,9 @@ def _swatch(label: str, color: str, size: float = 11) -> Line2D:
 def bubble_chart(df: pd.DataFrame) -> Figure:
     """Plot value at scale against time to first value on one pair of axes."""
     fig, ax = plt.subplots(figsize=(13.33, 7.5))
-    ticks = [5, 10, 20, 50, 100, 200]
+    ticks = [2, 5, 10, 20, 50, 100, 200]
     ax.set_yscale("log")
-    ax.set_ylim(3.5, 180)
+    ax.set_ylim(1.6, 180)
     ax.set_xlim(0, 42)
     ax.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
 
