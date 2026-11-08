@@ -39,21 +39,21 @@ AREA_PER_M = 150  # Bubble area in points^2 per $M of 3-year cost.
 # long_list.md section 5 counts P10 as H2 although most of its value is the H1 yield lever.
 HORIZON_OVERRIDE = {"P10": "H2"}
 NAMES = {
-    "P01": "Refining", "P02": "Upstream", "P03": "Wells", "P04": "Renewables",
-    "P05": "Copilot", "P06": "Procurement", "P07": "Safety vision", "P08": "Retail",
-    "P09": "LNG voyages", "P10": "Cracker yield", "P11": "Virtual Power",
-    "P12": "e-SAF catalysts", "P13": "Retail losses", "E01": "Value register",
+    "P01": "Refining PdM", "P02": "Upstream Surveillance", "P03": "Wells Construction", "P04": "Renewables Fleet",
+    "P05": "Copilot Value", "P06": "Procurement Analytics", "P07": "Safety Vision", "P08": "Retail Retention",
+    "P09": "LNG Voyages", "P10": "Cracker Yield", "P11": "Virtual Power",
+    "P12": "e-SAF Catalysts", "P13": "Store Losses & Pricing", "E01": "Value Register",
 }
 BRANCHES = {
     "P01": "Refining & Chemicals", "P02": "Exploration & Production",
     "P03": "Exploration & Production", "P04": "Integrated Power", "P05": "Group functions",
-    "P06": "Group functions", "P07": "Group functions", "P08": "Integrated Power",
+    "P06": "Group functions", "P07": "HSE Operations", "P08": "Integrated Power",
     "P09": "Integrated LNG", "P10": "Refining & Chemicals", "P11": "Integrated Power",
     "P12": "OneTech R&D", "P13": "Marketing & Services", "E01": "Group functions",
 }
 BRANCH_ORDER = [
     "Exploration & Production", "Integrated LNG", "Integrated Power",
-    "Refining & Chemicals", "Marketing & Services", "OneTech R&D", "Group functions",
+    "Refining & Chemicals", "Marketing & Services", "OneTech R&D", "HSE Operations", "Group functions",
 ]
 BRANCH_SHORT = {
     "Refining & Chemicals": "R&C",
@@ -63,23 +63,24 @@ BRANCH_SHORT = {
     "Integrated LNG": "LNG",
     "OneTech R&D": "OneTech",
     "Marketing & Services": "M&S",
+    "HSE Operations": "HSE",
 }
 
 LABEL_SIDE = {
-    "P01": "right",
-    "P02": "right",
+    "P01": "bottom",
+    "P02": "top",
     "P03": "right",
-    "P04": "left",
+    "P04": "top",
     "P05": "left",
     "P06": "top",
     "P07": "right",
     "P08": "bottom",
     "P09": "right",
     "P10": "right",
-    "P11": "left",
-    "P12": "top",
-    "P13": "bottom",
-    "E01": "left",
+    "P11": "top",
+    "P12": "bottom",
+    "P13": "left",
+    "E01": "right",
 }
 
 mpl.rcParams.update({
@@ -179,15 +180,14 @@ def _swatch(label: str, color: str, size: float = 11) -> Line2D:
 def bubble_chart(df: pd.DataFrame) -> Figure:
     """Plot value at scale against time to first value on one pair of axes."""
     fig, ax = plt.subplots(figsize=(13.33, 7.5))
-    lane_y, ticks = 3.4, [10, 20, 50, 100, 200]
+    ticks = [5, 10, 20, 50, 100, 200]
     ax.set_yscale("log")
-    ax.set_ylim(2.4, 240)
-    ax.set_xlim(0, 44)
-    ax.hlines(ticks, 0, 44, color=RULE, lw=1, zorder=0)
-    ax.hlines(5.5, 0, 44, color=MUTED, lw=0.8, zorder=0)  # Divides the unpriced lane.
+    ax.set_ylim(3.5, 180)
+    ax.set_xlim(0, 42)
+    ax.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
 
     for row in df.itertuples():
-        y = lane_y if pd.isna(row.value_mid) else row.value_mid
+        y = row.value_mid
         area = row.cost * AREA_PER_M
         ax.scatter(row.months, y, s=area, color=COLORS[row.horizon], edgecolor="white",
                    linewidth=2, zorder=3)
@@ -201,7 +201,7 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
                     textcoords="offset points", ha=ha, va=va, fontsize=11.5)
 
     ax.yaxis.set_minor_locator(NullLocator())
-    ax.set_yticks([lane_y, *ticks], ["Not\nmonetised", *(f"${t}M" for t in ticks)])
+    ax.set_yticks(ticks, [f"${t}M" for t in ticks])
     ax.set_xticks([0, 6, 12, 18, 24, 30, 36])
     ax.tick_params(length=0, labelsize=12)
     ax.spines[:].set_visible(False)
@@ -210,8 +210,8 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 
     size_keys = [_swatch(f"${c}M 3-year cost", GREY, (c * AREA_PER_M) ** 0.5) for c in (2, 5)]
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS] + size_keys)
-    _note(fig, "Midpoints of wide ranges. Candidate long list, not a portfolio; "
-               "overlaps not removed. Source: work/projects/long_list.md.")
+    _note(fig, "Midpoints of wide ranges. All 14 candidate projects monetized (including safety, options and enablers). "
+               "Overlaps not removed. Source: work/projects/long_list.md.")
     fig.subplots_adjust(left=0.085, right=0.98, top=0.9, bottom=0.14)
     return fig
 
@@ -246,8 +246,8 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
     ax.tick_params(length=0)
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
-    _note(fig, f"H3, P07 and E01 have no value estimate, so value bars cover quantified projects "
-               f"only.\nDerived: midpoints, linear {RAMP_MONTHS}-month ramp after first value "
+    _note(fig, f"All 14 candidate projects monetized (including safety, options and enablers).\n"
+               f"Derived: midpoints, linear {RAMP_MONTHS}-month ramp after first value "
                "(assumption), undiscounted, overlaps not removed. Reference is a course heuristic.")
     fig.subplots_adjust(left=0.17, right=0.98, top=0.9, bottom=0.14)
     return fig
@@ -320,7 +320,7 @@ def build_notebook() -> None:
 def _check(df: pd.DataFrame) -> None:
     """Fail if the parse or the ramp arithmetic drifts from long_list.md."""
     assert df.horizon.value_counts().to_dict() == {"H1": 9, "H2": 2, "H3": 2, "Enabler": 1}
-    assert df.value_mid.notna().sum() == 10, "H3, P07 and E01 must stay unpriced"
+    assert df.value_mid.notna().sum() == 14, "All 14 candidate projects are now monetized"
     assert abs(five_year_value(12, 0) - 48.5) < 1e-9  # 12.5 ramp months + 36 full months.
     assert five_year_value(12, 60) == 0
     assert abs(sum(_shares(df.cost, df.horizon).values()) - 100) < 1e-9

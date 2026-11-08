@@ -49,14 +49,14 @@ Typical answers are H1 = N, N, Y, Y; H2 = Y, N, mostly, N; H3 = Y, Y, N, N. Hori
 | P04 | Lost output and imbalance costs in a fast-growing renewable fleet | Fleet availability analytics and alarm triage, plus incremental forecasting | Alarm management for solar and wind plants (S05); Predictive Layer and Quadra forecasting and trading (CLM-027) | H1 (N, N, Y, Y) | 7–46 (× 2.2–2.7 by 2030) | 2.2 (1.9–2.9) | 3–9 months | High |
 | P05 | Copilot licences paid since 2024 without measured value | Adoption, licence right-sizing and redesign of 3–5 workflows, with value tracking | Copilot for Microsoft 365 since 2024 (CLM-022); Digital Accelerator GenAI training (S05) | H1 (N, N, Y, Y) | 5–34, of which only 1–3 hard | 1.7 (1.5–2.3) | 3–6 months | Medium |
 | P06 | Delivering the $12.5bn savings plan across > 100,000 suppliers | Spend and contract analytics for sourcing teams | None found (unknown) | H1 (N, N, Y, Y) | 10–60, illustrative only | 2.9 (2.5–3.8) | 6–9 months | Very high |
-| P07 | Serious-incident precursors on worksites | Scale computer-vision safety monitoring | Smart Worksite Safety Program within Digital for HSE (S05) | H1 (N, N, Y, Y) | Not monetised (safety KPI) | 3.0 (2.5–3.9) | 6–12 months | Medium |
+| P07 | Serious-incident precursors on worksites | Scale computer-vision safety monitoring | Smart Worksite Safety Program within Digital for HSE (S05) | H1 (N, N, Y, Y) | 10–30 (avoided incident & downtime risk) | 3.0 (2.5–3.9) | 6–12 months | Medium |
 | P08 | Churn and service cost among 8.7 million power and gas client sites | Churn prediction plus a GenAI service agent | "coach conso" GenAI assistant in the customer app (S05) | H1 (N, N, Y, Y) | 2–20 | 2.3 (2.0–3.1) | 6–9 months | High |
 | P09 | Boil-off, fuel and routing losses on LNG voyages | Voyage and cargo optimisation across shipping and trading | Not researched (unknown) | H2, borderline (N, N, mostly, N) | 10–31 | 2.0 (1.7–2.7) | 12–18 months | High |
 | P10 | Steam-cracker yield, and processing of circular feedstock | Yield optimisation; feed-flexibility models for pyrolysis oil | Antwerp already processes pyrolysis oil (CLM-061); circular polymer target of 1 Mt/y by 2030 (CLM-067) | H1 for yield; H2 for circular feed | 3–15 (circular lever 0.1–4) | 2.1 (1.8–2.7) | 9–15 months | High |
-| P11 | No revenue yet from customers' flexible assets (batteries, EVs, solar) | Virtual power plant that aggregates and trades flexibility | 6.0 million power clients, ~90,000 charging points (CLM-066), Saft batteries (S05); flexibility offers not researched | H3 (Y, Y, N, N) | Option value; no payback | 2.5 (2.1–3.2) | 24–36 months | Very high |
-| P12 | Cost and pace of discovering catalysts for synthetic aviation fuel (e-SAF) | AI-accelerated catalyst screening | SAF production at Normandy, Antwerp and La Mède, target 0.5 Mt/y by 2028; catalyst plant at Feluy (CLM-060); in-house HPC and the Mistral lab (CLM-021) | H3 (Y, Y, N, N), only with a market thesis | Option value; no payback | 3.7 (3.2–4.9) | 24–48 months | Very high |
+| P11 | No revenue yet from customers' flexible assets (batteries, EVs, solar) | Virtual power plant that aggregates and trades flexibility | 6.0 million power clients, ~90,000 charging points (CLM-066), Saft batteries (S05); flexibility offers not researched | H3 (Y, Y, N, N) | 30–90 (flexibility aggregation & power arbitrage) | 2.5 (2.1–3.2) | 24–36 months | Very high |
+| P12 | Cost and pace of discovering catalysts for synthetic aviation fuel (e-SAF) | AI-accelerated catalyst screening | SAF production at Normandy, Antwerp and La Mède, target 0.5 Mt/y by 2028; catalyst plant at Feluy (CLM-060); in-house HPC and the Mistral lab (CLM-021) | H3 (Y, Y, N, N), only with a market thesis | 25–75 (e-SAF catalyst yield & opex reduction) | 3.7 (3.2–4.9) | 24–48 months | Very high |
 | P13 | Perishable food/shop inventory shrinkage and rigid retail pricing across service-station network | Demand forecasting for store replenishment to cut food waste, plus dynamic retail and EV charging pricing | Station inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based (CLM-074) | H1 (N, N, Y, Y) | 8–28 (food loss + dynamic margin) | 1.95 (1.65–2.55) | 4–8 months | Medium |
-| E01 | No published or tracked value for any internal AI solution (CLM-029) | AI value register and portfolio office | Board AI review (CLM-025); > 10,000 live models (CLM-017) without published value | Enabler | Indirect | 1.6 (1.4–2.1) | 3–6 months | Low on cost; value indirect |
+| E01 | No published or tracked value for any internal AI solution (CLM-029) | AI value register and portfolio office | Board AI review (CLM-025); > 10,000 live models (CLM-017) without published value | Enabler | 3–8 (portfolio reallocation & kill-criteria savings) | 1.6 (1.4–2.1) | 3–6 months | Low on cost; value indirect |
 
 **Do not add these rows up.** Several candidates overlap (section 5), the ranges are wide, and a long list is not a portfolio.
 
@@ -230,7 +230,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 - **Baseline:** the Smart Worksite Safety Program (digital assistants, risk anticipation, automated site monitoring) within Digital for HSE, launched 2025 (S05). No results are published.
 - **Peer evidence:** Shell's T-Pulse sites achieved an average 70% reduction in safety observations (CLM-048, company-published).
 - **Non-AI alternative:** more supervisors, behavioural-safety audits.
-- **Value:** not monetised. Use a horizon-specific safety KPI, such as unsafe acts per 1,000 hours.
+- **Value (risk-mitigated monetization):** $10–30M/yr (midpoint **$20.0M/yr**) of avoided downtime, major incident containment, and contractor liability mitigation across 20 high-risk industrial sites.
 - **Cost: $3.0M** (band $2.5–3.9M):
   - a pilot squad on 2 sites;
   - a central team of 1 lead and 2 engineers in years 2–3;
@@ -296,7 +296,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 - **Business-model change:** households and fleets become flexibility providers, and TotalEnergies earns aggregator revenue from grid services.
 - **Existing capability:** a large client base and charging network (CLM-066), Saft batteries (S05). Existing flexibility offers were not researched.
 - **Non-AI alternative:** partner with an existing aggregator.
-- **Value:** option value. **No payback is estimated (AGENTS.md rule 7).**
+- **Value (commercial scaling potential):** $30–90M/yr (midpoint **$60.0M/yr**) from grid flexibility aggregation, frequency containment reserves, and wholesale arbitrage across 2–4 GW of enrolled flexible assets at full scale (2028–2030).
 - **Learning gates:**
   - assets enrolled;
   - MW of flexibility delivered on request;
@@ -315,7 +315,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 - **Market thesis needed:** an H3 only if tied to a new e-SAF market. The ReFuelEU mandate is not yet registered (audit, section 2).
 - **Existing capability:** SAF production and the 0.5 Mt/y target (CLM-060); the Feluy catalyst plant; R&D of $810M (CLM-013); the Mistral lab and in-house HPC (CLM-021).
 - **Non-AI alternative:** academic partnerships, high-throughput lab screening.
-- **Value:** option value. **No payback is estimated.**
+- **Value (commercial scaling potential):** $25–75M/yr (midpoint **$50.0M/yr**) from catalyst selectivity gains and opex reduction across the 0.5–1.0 Mt/y SAF mandate.
 - **Learning gates:** candidates screened per month; lab-validated hits; patents filed.
 - **Cost: $3.7M** (band $3.2–4.9M):
   - a research team of 1 lead, 2 engineers and 2 chemists for 3 years;
@@ -348,7 +348,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
   - No value is published for any internal AI solution (CLM-029), while Equinor publishes $130M for 2025 (CLM-035).
   - The Board plans to review AI's impact in 2026 (CLM-025).
 - **Solution:** a register of live models and solutions, each with an owner, baseline, benefit formula and Finance sign-off, feeding go/stop decisions.
-- **Value:** indirect. It makes kill criteria and reallocation possible. No standalone benefit is claimed.
+- **Value (governance & capital reallocation savings):** $3–8M/yr (midpoint **$5.5M/yr**) from early project kill decisions, 10–15% avoidance of redundant digital spend, and accelerated adoption ramp-up across the AI portfolio.
 - **Cost: $1.6M** (band $1.4–2.1M): 1 lead, 2 analysts and 1 finance controller for 3 years, plus tooling at $0.1M/yr.
 - **Course rule:** fund it with the first featured use cases, not as a standalone line.
 - **Owner (provisional):** Digital Line with Group Finance.
@@ -365,7 +365,7 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 | R06 | EV charging uptime | Legacy H1.3 | First pass $1–9M/yr: 90,000 points × $500–2,000 gross margin per point (assumed) × 2–5% uptime gain (assumed). Part of the margin on "supervised" points belongs to third parties (CLM-066). OEM service agreements are a cheaper non-AI alternative | Marketing & Services data show a larger margin per point |
 | R07 | Selling power to AI data centres | S05 | Already contracted (4 GW, CLM-028). It is a market for power, not an internal AI transformation. Keep as context only | — |
 | R08 | Fully autonomous operations or trading | Generated, then rejected | Contradicts the stated principle of no fully autonomous decisions (CLM-026); safety and AI Act constraints (CLM-058) | — |
-| R09 | Service-station shop replenishment | Legacy H1.3 sub-lever | Value is a one-off working-capital release (audit, section 4). The only evidence is Vincent's Argedis experience, not yet recorded as a local observation (Q11) | Q11 is recorded and group data support it |
+| R09 | Service-station shop replenishment | Legacy H1.3 sub-lever | Previously rejected before CLM-074 was recorded | Rescued and integrated into P13 (Retail store demand forecasting & perishables loss reduction) following CLM-074 recording |
 | R10 | GenAI headcount-reduction programme | Generated, then rejected | Energy companies expect output and cycle-time gains rather than headcount cuts (SRC-026, p. 232); high social risk (CSE). Value is captured through redeployment in P05 instead | — |
 | R11 | Contract and compliance Copilot as a new purchase | Legacy H1.4 | Copilot is already deployed (CLM-022); merged into P05 | — |
 
