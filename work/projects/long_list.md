@@ -55,7 +55,7 @@ Typical answers are H1 = N, N, Y, Y; H2 = Y, N, mostly, N; H3 = Y, Y, N, N. Hori
 | P10 | Steam-cracker yield, and processing of circular feedstock | Yield optimisation; feed-flexibility models for pyrolysis oil | Antwerp already processes pyrolysis oil (CLM-061); circular polymer target of 1 Mt/y by 2030 (CLM-067) | H1 for yield; H2 for circular feed | 3–15 (circular lever 0.1–4) | 2.1 (1.8–2.7) | 9–15 months | High |
 | P11 | No revenue yet from customers' flexible assets (batteries, EVs, solar) | Virtual power plant that aggregates and trades flexibility | 6.0 million power clients, ~90,000 charging points (CLM-066), Saft batteries (S05); flexibility offers not researched | H3 (Y, Y, N, N) | 30–90 (flexibility aggregation & power arbitrage) | 2.5 (2.1–3.2) | 24–36 months | Very high |
 | P12 | Cost and pace of discovering catalysts for synthetic aviation fuel (e-SAF) | AI-accelerated catalyst screening | SAF production at Normandy, Antwerp and La Mède, target 0.5 Mt/y by 2028; catalyst plant at Feluy (CLM-060); in-house HPC and the Mistral lab (CLM-021) | H3 (Y, Y, N, N), only with a market thesis | 25–75 (e-SAF catalyst yield & opex reduction) | 3.7 (3.2–4.9) | 24–48 months | Very high |
-| P13 | Perishable food/shop inventory shrinkage and rigid retail pricing across service-station network | Demand forecasting for store replenishment to cut food waste, plus dynamic shelf-life markdowns | Station inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based (CLM-074) | H1 (N, N, Y, Y) | 2.5–5.5 (conservative: food waste cut + markdowns) | 3.9 (3.2–4.8) | 4–8 months | Medium |
+| P13 | Perishable food/shop inventory shrinkage and rigid retail pricing across service-station network | Demand forecasting for store replenishment to cut food waste, plus dynamic shelf-life markdowns | Station inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based (CLM-074) | H1 (N, N, Y, Y) | 1.8–3.5 (food waste cut + markdowns; $2.5M base) | 3.9 (3.2–4.8) | 4–8 months | Medium |
 | E01 | No published or tracked value for any internal AI solution (CLM-029) | AI value register and portfolio office | Board AI review (CLM-025); > 10,000 live models (CLM-017) without published value | Enabler | 3–8 (portfolio reallocation & kill-criteria savings) | 1.6 (1.4–2.1) | 3–6 months | Low on cost; value indirect |
 
 **Do not add these rows up.** Several candidates overlap (section 5), the ranges are wide, and a long list is not a portfolio.
@@ -327,20 +327,19 @@ The squad is costed entirely at French rates. Staffing part of it from the Digit
 
 ### P13 — Retail station demand forecasting and perishables loss reduction (with dynamic pricing)
 
-- **Baseline:** Close to 13,000 service stations worldwide (SRC-002, p. 13; CLM-066), including motorway and expressway stations in France operated by Argedis (CLM-074). Network convenience store sales, food & beverage and perishables represent substantial working capital and recurring stock write-offs.
+- **Baseline:** TotalEnergies operates 12,775 service stations worldwide (Factbook 2025, p. 145; URD 2025, p. 13) and 3,256 in France. Scope is strictly focused on the company-owned and company-operated (COCO) network in France operated by Argedis (~150 to 200 motorway/expressway stations, CLM-074) where TotalEnergies directly owns store inventory and bears 100% of food shrinkage and spoilage on its P&L.
 - **Existing capability:** Station-level inventory POS systems; fuel pricing models exist, but store demand forecasting remains rule-based and manual (CLM-074).
 - **Non-AI alternative:** Fixed weekly reorder points, standard supplier delivery schedules, manual markdowns.
 - **Value (calculation on assumed inputs):**
-  - Store food and perishables loss reduction (15–25% reduction in stock write-offs across company-operated motorway stations): $5–18M/yr.
-  - Dynamic pricing and margin optimization for non-fuel retail and highway EV charging: $3–10M/yr.
-  - Total indicative run-rate: **$8–28M/yr** (midpoint **$18.0M/yr**).
-- **Cost: $1.95M** (band $1.65–2.55M):
-  - a pilot squad (Lead DS + Retail Business Champion + Branch DE) in Year 1 deployed at Argedis French network;
-  - central rollout team in Years 2–3 across European highway network;
-  - POS and inventory ERP integration ($0.25M);
-  - forecasting cloud compute ($0.15M/yr).
-- **Time:** First value in 4–8 months (fast H1 payback).
-- **Owner (provisional):** Marketing & Services, retail network operations.
+  - Store food and perishables loss reduction (15–20% reduction in stock write-offs across 180 Argedis COCO motorway stations): $0.61M/yr (direct spoilage, up to $0.85M across 250 COCO stores).
+  - Emergency logistics delivery avoidance on peak traffic weekends: $0.85M/yr.
+  - Automated dynamic shelf-life markdowns (-30% at 12h, -50% at 4h prior to expiry): $0.80M/yr.
+  - Total steady-state annual run-rate: **$1.8–3.5M/yr** (midpoint **$2.65M/yr**, target base case **$2.50M/yr**).
+- **Cost: $3.90M** (band $3.20–4.80M):
+  - Year 0 CAPEX ($1.20M): 1,500 store rugged tablets ($0.75M) + SAP POS API telemetry integration ($0.45M);
+  - Years 1–3 OPEX ($2.70M): 1 pilot squad (Lead DS + Argedis Business Champion + Branch DE), on-site store manager training, change management, and Azure ML inference.
+- **Time:** First value in 4–8 months (fast H1 payback, breakeven at 2.9 years).
+- **Owner (provisional):** Marketing & Services, retail network operations (Argedis).
 
 ### E01 — AI value register and portfolio office (enabler)
 
