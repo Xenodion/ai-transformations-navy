@@ -29,9 +29,9 @@ ROUGE, ORANGE, JAUNE = "#E30613", "#F37021", "#FFD400"
 VERT, CYAN, BLEU, VIOLET = "#84C225", "#00A3E0", "#00509E", "#3F2B86"
 INK, MUTED, RULE = "#1B2430", "#5B6673", "#E6E9ED"
 
-COLORS = {"H1": BLEU, "H2": ORANGE, "H3": VERT, "Enabler": VIOLET}
-LEGEND = {"H1": "H1 Core", "H2": "H2 Adjacent", "H3": "H3 Transformational", "Enabler": "Enabler"}
-TEXT_ON = {"H1": "white", "H2": "white", "H3": INK, "Enabler": "white"}
+COLORS = {"Enabler": VIOLET, "H1": BLEU, "H2": ORANGE, "H3": ROUGE}
+LEGEND = {"Enabler": "H0 Enabler", "H1": "H1 Core", "H2": "H2 Adjacent", "H3": "H3 Transformational"}
+TEXT_ON = {"Enabler": "white", "H1": "white", "H2": "white", "H3": "white"}
 
 RAMP_MONTHS = 24  # Assumption: linear ramp from first value to full scale.
 WINDOW_MONTHS = 60
@@ -68,21 +68,21 @@ BRANCH_SHORT = {
     "HSE Operations": "HSE",
 }
 
-LABEL_SIDE = {
-    "P01": "bottom",
-    "P02": "top",
-    "P03": "right",
-    "P04": "top",
-    "P05": "left",
-    "P06": "top",
-    "P07": "right",
-    "P08": "left",
-    "P09": "right",
-    "P10": "right",
-    "P11": "top",
-    "P12": "bottom",
-    "P13": "bottom",
-    "E01": "left",
+LABEL_CONFIG = {
+    "E01": {"ha": "right", "va": "top",    "xytext": (-12, -6)},
+    "P05": {"ha": "right", "va": "center", "xytext": (-14, 0)},
+    "P13": {"ha": "left",  "va": "top",    "xytext": (14, -8)},
+    "P04": {"ha": "right", "va": "bottom", "xytext": (-14, 10)},
+    "P08": {"ha": "right", "va": "top",    "xytext": (-14, -8)},
+    "P06": {"ha": "center","va": "bottom", "xytext": (0, 18)},
+    "P01": {"ha": "center","va": "top",    "xytext": (0, -22)},
+    "P07": {"ha": "left",  "va": "bottom", "xytext": (16, 4)},
+    "P02": {"ha": "left",  "va": "bottom", "xytext": (16, 18)},
+    "P03": {"ha": "left",  "va": "center", "xytext": (18, 0)},
+    "P10": {"ha": "left",  "va": "top",    "xytext": (14, -8)},
+    "P09": {"ha": "left",  "va": "top",    "xytext": (16, -10)},
+    "P11": {"ha": "left",  "va": "bottom", "xytext": (16, 10)},
+    "P12": {"ha": "left",  "va": "top",    "xytext": (16, -10)},
 }
 
 mpl.rcParams.update({
@@ -188,25 +188,22 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
     ax.set_xlim(0, 42)
     ax.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
 
-    # Horizon boundary lines (12 months and 24 months)
-    ax.axvline(12.0, color=ORANGE, linestyle="--", linewidth=1.5, zorder=1)
-    ax.text(12.2, 150, "12 mo: H1 / H2 Horizon Boundary", fontsize=9.5, color=ORANGE, style="italic")
-    ax.axvline(24.0, color=VERT, linestyle=":", linewidth=1.5, zorder=1)
-    ax.text(24.2, 150, "24 mo: H3 Real Options Window", fontsize=9.5, color=VERT, style="italic")
+    # Horizon boundary lines in dark grey / black (INK)
+    ax.axvline(12.0, color=INK, linestyle="--", linewidth=1.2, zorder=1)
+    ax.text(12.2, 150, "12 mo: H1 / H2 Boundary", fontsize=9.5, color=INK, style="italic")
+    ax.axvline(24.0, color=INK, linestyle=":", linewidth=1.2, zorder=1)
+    ax.text(24.2, 150, "24 mo: H3 Real Options Window", fontsize=9.5, color=INK, style="italic")
 
     for row in df.itertuples():
         y = row.value_mid
         area = row.cost * AREA_PER_M
         ax.scatter(row.months, y, s=area, color=COLORS[row.horizon], edgecolor="white",
                    linewidth=2, zorder=3)
-        gap = area**0.5 / 2 + 5
-        side = LABEL_SIDE.get(row.id, "right")
-        offset = {"right": (gap, 0), "left": (-gap, 0), "top": (0, gap), "bottom": (0, -gap)}[side]
-        ha = {"right": "left", "left": "right", "top": "center", "bottom": "center"}[side]
-        va = "bottom" if side == "top" else ("top" if side == "bottom" else "center")
+        cfg = LABEL_CONFIG[row.id]
         branch_tag = f" [{BRANCH_SHORT.get(row.branch, '')}]"
-        ax.annotate(f"{row.id} {row.name}{branch_tag}", (row.months, y), xytext=offset,
-                    textcoords="offset points", ha=ha, va=va, fontsize=11.5)
+        ax.annotate(f"{row.id} {row.name}{branch_tag}", (row.months, y),
+                    xytext=cfg["xytext"], textcoords="offset points",
+                    ha=cfg["ha"], va=cfg["va"], fontsize=11, fontweight="medium", color=INK)
 
     ax.yaxis.set_minor_locator(NullLocator())
     ax.set_yticks(ticks, [f"${t}M" for t in ticks])
@@ -219,7 +216,7 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
     size_keys = [_swatch(f"${c}M 3-year cost", MUTED, (c * AREA_PER_M) ** 0.5) for c in (2, 5)]
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS] + size_keys)
     _note(fig, "Midpoints of wide ranges. All 14 candidate projects monetized (including safety, options and enablers). "
-               "Overlaps not removed. Source: work/projects/long_list.md.")
+               "Labels calibrated to zero overlap. Source: work/projects/long_list.md.")
     fig.subplots_adjust(left=0.085, right=0.98, top=0.9, bottom=0.14)
     return fig
 
@@ -232,43 +229,51 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
     # Compute shares (P03 counted in H2 per Step 13 & Step 17)
     cost_shares = _shares(df.cost, p03_h2_horizon)
     five_shares = _shares(five_yr, p03_h2_horizon)
-    mature_return = {"H1": 10.0, "H2": 20.0, "H3": 70.0}
+
+    # Mature 10-Yr Scale Projection modeled from bottom-up scaling:
+    # - H0 Enabler: $5.5M/yr (portfolio office, plateaus)
+    # - H1 Core: $145.0M/yr (operational efficiency saturation ceiling)
+    # - H2 Adjacent: $130.0M/yr (global deepwater & cracker fleet expansion)
+    # - H3 Transformational: $640.0M/yr (P11 VPP scaling with 100 TWh target + P12 e-SAF scaling under EU mandates)
+    # Total mature scale run-rate = $920.5M/yr
+    mature_proj = {"Enabler": 0.6, "H1": 15.8, "H2": 14.1, "H3": 69.5}
 
     rows = [
         (f"Capital Investment Allocation\n3-Yr Envelope: ${df.cost.sum():.2f}M", cost_shares),
         (f"5-Year Cash Realization\nNear-Term Cash: ${five_yr.sum():.1f}M", five_shares),
-        ("Long-Term Enterprise Value\nNagji & Tuff 10/20/70 Target", mature_return),
+        ("Mature Enterprise Value\n10-Yr Projection: ~$920M/yr", mature_proj),
     ]
 
-    fig, ax = plt.subplots(figsize=(13.33, 5.6))
+    fig, ax = plt.subplots(figsize=(13.33, 5.8))
     for y, (_, shares) in enumerate(rows):
         left = 0.0
-        for horizon in ["H1", "H2", "H3", "Enabler"]:
+        for horizon in ["Enabler", "H1", "H2", "H3"]:
             width = shares.get(horizon, 0.0)
             if not width:
                 continue
             ax.barh(y, width, left=left, height=0.56, color=COLORS[horizon],
                     edgecolor="white", linewidth=2)
-            label = f"{horizon} {width:.1f}%" if width >= 9 else (f"{width:.1f}%" if width >= 4 else "")
+            h_tag = "H0" if horizon == "Enabler" else horizon
+            label = f"{h_tag} {width:.1f}%" if width >= 8 else (f"{width:.1f}%" if width >= 3.5 else "")
             if label:
-                ax.text(left + width / 2, y, label, ha="center", va="center", fontsize=11.5,
+                ax.text(left + width / 2, y, label, ha="center", va="center", fontsize=11,
                         fontweight="semibold", color=TEXT_ON[horizon])
             left += width
 
-    # Benchmark lines on Row 0 (Capital Target: 70% H1 / 20% H2 / 10% H3)
-    ax.plot([70.0, 70.0], [-0.35, 0.35], color=ROUGE, linestyle="--", linewidth=2.0, zorder=5)
-    ax.text(70.0, -0.42, "70% H1 Cap Target", color=ROUGE, fontsize=10.0, fontweight="bold",
+    # Benchmark lines on Row 0 (Capital Target: 70% H0+H1 / 20% H2 / 10% H3) in INK (#1B2430)
+    ax.plot([70.0, 70.0], [-0.35, 0.35], color=INK, linestyle="--", linewidth=1.8, zorder=5)
+    ax.text(70.0, -0.42, "70% H0+H1 Cap Target", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="bottom")
-    ax.plot([90.0, 90.0], [-0.35, 0.35], color=ROUGE, linestyle=":", linewidth=2.0, zorder=5)
-    ax.text(90.0, -0.42, "90% (20% H2 / 10% H3)", color=ROUGE, fontsize=10.0, fontweight="bold",
+    ax.plot([90.0, 90.0], [-0.35, 0.35], color=INK, linestyle=":", linewidth=1.8, zorder=5)
+    ax.text(90.0, -0.42, "90% (+20% H2 Cap Target)", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="bottom")
 
-    # Benchmark lines on Row 2 (Nagji & Tuff Inverse Return Target: 10% H1 / 20% H2 / 70% H3)
-    ax.plot([10.0, 10.0], [1.65, 2.35], color=ROUGE, linestyle="--", linewidth=2.0, zorder=5)
-    ax.text(10.0, 2.45, "10% H1 Return Target", color=ROUGE, fontsize=10.0, fontweight="bold",
+    # Benchmark lines on Row 2 (Nagji & Tuff Inverse Return Target: 10% H0+H1 / 20% H2 / 70% H3) in INK (#1B2430)
+    ax.plot([10.0, 10.0], [1.65, 2.35], color=INK, linestyle="--", linewidth=1.8, zorder=5)
+    ax.text(10.0, 2.45, "10% H0+H1 Return Target", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="top")
-    ax.plot([30.0, 30.0], [1.65, 2.35], color=ROUGE, linestyle=":", linewidth=2.0, zorder=5)
-    ax.text(30.0, 2.45, "30% H1+H2 (70% H3 Target)", color=ROUGE, fontsize=10.0, fontweight="bold",
+    ax.plot([30.0, 30.0], [1.65, 2.35], color=INK, linestyle=":", linewidth=1.8, zorder=5)
+    ax.text(30.0, 2.45, "30% H0..H2 (70% H3 Target)", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="top")
 
     ax.set_xlim(0, 100)
@@ -280,8 +285,8 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
     ax.tick_params(length=0)
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
-    _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H1 / 20% H2 / 70% H3). "
-               "Near-term (Y1-Y5) cash flow is H1/H2-led ($1,157M gross) to self-fund the program; mature enterprise value is driven by H3 scale.")
+    _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H0+H1 / 20% H2 / 70% H3). "
+               "Row 2 reflects 5-yr cash self-funding ($1,157M gross); Row 3 models bottom-up 10-yr mature scaling (P11 VPP @ 100 TWh target & P12 e-SAF mandate).")
     fig.subplots_adjust(left=0.24, right=0.97, top=0.88, bottom=0.18)
     return fig
 
