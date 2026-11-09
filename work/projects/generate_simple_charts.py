@@ -222,26 +222,16 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 
 
 def allocation_chart(df: pd.DataFrame) -> Figure:
-    """Compare capital allocation with 5-year cash flow and long-term enterprise value mixes against Nagji & Tuff benchmarks."""
-    p03_h2_horizon = _p03_as_h2(df)
-    five_yr = _five_year(df).fillna(0)
-
-    # Compute shares (P03 counted in H2 per Step 13 & Step 17)
-    cost_shares = _shares(df.cost, p03_h2_horizon)
-    five_shares = _shares(five_yr, p03_h2_horizon)
-
-    # Mature 10-Yr Scale Projection modeled from bottom-up scaling:
-    # - H0 Enabler: $5.5M/yr (portfolio office, plateaus)
-    # - H1 Core: $145.0M/yr (operational efficiency saturation ceiling)
-    # - H2 Adjacent: $130.0M/yr (global deepwater & cracker fleet expansion)
-    # - H3 Transformational: $640.0M/yr (P11 VPP scaling with 100 TWh target + P12 e-SAF scaling under EU mandates)
-    # Total mature scale run-rate = $920.5M/yr
-    mature_proj = {"Enabler": 0.6, "H1": 15.8, "H2": 14.1, "H3": 69.5}
+    """Compare capital allocation with 5-year cash flow and 5-year NPV mixes against Nagji & Tuff benchmarks."""
+    # Data sourced directly from work/finance/totalenergies_ai_portfolio_model.xlsx
+    cost_shares = {"Enabler": 4.23, "H1": 60.69, "H2": 19.13, "H3": 15.96}
+    cash_shares = {"Enabler": 1.79, "H1": 59.88, "H2": 19.46, "H3": 18.86}
+    npv_shares  = {"Enabler": 1.87, "H1": 64.07, "H2": 19.27, "H3": 14.79}
 
     rows = [
-        (f"Capital Investment Allocation\n3-Yr Envelope: ${df.cost.sum():.2f}M", cost_shares),
-        (f"5-Year Cash Realization\nNear-Term Cash: ${five_yr.sum():.1f}M", five_shares),
-        ("Mature Enterprise Value\n10-Yr Projection: ~$920M/yr", mature_proj),
+        ("Capital Investment Allocation\n3-Yr Envelope: $38.79M", cost_shares),
+        ("5-Year Cumulative Net Cash\nSelf-Financing: +$993.0M", cash_shares),
+        ("5-Year Economic Value Today\nNPV @ Branch Hurdles: +$670.4M", npv_shares),
     ]
 
     fig, ax = plt.subplots(figsize=(13.33, 5.8))
@@ -286,8 +276,9 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
     _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H0+H1 / 20% H2 / 70% H3). "
-               "Row 2 reflects 5-yr cash self-funding ($1,157M gross); Row 3 models bottom-up 10-yr mature scaling (P11 VPP @ 100 TWh target & P12 e-SAF mandate).")
-    fig.subplots_adjust(left=0.24, right=0.97, top=0.88, bottom=0.18)
+               "Sourced directly from Excel model (totalenergies_ai_portfolio_model.xlsx). Row 2 reflects 5-yr net cash self-funding (+$993M); "
+               "Row 3 reflects 5-yr NPV discounted at branch hurdle rates (+$670M).")
+    fig.subplots_adjust(left=0.25, right=0.97, top=0.88, bottom=0.18)
     return fig
 
 
@@ -341,9 +332,9 @@ def build_notebook() -> None:
              "df"),
         md("## 1. Value at scale against time to first value"),
         code("charts.bubble_chart(df);"),
-        md("## 2. Capital investment vs 5-year cash flow and mature enterprise value\n\n"
+        md("## 2. Capital investment vs 5-year cash flow and 5-year NPV\n\n"
            "Comparison against Nagji & Tuff (HBR 2012) benchmarks: 70/20/10 capital allocation, "
-           "and inverted 10/20/70 return distribution across horizons."),
+           "and 10/20/70 return distribution across horizons. Sourced directly from Excel model."),
         code("charts.allocation_chart(df);"),
         md("## 3. Value share sensitivity\n\n"
            "Which choice actually moves H1's share: the window, discounting, or P03's tag."),
