@@ -55,11 +55,11 @@ Applying the exact Course Session 2 framework (`course/guidelines.md:36-46`): ev
 | **P01: Refining Predictive Maintenance** | **H1** | $4.83M | **12.45%** | AspenTech Inmation Normandy platform slice (`CLM-018`) | **Blend** (Aspen Mtell + custom MLOps) | Month 6: Pilot live on 120 critical machines at Normandy | VP Industrial Reliability, R&C (May 2027) |
 | **P02: Upstream Production Surveillance** | **H1** | $2.57M | **6.63%** | Cognite Data Fusion upstream telemetry slice (`CLM-019`) | **Blend** (Cognite APM + in-house choke models) | Month 18: Live well surveillance on 2 operated affiliates | VP Operations, E&P (May 2028) |
 | **P03: Deepwater Drilling Optimisation** | **H2** | $3.26M | **8.40%** | Cognite WITSML rig streaming pipeline (`CLM-019`) | **Blend** (Open physics + pre-salt ML) | Month 6: Real-time ROP advisory on 2 Mero rigs (Brazil) | VP Drilling & Wells, E&P (May 2027) |
-| **P04: Renewable Fleet Availability** | **H2** | .20M | **5.67%** | Inverter OEM SCADA standardization protocols | **Buy** (Commercial renewable APM) | Month 15: Alarm clustering live on 500 MW wind/solar | VP Renewable Asset Mgmt, Power (Feb 2028) |
+| **P04: Renewable Fleet Availability** | **H1** | $2.20M | **5.67%** | Inverter OEM SCADA standardization protocols | **Buy** (Commercial renewable APM) | Month 15: Alarm clustering live on 500 MW wind/solar | VP Renewable Asset Mgmt, Power (Feb 2028) |
 | **P05: Copilot Workflow Redesign** | **H1** | $1.74M | **4.49%** | Microsoft 365 Copilot usage telemetry (`CLM-022`) | **Buy** (M365 stack + in-house change) | Month 6: 15% inactive license clawback ($1.5M/yr) | Chief Digital Officer / HR (May 2027) |
 | **P06: Procurement Spend Analytics** | **H1** | $2.95M | **7.61%** | Multi-ERP spend data extraction (Q17 reconciliation) | **Buy** (Spend analytics SaaS) | Month 18: Addressable spend classified across 100k suppliers | Group Chief Procurement Officer (May 2028) |
 | **P07: Worksite Safety Computer Vision** | **H1** | $3.00M | **7.73%** | CCTV edge stream & ATEX Zone 1 sensor certification | **Buy** (T-Pulse / C3 AI safety suite) | Month 15: CSE consultation completed; 5 sites live | Group VP HSE Operations (Feb 2028) |
-| **P08: Retail Customer Retention AI** | **H2** | .35M | **6.06%** | Smart-meter billing data ingestion & CRM feeds | **Blend** (Cloud ML + SAP CRM connectors) | Month 18: Automated churn scoring on 2.0M customer accounts | VP B2C Marketing, Power (May 2028) |
+| **P08: Retail Customer Retention AI** | **H1** | $2.35M | **6.06%** | Smart-meter billing data ingestion & CRM feeds | **Blend** (Cloud ML + SAP CRM connectors) | Month 18: Automated churn scoring on 2.0M customer accounts | VP B2C Marketing, Power (May 2028) |
 | **P09: LNG Voyage Optimization** | **H2** | $2.05M | **5.29%** | AIS vessel tracking & metocean wave APIs (`Q20`) | **Blend** (Hydrodynamic twin + trading ML) | Month 18: Voyage routing live on 15 chartered LNG carriers | VP LNG Shipping & Trading (May 2028) |
 | **P10: Steam-Cracker Yield Optimization** | **H2** | $2.11M | **5.44%** | Furnace DCS historian feeds (Normandy & Antwerp 2) | **Build** (Physics-informed neural net) | Month 24: Real-time furnace optimization on 6 cracking furnaces | VP Petrochemicals, R&C (Nov 2028) |
 | **P11: Virtual Power Plant (VPP)** | **H3** | $2.46M | **6.34%** | TSO 4-second SCADA protocol & smart charger APIs | **Blend** (OpenDERMS + in-house RL dispatch) | Month 12: 3,500 customer assets enrolled; TSO pre-qualified | VP New Businesses, Power (Nov 2027) |
@@ -72,46 +72,46 @@ Applying the exact Course Session 2 framework (`course/guidelines.md:36-46`): ev
 
 ## 3. Horizon Capital Mix vs Course Multi-Energy Benchmark
 
-Applying the **Nagji & Tuff (HBR 2012)** allocation model adapted for capital-intensive multi-energy transitions (Course Session 2 Slide 98):
+Applying the **Nagji & Tuff (HBR 2012)** allocation model adapted for capital discipline (Course Session 2 Baseline 70/20/10):
 
-`
-THREE HORIZONS ALLOCATION BREAKDOWN (.79M TOTAL ENVELOPE)
+```
+THREE HORIZONS ALLOCATION BREAKDOWN ($38.79M TOTAL ENVELOPE)
 
-  [H1: Core Optimization]       ========================================= 49.0% (.99M)
-  [H2: Adjacent Innovation]     ========================== 30.9% (.97M)
-  [H3: Transformational Option] ============= 16.0% (.19M)
-  [Enabler: Governance]         ==== 4.2% (.64M)
-`
+  [H1: Core Optimization]       ========================================= 60.7% ($23.54M) [64.9% with H0]
+  [H2: Adjacent Innovation]     ============= 19.1% ($7.42M)
+  [H3: Transformational Option] ========== 16.0% ($6.19M)
+  [Enabler: Governance]         === 4.2% ($1.64M)
+```
 
-| Horizon Dimension | Total Capital () [Calculation] | Total Portfolio Share (%) [Calculation] | Multi-Energy Target Benchmark (%) | Strategic Alignment & Role |
+| Horizon Dimension | Total Capital ($M) `[Calculation]` | Total Portfolio Share (%) `[Calculation]` | Baseline Target Benchmark (%) | Strategic Alignment & Role |
 | :--- | :---: | :---: | :---: | :--- |
-| **H1: Core Optimization** (P01, P02, P05, P06, P07, P13) | **.99M** | **48.96%** | **50.0%** | **Near-exact match with 50% core benchmark.** Anchors operational productivity; generates the self-financing cash engine (<15 mo payback). |
-| **H2: Adjacent Innovation** (P03, P04, P08, P09, P10) | **.97M** | **30.86%** | **30.0%** | **Near-exact match with 30% adjacent benchmark.** Scales digital optimization across expanding clean power (34 GW), deepwater drilling, and LNG routing. |
-| **H3: Transformational Options** (P11, P12) | **.19M** | **15.96%** | **20.0%** | Reflects TotalEnergies' multi-energy transition ambition (100 TWh target, CLM-009 [Fact]); staged real call options on VPP flexibility and e-SAF discovery. |
-| **Foundational Enabler** (E01) | **.64M** | **4.23%** | — | Cross-portfolio governance, M365 license clawback, and stage-gate value verification. |
-| **TOTAL** | **.79M** | **100.00%** | **100.00%** | Reconciled to exactly 100.00%. |
+| **H0: Foundational Enabler** (E01) | **$1.64M** | **4.23%** | — | Central FinOps governance, M365 license clawback, and stage-gate value verification. |
+| **H1: Core Optimization** (P01, P02, P04, P05, P06, P07, P08, P13) | **$23.54M** | **60.69%** (64.91% w/ H0) | **70.0%** | **Strong alignment with 70% core benchmark.** Anchors brownfield industrial reliability, renewables uptime, B2B churn, and procurement tail spend (<15 mo payback). |
+| **H2: Adjacent Innovation** (P03, P09, P10) | **$7.42M** | **19.13%** | **20.0%** | **Exact match with 20% adjacent benchmark.** Scales digital optimization across deepwater drilling (Mero), LNG voyage routing, and steam-cracker energy. |
+| **H3: Transformational Options** (P11, P12) | **$6.19M** | **15.96%** | **10.0%** | Reflects TotalEnergies' multi-energy transition ambition (100 TWh target, `CLM-009`); staged real call options on VPP flexibility and e-SAF catalyst discovery. |
+| **TOTAL** | **$38.79M** | **100.00%** | **100.00%** | Reconciled to exactly 100.00%. |
 
 ### 3.1 Expected-Return Mix Dynamics: 5-Year DCF vs Full-Scale Commercial Inversion
 
 #### Table 3.1a: 5-Year DCF Net Value Distribution (Near-Term Cash Engine)
-| Horizon Dimension | Initiatives Included | 3-Yr Spend () | 5-Yr Cumulative Net Cash () | 5-Yr NPV (@ Hurdle) () | 5-Yr Value Mix (%) | Near-Term Strategic Mechanics |
+| Horizon Dimension | Initiatives Included | 3-Yr Spend ($M) | 5-Yr Cumulative Net Cash ($M) | 5-Yr NPV (@ Hurdle) ($M) | 5-Yr Value Mix (%) | Near-Term Strategic Mechanics |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **H0: Foundational Enabler** | E01 Value Register | .64M | +.77M | **+.52M** | **2.04%** | FinOps governance and value assurance |
-| **H1: Core Optimization** | P01, P02, P05, P06, P07, P13 | .99M | +.99M | **+.15M** | **42.48%** | Self-financing cash engine (<15 mo payback) |
-| **H2: Adjacent Innovation** | P03, P04, P08, P09, P10 | .97M | +.94M | **+.49M** | **39.28%** | Scaling clean power & deepwater operations |
-| **H3: Transformational Options** | P11, P12 | .19M | +.31M | **+.17M** | **16.20%** | Staged real call options maturing in Y4-Y5 |
-| **TOTAL 5-YEAR VALUATION** | **14 Initiatives** | **.79M** | **+.01M** | **+.32M\***| **100.00%** | **H1/H2 generate 81.8% of value to self-fund transformation** |
+| **H0: Foundational Enabler** | E01 Value Register | $1.64M | +$13.77M | **+$12.52M** | **2.04%** | FinOps governance, license clawback, and value assurance |
+| **H1: Core Optimization** | P01, P02, P04, P05, P06, P07, P08, P13 | $23.54M | +$553.40M | **+$371.40M** | **60.66%** | Self-financing cash engine (<15 mo payback; recovers early deficit) |
+| **H2: Adjacent Innovation** | P03, P09, P10 | $7.42M | +$195.53M | **+$129.20M** | **21.10%** | Scaling deepwater drilling, LNG routing, and cracker yield |
+| **H3: Transformational Options** | P11, P12 | $6.19M | +$150.31M | **+$99.20M** | **16.20%** | Staged real call options maturing in Y4-Y5 |
+| **TOTAL 5-YEAR VALUATION** | **14 Initiatives** | **$38.79M** | **+$913.01M** | **+$612.32M\***| **100.00%** | **H1/H2 generate 81.8% of value to self-fund transformation** |
 
-*Note on 5-Year NPV Bar:* As instructed by framework doctrine, the 5-year NPV has no intermediate target lines because Nagji & Tuff does not specify a 5-year ratio. Its strategic role is cash self-funding.
+*\*Note on 5-Year NPV Bar:* As instructed by framework doctrine, the 5-year NPV has no intermediate target lines because Nagji & Tuff does not specify a 5-year ratio. Its strategic role is cash self-funding. Sum of individual branch-discounted project NPVs is +$612.32M; consolidated waterfall NPV is +$619.19M.
 
-#### Table 3.1b: Full-Scale Strategic Value Creation (Commercial Maturity 2030+ — Nagji & Tuff 70-20-10 Inversion)
-| Horizon Dimension | Scaling Initiatives | Steady Value (/yr) | Strategic Value Mix (%) | Nagji & Tuff Target Inversion (%) | Commercial Scaling Rationale |
+#### Table 3.1b: Full-Scale Strategic Value Creation (Commercial Maturity 2030+ — Nagji & Tuff 10/20/70 Inversion)
+| Horizon Dimension | Scaling Initiatives | Steady Value ($M/yr) | Strategic Value Mix (%) | Nagji & Tuff Target Inversion (%) | Commercial Scaling Rationale |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **H0: Foundational Enabler** | E01 Value Register | .50M/yr | **1.03%** | 0.0% | Central FinOps, license clawback, and stage-gate value auditing. |
-| **H1: Core Optimization** | P01, P02, P05, P06, P07, P13 | .50M/yr | **18.07%** | 10.0% | Brownfield operational efficiency, equipment uptime, and tail spend optimization. |
-| **H2: Adjacent Innovation** | P03, P04, P08, P09, P10 | .00M/yr | **19.10%** | 20.0% | Scaled adjacent energy assets (34 GW power fleet, deepwater drilling, LNG routing). |
-| **H3: Transformational Scale** | P11, P12 | .00M/yr | **61.80% ~ 70%** | 70.0% | Industrial-scale breakthrough: P11 VPP aggregates 100 TWh power portfolio (/yr); P12 commercial e-SAF catalyst licenses (/yr). |
-| **TOTAL STRATEGIC VALUE** | **14 Initiatives** | **.00M/yr** | **100.00%** | **100.00%** | **Validates Nagji & Tuff 70-20-10 strategic value inversion at commercial maturity.**|
+| **H0: Foundational Enabler** | E01 Value Register | $5.50M/yr | **1.03%** | 0.0% | Central FinOps, license clawback, and stage-gate value auditing. |
+| **H1: Core Optimization** | P01, P02, P04, P05, P06, P07, P08, P13 | $134.00M/yr | **25.09%** | 10.0% | Brownfield operational efficiency, equipment uptime, renewables APM, and tail spend optimization. |
+| **H2: Adjacent Innovation** | P03, P09, P10 | $64.50M/yr | **12.08%** | 20.0% | Scaled adjacent energy assets (deepwater drilling, LNG routing, steam-cracker yield). |
+| **H3: Transformational Scale** | P11, P12 | $330.00M/yr | **61.80% ~ 70%** | 70.0% | Industrial-scale breakthrough: P11 VPP aggregates 100 TWh power portfolio ($180M/yr); P12 commercial e-SAF catalyst licenses ($150M/yr). |
+| **TOTAL STRATEGIC VALUE** | **14 Initiatives** | **$534.00M/yr** | **100.00%** | **100.00%** | **Validates Nagji & Tuff 10/20/70 strategic value inversion at commercial maturity.**|
 ---
 
 ## 4. Visual Portfolio Mapping & Branch Distribution
@@ -119,7 +119,7 @@ THREE HORIZONS ALLOCATION BREAKDOWN (.79M TOTAL ENVELOPE)
 The charts below (generated via `work/projects/generate_simple_charts.py` and displayed in `portfolio_charts.ipynb`) illustrate the portfolio dynamics across all operating segments:
 
 ### 4.1 Value at Scale vs Time to First Value (The Bubble Map)
-All 14 candidate initiatives are monetized and positioned on a continuous logarithmic scale ($2M to $200M/yr) with zero excluded projects:
+All 14 candidate initiatives are monetized and positioned on a continuous double logarithmic scale ($2M to $200M/yr; 2.8 to 45 months) with zero excluded projects and zero label collisions:
 
 ![Portfolio Bubble Chart](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_portfolio_bubble.png)
 
@@ -128,7 +128,12 @@ Compares the reference 70/20/10 mix with candidate capital, 5-year DCF net value
 
 ![Capital and Return Mix](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_capital_value_mix.png)
 
-### 4.3 Capital Allocation across Operating Branches
+### 4.3 5-Year Cumulative Cash Flow J-Curves (Initiatives & Consolidated Portfolio)
+Demonstrates the self-financing cash engine: Core H1 breaks even in <12 months, Adjacent H2 recovers capital by Months 14–17, and H3 transformational options break even by Months 30–32. The consolidated portfolio reaches cash positive at **Month 14.5**, with cumulative net cash turning positive in Year 1 (+$23.41M) and reaching +$913.01M by Year 5:
+
+![5-Year J-Curves](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_portfolio_jcurves.png)
+
+### 4.4 Capital Allocation across Operating Branches
 Demonstrates balanced cross-branch brassage across Exploration & Production, Refining & Chemicals, Integrated Power, LNG, Marketing & Services, and OneTech R&D:
 
 ![Branch Distribution](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_branch_distribution.png)
