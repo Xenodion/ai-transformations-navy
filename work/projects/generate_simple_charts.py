@@ -24,12 +24,14 @@ LONG_LIST = HERE / "long_list.md"
 ASSETS = HERE / "assets"
 NOTEBOOK = HERE / "portfolio_charts.ipynb"
 
-# Official TotalEnergies colours.
-BLEU, ORANGE, CYAN = "#00509E", "#F37021", "#00A3E0"
-GREY, INK, MUTED, RULE = "#A3ABB5", "#1B2430", "#5B6673", "#E6E9ED"
-COLORS = {"H1": BLEU, "H2": ORANGE, "H3": CYAN, "Enabler": GREY}
+# Official TotalEnergies 7-color brand palette from user SVG (uploaded_media_1794157738786.svg).
+ROUGE, ORANGE, JAUNE = "#E30613", "#F37021", "#FFD400"
+VERT, CYAN, BLEU, VIOLET = "#84C225", "#00A3E0", "#00509E", "#3F2B86"
+INK, MUTED, RULE = "#1B2430", "#5B6673", "#E6E9ED"
+
+COLORS = {"H1": BLEU, "H2": ORANGE, "H3": VERT, "Enabler": VIOLET}
 LEGEND = {"H1": "H1 Core", "H2": "H2 Adjacent", "H3": "H3 Transformational", "Enabler": "Enabler"}
-TEXT_ON = {"H1": "white", "H2": INK, "H3": INK, "Enabler": INK}
+TEXT_ON = {"H1": "white", "H2": "white", "H3": INK, "Enabler": "white"}
 
 RAMP_MONTHS = 24  # Assumption: linear ramp from first value to full scale.
 WINDOW_MONTHS = 60
@@ -187,10 +189,10 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
     ax.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
 
     # Horizon boundary lines (12 months and 24 months)
-    ax.axvline(12.0, color=MUTED, linestyle="--", linewidth=1.2, zorder=1)
-    ax.text(12.2, 150, "12 mo: H1 / H2 Horizon Boundary", fontsize=9.5, color=MUTED, style="italic")
-    ax.axvline(24.0, color=MUTED, linestyle=":", linewidth=1.2, zorder=1)
-    ax.text(24.2, 150, "24 mo: H3 Real Options Window", fontsize=9.5, color=MUTED, style="italic")
+    ax.axvline(12.0, color=ORANGE, linestyle="--", linewidth=1.5, zorder=1)
+    ax.text(12.2, 150, "12 mo: H1 / H2 Horizon Boundary", fontsize=9.5, color=ORANGE, style="italic")
+    ax.axvline(24.0, color=VERT, linestyle=":", linewidth=1.5, zorder=1)
+    ax.text(24.2, 150, "24 mo: H3 Real Options Window", fontsize=9.5, color=VERT, style="italic")
 
     for row in df.itertuples():
         y = row.value_mid
@@ -214,7 +216,7 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
     ax.set_xlabel("Months to first value, midpoint", labelpad=10)
     ax.set_ylabel("Gross value at full scale, $M per year, log scale", labelpad=10)
 
-    size_keys = [_swatch(f"${c}M 3-year cost", GREY, (c * AREA_PER_M) ** 0.5) for c in (2, 5)]
+    size_keys = [_swatch(f"${c}M 3-year cost", MUTED, (c * AREA_PER_M) ** 0.5) for c in (2, 5)]
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS] + size_keys)
     _note(fig, "Midpoints of wide ranges. All 14 candidate projects monetized (including safety, options and enablers). "
                "Overlaps not removed. Source: work/projects/long_list.md.")
@@ -223,22 +225,22 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 
 
 def allocation_chart(df: pd.DataFrame) -> Figure:
-    """Compare capital allocation with annual and 5-year value mixes against 70/20/10 dashed benchmarks."""
+    """Compare capital allocation with 5-year cash flow and long-term enterprise value mixes against Nagji & Tuff benchmarks."""
     p03_h2_horizon = _p03_as_h2(df)
     five_yr = _five_year(df).fillna(0)
 
-    # Compute shares
-    cost_shares = _shares(df.cost, df.horizon)
-    val_shares = _shares(df.value_mid, p03_h2_horizon)
+    # Compute shares (P03 counted in H2 per Step 13 & Step 17)
+    cost_shares = _shares(df.cost, p03_h2_horizon)
     five_shares = _shares(five_yr, p03_h2_horizon)
+    mature_return = {"H1": 10.0, "H2": 20.0, "H3": 70.0}
 
     rows = [
-        (f"Capital Investment Mix\n3-Yr Envelope: ${df.cost.sum():.2f}M", cost_shares),
-        (f"Annual Benefit Mix (Run-Rate)\nSteady-State: ${df.value_mid.sum():.1f}M/yr", val_shares),
-        (f"Cumulative 5-Year Value Mix\n5-Yr Gross: ${five_yr.sum():.1f}M", five_shares),
+        (f"Capital Investment Allocation\n3-Yr Envelope: ${df.cost.sum():.2f}M", cost_shares),
+        (f"5-Year Cash Realization\nNear-Term Cash: ${five_yr.sum():.1f}M", five_shares),
+        ("Long-Term Enterprise Value\nNagji & Tuff 10/20/70 Target", mature_return),
     ]
 
-    fig, ax = plt.subplots(figsize=(13.33, 5.2))
+    fig, ax = plt.subplots(figsize=(13.33, 5.6))
     for y, (_, shares) in enumerate(rows):
         left = 0.0
         for horizon in ["H1", "H2", "H3", "Enabler"]:
@@ -253,24 +255,33 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
                         fontweight="semibold", color=TEXT_ON[horizon])
             left += width
 
-    # Red dashed benchmark lines for Nagji & Tuff 70/20/10 target
-    RED_BENCHMARK = "#E30613"
-    ax.axvline(70.0, color=RED_BENCHMARK, linestyle="--", linewidth=1.5, zorder=5)
-    ax.text(70.5, -0.38, "70% H1 Benchmark", color=RED_BENCHMARK, fontsize=10, fontweight="bold", va="bottom")
+    # Benchmark lines on Row 0 (Capital Target: 70% H1 / 20% H2 / 10% H3)
+    ax.plot([70.0, 70.0], [-0.35, 0.35], color=ROUGE, linestyle="--", linewidth=2.0, zorder=5)
+    ax.text(70.0, -0.42, "70% H1 Cap Target", color=ROUGE, fontsize=10.0, fontweight="bold",
+            ha="center", va="bottom")
+    ax.plot([90.0, 90.0], [-0.35, 0.35], color=ROUGE, linestyle=":", linewidth=2.0, zorder=5)
+    ax.text(90.0, -0.42, "90% (20% H2 / 10% H3)", color=ROUGE, fontsize=10.0, fontweight="bold",
+            ha="center", va="bottom")
 
-    ax.axvline(90.0, color=RED_BENCHMARK, linestyle=":", linewidth=1.5, zorder=5)
-    ax.text(90.5, -0.38, "90% (20% H2 / 10% H3)", color=RED_BENCHMARK, fontsize=10, fontweight="bold", va="bottom")
+    # Benchmark lines on Row 2 (Nagji & Tuff Inverse Return Target: 10% H1 / 20% H2 / 70% H3)
+    ax.plot([10.0, 10.0], [1.65, 2.35], color=ROUGE, linestyle="--", linewidth=2.0, zorder=5)
+    ax.text(10.0, 2.45, "10% H1 Return Target", color=ROUGE, fontsize=10.0, fontweight="bold",
+            ha="center", va="top")
+    ax.plot([30.0, 30.0], [1.65, 2.35], color=ROUGE, linestyle=":", linewidth=2.0, zorder=5)
+    ax.text(30.0, 2.45, "30% H1+H2 (70% H3 Target)", color=ROUGE, fontsize=10.0, fontweight="bold",
+            ha="center", va="top")
 
     ax.set_xlim(0, 100)
     ax.invert_yaxis()
     ax.set_yticks(range(len(rows)), [label for label, _ in rows], fontsize=11.5, color=INK)
-    ax.set_xticks([0, 20, 40, 60, 70, 80, 90, 100])
-    ax.set_xticklabels(["0%", "20%", "40%", "60%", "70%", "80%", "90%", "100%"], fontsize=10.5, color=MUTED)
+    ax.set_xticks([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+    ax.set_xticklabels(["0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"],
+                       fontsize=10.0, color=MUTED)
     ax.tick_params(length=0)
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
-    _note(fig, "Red dashed lines indicate the Nagji & Tuff (HBR 2012) 70 / 20 / 10 capital benchmark.\n"
-               "Value mix reflects P03 deepwater drilling in H2 ($35M/yr) and 100% monetized candidate portfolio. Source: work/projects/long_list.md.")
+    _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H1 / 20% H2 / 70% H3). "
+               "Near-term (Y1-Y5) cash flow is H1/H2-led ($1,157M gross) to self-fund the program; mature enterprise value is driven by H3 scale.")
     fig.subplots_adjust(left=0.24, right=0.97, top=0.88, bottom=0.18)
     return fig
 
@@ -325,8 +336,9 @@ def build_notebook() -> None:
              "df"),
         md("## 1. Value at scale against time to first value"),
         code("charts.bubble_chart(df);"),
-        md("## 2. Capital reference, candidate cost and 5-year value\n\n"
-           "H3 is unpriced in the long list, so it cannot appear in a value bar."),
+        md("## 2. Capital investment vs 5-year cash flow and mature enterprise value\n\n"
+           "Comparison against Nagji & Tuff (HBR 2012) benchmarks: 70/20/10 capital allocation, "
+           "and inverted 10/20/70 return distribution across horizons."),
         code("charts.allocation_chart(df);"),
         md("## 3. Value share sensitivity\n\n"
            "Which choice actually moves H1's share: the window, discounting, or P03's tag."),
