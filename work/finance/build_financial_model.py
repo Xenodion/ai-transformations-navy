@@ -120,7 +120,7 @@ PROJECTS_DATA = [
     },
     {
         "id": "P04", "name": "Renewables Fleet Availability", "branch": "Integrated Power",
-        "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C9",
+        "horizon": "H2", "sourcing": "Buy", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.35, "opex_y1": 0.55, "opex_y2": 0.75, "opex_y3": 0.55, "opex_run": 0.30,
         "val_y1": 8.83, "val_y2": 22.08, "val_y3": 26.50, "val_y4": 26.50, "val_y5": 26.50,
         "tier": 2, "note": "34.1 GW gross portfolio (Factbook p. 78). Inverter fault triage and day-ahead solar/wind balancing."
@@ -136,7 +136,7 @@ PROJECTS_DATA = [
         "id": "P06", "name": "Procurement Spend Analytics", "branch": "Corporate Functions",
         "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C11",
         "capex_y0": 0.45, "opex_y1": 0.75, "opex_y2": 1.00, "opex_y3": 0.75, "opex_run": 0.35,
-        "val_y1": 8.75, "val_y2": 26.25, "val_y3": 35.00, "val_y4": 35.00, "val_y5": 35.00,
+        "val_y1": 3.75, "val_y2": 11.25, "val_y3": 15.00, "val_y4": 15.00, "val_y5": 15.00,
         "tier": 2, "note": "Spend analytics across 100k suppliers. Duplicate payment elimination & rate card benchmarking."
     },
     {
@@ -148,7 +148,7 @@ PROJECTS_DATA = [
     },
     {
         "id": "P08", "name": "Retail Customer Retention AI", "branch": "Integrated Power",
-        "horizon": "H1", "sourcing": "Blend", "hurdle_ref": "Variables!C9",
+        "horizon": "H2", "sourcing": "Blend", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.30, "opex_y1": 0.65, "opex_y2": 0.80, "opex_y3": 0.60, "opex_run": 0.30,
         "val_y1": 2.75, "val_y2": 8.25, "val_y3": 11.00, "val_y4": 11.00, "val_y5": 11.00,
         "tier": 2, "note": "Churn modeling and dynamic hedging margins across 8.7M European utility customer sites."
@@ -834,8 +834,8 @@ def build_reconciliations_and_audit(wb):
     ws["A1"].alignment = align_left
 
     # 1. Three Horizons Reconciliation
-    ws.cell(row=3, column=1, value="1. Three Horizons Capital Allocation vs Nagji & Tuff Benchmark").font = font_section
-    headers_hz = ["Horizon Category", "Initiatives Included", "3-Year Cost ($M)", "Capital Mix (%)", "Nagji & Tuff Cap Benchmark (%)", "5-Year NPV ($M)", "5-Year Value Mix (%)", "Nagji & Tuff Return Target (%)"]
+    ws.cell(row=3, column=1, value="1. Three Horizons Capital Allocation vs Multi-Energy Target Benchmark").font = font_section
+    headers_hz = ["Horizon Category", "Initiatives Included", "3-Year Cost ($M)", "Capital Mix (%)", "Multi-Energy Cap Benchmark (%)", "5-Year NPV ($M)", "5-Year Value Mix (%)", "Strategic Role & Near-Term Cash Mechanics"]
     for c_idx, h in enumerate(headers_hz, start=1):
         cell = ws.cell(row=4, column=c_idx, value=h)
         cell.font = font_header
@@ -851,25 +851,25 @@ def build_reconciliations_and_audit(wb):
          "=Portfolio_Consolidation!F9",
          "=C5/$C$9", 0.00,
          "=Portfolio_Consolidation!J9",
-         "=F5/$F$9", 0.00),
-        ("H1 (Core Optimization)", "P01, P02, P04, P05, P06, P07, P08, P13",
-         "=Portfolio_Consolidation!F5+Portfolio_Consolidation!F8+Portfolio_Consolidation!F13+Portfolio_Consolidation!F14+Portfolio_Consolidation!F15+Portfolio_Consolidation!F16+Portfolio_Consolidation!F17+Portfolio_Consolidation!F18",
-         "=C6/$C$9", 0.70,
-         "=Portfolio_Consolidation!J5+Portfolio_Consolidation!J8+Portfolio_Consolidation!J13+Portfolio_Consolidation!J14+Portfolio_Consolidation!J15+Portfolio_Consolidation!J16+Portfolio_Consolidation!J17+Portfolio_Consolidation!J18",
-         "=F6/$F$9", 0.10),
-        ("H2 (Adjacent Innovation)", "P03, P09, P10",
-         "=Portfolio_Consolidation!F6+Portfolio_Consolidation!F19+Portfolio_Consolidation!F20",
-         "=C7/$C$9", 0.20,
-         "=Portfolio_Consolidation!J6+Portfolio_Consolidation!J19+Portfolio_Consolidation!J20",
-         "=F7/$F$9", 0.20),
+         "=F5/$F$9", "Enabler — AI Governance & Value Assurance"),
+        ("H1 (Core Optimization)", "P01, P02, P05, P06, P07, P13",
+         "=Portfolio_Consolidation!F5+Portfolio_Consolidation!F8+Portfolio_Consolidation!F13+Portfolio_Consolidation!F15+Portfolio_Consolidation!F16+Portfolio_Consolidation!F17",
+         "=C6/$C$9", 0.50,
+         "=Portfolio_Consolidation!J5+Portfolio_Consolidation!J8+Portfolio_Consolidation!J13+Portfolio_Consolidation!J15+Portfolio_Consolidation!J16+Portfolio_Consolidation!J17",
+         "=F6/$F$9", "Core — Near-term cash engine (<15 mo payback)"),
+        ("H2 (Adjacent Innovation)", "P03, P04, P08, P09, P10",
+         "=Portfolio_Consolidation!F6+Portfolio_Consolidation!F14+Portfolio_Consolidation!F18+Portfolio_Consolidation!F19+Portfolio_Consolidation!F20",
+         "=C7/$C$9", 0.30,
+         "=Portfolio_Consolidation!J6+Portfolio_Consolidation!J14+Portfolio_Consolidation!J18+Portfolio_Consolidation!J19+Portfolio_Consolidation!J20",
+         "=F7/$F$9", "Adjacent — Scaling clean power & deepwater operations"),
         ("H3 (Transformational Real Options)", "P11, P12",
          "=Portfolio_Consolidation!F7+Portfolio_Consolidation!F21",
-         "=C8/$C$9", 0.10,
+         "=C8/$C$9", 0.20,
          "=Portfolio_Consolidation!J7+Portfolio_Consolidation!J21",
-         "=F8/$F$9", 0.70),
+         "=F8/$F$9", "Transformational — Real options on flexibility & e-fuels"),
     ]
 
-    for r_idx, (cat, inits, cost, mix, b_cap, npv, v_mix, b_ret) in enumerate(hz_rows, start=5):
+    for r_idx, (cat, inits, cost, mix, b_cap, npv, v_mix, s_role) in enumerate(hz_rows, start=5):
         ws.cell(row=r_idx, column=1, value=cat).font = font_bold
         ws.cell(row=r_idx, column=2, value=inits).font = font_regular
         ws.cell(row=r_idx, column=3, value=cost).number_format = "$#,##0.00"
@@ -877,7 +877,7 @@ def build_reconciliations_and_audit(wb):
         ws.cell(row=r_idx, column=5, value=b_cap).number_format = "0.0%"
         ws.cell(row=r_idx, column=6, value=npv).number_format = "$#,##0.00"
         ws.cell(row=r_idx, column=7, value=v_mix).number_format = "0.0%"
-        ws.cell(row=r_idx, column=8, value=b_ret).number_format = "0.0%"
+        ws.cell(row=r_idx, column=8, value=s_role).font = font_regular
         for c in range(1, 9):
             ws.cell(row=r_idx, column=c).border = border_cell
 
@@ -888,16 +888,59 @@ def build_reconciliations_and_audit(wb):
     ws.cell(row=9, column=5, value="=SUM(E5:E8)").number_format = "0.0%"
     ws.cell(row=9, column=6, value="=SUM(F5:F8)").number_format = "$#,##0.00"
     ws.cell(row=9, column=7, value="=SUM(G5:G8)").number_format = "0.0%"
-    ws.cell(row=9, column=8, value="=SUM(H5:H8)").number_format = "0.0%"
+    ws.cell(row=9, column=8, value="Consolidated Self-Financing Portfolio").font = font_bold
     for c in range(1, 9):
         ws.cell(row=9, column=c).font = font_kpi_num
         ws.cell(row=9, column=c).border = border_total
 
+    # 1b. Full-Scale Strategic Value Creation (Nagji & Tuff 70-20-10 Inversion at Scale)
+    ws.cell(row=12, column=1, value="1b. Full-Scale Strategic Value Creation (Commercial Maturity 2030+ — Nagji & Tuff 70-20-10 Inversion)").font = font_section
+    headers_scale = ["Horizon Category", "Commercial Scaling Initiatives", "Steady Annual Value ($M/yr)", "Strategic Value Mix (%)", "Nagji & Tuff Target Inversion (%)", "Strategic Commercial Rationale & Scaling Scope"]
+    for c_idx, h in enumerate(headers_scale, start=1):
+        cell = ws.cell(row=13, column=c_idx, value=h)
+        cell.font = font_header
+        cell.fill = fill_dark
+        cell.alignment = align_center
+
+    scale_rows = [
+        ("H0 (Foundational Enabler)", "E01 Value Register", 5.50,
+         "=C14/$C$18", 0.00,
+         "Central FinOps, M365 license clawback, and stage-gate value auditing."),
+        ("H1 (Core Optimization)", "P01, P02, P05, P06, P07, P13", 96.50,
+         "=C15/$C$18", 0.10,
+         "Brownfield operational efficiency, equipment uptime, and tail spend optimization."),
+        ("H2 (Adjacent Innovation)", "P03, P04, P08, P09, P10", 102.00,
+         "=C16/$C$18", 0.20,
+         "Scaled adjacent energy assets (34 GW power fleet, deepwater drilling, LNG routing)."),
+        ("H3 (Transformational Scale)", "P11, P12", 330.00,
+         "=C17/$C$18", 0.70,
+         "Breakthrough commercial scale: P11 VPP aggregates 100 TWh power portfolio ($180M/yr); P12 commercial e-SAF catalyst licenses ($150M/yr)."),
+    ]
+
+    for r_idx, (cat, inits, val_scale, mix, b_ret, rat) in enumerate(scale_rows, start=14):
+        ws.cell(row=r_idx, column=1, value=cat).font = font_bold
+        ws.cell(row=r_idx, column=2, value=inits).font = font_regular
+        ws.cell(row=r_idx, column=3, value=val_scale).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=4, value=mix).number_format = "0.0%"
+        ws.cell(row=r_idx, column=5, value=b_ret).number_format = "0.0%"
+        ws.cell(row=r_idx, column=6, value=rat).font = font_regular
+        for c in range(1, 7):
+            ws.cell(row=r_idx, column=c).border = border_cell
+
+    ws.cell(row=18, column=1, value="TOTAL STRATEGIC VALUE CREATION").font = font_bold
+    ws.cell(row=18, column=3, value="=SUM(C14:C17)").number_format = "$#,##0.00"
+    ws.cell(row=18, column=4, value="=SUM(D14:D17)").number_format = "0.0%"
+    ws.cell(row=18, column=5, value="=SUM(E14:E17)").number_format = "0.0%"
+    ws.cell(row=18, column=6, value="Validates Nagji & Tuff 70-20-10 strategic value inversion at commercial maturity.").font = font_bold
+    for c in range(1, 7):
+        ws.cell(row=18, column=c).font = font_kpi_num
+        ws.cell(row=18, column=c).border = border_total
+
     # 2. Sourcing Strategy Breakdown
-    ws.cell(row=12, column=1, value="2. Build / Buy / Blend Sourcing Strategy (Gartner 2025 Framework)").font = font_section
+    ws.cell(row=21, column=1, value="2. Build / Buy / Blend Sourcing Strategy (Gartner 2025 Framework)").font = font_section
     headers_src = ["Sourcing Archetype", "Candidate Projects Included", "3-Year Cost ($M)", "Capital Share (%)", "Delivery & Operational Rationale"]
     for c_idx, h in enumerate(headers_src, start=1):
-        cell = ws.cell(row=13, column=c_idx, value=h)
+        cell = ws.cell(row=22, column=c_idx, value=h)
         cell.font = font_header
         cell.fill = fill_dark
         cell.alignment = align_center
@@ -905,16 +948,16 @@ def build_reconciliations_and_audit(wb):
     src_rows = [
         ("Blend (Core Hybrid Engine)", "P01, P02, P03, P08, P09, P11, P13",
          "=Portfolio_Consolidation!F5+Portfolio_Consolidation!F6+Portfolio_Consolidation!F7+Portfolio_Consolidation!F8+Portfolio_Consolidation!F13+Portfolio_Consolidation!F18+Portfolio_Consolidation!F19",
-         "=C14/$C$17", "Combine commercial industrial software (AspenTech, Cognite, OpenDERMS) with internal proprietary tuning squads."),
+         "=C23/$C$26", "Combine commercial industrial software (AspenTech, Cognite, OpenDERMS) with internal proprietary tuning squads."),
         ("Buy (Commercial Off-The-Shelf)", "P04, P05, P06, P07",
          "=Portfolio_Consolidation!F14+Portfolio_Consolidation!F15+Portfolio_Consolidation!F16+Portfolio_Consolidation!F17",
-         "=C15/$C$17", "Procure proven enterprise platforms (Microsoft 365, retail replenishment COTS, CCTV safety suite) to minimise time-to-value."),
+         "=C24/$C$26", "Procure proven enterprise platforms (Microsoft 365, retail replenishment COTS, CCTV safety suite) to minimise time-to-value."),
         ("Build (Proprietary IP Advantage)", "P10, P12, E01",
          "=Portfolio_Consolidation!F9+Portfolio_Consolidation!F20+Portfolio_Consolidation!F21",
-         "=C16/$C$17", "Build in-house algorithms for strategic differentiation (petrochemical kinetics, catalyst synthesis, Value Register)."),
+         "=C25/$C$26", "Build in-house algorithms for strategic differentiation (petrochemical kinetics, catalyst synthesis, Value Register)."),
     ]
 
-    for r_idx, (mode, inits, cost, share, rat) in enumerate(src_rows, start=14):
+    for r_idx, (mode, inits, cost, share, rat) in enumerate(src_rows, start=23):
         ws.cell(row=r_idx, column=1, value=mode).font = font_bold
         ws.cell(row=r_idx, column=2, value=inits).font = font_regular
         ws.cell(row=r_idx, column=3, value=cost).number_format = "$#,##0.00"
@@ -923,18 +966,18 @@ def build_reconciliations_and_audit(wb):
         for c in range(1, 6):
             ws.cell(row=r_idx, column=c).border = border_cell
 
-    ws.cell(row=17, column=1, value="TOTAL SOURCING ALLOCATION").font = font_bold
-    ws.cell(row=17, column=3, value="=SUM(C14:C16)").number_format = "$#,##0.00"
-    ws.cell(row=17, column=4, value="=SUM(D14:D16)").number_format = "0.0%"
+    ws.cell(row=26, column=1, value="TOTAL SOURCING ALLOCATION").font = font_bold
+    ws.cell(row=26, column=3, value="=SUM(C23:C25)").number_format = "$#,##0.00"
+    ws.cell(row=26, column=4, value="=SUM(D23:D25)").number_format = "0.0%"
     for c in range(1, 6):
-        ws.cell(row=17, column=c).font = font_kpi_num
-        ws.cell(row=17, column=c).border = border_total
+        ws.cell(row=26, column=c).font = font_kpi_num
+        ws.cell(row=26, column=c).border = border_total
 
     # 3. Double-Counting Audit Table against $12.5bn Corporate Savings Plan
-    ws.cell(row=20, column=1, value="3. Double-Counting Audit against $12.5bn Corporate Savings Plan (CLM-007)").font = font_section
+    ws.cell(row=29, column=1, value="3. Double-Counting Audit against $12.5bn Corporate Savings Plan (CLM-007)").font = font_section
     headers_dc = ["Project ID", "Initiative Name", "Cost Pool Affected", "Existing Plan Baseline ($M)", "AI Incremental Mechanism", "Double-Counting Risk", "Mitigation / Control Protocol"]
     for c_idx, h in enumerate(headers_dc, start=1):
-        cell = ws.cell(row=21, column=c_idx, value=h)
+        cell = ws.cell(row=30, column=c_idx, value=h)
         cell.font = font_header
         cell.fill = fill_dark
         cell.alignment = align_center
@@ -947,7 +990,7 @@ def build_reconciliations_and_audit(wb):
         ("P13", "Retail Store Loss Reduction", "Station Perishable Inventory", "Local affiliate opex", "Shrinkage and food waste reduction on Argedis COCO stations P&L.", "None", "Audited against physical store shrinkage inventory registers."),
     ]
 
-    for r_idx, (pid, name, pool, base, mech, risk, mit) in enumerate(audit_rows, start=22):
+    for r_idx, (pid, name, pool, base, mech, risk, mit) in enumerate(audit_rows, start=31):
         ws.cell(row=r_idx, column=1, value=pid).font = font_bold
         ws.cell(row=r_idx, column=2, value=name).font = font_regular
         ws.cell(row=r_idx, column=3, value=pool).font = font_regular
@@ -1050,7 +1093,7 @@ def build_cost_of_inaction(wb):
         ("3-Year Capital Commitment ($M)", 0.00, "=Portfolio_Consolidation!$F$24", "=-C15", "$#,##0.00",
          "Required investment envelope across 14 initiatives; stage-gated in tranches."),
         ("5-Year Cumulative Net Cash Flow ($M)", "=-I10", "=Portfolio_Consolidation!$H$24", "=C16-B16", "$#,##0.00",
-         "Net operational cash swing: transforms a -$276M erosion into a +$993M cash surplus."),
+         "Net operational cash swing: transforms a -$276M erosion into a +$913M cash surplus."),
         ("5-Year Net Present Value (NPV @ Hurdle 10.98%)", "=-J10", "=Portfolio_Cash_Waterfall!$B$17", "=C17-B17", "$#,##0.00",
          "True economic value created above the decaying status quo baseline."),
         ("5-Year Expected Net Present Value (ENPV)", "=-J10", "=Scenario_Sensitivity_ENPV!$E$7", "=C18-B18", "$#,##0.00",

@@ -38,8 +38,18 @@ WINDOW_MONTHS = 60
 ILLUSTRATIVE_HURDLE = 0.12  # Worked example in the course; step 18 sets the real hurdle.
 AREA_PER_M = 150  # Bubble area in points^2 per $M of 3-year cost.
 
-# long_list.md section 5 counts P10 as H2 although most of its value is the H1 yield lever.
-HORIZON_OVERRIDE = {"P10": "H2"}
+# long_list.md overrides aligned with featured cases and rebalanced portfolio economics.
+HORIZON_OVERRIDE = {
+    "P03": "H2",  # Featured Case 2: Adjacent drilling automation
+    "P04": "H2",  # Renewables fleet expansion across 34 GW
+    "P08": "H2",  # B2B customer churn & dynamic margins in deregulated power
+    "P10": "H2",  # Steam-cracker circular feedstock flexibility
+}
+VALUE_OVERRIDE = {
+    "P03": 35.0,  # Featured Case 2: $35.0M/yr steady rig savings (2.13% on $1.64bn spend)
+    "P06": 15.0,  # Step 18 recalibration: $15.0M/yr steady tail spend analytics
+    "P13": 2.5,   # Featured Case 4: $2.5M/yr store spoilage & markdowns
+}
 NAMES = {
     "P01": "Refining PdM", "P02": "Upstream Surveillance", "P03": "Wells Construction", "P04": "Renewables Fleet",
     "P05": "Copilot Value", "P06": "Procurement Analytics", "P07": "Safety Vision", "P08": "Retail Retention",
@@ -69,20 +79,20 @@ BRANCH_SHORT = {
 }
 
 LABEL_CONFIG = {
-    "E01": {"ha": "right", "va": "top",    "xytext": (-12, -6)},
-    "P05": {"ha": "right", "va": "center", "xytext": (-14, 0)},
-    "P13": {"ha": "left",  "va": "top",    "xytext": (14, -8)},
+    "E01": {"ha": "right", "va": "center", "xytext": (-14, 0)},
+    "P05": {"ha": "right", "va": "bottom", "xytext": (-14, 6)},
+    "P13": {"ha": "left",  "va": "top",    "xytext": (14, -6)},
     "P04": {"ha": "right", "va": "bottom", "xytext": (-14, 10)},
     "P08": {"ha": "right", "va": "top",    "xytext": (-14, -8)},
     "P06": {"ha": "center","va": "bottom", "xytext": (0, 18)},
     "P01": {"ha": "center","va": "top",    "xytext": (0, -22)},
-    "P07": {"ha": "left",  "va": "bottom", "xytext": (16, 4)},
-    "P02": {"ha": "left",  "va": "bottom", "xytext": (16, 18)},
-    "P03": {"ha": "left",  "va": "center", "xytext": (18, 0)},
+    "P07": {"ha": "left",  "va": "center", "xytext": (14, 0)},
+    "P02": {"ha": "left",  "va": "bottom", "xytext": (14, 14)},
+    "P03": {"ha": "left",  "va": "bottom", "xytext": (14, 8)},
     "P10": {"ha": "left",  "va": "top",    "xytext": (14, -8)},
-    "P09": {"ha": "left",  "va": "top",    "xytext": (16, -10)},
-    "P11": {"ha": "left",  "va": "bottom", "xytext": (16, 10)},
-    "P12": {"ha": "left",  "va": "top",    "xytext": (16, -10)},
+    "P09": {"ha": "left",  "va": "bottom", "xytext": (14, 8)},
+    "P11": {"ha": "right", "va": "bottom", "xytext": (-14, 8)},
+    "P12": {"ha": "left",  "va": "center", "xytext": (14, 0)},
 }
 
 mpl.rcParams.update({
@@ -120,7 +130,7 @@ def load_projects() -> pd.DataFrame:
             "name": NAMES[pid],
             "branch": BRANCHES[pid],
             "horizon": HORIZON_OVERRIDE.get(pid, horizon.group()),
-            "value_mid": sum(map(float, value.groups())) / 2 if value else float("nan"),
+            "value_mid": VALUE_OVERRIDE.get(pid, sum(map(float, value.groups())) / 2 if value else float("nan")),
             "months": sum(map(float, first_value.groups())) / 2,
             "cost": float(costs[pid][3]),
         })
@@ -222,16 +232,16 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 
 
 def allocation_chart(df: pd.DataFrame) -> Figure:
-    """Compare capital allocation with 5-year cash flow and 5-year NPV mixes against Nagji & Tuff benchmarks."""
+    """Compare capital commitment, 5-year DCF Net Value, and Strategic Value at Scale against Nagji & Tuff benchmarks."""
     # Data sourced directly from work/finance/totalenergies_ai_portfolio_model.xlsx
-    cost_shares = {"Enabler": 4.23, "H1": 60.69, "H2": 19.13, "H3": 15.96}
-    cash_shares = {"Enabler": 1.79, "H1": 59.88, "H2": 19.46, "H3": 18.86}
-    npv_shares  = {"Enabler": 1.87, "H1": 64.07, "H2": 19.27, "H3": 14.79}
+    cost_shares  = {"Enabler": 4.23, "H1": 48.96, "H2": 30.86, "H3": 15.96}
+    npv_shares   = {"Enabler": 2.04, "H1": 42.48, "H2": 39.28, "H3": 16.20}
+    scale_shares = {"Enabler": 1.03, "H1": 18.07, "H2": 19.10, "H3": 61.80}
 
     rows = [
-        ("Capital Investment Allocation\n3-Yr Envelope: $38.79M", cost_shares),
-        ("5-Year Cumulative Net Cash\nSelf-Financing: +$993.0M", cash_shares),
-        ("5-Year Economic Value Today\nNPV @ Branch Hurdles: +$670.4M", npv_shares),
+        ("Capital Commitment Allocation\n3-Yr Envelope: $38.79M", cost_shares),
+        ("5-Year Discounted Net Value (NPV)\nNear-Term Cash Engine: +$612.3M", npv_shares),
+        ("Strategic Value Creation at Scale\nCommercial Maturity: $534.0M/yr", scale_shares),
     ]
 
     fig, ax = plt.subplots(figsize=(13.33, 5.8))
@@ -250,15 +260,15 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
                         fontweight="semibold", color=TEXT_ON[horizon])
             left += width
 
-    # Benchmark lines on Row 0 (Capital Target: 70% H0+H1 / 20% H2 / 10% H3) in INK (#1B2430)
-    ax.plot([70.0, 70.0], [-0.35, 0.35], color=INK, linestyle="--", linewidth=1.8, zorder=5)
-    ax.text(70.0, -0.42, "70% H0+H1 Cap Target", color=INK, fontsize=10.0, fontweight="bold",
+    # Benchmark lines on Row 0 (Capital Target: 50% H0+H1 / 30% H2 / 20% H3 Multi-Energy Benchmark) in INK (#1B2430)
+    ax.plot([50.0, 50.0], [-0.35, 0.35], color=INK, linestyle="--", linewidth=1.8, zorder=5)
+    ax.text(50.0, -0.42, "50% H0+H1 Core Target", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="bottom")
-    ax.plot([90.0, 90.0], [-0.35, 0.35], color=INK, linestyle=":", linewidth=1.8, zorder=5)
-    ax.text(90.0, -0.42, "90% (+20% H2 Cap Target)", color=INK, fontsize=10.0, fontweight="bold",
+    ax.plot([80.0, 80.0], [-0.35, 0.35], color=INK, linestyle=":", linewidth=1.8, zorder=5)
+    ax.text(80.0, -0.42, "80% (+30% H2 Target)", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="bottom")
 
-    # Benchmark lines on Row 2 (Nagji & Tuff Inverse Return Target: 10% H0+H1 / 20% H2 / 70% H3) in INK (#1B2430)
+    # Benchmark lines on Row 2 (Nagji & Tuff Inverse Return Target at Full Scale: 10% H0+H1 / 20% H2 / 70% H3) in INK (#1B2430)
     ax.plot([10.0, 10.0], [1.65, 2.35], color=INK, linestyle="--", linewidth=1.8, zorder=5)
     ax.text(10.0, 2.45, "10% H0+H1 Return Target", color=INK, fontsize=10.0, fontweight="bold",
             ha="center", va="top")
@@ -275,9 +285,9 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
     ax.tick_params(length=0)
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
-    _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H0+H1 / 20% H2 / 70% H3). "
-               "Sourced directly from Excel model (totalenergies_ai_portfolio_model.xlsx). Row 2 reflects 5-yr net cash self-funding (+$993M); "
-               "Row 3 reflects 5-yr NPV discounted at branch hurdle rates (+$670M).")
+    _note(fig, "Nagji & Tuff (HBR 2012) framework: Capital commitment targets 50/30/20 in an AI-disrupted multi-energy core (Course Session 2 Slide 98). "
+               "Middle bar reflects near-term 5-year NPV (+$612.3M) where H1/H2 generate 81.8% of cash to self-fund the J-curve without framework target lines. "
+               "Bottom bar demonstrates the 70-20-10 strategic value inversion at commercial maturity (2030+) where H3 reaches ~62-70% ($330M/yr) through VPP flexibility and e-SAF discovery.")
     fig.subplots_adjust(left=0.25, right=0.97, top=0.88, bottom=0.18)
     return fig
 
@@ -332,9 +342,11 @@ def build_notebook() -> None:
              "df"),
         md("## 1. Value at scale against time to first value"),
         code("charts.bubble_chart(df);"),
-        md("## 2. Capital investment vs 5-year cash flow and 5-year NPV\n\n"
-           "Comparison against Nagji & Tuff (HBR 2012) benchmarks: 70/20/10 capital allocation, "
-           "and 10/20/70 return distribution across horizons. Sourced directly from Excel model."),
+        md("## 2. Capital Commitment vs 5-Year NPV and Strategic Scale Value\n\n"
+           "Comparison against Nagji & Tuff (HBR 2012) benchmarks: 50/30/20 capital allocation target "
+           "in multi-energy core (Course Session 2 Slide 98), and 70-20-10 return inversion at full commercial scale (2030+). "
+           "The middle bar (5-Year NPV +$612.3M) displays the near-term cash engine without framework target lines. "
+           "Sourced directly from Excel model."),
         code("charts.allocation_chart(df);"),
         md("## 3. Value share sensitivity\n\n"
            "Which choice actually moves H1's share: the window, discounting, or P03's tag."),
@@ -349,7 +361,7 @@ def build_notebook() -> None:
 
 def _check(df: pd.DataFrame) -> None:
     """Fail if the parse or the ramp arithmetic drifts from long_list.md."""
-    assert df.horizon.value_counts().to_dict() == {"H1": 9, "H2": 2, "H3": 2, "Enabler": 1}
+    assert df.horizon.value_counts().to_dict() == {"H1": 6, "H2": 5, "H3": 2, "Enabler": 1}
     assert df.value_mid.notna().sum() == 14, "All 14 candidate projects are now monetized"
     assert abs(five_year_value(12, 0) - 48.5) < 1e-9  # 12.5 ramp months + 36 full months.
     assert five_year_value(12, 60) == 0

@@ -71,7 +71,7 @@ def audit():
     # 6. Inspect Strategic Reconciliations
     print("\n6. Strategic Reconciliations:")
     ws_sr = wb["Strategic_Reconciliations"]
-    print("  Three Horizons Allocation:")
+    print("  Table 1: Three Horizons Capital & 5-Yr Net Value:")
     for r in range(5, 10):
         cat = ws_sr.cell(r, 1).value
         inits = ws_sr.cell(r, 2).value
@@ -81,8 +81,17 @@ def audit():
         vmix = ws_sr.cell(r, 7).value
         print(f"  Row {r}: {str(cat):32s} | Cost={str(cost):35s} | Mix={str(mix):15s} | NPV={str(npv):35s} | VMix={str(vmix)}")
 
-    print("\n  Sourcing Strategy Allocation:")
-    for r in range(14, 18):
+    print("\n  Table 1b: Full-Scale Strategic Value Creation (Maturity 2030+):")
+    for r in range(14, 19):
+        cat = ws_sr.cell(r, 1).value
+        inits = ws_sr.cell(r, 2).value
+        val_scale = ws_sr.cell(r, 3).value
+        mix = ws_sr.cell(r, 4).value
+        target = ws_sr.cell(r, 5).value
+        print(f"  Row {r}: {str(cat):32s} | SteadyValue={str(val_scale):10s} | Mix={str(mix):15s} | Target={str(target):15s}")
+
+    print("\n  Table 2: Sourcing Strategy Allocation:")
+    for r in range(23, 27):
         mode = ws_sr.cell(r, 1).value
         cost = ws_sr.cell(r, 3).value
         share = ws_sr.cell(r, 4).value
@@ -134,11 +143,11 @@ def audit():
 
     # IRR numerical check
     import numpy_financial as npf
-    prog_cf = [-5.95, 34.36, 133.08, 218.02, 285.50, 328.00]
+    prog_cf = [-5.95, 29.36, 118.08, 198.02, 265.50, 308.00]
     sq_cf = [0.0, -1.00, -31.22, -56.32, -80.91, -106.57]
     inc_cf = [p - s for p, s in zip(prog_cf, sq_cf)]
     calc_irr = npf.irr(inc_cf)
-    assert abs(calc_irr - 8.4592) < 0.01, f"Calculated IRR mismatch: {calc_irr}"
+    assert abs(calc_irr - 7.6680) < 0.01, f"Calculated IRR mismatch: {calc_irr}"
     print(f"  [PASS] Incremental IRR mathematically verified at {calc_irr*100:.2f}%.")
 
     print("\nAUDIT COMPLETED CLEANLY: ALL 8 ASSERTIONS PASSED.")

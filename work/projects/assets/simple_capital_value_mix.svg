@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-09T12:20:36.355827</dc:date>
+    <dc:date>2026-11-09T14:34:55.160948</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -43,23 +43,23 @@ L 269.170451 70.28897
 L 269.170451 125.406545 
 L 239.94 125.406545 
 z
-" clip-path="url(#p33827829f0)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 269.170451 70.28897 
-L 688.554858 70.28897 
-L 688.554858 125.406545 
+L 607.497368 70.28897 
+L 607.497368 125.406545 
 L 269.170451 125.406545 
 z
-" clip-path="url(#p33827829f0)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 688.554858 70.28897 
+    <path d="M 607.497368 70.28897 
 L 820.748362 70.28897 
 L 820.748362 125.406545 
-L 688.554858 125.406545 
+L 607.497368 125.406545 
 z
-" clip-path="url(#p33827829f0)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 820.748362 70.28897 
@@ -67,71 +67,71 @@ L 931.036303 70.28897
 L 931.036303 125.406545 
 L 820.748362 125.406545 
 z
-" clip-path="url(#p33827829f0)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 239.94 168.713212 
-L 252.309387 168.713212 
-L 252.309387 223.830788 
+L 254.036955 168.713212 
+L 254.036955 223.830788 
 L 239.94 223.830788 
 z
-" clip-path="url(#p33827829f0)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 252.309387 168.713212 
-L 666.096474 168.713212 
-L 666.096474 223.830788 
-L 252.309387 223.830788 
+    <path d="M 254.036955 168.713212 
+L 547.585309 168.713212 
+L 547.585309 223.830788 
+L 254.036955 223.830788 
 z
-" clip-path="url(#p33827829f0)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 666.096474 168.713212 
-L 800.570367 168.713212 
-L 800.570367 223.830788 
-L 666.096474 223.830788 
+    <path d="M 547.585309 168.713212 
+L 819.020794 168.713212 
+L 819.020794 223.830788 
+L 547.585309 223.830788 
 z
-" clip-path="url(#p33827829f0)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
-    <path d="M 800.570367 168.713212 
-L 930.898097 168.713212 
-L 930.898097 223.830788 
-L 800.570367 223.830788 
+    <path d="M 819.020794 168.713212 
+L 930.9672 168.713212 
+L 930.9672 223.830788 
+L 819.020794 223.830788 
 z
-" clip-path="url(#p33827829f0)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
     <path d="M 239.94 267.137455 
-L 252.862209 267.137455 
-L 252.862209 322.25503 
+L 247.05758 267.137455 
+L 247.05758 322.25503 
 L 239.94 322.25503 
 z
-" clip-path="url(#p33827829f0)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
-    <path d="M 252.862209 267.137455 
-L 695.603336 267.137455 
-L 695.603336 322.25503 
-L 252.862209 322.25503 
+    <path d="M 247.05758 267.137455 
+L 371.926195 267.137455 
+L 371.926195 322.25503 
+L 247.05758 322.25503 
 z
-" clip-path="url(#p33827829f0)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
-    <path d="M 695.603336 267.137455 
-L 828.764277 267.137455 
-L 828.764277 322.25503 
-L 695.603336 322.25503 
+    <path d="M 371.926195 267.137455 
+L 503.91239 267.137455 
+L 503.91239 322.25503 
+L 371.926195 322.25503 
 z
-" clip-path="url(#p33827829f0)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_14">
-    <path d="M 828.764277 267.137455 
+    <path d="M 503.91239 267.137455 
 L 930.9672 267.137455 
 L 930.9672 322.25503 
-L 828.764277 322.25503 
+L 503.91239 322.25503 
 z
-" clip-path="url(#p33827829f0)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#pc400315a17)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -205,22 +205,22 @@ z
     <g id="ytick_1">
      <g id="line2d_12"/>
      <g id="text_12">
-      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(88.1475 96.244945)">Capital Investment Allocation</text>
+      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(77.590859 96.244945)">Capital Commitment Allocation</text>
       <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(117.389844 109.779008)">3-Yr Envelope: $38.79M</text>
      </g>
     </g>
     <g id="ytick_2">
      <g id="line2d_13"/>
      <g id="text_13">
-      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(95.290078 194.669187)">5-Year Cumulative Net Cash</text>
-      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(107.936484 208.20325)">Self-Financing: +$993.0M</text>
+      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(59.313047 194.669187)">5-Year Discounted Net Value (NPV)</text>
+      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(60.964375 208.20325)">Near-Term Cash Engine: +$612.3M</text>
      </g>
     </g>
     <g id="ytick_3">
      <g id="line2d_14"/>
      <g id="text_14">
-      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(88.6075 293.343196)">5-Year Economic Value Today</text>
-      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(62.757656 306.265602)">NPV @ Branch Hurdles: +$670.4M</text>
+      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(73.608984 293.062883)">Strategic Value Creation at Scale</text>
+      <text style="font-size: 11.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(66.698203 306.658039)">Commercial Maturity: $534.0M/yr</text>
      </g>
     </g>
    </g>
@@ -228,37 +228,37 @@ z
     <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="254.555225" y="100.654476" transform="rotate(-0 254.555225 100.654476)">4.2%</text>
    </g>
    <g id="text_16">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="478.862654" y="100.654476" transform="rotate(-0 478.862654 100.654476)">H1 60.7%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="438.333909" y="100.654476" transform="rotate(-0 438.333909 100.654476)">H1 49.0%</text>
    </g>
    <g id="text_17">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="754.65161" y="100.654476" transform="rotate(-0 754.65161 100.654476)">H2 19.1%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="714.122865" y="100.654476" transform="rotate(-0 714.122865 100.654476)">H2 30.9%</text>
    </g>
    <g id="text_18">
     <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="875.892332" y="100.654476" transform="rotate(-0 875.892332 100.654476)">H3 16.0%</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="459.202931" y="199.078719" transform="rotate(-0 459.202931 199.078719)">H1 59.9%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="400.811132" y="199.078719" transform="rotate(-0 400.811132 199.078719)">H1 42.5%</text>
    </g>
    <g id="text_20">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="733.333421" y="199.078719" transform="rotate(-0 733.333421 199.078719)">H2 19.5%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="683.303052" y="199.078719" transform="rotate(-0 683.303052 199.078719)">H2 39.3%</text>
    </g>
    <g id="text_21">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="865.734232" y="199.078719" transform="rotate(-0 865.734232 199.078719)">H3 18.9%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="874.993997" y="199.078719" transform="rotate(-0 874.993997 199.078719)">H3 16.2%</text>
    </g>
    <g id="text_22">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="474.232772" y="297.502961" transform="rotate(-0 474.232772 297.502961)">H1 64.1%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="309.491888" y="297.502961" transform="rotate(-0 309.491888 297.502961)">H1 18.1%</text>
    </g>
    <g id="text_23">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="762.183806" y="297.502961" transform="rotate(-0 762.183806 297.502961)">H2 19.3%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="437.919293" y="297.502961" transform="rotate(-0 437.919293 297.502961)">H2 19.1%</text>
    </g>
    <g id="text_24">
-    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="879.865739" y="297.502961" transform="rotate(-0 879.865739 297.502961)">H3 14.8%</text>
+    <text style="font-weight: 600; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="717.439795" y="297.502961" transform="rotate(-0 717.439795 297.502961)">H3 61.8%</text>
    </g>
    <g id="text_25">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="723.65904" y="54.161138" transform="rotate(-0 723.65904 54.161138)">70% H0+H1 Cap Target</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="585.4536" y="54.161138" transform="rotate(-0 585.4536 54.161138)">50% H0+H1 Core Target</text>
    </g>
    <g id="text_26">
-    <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="861.86448" y="54.161138" transform="rotate(-0 861.86448 54.161138)">90% (+20% H2 Cap Target)</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="792.76176" y="54.161138" transform="rotate(-0 792.76176 54.161138)">80% (+30% H2 Target)</text>
    </g>
    <g id="text_27">
     <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="309.04272" y="346.341839" transform="rotate(-0 309.04272 346.341839)">10% H0+H1 Return Target</text>
@@ -267,33 +267,33 @@ z
     <text style="font-weight: 700; font-size: 10px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #1b2430" x="447.24816" y="346.341839" transform="rotate(-0 447.24816 346.341839)">30% H0..H2 (70% H3 Target)</text>
    </g>
    <g id="line2d_15">
-    <path d="M 723.65904 63.399273 
-L 723.65904 132.296242 
-" clip-path="url(#p33827829f0)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+    <path d="M 585.4536 63.399273 
+L 585.4536 132.296242 
+" clip-path="url(#pc400315a17)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_16">
-    <path d="M 861.86448 63.399273 
-L 861.86448 132.296242 
-" clip-path="url(#p33827829f0)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+    <path d="M 792.76176 63.399273 
+L 792.76176 132.296242 
+" clip-path="url(#pc400315a17)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_17">
     <path d="M 309.04272 260.247758 
 L 309.04272 329.144727 
-" clip-path="url(#p33827829f0)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#pc400315a17)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_18">
     <path d="M 447.24816 260.247758 
 L 447.24816 329.144727 
-" clip-path="url(#p33827829f0)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#pc400315a17)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
   </g>
   <g id="text_29">
-   <text style="font-size: 9.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #5b6673" x="19.1952" y="407.012531" transform="rotate(-0 19.1952 407.012531)">Nagji &amp; Tuff (HBR 2012) framework: Capital allocates 70/20/10; returns run the other way (10% H0+H1 / 20% H2 / 70% H3). Sourced directly from Excel model (totalenergies_ai_portfolio_model.xlsx). Row 2 reflects 5-yr net cash self-funding (+$993M); Row 3 reflects 5-yr NPV discounted at branch hurdle rates (+$670M).</text>
+   <text style="font-size: 9.5px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: start; fill: #5b6673" x="19.1952" y="407.012531" transform="rotate(-0 19.1952 407.012531)">Nagji &amp; Tuff (HBR 2012) framework: Capital commitment targets 50/30/20 in an AI-disrupted multi-energy core (Course Session 2 Slide 98). Middle bar reflects near-term 5-year NPV (+$612.3M) where H1/H2 generate 81.8% of cash to self-fund the J-curve without framework target lines. Bottom bar demonstrates the 70-20-10 strategic value inversion at commercial maturity (2030+) where H3 reaches ~62-70% ($330M/yr) through VPP flexibility and e-SAF discovery.</text>
   </g>
   <g id="legend_1">
    <g id="line2d_19">
     <defs>
-     <path id="mcc75427729" d="M 0 5.5 
+     <path id="m013b09d9ce" d="M 0 5.5 
 C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
 C 4.920485 2.857689 5.5 1.458617 5.5 0 
 C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
@@ -306,7 +306,7 @@ z
 " style="stroke: #3f2b86"/>
     </defs>
     <g>
-     <use xlink:href="#mcc75427729" x="36.2464" y="21.102594" style="fill: #3f2b86; stroke: #3f2b86"/>
+     <use xlink:href="#m013b09d9ce" x="36.2464" y="21.102594" style="fill: #3f2b86; stroke: #3f2b86"/>
     </g>
    </g>
    <g id="text_30">
@@ -314,7 +314,7 @@ z
    </g>
    <g id="line2d_20">
     <defs>
-     <path id="m87ee39913a" d="M 0 5.5 
+     <path id="m4a222c2d77" d="M 0 5.5 
 C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
 C 4.920485 2.857689 5.5 1.458617 5.5 0 
 C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
@@ -327,7 +327,7 @@ z
 " style="stroke: #00509e"/>
     </defs>
     <g>
-     <use xlink:href="#m87ee39913a" x="138.646713" y="21.102594" style="fill: #00509e; stroke: #00509e"/>
+     <use xlink:href="#m4a222c2d77" x="138.646713" y="21.102594" style="fill: #00509e; stroke: #00509e"/>
     </g>
    </g>
    <g id="text_31">
@@ -335,7 +335,7 @@ z
    </g>
    <g id="line2d_21">
     <defs>
-     <path id="m888ea1e760" d="M 0 5.5 
+     <path id="mbe0bac8bde" d="M 0 5.5 
 C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
 C 4.920485 2.857689 5.5 1.458617 5.5 0 
 C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
@@ -348,7 +348,7 @@ z
 " style="stroke: #f37021"/>
     </defs>
     <g>
-     <use xlink:href="#m888ea1e760" x="227.024212" y="21.102594" style="fill: #f37021; stroke: #f37021"/>
+     <use xlink:href="#mbe0bac8bde" x="227.024212" y="21.102594" style="fill: #f37021; stroke: #f37021"/>
     </g>
    </g>
    <g id="text_32">
@@ -356,7 +356,7 @@ z
    </g>
    <g id="line2d_22">
     <defs>
-     <path id="m79409cfdc5" d="M 0 5.5 
+     <path id="m48f5c35384" d="M 0 5.5 
 C 1.458617 5.5 2.857689 4.920485 3.889087 3.889087 
 C 4.920485 2.857689 5.5 1.458617 5.5 0 
 C 5.5 -1.458617 4.920485 -2.857689 3.889087 -3.889087 
@@ -369,7 +369,7 @@ z
 " style="stroke: #e30613"/>
     </defs>
     <g>
-     <use xlink:href="#m79409cfdc5" x="336.245462" y="21.102594" style="fill: #e30613; stroke: #e30613"/>
+     <use xlink:href="#m48f5c35384" x="336.245462" y="21.102594" style="fill: #e30613; stroke: #e30613"/>
     </g>
    </g>
    <g id="text_33">
@@ -378,7 +378,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p33827829f0">
+  <clipPath id="pc400315a17">
    <rect x="239.94" y="50.112" width="691.0272" height="292.32"/>
   </clipPath>
  </defs>

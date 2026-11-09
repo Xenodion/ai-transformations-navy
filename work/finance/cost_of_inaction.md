@@ -195,22 +195,22 @@ This table mirrors Sheet `Cost_of_Inaction` (`A14:E20`) in `totalenergies_ai_por
 | Valuation & Return Metric | Decaying Status Quo (Do Nothing) | Standalone Transformation Program (Step 18) | Incremental Decision Value (Invest vs Status Quo) | Strategic Boardroom Rationale |
 | :--- | :---: | :---: | :---: | :--- |
 | **3-Year Capital Commitment ($M)** | **$0.00** | **$38.79** (`Portfolio_Consolidation!F24`) | **-$38.79** | Total multi-year funding commitment, released in stage-gated tranches across 14 projects. |
-| **5-Year Net Cash Flow ($M)** | **-$276.02** (`-Cost_of_Inaction!I10`) | **+$993.01** (`Portfolio_Consolidation!H24`) | **+$1,269.03** | Cumulative free cash swing: converts a -$276M erosion drain into a +$993M cash surplus. |
-| **5-Year NPV (@ Hurdle 10.98%)** | **-$184.11** (`-Cost_of_Inaction!J10`) | **+$675.57** (`Portfolio_Cash_Waterfall!B17`) | **+$859.68** | Economic value creation above the decaying reality of peer competitive advancement. |
-| **Expected NPV (ENPV)** | **-$184.11** | **+$657.67** (`Scenario_Sensitivity_ENPV!E7`) | **+$841.78** | Probability-weighted decision value clearing the hurdle with over $840M in risk cushion. |
-| **Internal Rate of Return (IRR)** | **N/A (Pure Loss)** | **784.9%** (`Portfolio_Cash_Waterfall!B18`) | **845.9%** (`=IRR(B25:G25)`) | Return on incremental cash flows; clears the 10.98% hurdle rate by over 834 points. |
+| **5-Year Net Cash Flow ()** | **-.02** (-Cost_of_Inaction!I10) | **+.01** (Portfolio_Consolidation!H24) | **+,189.03** | Cumulative free cash swing: converts a - erosion drain into a + cash surplus. |
+| **5-Year NPV (@ Hurdle 10.98%)** | **-.11** (-Cost_of_Inaction!J10) | **+.19** (Portfolio_Cash_Waterfall!B17) | **+.30** | Economic value creation above the decaying reality of peer competitive advancement. |
+| **Expected NPV (ENPV)** | **-.11** | **+.70** (Scenario_Sensitivity_ENPV!E7) | **+.81** | Probability-weighted decision value clearing the hurdle with over  in risk cushion. |
+| **Internal Rate of Return (IRR)** | **N/A (Pure Loss)** | **702.4%** (Portfolio_Cash_Waterfall!B18) | **766.8%** (=IRR(B25:G25)) | Return on incremental cash flows; clears the 10.98% hurdle rate by over 755 points. |
 | **Discounted Payback Period** | **Never** | **1.4 Years** (`Portfolio_Cash_Waterfall!B20`) | **1.2 Years** | Incremental cash flows cover initial capital within Month 14.5 of deployment. |
 
 ### 5.2 Incremental Cash Flow Stream Schedule
-To compute the exact Incremental IRR of **845.9%**, the cash flow streams from Sheet `Cost_of_Inaction` (`A22:G25`) are reconciled below:
+To compute the exact Incremental IRR of **766.8%**, the cash flow streams from Sheet `Cost_of_Inaction` (`A22:G25`) are reconciled below:
 
 | Cash Flow Stream ($M) | Y0 (2025) | Y1 (2026) | Y2 (2027) | Y3 (2028) | Y4 (2029) | Y5 (2030) | Cumulative ($M) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Decaying Status Quo Stream** | $0.00 | -$1.00 | -$31.22 | -$56.32 | -$80.91 | -$106.57 | **-$276.02** |
-| **Transformation Program Stream** | -$5.95 | +$34.36 | +$133.08 | +$218.02 | +$285.50 | +$328.00 | **+$993.01** |
-| **Incremental Stream (Plan - Status Quo)** | **-$5.95** | **+$35.36** | **+$164.30** | **+$274.34** | **+$366.41** | **+$434.57** | **+$1,269.03** |
+| **Transformation Program Stream** | -.95 | +.36 | +.08 | +.02 | +.50 | +.00 | **+.01** |
+| **Incremental Stream (Plan - Status Quo)** | **-.95** | **+.36** | **+.30** | **+.34** | **+.41** | **+.57** | **+,189.03** |
 
-$$\text{Incremental IRR} = \text{IRR}([-5.95, +35.36, +164.30, +274.34, +366.41, +434.57]) = \mathbf{845.9\%}$$
+$$\text{Incremental IRR} = \text{IRR}([-5.95, +30.36, +149.30, +254.34, +346.41, +414.57]) = \mathbf{766.8\%}$$
 
 The initial capital commitment ($Y_0 = -\$5.95\text{M}$) is fully amortized by the incremental operational margin generated in Year 1 alone ($Y_1 = +\$35.36\text{M}$), yielding immediate downside insulation.
 
