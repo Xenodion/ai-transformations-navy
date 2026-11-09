@@ -186,6 +186,12 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
     ax.set_xlim(0, 42)
     ax.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
 
+    # Horizon boundary lines (12 months and 24 months)
+    ax.axvline(12.0, color=MUTED, linestyle="--", linewidth=1.2, zorder=1)
+    ax.text(12.2, 150, "12 mo: H1 / H2 Horizon Boundary", fontsize=9.5, color=MUTED, style="italic")
+    ax.axvline(24.0, color=MUTED, linestyle=":", linewidth=1.2, zorder=1)
+    ax.text(24.2, 150, "24 mo: H3 Real Options Window", fontsize=9.5, color=MUTED, style="italic")
+
     for row in df.itertuples():
         y = row.value_mid
         area = row.cost * AREA_PER_M
@@ -217,39 +223,55 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 
 
 def allocation_chart(df: pd.DataFrame) -> Figure:
-    """Compare the course reference mix with cost and 5-year value by horizon."""
-    five = _five_year(df).fillna(0)
+    """Compare capital allocation with annual and 5-year value mixes against 70/20/10 dashed benchmarks."""
+    p03_h2_horizon = _p03_as_h2(df)
+    five_yr = _five_year(df).fillna(0)
+
+    # Compute shares
+    cost_shares = _shares(df.cost, df.horizon)
+    val_shares = _shares(df.value_mid, p03_h2_horizon)
+    five_shares = _shares(five_yr, p03_h2_horizon)
+
     rows = [
-        ("Course reference\n70-20-10 heuristic", {"H1": 70.0, "H2": 20.0, "H3": 10.0}),
-        (f"Candidate pool\n3-year cost, ${df.cost.sum():.1f}M", _shares(df.cost, df.horizon)),
-        (f"5-year gross value\nas tagged, ${five.sum():.0f}M", _shares(five, df.horizon)),
-        (f"5-year gross value\nif P03 is H2, ${five.sum():.0f}M", _shares(five, _p03_as_h2(df))),
+        (f"Capital Investment Mix\n3-Yr Envelope: ${df.cost.sum():.2f}M", cost_shares),
+        (f"Annual Benefit Mix (Run-Rate)\nSteady-State: ${df.value_mid.sum():.1f}M/yr", val_shares),
+        (f"Cumulative 5-Year Value Mix\n5-Yr Gross: ${five_yr.sum():.1f}M", five_shares),
     ]
-    fig, ax = plt.subplots(figsize=(13.33, 6))
+
+    fig, ax = plt.subplots(figsize=(13.33, 5.2))
     for y, (_, shares) in enumerate(rows):
         left = 0.0
-        for horizon in COLORS:
+        for horizon in ["H1", "H2", "H3", "Enabler"]:
             width = shares.get(horizon, 0.0)
             if not width:
                 continue
             ax.barh(y, width, left=left, height=0.56, color=COLORS[horizon],
                     edgecolor="white", linewidth=2)
-            label = f"{horizon} {width:.1f}%" if width >= 8 else f"{width:.1f}%"
-            ax.text(left + width / 2, y, label, ha="center", va="center", fontsize=12,
-                    color=TEXT_ON[horizon])
+            label = f"{horizon} {width:.1f}%" if width >= 9 else (f"{width:.1f}%" if width >= 4 else "")
+            if label:
+                ax.text(left + width / 2, y, label, ha="center", va="center", fontsize=11.5,
+                        fontweight="semibold", color=TEXT_ON[horizon])
             left += width
+
+    # Red dashed benchmark lines for Nagji & Tuff 70/20/10 target
+    RED_BENCHMARK = "#E30613"
+    ax.axvline(70.0, color=RED_BENCHMARK, linestyle="--", linewidth=1.5, zorder=5)
+    ax.text(70.5, -0.38, "70% H1 Benchmark", color=RED_BENCHMARK, fontsize=10, fontweight="bold", va="bottom")
+
+    ax.axvline(90.0, color=RED_BENCHMARK, linestyle=":", linewidth=1.5, zorder=5)
+    ax.text(90.5, -0.38, "90% (20% H2 / 10% H3)", color=RED_BENCHMARK, fontsize=10, fontweight="bold", va="bottom")
 
     ax.set_xlim(0, 100)
     ax.invert_yaxis()
-    ax.set_yticks(range(len(rows)), [label for label, _ in rows], fontsize=12, color=INK)
-    ax.set_xticks([])
+    ax.set_yticks(range(len(rows)), [label for label, _ in rows], fontsize=11.5, color=INK)
+    ax.set_xticks([0, 20, 40, 60, 70, 80, 90, 100])
+    ax.set_xticklabels(["0%", "20%", "40%", "60%", "70%", "80%", "90%", "100%"], fontsize=10.5, color=MUTED)
     ax.tick_params(length=0)
     ax.spines[:].set_visible(False)
     _legend(fig, [_swatch(LEGEND[h], COLORS[h]) for h in COLORS])
-    _note(fig, f"All 14 candidate projects monetized (including safety, options and enablers).\n"
-               f"Derived: midpoints, linear {RAMP_MONTHS}-month ramp after first value "
-               "(assumption), undiscounted, overlaps not removed. Reference is a course heuristic.")
-    fig.subplots_adjust(left=0.17, right=0.98, top=0.9, bottom=0.14)
+    _note(fig, "Red dashed lines indicate the Nagji & Tuff (HBR 2012) 70 / 20 / 10 capital benchmark.\n"
+               "Value mix reflects P03 deepwater drilling in H2 ($35M/yr) and 100% monetized candidate portfolio. Source: work/projects/long_list.md.")
+    fig.subplots_adjust(left=0.24, right=0.97, top=0.88, bottom=0.18)
     return fig
 
 
