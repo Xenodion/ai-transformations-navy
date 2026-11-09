@@ -961,6 +961,221 @@ def build_reconciliations_and_audit(wb):
     auto_fit_columns(ws)
 
 
+def build_cost_of_inaction(wb):
+    """Build Sheet: Cost_of_Inaction & Decision Value Bridge (Course Session 3 Framework)."""
+    ws = wb.create_sheet(title="Cost_of_Inaction")
+
+    ws.merge_cells("A1:K1")
+    ws["A1"] = "TotalEnergies AI Transformation — Cost of Inaction & Decision Value Bridge"
+    ws["A1"].font = font_title
+    ws["A1"].fill = fill_navy
+    ws["A1"].alignment = align_left
+
+    # Section 1: Inaction Baseline & Erosion Schedule (Nominal Cash Outflows in $M)
+    ws.cell(row=3, column=1, value="1. Inaction Baseline & Annual Operational Erosion Projections ($M)").font = font_section
+
+    headers_erosion = [
+        "Driver ID", "Erosion Category & Operational Mechanism", "Source / Grounding & Operational Metric",
+        "Year 1 ($M)", "Year 2 ($M)", "Year 3 ($M)", "Year 4 ($M)", "Year 5 ($M)",
+        "5-Year Cumulative ($M)", "Present Value @ Hurdle (10.98%)", "Present Value @ WACC (7.50%)"
+    ]
+    for c_idx, h in enumerate(headers_erosion, start=1):
+        cell = ws.cell(row=4, column=c_idx, value=h)
+        cell.font = font_header
+        cell.fill = fill_dark
+        cell.alignment = align_center
+
+    erosion_rows = [
+        ("D1a - Refining Margin Slippage",
+         "European refining yield & crude blend sub-optimization (1,076 kb/d throughput) vs C3 AI / BP peers",
+         "SRC-002 p.13, 474; $0.02-$0.08/bbl on 392.7M bbl/yr",
+         0.00, 7.85, 15.71, 23.56, 31.42),
+        ("D1b - Renewable Imbalance Penalties",
+         "Sub-hourly grid balancing penalties & curtailment on expanding renewable output (48->100 TWh)",
+         "SRC-003 p.9, SRC-004; €0.15-€0.40/MWh @ 1.13 USD/EUR",
+         0.00, 9.32, 19.21, 29.65, 45.20),
+        ("D1c - Deepwater Rig Inefficiency",
+         "Offshore drillship scheduling delays & invisible lost time (15-35 excess rig-days/yr)",
+         "SRC-017, SRC-026; $450k/day loaded rig-rate",
+         0.00, 6.75, 9.90, 13.50, 15.75),
+        ("D2 - AI Talent Flight & Drag",
+         "Attrition of scarce AI/data engineers (15-30 FTEs/yr out of 500) due to pilot purgatory",
+         "SRC-002 p.42, APEC 2025; $200k/FTE loaded replacement & ramp cost",
+         0.00, 3.00, 5.00, 6.00, 6.00),
+        ("D3 - Regulatory & Cyber Exposure",
+         "EU AI Act Annex III high-risk compliance penalties & unmonitored shadow AI data leakage",
+         "SRC-002 p.136, 138; EU AI Act 2024/1689; statutory risk formula (p * impact)",
+         1.00, 4.30, 6.50, 8.20, 8.20),
+    ]
+
+    for r_idx, (did, cat, src, y1, y2, y3, y4, y5) in enumerate(erosion_rows, start=5):
+        ws.cell(row=r_idx, column=1, value=did).font = font_bold
+        ws.cell(row=r_idx, column=2, value=cat).font = font_regular
+        ws.cell(row=r_idx, column=3, value=src).font = font_italic
+        ws.cell(row=r_idx, column=4, value=y1).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=5, value=y2).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=6, value=y3).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=7, value=y4).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=8, value=y5).number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=9, value=f"=SUM(D{r_idx}:H{r_idx})").number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=10, value=f"=NPV(Variables!$C$13, D{r_idx}:H{r_idx})").number_format = "$#,##0.00"
+        ws.cell(row=r_idx, column=11, value=f"=NPV(Variables!$C$6, D{r_idx}:H{r_idx})").number_format = "$#,##0.00"
+        for c in range(1, 12):
+            ws.cell(row=r_idx, column=c).border = border_cell
+
+    # Total Inaction Losses Row
+    ws.cell(row=10, column=1, value="TOTAL COST OF INACTION (LOSSES)").font = font_bold
+    for c_idx, col_let in enumerate(["D", "E", "F", "G", "H", "I"], start=4):
+        ws.cell(row=10, column=c_idx, value=f"=SUM({col_let}5:{col_let}9)").number_format = "$#,##0.00"
+    ws.cell(row=10, column=10, value="=NPV(Variables!$C$13, D10:H10)").number_format = "$#,##0.00"
+    ws.cell(row=10, column=11, value="=NPV(Variables!$C$6, D10:H10)").number_format = "$#,##0.00"
+    for c in range(1, 12):
+        ws.cell(row=10, column=c).font = font_kpi_num
+        ws.cell(row=10, column=c).border = border_total
+
+    # Section 2: Executive Decision Value Bridge
+    ws.cell(row=13, column=1, value="2. Strategic Decision Value Bridge (Status Quo vs Enterprise Transformation Program)").font = font_section
+
+    headers_bridge = [
+        "Valuation & Return Metric", "Decaying Status Quo (Do Nothing)", "Standalone Transformation Program (Step 18)",
+        "Incremental Decision Value (Invest vs Status Quo)", "Strategic Impact & Board Clearance Rationale"
+    ]
+    for c_idx, h in enumerate(headers_bridge, start=1):
+        cell = ws.cell(row=14, column=c_idx, value=h)
+        cell.font = font_header
+        cell.fill = fill_dark
+        cell.alignment = align_center
+
+    bridge_rows = [
+        ("3-Year Capital Commitment ($M)", 0.00, "=Portfolio_Consolidation!$F$24", "=-C15", "$#,##0.00",
+         "Required investment envelope across 14 initiatives; stage-gated in tranches."),
+        ("5-Year Cumulative Net Cash Flow ($M)", "=-I10", "=Portfolio_Consolidation!$H$24", "=C16-B16", "$#,##0.00",
+         "Net operational cash swing: transforms a -$276M erosion into a +$993M cash surplus."),
+        ("5-Year Net Present Value (NPV @ Hurdle 10.98%)", "=-J10", "=Portfolio_Cash_Waterfall!$B$17", "=C17-B17", "$#,##0.00",
+         "True economic value created above the decaying status quo baseline."),
+        ("5-Year Expected Net Present Value (ENPV)", "=-J10", "=Scenario_Sensitivity_ENPV!$E$7", "=C18-B18", "$#,##0.00",
+         "Probability-weighted decision value clearing hurdle with over $840M headroom."),
+        ("Internal Rate of Return (IRR)", "N/A (Loss)", "=Portfolio_Cash_Waterfall!$B$18", "=IRR(B25:G25)", "0.0%",
+         "Return on incremental cash flows against status quo; clears hurdle by huge margin."),
+        ("Discounted Payback Period", "Never", "=Portfolio_Cash_Waterfall!$B$20", "1.2 Years", "General",
+         "Incremental cash generation fully amortizes upfront capital within 14.5 months."),
+    ]
+
+    for r_idx, (metric, sq_val, prog_val, inc_val, fmt, rat) in enumerate(bridge_rows, start=15):
+        ws.cell(row=r_idx, column=1, value=metric).font = font_bold
+        cell_sq = ws.cell(row=r_idx, column=2, value=sq_val)
+        cell_sq.font = font_regular
+        if fmt != "General" and not isinstance(sq_val, str):
+            cell_sq.number_format = fmt
+
+        cell_prog = ws.cell(row=r_idx, column=3, value=prog_val)
+        cell_prog.font = font_bold
+        if fmt != "General" and not isinstance(prog_val, str):
+            cell_prog.number_format = fmt
+
+        cell_inc = ws.cell(row=r_idx, column=4, value=inc_val)
+        cell_inc.font = font_kpi_num
+        if fmt != "General" and not isinstance(inc_val, str):
+            cell_inc.number_format = fmt
+
+        ws.cell(row=r_idx, column=5, value=rat).font = font_regular
+        for c in range(1, 6):
+            ws.cell(row=r_idx, column=c).border = border_cell
+
+    # Helper Cash Flow Stream Block for Incremental IRR Calculation
+    ws.cell(row=22, column=1, value="Stream / Year").font = font_header
+    ws.cell(row=22, column=1).fill = fill_navy
+    cf_headers = ["Y0", "Y1", "Y2", "Y3", "Y4", "Y5"]
+    for c_idx, h in enumerate(cf_headers, start=2):
+        cell = ws.cell(row=22, column=c_idx, value=h)
+        cell.font = font_header
+        cell.fill = fill_navy
+        cell.alignment = align_center
+
+    # Status Quo Stream (Row 23)
+    ws.cell(row=23, column=1, value="Status Quo Net Cash Flow ($M)").font = font_bold
+    ws.cell(row=23, column=2, value=0.0).number_format = "$#,##0.00"
+    ws.cell(row=23, column=3, value="=-D10").number_format = "$#,##0.00"
+    ws.cell(row=23, column=4, value="=-E10").number_format = "$#,##0.00"
+    ws.cell(row=23, column=5, value="=-F10").number_format = "$#,##0.00"
+    ws.cell(row=23, column=6, value="=-G10").number_format = "$#,##0.00"
+    ws.cell(row=23, column=7, value="=-H10").number_format = "$#,##0.00"
+
+    # Transformation Program Stream (Row 24)
+    ws.cell(row=24, column=1, value="Transformation Program Cash Flow ($M)").font = font_bold
+    ws.cell(row=24, column=2, value="=Portfolio_Cash_Waterfall!$B$8").number_format = "$#,##0.00"
+    ws.cell(row=24, column=3, value="=Portfolio_Cash_Waterfall!$C$8").number_format = "$#,##0.00"
+    ws.cell(row=24, column=4, value="=Portfolio_Cash_Waterfall!$D$8").number_format = "$#,##0.00"
+    ws.cell(row=24, column=5, value="=Portfolio_Cash_Waterfall!$E$8").number_format = "$#,##0.00"
+    ws.cell(row=24, column=6, value="=Portfolio_Cash_Waterfall!$F$8").number_format = "$#,##0.00"
+    ws.cell(row=24, column=7, value="=Portfolio_Cash_Waterfall!$G$8").number_format = "$#,##0.00"
+
+    # Incremental Stream (Row 25)
+    ws.cell(row=25, column=1, value="Incremental Cash Flow (Plan - Status Quo)").font = font_kpi_num
+    for c_idx, col_let in enumerate(["B", "C", "D", "E", "F", "G"], start=2):
+        ws.cell(row=25, column=c_idx, value=f"={col_let}24-{col_let}23").number_format = "$#,##0.00"
+
+    for r in [23, 24, 25]:
+        for c in range(1, 8):
+            ws.cell(row=r, column=c).border = border_cell
+
+    # Section 3: Anti-Double-Counting Audit & Demarcation Matrix (Rule 7 Compliance)
+    ws.cell(row=28, column=1, value="3. Anti-Double-Counting Audit & Operational Demarcation Matrix (AGENTS.md Rule 7)").font = font_section
+
+    headers_dc = [
+        "Industrial Segment / Function", "Transformation Use Case (Step 18 Base)",
+        "Step 18 Active Value Creation Mechanism", "Inaction Erosion Driver (Step 19 Baseline)",
+        "Status Quo Degradation Mechanism", "Double-Counting Risk",
+        "Demarcation & Independent Verification Protocol"
+    ]
+    for c_idx, h in enumerate(headers_dc, start=1):
+        cell = ws.cell(row=29, column=c_idx, value=h)
+        cell.font = font_header
+        cell.fill = fill_dark
+        cell.alignment = align_center
+
+    dc_rows = [
+        ("Refining & Chemicals", "P01 - Refining Predictive Maint.",
+         "Avoidance of catastrophic unplanned mechanical trips on Tier-1 rotating equipment (+$15.0M/yr).",
+         "D1a - Refining Margin Compression",
+         "Market spread erosion ($0.02-$0.08/bbl) on base crude slate due to peer AI LP blending algorithms.",
+         "Zero", "P01 audited on mechanical downtime hours; D1a audited on market crack yield spreads against Platts."),
+        ("Integrated Power", "P11 - Virtual Power Plant Flex.",
+         "Active intraday multi-market arbitrage and capacity market ancillary service revenues (+$60.0M/yr).",
+         "D1b - Renewable Imbalance Drift",
+         "RTE/EPEX imbalance settlement penalties and curtailment (€0.15-€0.40/MWh) on scheduled volumes.",
+         "Zero", "P11 booked in proprietary trading accounts; D1b tracked in grid operator balancing settlement invoices."),
+        ("Exploration & Production", "P03 - Deepwater Drilling Opt.",
+         "Real-time subterranean MWD telemetry reducing invisible lost time and drill-string stuck pipe (+$35.0M/yr).",
+         "D1c - Deepwater Rig Inefficiency",
+         "Offshore logistics scheduling delays and rig charter contract inflation (15-35 excess rig-days/yr).",
+         "Zero", "P03 verified via downhole rate-of-penetration logs; D1c audited via marine vessel and rig standby manifests."),
+        ("Group IT & Data Factory", "E01 - Enterprise Value Register",
+         "Accelerated model deployment, code reusability, and value tracking governance across business units.",
+         "D2 - AI Talent Flight & Drag",
+         "Loss of 15-30 senior AI engineers/yr to peers due to pilot purgatory, incurring $200k replacement fees.",
+         "Zero", "E01 measures project lifecycle velocity; D2 tracks HR recruitment expenses and onboarding time lag."),
+        ("Group HSE & Legal", "P07 - CCTV Site Safety Analytics",
+         "Computer vision safety monitoring reducing lost-time injury frequency rates (+$20.0M/yr).",
+         "D3 - Regulatory & Cyber Exposure",
+         "EU AI Act Annex III statutory non-compliance audit fines and unmonitored shadow AI leakages.",
+         "Zero", "P07 measures operational safety incidents; D3 covers legal compliance audit reserves and cyber containment."),
+    ]
+
+    for r_idx, (seg, uc, uc_mech, did, inact_mech, risk, proto) in enumerate(dc_rows, start=30):
+        ws.cell(row=r_idx, column=1, value=seg).font = font_bold
+        ws.cell(row=r_idx, column=2, value=uc).font = font_regular
+        ws.cell(row=r_idx, column=3, value=uc_mech).font = font_regular
+        ws.cell(row=r_idx, column=4, value=did).font = font_bold
+        ws.cell(row=r_idx, column=5, value=inact_mech).font = font_regular
+        ws.cell(row=r_idx, column=6, value=risk).font = font_bold
+        ws.cell(row=r_idx, column=7, value=proto).font = font_italic
+        for c in range(1, 8):
+            ws.cell(row=r_idx, column=c).border = border_cell
+
+    auto_fit_columns(ws)
+
+
 def main():
     print(f"Generating Investment-Grade Master Financial Model at {OUTPUT_PATH}...")
     wb = openpyxl.Workbook()
@@ -973,6 +1188,7 @@ def main():
     build_portfolio_waterfall(wb, t1_meta, t2_meta)
     build_scenario_sensitivity(wb)
     build_reconciliations_and_audit(wb)
+    build_cost_of_inaction(wb)
 
     wb.save(OUTPUT_PATH)
     print(f"Successfully generated {OUTPUT_PATH} with {len(wb.sheetnames)} sheets:")
