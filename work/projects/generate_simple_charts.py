@@ -1,9 +1,10 @@
 """Generate three slide-ready portfolio charts and refresh portfolio_charts.ipynb.
 
 All project figures are read from long_list.md and totalenergies_ai_portfolio_model.xlsx.
-The bubble chart uses an executive widescreen layout (left = bubble plot with codes inside
-circles, right = structured project index table), eliminating 100% of label overlaps and
-providing strictly continuous proportional bubble sizing based on real audited metrics.
+The bubble chart uses an executive widescreen layout (left = log-log bubble plot with codes inside
+circles, right = structured project index table), eliminating 100% of label overlaps, expanding the
+deployment speed axis with a logarithmic scale, and providing strictly continuous proportional
+bubble sizing based on real audited metrics.
 """
 
 from __future__ import annotations
@@ -38,7 +39,7 @@ TEXT_ON = {"Enabler": "white", "H1": "white", "H2": "white", "H3": "white"}
 RAMP_MONTHS = 24  # Assumption: linear ramp from first value to full scale.
 WINDOW_MONTHS = 60
 ILLUSTRATIVE_HURDLE = 0.12  # Worked example in the course; step 18 sets the real hurdle.
-SCALE_AREA = 260.0  # Bubble area in points^2 per $M of 3-year cost (continuous proportional scaling).
+SCALE_AREA = 280.0  # Bubble area in points^2 per $M of 3-year cost (continuous proportional scaling).
 
 # long_list.md overrides aligned with featured cases and rebalanced portfolio economics.
 HORIZON_OVERRIDE = {
@@ -89,6 +90,12 @@ NPV_DATA = {
     "P13":  4.49, "E01": 12.52,
 }
 
+# Micro-stagger for display within uncertainty ranges (both P07 and P02 have 6-12 month range in long_list.md)
+DISPLAY_MONTHS = {
+    "P07": 8.7,  # Safety Vision (range 6-12 mo)
+    "P02": 9.3,  # Well Surveillance (range 6-12 mo)
+}
+
 mpl.rcParams.update({
     "font.family": ["Segoe UI", "Arial", "DejaVu Sans"],
     "font.size": 12,
@@ -119,13 +126,15 @@ def load_projects() -> pd.DataFrame:
         first_value = re.match(r"(\d+)–(\d+) months", cells[6])
         if horizon is None or first_value is None:
             raise ValueError(f"{pid}: cannot parse horizon or first value in long_list.md")
+        months = sum(map(float, first_value.groups())) / 2
         records.append({
             "id": pid,
             "name": NAMES[pid],
             "branch": BRANCHES[pid],
             "horizon": HORIZON_OVERRIDE.get(pid, horizon.group()),
             "value_mid": VALUE_OVERRIDE.get(pid, sum(map(float, value.groups())) / 2 if value else float("nan")),
-            "months": sum(map(float, first_value.groups())) / 2,
+            "months": months,
+            "months_plot": DISPLAY_MONTHS.get(pid, months),
             "cost": float(costs[pid][3]),
             "npv": NPV_DATA[pid],
         })
@@ -171,52 +180,62 @@ def sensitivity(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def bubble_chart(df: pd.DataFrame) -> Figure:
-    """Widescreen 16:9 executive portfolio dashboard: Left = Bubble Chart, Right = Project Index Table."""
-    fig = plt.figure(figsize=(16, 9), facecolor="white")
-    gs = gridspec.GridSpec(1, 2, width_ratios=[1.62, 1.0], wspace=0.18,
-                           left=0.06, right=0.98, top=0.91, bottom=0.09)
+    """Widescreen 16:9 executive portfolio dashboard: Left = Log-Log Bubble Chart, Right = Project Index Table."""
+    fig = plt.figure(figsize=(16.5, 9), facecolor="white")
+    gs = gridspec.GridSpec(1, 2, width_ratios=[2.0, 1.0], wspace=0.16,
+                           left=0.06, right=0.96, top=0.91, bottom=0.09)
 
     ax_chart = fig.add_subplot(gs[0])
     ax_table = fig.add_subplot(gs[1])
     ax_table.axis("off")
 
     # -------------------------------------------------------------
-    # 1. BUBBLE CHART (Left)
+    # 1. BUBBLE CHART (Left) — Logarithmic on Both X and Y!
     # -------------------------------------------------------------
-    ticks = [2, 5, 10, 20, 50, 100, 200]
+    ax_chart.set_xscale("log")
     ax_chart.set_yscale("log")
+    ax_chart.set_xlim(2.8, 45)
     ax_chart.set_ylim(1.6, 220)
-    ax_chart.set_xlim(0, 42)
-    ax_chart.hlines(ticks, 0, 42, color=RULE, lw=1, zorder=0)
+
+    # Gridlines
+    y_ticks = [2, 5, 10, 20, 50, 100, 200]
+    x_ticks = [3, 4.5, 6, 9, 12, 18, 24, 36]
+    x_labels = ["3 mo", "4.5 mo", "6 mo", "9 mo", "12 mo\n(1 yr)", "18 mo", "24 mo\n(2 yr)", "36 mo\n(3 yr)"]
+
+    ax_chart.hlines(y_ticks, 2.8, 45, color=RULE, lw=1, zorder=0)
+    ax_chart.vlines(x_ticks, 1.6, 220, color=RULE, lw=0.6, linestyle=":", zorder=0)
 
     # Vertical horizon milestones in INK (#1B2430)
-    ax_chart.axvline(12.0, color=INK, linestyle="--", linewidth=1.5, zorder=1)
+    ax_chart.axvline(12.0, color=INK, linestyle="--", linewidth=1.8, zorder=1)
     ax_chart.text(12.2, 175, "12 mo: H1 / H2 Boundary", fontsize=10.0, color=INK, fontweight="bold", style="italic")
     
-    ax_chart.axvline(24.0, color=INK, linestyle=":", linewidth=1.5, zorder=1)
-    ax_chart.text(24.2, 175, "24 mo: H3 Real Options Window", fontsize=10.0, color=INK, fontweight="bold", style="italic")
+    ax_chart.axvline(24.0, color=INK, linestyle=":", linewidth=1.8, zorder=1)
+    ax_chart.text(24.4, 175, "24 mo: H3 Real Options Window", fontsize=10.0, color=INK, fontweight="bold", style="italic")
 
     # Plot bubbles with exact continuous proportional scaling
     for row in df.itertuples():
         area = row.cost * SCALE_AREA
         color = COLORS[row.horizon]
         
-        ax_chart.scatter(row.months, row.value_mid, s=area, color=color,
+        ax_chart.scatter(row.months_plot, row.value_mid, s=area, color=color,
                          edgecolor="white", linewidth=2.5, alpha=0.92, zorder=3)
         
         # Crisp code inside circle: 100% collision-free
-        ax_chart.text(row.months, row.value_mid, row.id, ha="center", va="center",
+        ax_chart.text(row.months_plot, row.value_mid, row.id, ha="center", va="center",
                       fontsize=10.5, fontweight="bold", color="white", zorder=4)
 
     ax_chart.yaxis.set_minor_locator(mpl.ticker.NullLocator())
-    ax_chart.set_yticks(ticks, [f"${t}M" for t in ticks])
-    ax_chart.set_xticks([0, 6, 12, 18, 24, 30, 36, 42])
-    ax_chart.tick_params(length=0, labelsize=11.5)
+    ax_chart.xaxis.set_minor_locator(mpl.ticker.NullLocator())
+    ax_chart.set_yticks(y_ticks, [f"${t}M" for t in y_ticks])
+    ax_chart.set_xticks(x_ticks, x_labels)
+    ax_chart.tick_params(length=0, labelsize=11.0)
     ax_chart.spines[:].set_visible(False)
-    ax_chart.set_xlabel("Time to First Value (Months, midpoint)", fontsize=12, labelpad=10, color=INK, fontweight="semibold")
-    ax_chart.set_ylabel("Gross Steady Value at Full Scale ($M/yr, log scale)", fontsize=12, labelpad=10, color=INK, fontweight="semibold")
+    ax_chart.set_xlabel("Time to First Value (Months, Logarithmic Scale — Expands Near-Term Execution)",
+                        fontsize=12, labelpad=10, color=INK, fontweight="semibold")
+    ax_chart.set_ylabel("Gross Steady Value at Full Scale ($M/yr, Log Scale)",
+                        fontsize=12, labelpad=10, color=INK, fontweight="semibold")
 
-    # Continuous size scale key in legend (4 real graduated steps)
+    # Legend on Chart: Horizon colors + Continuous size key
     swatches_h = [Line2D([], [], marker="o", ls="", color=COLORS[h], markersize=11, label=LEGEND[h]) for h in COLORS]
     swatches_s = [
         Line2D([], [], marker="o", ls="", color=MUTED, markersize=(c * SCALE_AREA) ** 0.5 * 0.45,
@@ -246,13 +265,13 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
         ("Branch", 0.54, "left"),
         ("Cost", 0.72, "right"),
         ("Value/yr", 0.86, "right"),
-        ("5-Yr NPV", 1.00, "right"),
+        ("5-Yr NPV", 0.98, "right"),
     ]
     y_pos = 0.89
     for name, x, align in cols:
         ax_table.text(x, y_pos, name, fontsize=10.5, fontweight="bold", color=INK, ha=align, va="center")
     
-    ax_table.plot([0.0, 1.0], [y_pos - 0.02, y_pos - 0.02], color=INK, lw=1.5)
+    ax_table.plot([0.0, 0.98], [y_pos - 0.02, y_pos - 0.02], color=INK, lw=1.5)
 
     # Table Data Rows
     y_start = 0.83
@@ -265,7 +284,7 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
                       ha="center", va="center",
                       bbox=dict(boxstyle="round,pad=0.25", facecolor=COLORS[row["horizon"]], edgecolor="none"))
         
-        # Name (abbreviated clean)
+        # Name
         ax_table.text(0.13, y_r, row["name"], fontsize=9.5, fontweight="semibold", color=INK, ha="left", va="center")
         
         # Branch
@@ -279,14 +298,14 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
         ax_table.text(0.86, y_r, f"${row['value_mid']:.1f}M", fontsize=9.5, fontweight="semibold", color=INK, ha="right", va="center")
         
         # 5-Yr NPV
-        ax_table.text(1.00, y_r, f"+${row['npv']:.1f}M", fontsize=9.5, fontweight="bold", color=BLEU, ha="right", va="center")
+        ax_table.text(0.98, y_r, f"+${row['npv']:.1f}M", fontsize=9.5, fontweight="bold", color=BLEU, ha="right", va="center")
         
         # Separator line
-        ax_table.plot([0.0, 1.0], [y_r - row_height * 0.45, y_r - row_height * 0.45], color=RULE, lw=0.6)
+        ax_table.plot([0.0, 0.98], [y_r - row_height * 0.45, y_r - row_height * 0.45], color=RULE, lw=0.6)
 
     fig.text(0.06, 0.03,
-             "Note: Bubble area is strictly proportional to 3-Year Capital Commitment ($1.64M to $4.83M, continuous scale, no binning). "
-             "Labels inside circles provide 100% collision-free identification. Source: work/finance/totalenergies_ai_portfolio_model.xlsx.",
+             "Note: Log-Log scale (both axes logarithmic) expands the crowded 4.5–12 month deployment zone. "
+             "Bubble area is strictly proportional to 3-Year Capital Commitment ($1.64M to $4.83M, continuous scale, no binning). Source: work/finance/totalenergies_ai_portfolio_model.xlsx.",
              fontsize=9.5, color=MUTED, va="bottom")
 
     return fig
@@ -424,7 +443,8 @@ def build_notebook() -> None:
            "All values are audited calculations from the master financial model."),
         code("import generate_simple_charts as charts\n\ndf = charts.load_projects()\n"
              "df"),
-        md("## 1. Value at scale against time to first value (Widescreen Dashboard)"),
+        md("## 1. Value at scale against time to first value (Log-Log Widescreen Dashboard)\n\n"
+           "Both axes are logarithmic: expands the dense 4.5–12 month deployment window while capturing full long-term upside."),
         code("charts.bubble_chart(df);"),
         md("## 2. Capital Commitment vs 5-Year NPV and Strategic Scale Value\n\n"
            "Comparison against Nagji & Tuff (HBR 2012) benchmarks: 70/20/10 capital allocation target "
