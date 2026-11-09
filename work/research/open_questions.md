@@ -16,7 +16,7 @@ Running list of checks raised during research. Each item names the step it affec
 | Q08 | Official amount and scope of the Sept 2026 Mistral subsurface programme | Shows what H3 / subsurface AI is already funded, so we don't propose it again | 08, 11 | Official Business Wire release, 15 Sep 2026 | CLM-021 | Closed 8 Nov: "more than €100 million" over 3 years confirmed by the official release, SRC-027 (CLM-021 verified) |
 | Q09 | Official Copilot licence count and usage metrics | Adoption baseline for change management | 09, 20 | TotalEnergies or Microsoft official case study | CLM-023 | Open |
 | Q10 | Size of digital and data teams inside the segments (Integrated Power, E&P, Refining & Chemicals, Marketing & Services) | Hub-and-spoke vs federated evidence | 10 | Job postings by entity; segment pages of URD chapter 2 | — | Open |
-| Q11 | Record Vincent's Argedis observation as a local observation (observer, entity, period, what was seen) | Required before it can be used anywhere | 09 | Vincent | CLM-072 | Closed 8 Nov: Recorded as CLM-072 (Local observation by Vincent Lamy, Argedis / M&S France). Highlights CoE delivery bottleneck ('au compte-goutte'), business passivity, DE friction, and shadow AI; proposed solution: agile delivery trios (DS + dedicated business champion + DE). Informs steps 09, 10, 20 |
+| Q11 | Record Vincent's Argedis observation as a local observation (observer, entity, period, what was seen) | Required before it can be used anywhere | 09 | Vincent | CLM-074 | Closed 8 Nov: recorded as CLM-074 (local observation by Vincent Lamy, Argedis / M&S France). It does not establish group-wide practice. |
 
 **Opened 8 Nov 2026 by step 06.** Source: [competitor and benchmark synthesis](../../sources/synthesis/2026-11-08_competitors_benchmarks.md).
 
@@ -31,7 +31,7 @@ Running list of checks raised during research. Each item names the step it affec
 
 | # | Question | Why it matters | Affects step | Where to look | Register | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Q16 | Have the AI Act's application dates for high-risk systems been amended? EUR-Lex lists a consolidated version dated 27 Jul 2026 | The governance timeline and compliance costs depend on whether Annex III obligations apply from 2 Aug 2026 or later | 20 | EUR-Lex consolidated text of Regulation (EU) 2024/1689; amending regulation ("Digital Omnibus") in the Official Journal | SRC-029, CLM-058, CLM-072 | Partly answered 8 Nov: the course deck (PDF p. 64) gives 2 Dec 2027 for Annex III high-risk uses, citing the Commission timeline as amended by Reg. (EU) 2026/1744 (CLM-072). The amending regulation is not yet read |
+| Q16 | Have the AI Act's application dates for high-risk systems been amended? | The governance timeline and compliance costs depend on applicable dates | 20 | EUR-Lex Regulation (EU) 2026/1744, Article 1(40) | SRC-035, CLM-072 | Answered 9 Nov: the specified Annex III provisions apply from 2 Dec 2027 and Annex I provisions from 2 Aug 2028; classification and transitions remain use-case-specific. |
 
 **Opened 8 Nov 2026 by step 08.** Source: [long list](../projects/long_list.md).
 
