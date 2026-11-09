@@ -124,7 +124,7 @@ All 14 candidate initiatives are monetized and positioned on a continuous logari
 ![Portfolio Bubble Chart](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_portfolio_bubble.png)
 
 ### 4.2 Three Horizons Capital Allocation vs 5-Year Return Mix
-Compares the reference 70/20/10 mix with candidate capital and 5-year value (showing the balanced 48% H1 / 38% H2 / 12% H3 split when P03 is classified as H2):
+Compares the reference 70/20/10 mix with candidate capital, 5-year DCF net value, and commercial scale return mix (showing the 64.9% H0+H1 / 19.1% H2 / 16.0% H3 capital split matching the 70/20/10 benchmark, and the Nagji & Tuff 10/20/70 return inversion at full scale):
 
 ![Capital and Return Mix](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_capital_value_mix.png)
 
@@ -276,7 +276,7 @@ To protect corporate capital and eliminate the risk of "Comex Impatience" (Cours
 
 - [x] Full portfolio sequencing canvas completed across all 14 candidate initiatives.
 - [x] Capital allocation reconciled to exactly 100.00% ($38.79M total envelope).
-- [x] Three Horizons capital mix aligned with the 70 / 20 / 10 benchmark (63.4% H1, 20.0% H2, 16.6% H3 core split).
+- [x] Three Horizons capital mix aligned with the 70 / 20 / 10 benchmark (64.9% H0+H1, 19.1% H2, 16.0% H3 split).
 - [x] Full portfolio bubble map, capital mix, and branch distribution figures embedded.
 - [x] Expected-return mix dynamics documented ($316.5M/yr run-rate vs 10/20/70 benchmark).
 - [x] Thin-slice architectural dependencies mapped and verified against AspenTech and Cognite enterprise timelines.
@@ -287,7 +287,7 @@ To protect corporate capital and eliminate the risk of "Comex Impatience" (Cours
 
 - [x] Full portfolio sequencing canvas completed across all 14 candidate initiatives.
 - [x] Capital allocation reconciled to exactly 100.00% ($38.79M total envelope).
-- [x] Three Horizons capital mix aligned with the 70 / 20 / 10 benchmark (63.4% H1, 20.0% H2, 16.6% H3 core split).
+- [x] Three Horizons capital mix aligned with the 70 / 20 / 10 benchmark (64.9% H0+H1, 19.1% H2, 16.0% H3 split).
 - [x] Thin-slice architectural dependencies mapped and verified against AspenTech and Cognite enterprise timelines.
 - [x] Build / Buy / Blend sourcing strategy comprehensively categorized across all initiatives.
 - [x] Three annual stage-gated capital release tranches defined with explicit P&L pre-conditions.

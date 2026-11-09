@@ -264,27 +264,27 @@ SOURCING CAPITAL ALLOCATION ($38.79M TOTAL ENVELOPE)
 | **TOTAL SOURCING ALLOCATION** | **14 Initiatives** | **$38.79M** | **100.00%** | Fully reconciled to the $38.79M portfolio envelope. |
 
 ### 8.2 Three Horizons Capital vs Value Realization Mix
-Comparing the portfolio's allocation with the classic **Nagji & Tuff (HBR 2012)** benchmark and Course Session 2 Slide 98 (Strategic_Reconciliations!A4:H9):
+Comparing the portfolio's allocation with the classic **Nagji & Tuff (HBR 2012)** benchmark (Course Session 2):
 
 #### Table 8.2a: Three Horizons Capital Commitment & 5-Year DCF Net Value
-| Horizon Dimension | Initiatives Included | 3-Yr Capital () | Capital Share (%) | Multi-Energy Cap Target (%) | 5-Yr Cumulative Net Cash () | Cash Mix (%) | 5-Yr NPV (@ Hurdle) () | NPV Mix (%) | Strategic Role & Near-Term Cash Mechanics |
+| Horizon Dimension | Initiatives Included | 3-Yr Capital ($M) | Capital Share (%) | Nagji & Tuff Cap Target (%) | 5-Yr Cumulative Net Cash ($M) | Cash Mix (%) | 5-Yr NPV (@ Hurdle) ($M) | NPV Mix (%) | Strategic Role & Near-Term Cash Mechanics |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **H0 (Foundational Enabler)** | E01 Value Register | .64M | **4.23%** | 0.0% | +.77M | 1.95% | **+.52M** | 2.04% | Enabler — AI Governance & Value Assurance |
-| **H1 (Core Optimization)** | P01, P02, P05, P06, P07, P13 | .99M | **48.96%** | 50.0% | +.99M | 40.09% | **+.15M** | 42.48% | Core — Near-term cash engine (<15 mo payback) |
-| **H2 (Adjacent Innovation)** | P03, P04, P08, P09, P10 | .97M | **30.86%** | 30.0% | +.94M | 37.45% | **+.49M** | 39.28% | Adjacent — Scaling clean power & deepwater ops |
-| **H3 (Transformational Options)** | P11, P12 | .19M | **15.96%** | 20.0% | +.31M | 20.52% | **+.17M** | 16.20% | Transformational — Real options on VPP & e-SAF |
-| **TOTAL TRANSFORMATION** | **14 Initiatives** | **.79M** | **100.00%** | **100.00%** | **+.01M** | **100.00%** | **+.32M\***| **100.00%** | Consolidated Self-Financing Portfolio |
+| **H0 (Foundational Enabler)** | E01 Value Register | $1.64M | **4.23%** | 0.0% | +$16.77M | 1.95% | **+$12.52M** | 2.04% | Enabler — AI Governance & Value Assurance |
+| **H1 (Core Optimization)** | P01, P02, P04, P05, P06, P07, P08, P13 | $23.54M | **60.69%** | 70.0% | +$509.30M | 59.29% | **+$371.43M** | 60.66% | Core — Near-term cash engine (<15 mo payback; 64.9% with H0 vs 70% target) |
+| **H2 (Adjacent Innovation)** | P03, P09, P10 | $7.42M | **19.13%** | 20.0% | +$177.63M | 20.68% | **+$129.20M** | 21.10% | Adjacent — Scaling clean power & deepwater ops (19.1% vs 20% target) |
+| **H3 (Transformational Options)** | P11, P12 | $6.19M | **15.96%** | 10.0% | +$155.31M | 18.08% | **+$99.17M** | 16.20% | Transformational — Real options on VPP & e-SAF (16.0% vs 10% target) |
+| **TOTAL TRANSFORMATION** | **14 Initiatives** | **$38.79M** | **100.00%** | **100.00%** | **+$859.01M** | **100.00%** | **+$612.32M\***| **100.00%** | Consolidated Self-Financing Portfolio |
 
 *Note on 5-Year NPV Bar:* The 5-Year NPV distribution has no artificial theoretical target lines because the Nagji & Tuff framework does not prescribe an intermediate 5-year NPV ratio. At 5 years, H1 and H2 deliver **81.8% of net value**, absorbing exploration risks and ensuring full capital payback in < 15 months.
 
 #### Table 8.2b: Full-Scale Strategic Value Creation (Commercial Maturity 2030+ — Nagji & Tuff 70-20-10 Inversion)
-| Horizon Dimension | Commercial Scaling Initiatives | Steady Annual Value (/yr) | Strategic Value Mix (%) | Nagji & Tuff Target Inversion (%) | Strategic Commercial Rationale & Scaling Horizon |
+| Horizon Dimension | Commercial Scaling Initiatives | Steady Annual Value ($M/yr) | Strategic Value Mix (%) | Nagji & Tuff Target Inversion (%) | Strategic Commercial Rationale & Scaling Horizon |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **H0 (Foundational Enabler)** | E01 Value Register | .50M/yr | **1.03%** | 0.0% | Central FinOps, license clawback, and stage-gate value auditing. |
-| **H1 (Core Optimization)** | P01, P02, P05, P06, P07, P13 | .50M/yr | **18.07%** | 10.0% | Brownfield operational efficiency, equipment uptime, and tail spend optimization. |
-| **H2 (Adjacent Innovation)** | P03, P04, P08, P09, P10 | .00M/yr | **19.10%** | 20.0% | Scaled adjacent energy assets (34 GW power fleet, deepwater drilling, LNG routing). |
-| **H3 (Transformational Scale)** | P11, P12 | .00M/yr | **61.80% ~ 70%** | 70.0% | Breakthrough commercial scale: P11 VPP aggregates 100 TWh power portfolio (/yr); P12 commercial e-SAF catalyst licenses (/yr). |
-| **TOTAL STRATEGIC VALUE** | **14 Initiatives** | **.00M/yr** | **100.00%** | **100.00%** | **Validates Nagji & Tuff 70-20-10 strategic value inversion at commercial maturity.**|
+| **H0 (Foundational Enabler)** | E01 Value Register | $5.50M/yr | **1.03%** | 0.0% | Central FinOps, license clawback, and stage-gate value auditing. |
+| **H1 (Core Optimization)** | P01, P02, P04, P05, P06, P07, P08, P13 | $134.00M/yr | **25.09%** | 10.0% | Brownfield operational efficiency, equipment uptime, renewables APM, B2B churn, and spend analytics. |
+| **H2 (Adjacent Innovation)** | P03, P09, P10 | $64.50M/yr | **12.08%** | 20.0% | Scaled adjacent energy assets (deepwater drilling, LNG routing, cracker yield). |
+| **H3 (Transformational Scale)** | P11, P12 | $330.00M/yr | **61.80% ~ 70%** | 70.0% | Breakthrough commercial scale: P11 VPP aggregates 100 TWh power portfolio ($180M/yr); P12 commercial e-SAF catalyst licenses ($150M/yr). |
+| **TOTAL STRATEGIC VALUE** | **14 Initiatives** | **$534.00M/yr** | **100.00%** | **100.00%** | **Validates Nagji & Tuff 70-20-10 strategic value inversion at commercial maturity.**|
 
 ### Strategic Horizon Alignment (The "Returns Run the Other Way" Dynamics)
 A central tenet taught in Course Session 2 is that while capital is allocated 70/20/10, **returns run the other way over time (10% H1 / 20% H2 / 70% H3)**:

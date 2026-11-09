@@ -120,7 +120,7 @@ PROJECTS_DATA = [
     },
     {
         "id": "P04", "name": "Renewables Fleet Availability", "branch": "Integrated Power",
-        "horizon": "H2", "sourcing": "Buy", "hurdle_ref": "Variables!C9",
+        "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.35, "opex_y1": 0.55, "opex_y2": 0.75, "opex_y3": 0.55, "opex_run": 0.30,
         "val_y1": 8.83, "val_y2": 22.08, "val_y3": 26.50, "val_y4": 26.50, "val_y5": 26.50,
         "tier": 2, "note": "34.1 GW gross portfolio (Factbook p. 78). Inverter fault triage and day-ahead solar/wind balancing."
@@ -148,7 +148,7 @@ PROJECTS_DATA = [
     },
     {
         "id": "P08", "name": "Retail Customer Retention AI", "branch": "Integrated Power",
-        "horizon": "H2", "sourcing": "Blend", "hurdle_ref": "Variables!C9",
+        "horizon": "H1", "sourcing": "Blend", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.30, "opex_y1": 0.65, "opex_y2": 0.80, "opex_y3": 0.60, "opex_run": 0.30,
         "val_y1": 2.75, "val_y2": 8.25, "val_y3": 11.00, "val_y4": 11.00, "val_y5": 11.00,
         "tier": 2, "note": "Churn modeling and dynamic hedging margins across 8.7M European utility customer sites."
@@ -834,8 +834,8 @@ def build_reconciliations_and_audit(wb):
     ws["A1"].alignment = align_left
 
     # 1. Three Horizons Reconciliation
-    ws.cell(row=3, column=1, value="1. Three Horizons Capital Allocation vs Multi-Energy Target Benchmark").font = font_section
-    headers_hz = ["Horizon Category", "Initiatives Included", "3-Year Cost ($M)", "Capital Mix (%)", "Multi-Energy Cap Benchmark (%)", "5-Year NPV ($M)", "5-Year Value Mix (%)", "Strategic Role & Near-Term Cash Mechanics"]
+    ws.cell(row=3, column=1, value="1. Three Horizons Capital Allocation vs Nagji & Tuff Benchmark (70/20/10)").font = font_section
+    headers_hz = ["Horizon Category", "Initiatives Included", "3-Year Cost ($M)", "Capital Mix (%)", "Nagji & Tuff Cap Benchmark (%)", "5-Year NPV ($M)", "5-Year Value Mix (%)", "Strategic Role & Near-Term Cash Mechanics"]
     for c_idx, h in enumerate(headers_hz, start=1):
         cell = ws.cell(row=4, column=c_idx, value=h)
         cell.font = font_header
@@ -852,21 +852,21 @@ def build_reconciliations_and_audit(wb):
          "=C5/$C$9", 0.00,
          "=Portfolio_Consolidation!J9",
          "=F5/$F$9", "Enabler — AI Governance & Value Assurance"),
-        ("H1 (Core Optimization)", "P01, P02, P05, P06, P07, P13",
-         "=Portfolio_Consolidation!F5+Portfolio_Consolidation!F8+Portfolio_Consolidation!F13+Portfolio_Consolidation!F15+Portfolio_Consolidation!F16+Portfolio_Consolidation!F17",
-         "=C6/$C$9", 0.50,
-         "=Portfolio_Consolidation!J5+Portfolio_Consolidation!J8+Portfolio_Consolidation!J13+Portfolio_Consolidation!J15+Portfolio_Consolidation!J16+Portfolio_Consolidation!J17",
-         "=F6/$F$9", "Core — Near-term cash engine (<15 mo payback)"),
-        ("H2 (Adjacent Innovation)", "P03, P04, P08, P09, P10",
-         "=Portfolio_Consolidation!F6+Portfolio_Consolidation!F14+Portfolio_Consolidation!F18+Portfolio_Consolidation!F19+Portfolio_Consolidation!F20",
-         "=C7/$C$9", 0.30,
-         "=Portfolio_Consolidation!J6+Portfolio_Consolidation!J14+Portfolio_Consolidation!J18+Portfolio_Consolidation!J19+Portfolio_Consolidation!J20",
-         "=F7/$F$9", "Adjacent — Scaling clean power & deepwater operations"),
+        ("H1 (Core Optimization)", "P01, P02, P04, P05, P06, P07, P08, P13",
+         "=Portfolio_Consolidation!F5+Portfolio_Consolidation!F8+Portfolio_Consolidation!F13+Portfolio_Consolidation!F14+Portfolio_Consolidation!F15+Portfolio_Consolidation!F16+Portfolio_Consolidation!F17+Portfolio_Consolidation!F18",
+         "=C6/$C$9", 0.70,
+         "=Portfolio_Consolidation!J5+Portfolio_Consolidation!J8+Portfolio_Consolidation!J13+Portfolio_Consolidation!J14+Portfolio_Consolidation!J15+Portfolio_Consolidation!J16+Portfolio_Consolidation!J17+Portfolio_Consolidation!J18",
+         "=F6/$F$9", "Core — Near-term cash engine (<15 mo payback; 65% capital with H0 vs 70% benchmark)"),
+        ("H2 (Adjacent Innovation)", "P03, P09, P10",
+         "=Portfolio_Consolidation!F6+Portfolio_Consolidation!F19+Portfolio_Consolidation!F20",
+         "=C7/$C$9", 0.20,
+         "=Portfolio_Consolidation!J6+Portfolio_Consolidation!J19+Portfolio_Consolidation!J20",
+         "=F7/$F$9", "Adjacent — Scaling clean power & deepwater operations (19% capital vs 20% benchmark)"),
         ("H3 (Transformational Real Options)", "P11, P12",
          "=Portfolio_Consolidation!F7+Portfolio_Consolidation!F21",
-         "=C8/$C$9", 0.20,
+         "=C8/$C$9", 0.10,
          "=Portfolio_Consolidation!J7+Portfolio_Consolidation!J21",
-         "=F8/$F$9", "Transformational — Real options on flexibility & e-fuels"),
+         "=F8/$F$9", "Transformational — Real options on flexibility & e-fuels (16% capital vs 10% benchmark)"),
     ]
 
     for r_idx, (cat, inits, cost, mix, b_cap, npv, v_mix, s_role) in enumerate(hz_rows, start=5):
@@ -906,12 +906,12 @@ def build_reconciliations_and_audit(wb):
         ("H0 (Foundational Enabler)", "E01 Value Register", 5.50,
          "=C14/$C$18", 0.00,
          "Central FinOps, M365 license clawback, and stage-gate value auditing."),
-        ("H1 (Core Optimization)", "P01, P02, P05, P06, P07, P13", 96.50,
+        ("H1 (Core Optimization)", "P01, P02, P04, P05, P06, P07, P08, P13", 134.00,
          "=C15/$C$18", 0.10,
-         "Brownfield operational efficiency, equipment uptime, and tail spend optimization."),
-        ("H2 (Adjacent Innovation)", "P03, P04, P08, P09, P10", 102.00,
+         "Brownfield operational efficiency, renewables APM, B2B churn, and tail spend optimization."),
+        ("H2 (Adjacent Innovation)", "P03, P09, P10", 64.50,
          "=C16/$C$18", 0.20,
-         "Scaled adjacent energy assets (34 GW power fleet, deepwater drilling, LNG routing)."),
+         "Scaled adjacent energy assets (deepwater drilling, LNG routing, cracker energy)."),
         ("H3 (Transformational Scale)", "P11, P12", 330.00,
          "=C17/$C$18", 0.70,
          "Breakthrough commercial scale: P11 VPP aggregates 100 TWh power portfolio ($180M/yr); P12 commercial e-SAF catalyst licenses ($150M/yr)."),
