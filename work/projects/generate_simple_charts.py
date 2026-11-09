@@ -83,10 +83,10 @@ BRANCH_SHORT = {
 
 # 5-Year DCF NPV audited from totalenergies_ai_portfolio_model.xlsx
 NPV_DATA = {
-    "P01": 40.89, "P02": 69.04, "P03": 60.59, "P04": 80.83,
-    "P05": 49.92, "P06": 40.56, "P07": 55.24, "P08": 30.46,
-    "P09": 48.52, "P10": 20.09, "P11": 48.10, "P12": 51.07,
-    "P13":  4.49, "E01": 12.52,
+    "P01": 38.41, "P02": 44.89, "P03": 60.59, "P04": 58.16,
+    "P05": 42.47, "P06": 28.13, "P07": 38.39, "P08": 21.19,
+    "P09": 46.94, "P10": 20.09, "P11": 48.10, "P12": 51.07,
+    "P13":  2.88, "E01": 12.52,
 }
 
 # Micro-stagger for display within uncertainty ranges (both P07 and P02 have 6-12 month range in long_list.md)
@@ -287,12 +287,12 @@ def bubble_chart(df: pd.DataFrame) -> Figure:
 # -----------------------------------------------------------------------------
 def allocation_chart(df: pd.DataFrame) -> Figure:
     cost_shares  = {"Enabler": 4.23, "H1": 60.69, "H2": 19.13, "H3": 15.96}
-    npv_shares   = {"Enabler": 2.04, "H1": 60.66, "H2": 21.10, "H3": 16.20}
+    npv_shares   = {"Enabler": 2.44, "H1": 53.43, "H2": 24.84, "H3": 19.30}
     scale_shares = {"Enabler": 1.03, "H1": 25.09, "H2": 12.08, "H3": 61.80}
 
     rows = [
         ("1. Capital Commitment Allocation\n3-Yr Capex + Opex: $38.79M", cost_shares),
-        ("2. 5-Year Cumulative DCF Net Value\nDiscounted Net Cash (NPV): +$612.3M", npv_shares),
+        ("2. 5-Year Cumulative DCF Net Value\nDiscounted Net Cash (NPV): +$513.8M", npv_shares),
         ("3. Strategic Value at Full Scale\nAnnual Run-Rate (2030+): $534.0M/yr", scale_shares),
     ]
 
@@ -353,7 +353,7 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
                ncol=4, frameon=False, fontsize=11.0)
     
     fig.text(0.02, 0.02, 
-             "Valuation Methodology: Bar 1 = Cumulative 3-Yr Cash Outflows ($38.79M) | Bar 2 = 5-Year Cumulative DCF Net Present Value (@ hurdle rate, +$612.3M) | "
+             "Valuation Methodology: Bar 1 = Cumulative 3-Yr Cash Outflows ($38.79M) | Bar 2 = 5-Year Cumulative DCF Net Present Value (@ hurdle rate, +$513.8M) | "
              "Bar 3 = Steady-State Annual Run-Rate at Commercial Maturity 2030+ ($534.0M/yr).\n"
              "Validates Nagji & Tuff (HBR 2012) framework: 70/20/10 capital baseline, self-financing H1 cash engine, and 10/20/70 return inversion at scale. Source: totalenergies_ai_portfolio_model.xlsx.",
              fontsize=8.8, color=MUTED, va="bottom")
@@ -366,7 +366,7 @@ def allocation_chart(df: pd.DataFrame) -> Figure:
 # 3. BRAND NEW 5-YEAR J-CURVES DASHBOARD (14 Projects + Consolidated Group)
 # -----------------------------------------------------------------------------
 def jcurves_chart(df: pd.DataFrame) -> Figure:
-    """Widescreen 16:9 executive dashboard showing 5-year J-Curves for all 14 projects and the Group portfolio."""
+    """Widescreen 16:9 executive dashboard showing authentic 5-year J-Curves for all 14 projects and the Group portfolio."""
     fig = plt.figure(figsize=(16, 8.5), facecolor="white")
     gs = gridspec.GridSpec(1, 2, width_ratios=[1.35, 1.0], wspace=0.18,
                            left=0.06, right=0.97, top=0.90, bottom=0.10)
@@ -374,8 +374,10 @@ def jcurves_chart(df: pd.DataFrame) -> Figure:
     ax_indiv = fig.add_subplot(gs[0])
     ax_group = fig.add_subplot(gs[1])
 
-    years = np.array([0, 1, 2, 3, 4, 5])
-    year_labels = ["Y0 (Cap)", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5"]
+    # 7 Timeline points: Start (0.0), Y0 Capex (0.35), Y1 (1.0), Y2 (2.0), Y3 (3.0), Y4 (4.0), Y5 (5.0)
+    t_points = np.array([0.0, 0.35, 1.0, 2.0, 3.0, 4.0, 5.0])
+    tick_years = np.array([0.0, 1.0, 2.0, 3.0, 4.0, 5.0])
+    tick_labels = ["Start (0)", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5"]
 
     # Import PROJECTS_DATA from build_financial_model
     import sys
@@ -387,8 +389,8 @@ def jcurves_chart(df: pd.DataFrame) -> Figure:
     ax_indiv.axhline(0, color=INK, linestyle="-", linewidth=1.5, zorder=2)
     ax_indiv.grid(True, linestyle=":", color=RULE, alpha=0.8, zorder=0)
 
-    ax_indiv.axhspan(-4.0, 0, facecolor="#FEECEE", alpha=0.4, zorder=0)
-    ax_indiv.text(0.1, -2.8, "Capital Outflow Zone (Trough)", fontsize=9.5, color=ROUGE, fontweight="bold", alpha=0.8)
+    ax_indiv.axhspan(-3.5, 0, facecolor="#FEECEE", alpha=0.45, zorder=0)
+    ax_indiv.text(0.1, -3.1, "Capital Outflow Zone (Trough / Build Phase)", fontsize=9.5, color=ROUGE, fontweight="bold", alpha=0.85)
 
     for p in bfm.PROJECTS_DATA:
         c0 = -p["capex_y0"]
@@ -397,35 +399,35 @@ def jcurves_chart(df: pd.DataFrame) -> Figure:
         c3 = c2 + (p["val_y3"] - p["opex_y3"])
         c4 = c3 + (p["val_y4"] - p["opex_run"])
         c5 = c4 + (p["val_y5"] - p["opex_run"])
-        stream = [c0, c1, c2, c3, c4, c5]
+        stream = [0.0, c0, c1, c2, c3, c4, c5]
         
         color = COLORS[p["horizon"]]
         lw = 2.2 if p["id"] in ["P01", "P02", "P03", "P04", "P11", "P12"] else 1.4
         alpha = 0.95 if p["id"] in ["P01", "P02", "P03", "P04", "P11", "P12"] else 0.65
         
-        ax_indiv.plot(years, stream, marker="o", markersize=4.5, color=color, linewidth=lw, alpha=alpha, zorder=3)
+        ax_indiv.plot(t_points, stream, marker="o", markersize=4.5, color=color, linewidth=lw, alpha=alpha, zorder=3)
         
-        if p["id"] in ["P04", "P02", "P12", "P11", "P03", "P05", "P01", "P13"]:
+        if p["id"] in ["P04", "P02", "P12", "P11", "P03", "P05", "P01", "P07", "P13"]:
             ax_indiv.text(5.08, c5, f"{p['id']} (+${c5:.0f}M)", fontsize=8.5, fontweight="bold",
                           color=color, va="center")
 
-    ax_indiv.set_xlim(-0.1, 5.85)
-    ax_indiv.set_ylim(-3.5, 115)
-    ax_indiv.set_xticks(years, year_labels, fontsize=10.5)
+    ax_indiv.set_xlim(-0.15, 5.85)
+    ax_indiv.set_ylim(-3.8, 105)
+    ax_indiv.set_xticks(tick_years, tick_labels, fontsize=10.5)
     ax_indiv.set_ylabel("Cumulative Net Cash Flow ($M)", fontsize=11.5, fontweight="semibold", color=INK)
     ax_indiv.set_title("A. 14 Individual Initiative J-Curves (By Strategic Horizon)",
                        fontsize=12.5, fontweight="bold", color=INK, pad=12, loc="left")
     ax_indiv.spines[:].set_visible(False)
 
-    ax_indiv.text(0.9, 100, "H1 Core: Payback < 12 mo\n(Immediate cash engine)",
+    ax_indiv.text(0.25, 88, "H1 Core: Payback < 15 mo\n(P01 quick win + Wave 2 scaling)",
                   fontsize=9.0, color=BLEU, fontweight="bold",
                   bbox=dict(boxstyle="round,pad=0.3", facecolor="#EBF3FB", edgecolor=BLEU, alpha=0.9))
 
-    ax_indiv.text(1.9, 78, "H2 Adjacent: Payback 14–17 mo\n(Scaling deepwater & LNG)",
+    ax_indiv.text(1.7, 68, "H2 Adjacent: Payback 14–16 mo\n(P03 deepwater, P09 LNG, P10)",
                   fontsize=9.0, color=ORANGE, fontweight="bold",
                   bbox=dict(boxstyle="round,pad=0.3", facecolor="#FEF2E8", edgecolor=ORANGE, alpha=0.9))
 
-    ax_indiv.text(3.1, 15, "H3 Options: Deepest Trough\nPayback 30–32 mo (P11, P12)",
+    ax_indiv.text(2.6, 12, "H3 Options: 2-Year Deep Troughs\nPayback 28–32 mo (P11 VPP, P12 e-SAF)",
                   fontsize=9.0, color=ROUGE, fontweight="bold",
                   bbox=dict(boxstyle="round,pad=0.3", facecolor="#FEECEE", edgecolor=ROUGE, alpha=0.9))
 
@@ -436,52 +438,68 @@ def jcurves_chart(df: pd.DataFrame) -> Figure:
     ax_group.set_facecolor("white")
     ax_group.grid(True, linestyle=":", color=RULE, alpha=0.8, zorder=0)
 
-    group_cum = [-5.95, 23.41, 141.49, 339.51, 605.01, 913.01]
+    group_cum = [0.0, -5.95, -10.36, 49.47, 223.01, 488.51, 796.51]
+    outflows = [0.0, -5.95, -15.49, -28.31, -38.79, -44.79, -50.79]
 
-    ax_group.fill_between(years, 0, group_cum, where=(np.array(group_cum) >= 0),
+    # Plot Cumulative Capital Outflow (Investment Commitment)
+    ax_group.plot(t_points, outflows, color=ROUGE, linestyle="--", linewidth=2.0,
+                  marker="v", markersize=5.0, zorder=3, label="Cumulative Capital Outflows (Spend: -$38.8M)")
+
+    # Plot Authentic J-Curve (Cumulative Net Cash Flow)
+    ax_group.fill_between(t_points, 0, group_cum, where=(np.array(group_cum) >= 0),
                           facecolor="#EBF3FB", alpha=0.7, zorder=1)
-    ax_group.fill_between(years, 0, group_cum, where=(np.array(group_cum) < 0),
+    ax_group.fill_between(t_points, 0, group_cum, where=(np.array(group_cum) < 0),
                           facecolor="#FEECEE", alpha=0.7, zorder=1)
 
     ax_group.axhline(0, color=INK, linestyle="-", linewidth=1.5, zorder=2)
-    ax_group.plot(years, group_cum, marker="s", markersize=7.0, color=BLEU, linewidth=3.2, zorder=4, label="Consolidated Group Portfolio")
+    ax_group.plot(t_points, group_cum, marker="s", markersize=7.0, color=BLEU, linewidth=3.2, zorder=4,
+                  label="Cumulative Net Cash Flow (Authentic J-Curve)")
 
-    for x, val in zip(years, group_cum):
-        va_pos = "bottom" if val >= 0 else "top"
-        y_offset = 25 if val >= 0 else -25
-        ax_group.annotate(f"${val:+.1f}M", (x, val), xytext=(0, y_offset), textcoords="offset points",
-                          ha="center", va=va_pos, fontsize=10.0, fontweight="bold", color=BLEU if val > 0 else ROUGE,
+    # Key Data Labels on J-Curve
+    ax_group.annotate("-$5.95M\n(Capex Y0)", (0.35, -5.95), xytext=(0, -28), textcoords="offset points",
+                      ha="center", va="top", fontsize=9.0, fontweight="bold", color=ROUGE,
+                      bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor=RULE, alpha=0.9))
+
+    ax_group.annotate("-$10.36M\n(Trough / Y1)", (1.0, -10.36), xytext=(0, -28), textcoords="offset points",
+                      ha="center", va="top", fontsize=9.0, fontweight="bold", color=ROUGE,
+                      bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor=ROUGE, alpha=0.9))
+
+    for x, val in zip([2.0, 3.0, 5.0], [49.47, 223.01, 796.51]):
+        ax_group.annotate(f"+${val:.1f}M", (x, val), xytext=(0, 18), textcoords="offset points",
+                          ha="center", va="bottom", fontsize=9.5, fontweight="bold", color=BLEU,
                           bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor=RULE, alpha=0.9))
 
-    ax_group.scatter([0.20], [0], color=ROUGE, s=70, zorder=5)
-    ax_group.annotate("Portfolio Breakeven\nMonth 14.5 (< 1.2 yrs)", (0.20, 0), xytext=(35, -45),
+    # Breakeven / Payback point at Month 14.1 (~1.2 years)
+    ax_group.scatter([1.17], [0], color=ROUGE, s=85, zorder=5)
+    ax_group.annotate("Breakeven Point\nMonth 14.1 (1.2 yrs)", (1.17, 0), xytext=(35, -45),
                       textcoords="offset points", ha="left", va="top", fontsize=9.5, fontweight="bold", color=INK,
                       arrowprops=dict(arrowstyle="->", color=INK, lw=1.2))
 
     ax_group.set_xlim(-0.2, 5.5)
-    ax_group.set_ylim(-60, 1020)
-    ax_group.set_xticks(years, year_labels, fontsize=10.5)
+    ax_group.set_ylim(-65, 890)
+    ax_group.set_xticks(tick_years, tick_labels, fontsize=10.5)
     ax_group.set_ylabel("Group Cumulative Net Cash Flow ($M)", fontsize=11.5, fontweight="semibold", color=INK)
     ax_group.set_title("B. Consolidated Program J-Curve (Self-Financing Engine)",
                        fontsize=12.5, fontweight="bold", color=INK, pad=12, loc="left")
     ax_group.spines[:].set_visible(False)
+    ax_group.legend(loc="center left", bbox_to_anchor=(0.04, 0.58), frameon=True, facecolor="white", edgecolor=RULE, fontsize=9.0)
 
     kpi_text = (
         "Consolidated Financial Metrics:\n"
         "• Total 3-Yr Capital: $38.79M ($5.95M upfront Y0)\n"
-        "• Max Cash Drawdown: -$5.95M (Zero net deficit post-Y1)\n"
-        "• Discounted Payback: Under 15 Months (Month 14.5)\n"
-        "• 5-Year Cumulative Cash: +$913.01M\n"
-        "• 5-Year Net Present Value (NPV): +$619.19M\n"
-        "• Portfolio IRR: 702.4% (Self-financing transformation)"
+        "• Max Cash Deficit (Trough): -$10.36M in Year 1\n"
+        "• Simple & Discounted Payback: Month 14.1 (1.2 yrs)\n"
+        "• 5-Year Cumulative Cash: +$796.51M\n"
+        "• 5-Year Net Present Value (NPV): +$523.58M (@ 10.98%)\n"
+        "• Portfolio IRR: 315.8% (Self-financing transformation)"
     )
     ax_group.text(0.05, 0.95, kpi_text, transform=ax_group.transAxes,
                   fontsize=9.5, fontweight="medium", color=INK, va="top",
                   bbox=dict(boxstyle="round,pad=0.5", facecolor=BG_LIGHT, edgecolor=BLEU, lw=1.2, alpha=0.95))
 
     fig.text(0.06, 0.02,
-             "Methodology: J-Curve tracks Cumulative Net Cash Flow (Gross Benefits minus Capex and Opex) from Year 0 to Year 5 across all 14 candidate initiatives. "
-             "H1 near-term cash generation eliminates portfolio deficit by Month 14.5, self-funding H3 real options exploration. Source: totalenergies_ai_portfolio_model.xlsx.",
+             "Methodology: J-Curve tracks Cumulative Net Cash Flow (Gross Benefits minus Capex and Opex) from Time 0 to Year 5 across all 14 initiatives. "
+             "Year 1 deficit (-$10.36M) reflects disciplined build phase before Wave 2 scaling; self-financing engine turns positive at Month 14.1. Source: totalenergies_ai_portfolio_model.xlsx.",
              fontsize=9.0, color=MUTED, va="bottom")
 
     return fig

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-09T16:31:45.659931</dc:date>
+    <dc:date>2026-11-09T17:35:42.651538</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -117,7 +117,7 @@ z
      <g id="line2d_13"/>
      <g id="text_13">
       <text style="font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(106.504063 157.711)">2. 5-Year Cumulative DCF Net Value</text>
-      <text style="font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(91.097188 170.013125)">Discounted Net Cash (NPV): +$612.3M</text>
+      <text style="font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #1b2430" transform="translate(91.097188 170.013125)">Discounted Net Cash (NPV): +$513.8M</text>
      </g>
     </g>
     <g id="ytick_3">
@@ -134,7 +134,7 @@ L 311.660496 85.1552
 L 311.660496 107.6768 
 L 282.24 107.6768 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 311.660496 85.1552 
@@ -142,7 +142,7 @@ L 733.771584 85.1552
 L 733.771584 107.6768 
 L 311.660496 107.6768 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 733.771584 85.1552 
@@ -150,7 +150,7 @@ L 866.82456 85.1552
 L 866.82456 107.6768 
 L 733.771584 107.6768 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 866.82456 85.1552 
@@ -158,39 +158,39 @@ L 977.829552 85.1552
 L 977.829552 107.6768 
 L 866.82456 107.6768 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 282.24 147.7152 
-L 296.428608 147.7152 
-L 296.428608 170.2368 
+L 299.210688 147.7152 
+L 299.210688 170.2368 
 L 282.24 170.2368 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 296.428608 147.7152 
-L 718.33104 147.7152 
-L 718.33104 170.2368 
-L 296.428608 170.2368 
+    <path d="M 299.210688 147.7152 
+L 670.827024 147.7152 
+L 670.827024 170.2368 
+L 299.210688 170.2368 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 718.33104 147.7152 
-L 865.08576 147.7152 
-L 865.08576 170.2368 
-L 718.33104 170.2368 
+    <path d="M 670.827024 147.7152 
+L 843.594192 147.7152 
+L 843.594192 170.2368 
+L 670.827024 170.2368 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
-    <path d="M 865.08576 147.7152 
-L 977.76 147.7152 
-L 977.76 170.2368 
-L 865.08576 170.2368 
+    <path d="M 843.594192 147.7152 
+L 977.829552 147.7152 
+L 977.829552 170.2368 
+L 843.594192 170.2368 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
     <path d="M 282.24 210.2752 
@@ -198,7 +198,7 @@ L 289.403856 210.2752
 L 289.403856 232.7968 
 L 282.24 232.7968 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #3f2b86; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
     <path d="M 289.403856 210.2752 
@@ -206,7 +206,7 @@ L 463.909824 210.2752
 L 463.909824 232.7968 
 L 289.403856 232.7968 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #00509e; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
     <path d="M 463.909824 210.2752 
@@ -214,7 +214,7 @@ L 547.92864 210.2752
 L 547.92864 232.7968 
 L 463.909824 232.7968 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #f37021; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="patch_14">
     <path d="M 547.92864 210.2752 
@@ -222,7 +222,7 @@ L 977.76 210.2752
 L 977.76 232.7968 
 L 547.92864 232.7968 
 z
-" clip-path="url(#p465aa3322a)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+" clip-path="url(#p83e68c76f4)" style="fill: #e30613; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
    </g>
    <g id="text_15">
     <g id="patch_15">
@@ -281,13 +281,13 @@ z
     <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="922.327056" y="99.222719" transform="rotate(-0 922.327056 99.222719)">H3 16.0%</text>
    </g>
    <g id="text_23">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="507.379824" y="161.782719" transform="rotate(-0 507.379824 161.782719)">H1 60.7%</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="485.018856" y="161.782719" transform="rotate(-0 485.018856 161.782719)">H1 53.4%</text>
    </g>
    <g id="text_24">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="791.7084" y="161.782719" transform="rotate(-0 791.7084 161.782719)">H2 21.1%</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="757.210608" y="161.782719" transform="rotate(-0 757.210608 161.782719)">H2 24.8%</text>
    </g>
    <g id="text_25">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="921.42288" y="161.782719" transform="rotate(-0 921.42288 161.782719)">H3 16.2%</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="910.711872" y="161.782719" transform="rotate(-0 910.711872 161.782719)">H3 19.3%</text>
    </g>
    <g id="text_26">
     <text style="font-weight: 700; font-size: 11px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="376.65684" y="224.342719" transform="rotate(-0 376.65684 224.342719)">H1 25.1%</text>
@@ -301,32 +301,32 @@ z
    <g id="line2d_15">
     <path d="M 769.104 78.8992 
 L 769.104 113.9328 
-" clip-path="url(#p465aa3322a)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#p83e68c76f4)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_16">
     <path d="M 908.208 78.8992 
 L 908.208 113.9328 
-" clip-path="url(#p465aa3322a)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#p83e68c76f4)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_17">
     <path d="M 351.792 204.0192 
 L 351.792 239.0528 
-" clip-path="url(#p465aa3322a)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#p83e68c76f4)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
    <g id="line2d_18">
     <path d="M 490.896 204.0192 
 L 490.896 239.0528 
-" clip-path="url(#p465aa3322a)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
+" clip-path="url(#p83e68c76f4)" style="fill: none; stroke-dasharray: 1.8,2.97; stroke-dashoffset: 0; stroke: #1b2430; stroke-width: 1.8"/>
    </g>
   </g>
   <g id="text_29">
-   <text style="font-size: 8.8px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #5b6673" transform="translate(20.16 312.5046)">Valuation Methodology: Bar 1 = Cumulative 3-Yr Cash Outflows ($38.79M) | Bar 2 = 5-Year Cumulative DCF Net Present Value (@ hurdle rate, +$612.3M) | Bar 3 = Steady-State Annual Run-Rate at Commercial Maturity 2030+ ($534.0M/yr).</text>
+   <text style="font-size: 8.8px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #5b6673" transform="translate(20.16 312.5046)">Valuation Methodology: Bar 1 = Cumulative 3-Yr Cash Outflows ($38.79M) | Bar 2 = 5-Year Cumulative DCF Net Present Value (@ hurdle rate, +$513.8M) | Bar 3 = Steady-State Annual Run-Rate at Commercial Maturity 2030+ ($534.0M/yr).</text>
    <text style="font-size: 8.8px; font-family: 'Segoe UI', 'Arial', 'DejaVu Sans'; fill: #5b6673" transform="translate(20.16 322.50525)">Validates Nagji &amp; Tuff (HBR 2012) framework: 70/20/10 capital baseline, self-financing H1 cash engine, and 10/20/70 return inversion at scale. Source: totalenergies_ai_portfolio_model.xlsx.</text>
   </g>
   <g id="legend_1">
    <g id="line2d_19">
     <defs>
-     <path id="m69d5f6ee95" d="M -5.5 5.5 
+     <path id="maf16cca2c7" d="M -5.5 5.5 
 L 5.5 5.5 
 L 5.5 -5.5 
 L -5.5 -5.5 
@@ -334,7 +334,7 @@ z
 " style="stroke: #3f2b86; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#m69d5f6ee95" x="303.14" y="20.817438" style="fill: #3f2b86; stroke: #3f2b86; stroke-linejoin: miter"/>
+     <use xlink:href="#maf16cca2c7" x="303.14" y="20.817438" style="fill: #3f2b86; stroke: #3f2b86; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="text_30">
@@ -342,7 +342,7 @@ z
    </g>
    <g id="line2d_20">
     <defs>
-     <path id="mf38bf2e956" d="M -5.5 5.5 
+     <path id="m2b0bb24258" d="M -5.5 5.5 
 L 5.5 5.5 
 L 5.5 -5.5 
 L -5.5 -5.5 
@@ -350,7 +350,7 @@ z
 " style="stroke: #00509e; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#mf38bf2e956" x="408.788125" y="20.817438" style="fill: #00509e; stroke: #00509e; stroke-linejoin: miter"/>
+     <use xlink:href="#m2b0bb24258" x="408.788125" y="20.817438" style="fill: #00509e; stroke: #00509e; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="text_31">
@@ -358,7 +358,7 @@ z
    </g>
    <g id="line2d_21">
     <defs>
-     <path id="m46c47609f7" d="M -5.5 5.5 
+     <path id="mf85d1fcd4a" d="M -5.5 5.5 
 L 5.5 5.5 
 L 5.5 -5.5 
 L -5.5 -5.5 
@@ -366,7 +366,7 @@ z
 " style="stroke: #f37021; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#m46c47609f7" x="501.023125" y="20.817438" style="fill: #f37021; stroke: #f37021; stroke-linejoin: miter"/>
+     <use xlink:href="#mf85d1fcd4a" x="501.023125" y="20.817438" style="fill: #f37021; stroke: #f37021; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="text_32">
@@ -374,7 +374,7 @@ z
    </g>
    <g id="line2d_22">
     <defs>
-     <path id="m36dbb6b477" d="M -5.5 5.5 
+     <path id="m4042b115bb" d="M -5.5 5.5 
 L 5.5 5.5 
 L 5.5 -5.5 
 L -5.5 -5.5 
@@ -382,7 +382,7 @@ z
 " style="stroke: #e30613; stroke-linejoin: miter"/>
     </defs>
     <g>
-     <use xlink:href="#m36dbb6b477" x="613.195625" y="20.817438" style="fill: #e30613; stroke: #e30613; stroke-linejoin: miter"/>
+     <use xlink:href="#m4042b115bb" x="613.195625" y="20.817438" style="fill: #e30613; stroke: #e30613; stroke-linejoin: miter"/>
     </g>
    </g>
    <g id="text_33">
@@ -391,7 +391,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p465aa3322a">
+  <clipPath id="p83e68c76f4">
    <rect x="282.24" y="46.368" width="695.52" height="225.216"/>
   </clipPath>
  </defs>

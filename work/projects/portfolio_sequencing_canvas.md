@@ -96,13 +96,13 @@ THREE HORIZONS ALLOCATION BREAKDOWN ($38.79M TOTAL ENVELOPE)
 #### Table 3.1a: 5-Year DCF Net Value Distribution (Near-Term Cash Engine)
 | Horizon Dimension | Initiatives Included | 3-Yr Spend ($M) | 5-Yr Cumulative Net Cash ($M) | 5-Yr NPV (@ Hurdle) ($M) | 5-Yr Value Mix (%) | Near-Term Strategic Mechanics |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **H0: Foundational Enabler** | E01 Value Register | $1.64M | +$13.77M | **+$12.52M** | **2.04%** | FinOps governance, license clawback, and value assurance |
-| **H1: Core Optimization** | P01, P02, P04, P05, P06, P07, P08, P13 | $23.54M | +$553.40M | **+$371.40M** | **60.66%** | Self-financing cash engine (<15 mo payback; recovers early deficit) |
-| **H2: Adjacent Innovation** | P03, P09, P10 | $7.42M | +$195.53M | **+$129.20M** | **21.10%** | Scaling deepwater drilling, LNG routing, and cracker yield |
-| **H3: Transformational Options** | P11, P12 | $6.19M | +$150.31M | **+$99.20M** | **16.20%** | Staged real call options maturing in Y4-Y5 |
-| **TOTAL 5-YEAR VALUATION** | **14 Initiatives** | **$38.79M** | **+$913.01M** | **+$612.32M\***| **100.00%** | **H1/H2 generate 81.8% of value to self-fund transformation** |
+| **H0: Foundational Enabler** | E01 Value Register | $1.64M | +$17.77M | **+$12.52M** | **2.44%** | FinOps governance, license clawback, and value assurance |
+| **H1: Core Optimization** | P01, P02, P04, P05, P06, P07, P08, P13 | $23.54M | +$420.30M | **+$274.52M** | **53.43%** | Self-financing cash engine (<15 mo payback; absorbs Wave 1 deficit) |
+| **H2: Adjacent Innovation** | P03, P09, P10 | $7.42M | +$193.28M | **+$127.61M** | **24.84%** | Scaling deepwater drilling, LNG routing, and cracker yield |
+| **H3: Transformational Options** | P11, P12 | $6.19M | +$187.31M | **+$99.17M** | **19.30%** | Staged real call options maturing in Y4-Y5 |
+| **TOTAL 5-YEAR VALUATION** | **14 Initiatives** | **$38.79M** | **+$796.51M** | **+$513.81M\***| **100.00%** | **H1/H2 generate 78.3% of value to self-fund transformation** |
 
-*\*Note on 5-Year NPV Bar:* As instructed by framework doctrine, the 5-year NPV has no intermediate target lines because Nagji & Tuff does not specify a 5-year ratio. Its strategic role is cash self-funding. Sum of individual branch-discounted project NPVs is +$612.32M; consolidated waterfall NPV is +$619.19M.
+*\*Note on 5-Year NPV Bar:* As instructed by framework doctrine, the 5-year NPV has no intermediate target lines because Nagji & Tuff does not specify a 5-year ratio. Its strategic role is cash self-funding. Sum of individual branch-discounted project NPVs is +$513.81M; consolidated waterfall NPV is +$523.58M.
 
 #### Table 3.1b: Full-Scale Strategic Value Creation (Commercial Maturity 2030+ — Nagji & Tuff 10/20/70 Inversion)
 | Horizon Dimension | Scaling Initiatives | Steady Value ($M/yr) | Strategic Value Mix (%) | Nagji & Tuff Target Inversion (%) | Commercial Scaling Rationale |
@@ -129,7 +129,7 @@ Compares the reference 70/20/10 mix with candidate capital, 5-year DCF net value
 ![Capital and Return Mix](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_capital_value_mix.png)
 
 ### 4.3 5-Year Cumulative Cash Flow J-Curves (Initiatives & Consolidated Portfolio)
-Demonstrates the self-financing cash engine: Core H1 breaks even in <12 months, Adjacent H2 recovers capital by Months 14–17, and H3 transformational options break even by Months 30–32. The consolidated portfolio reaches cash positive at **Month 14.5**, with cumulative net cash turning positive in Year 1 (+$23.41M) and reaching +$913.01M by Year 5:
+Demonstrates the self-financing cash engine: Core H1 breaks even in <15 months, Adjacent H2 recovers capital by Months 14–16, and H3 transformational options undergo a 2-year disciplined trough before breaking even by Months 28–32. The consolidated portfolio bottoms out at **-$10.36M in Year 1** (the authentic investment trough) and reaches cash positive at **Month 14.1** (< 1.2 years), with cumulative net cash reaching +$796.51M by Year 5:
 
 ![5-Year J-Curves](file:///C:/Users/Vincent/GitHub/Vincent-20-100/ai-transformations-navy/work/projects/assets/simple_portfolio_jcurves.png)
 

@@ -102,19 +102,20 @@ The table below synthesizes the consolidated financial performance across all 14
 
 | Line Item ($M) | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 | 5-Year Cumulative | Methodological Reference |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Gross Operational Benefits** | **0.00** | **38.90** | **130.90** | **208.50** | **271.50** | **314.00** | **$963.80M** | `=SUM(B7:G7)`, 14 project ramp models |
+| **Gross Operational Benefits** | **0.00** | **5.13** | **72.65** | **184.02** | **271.50** | **314.00** | **$847.30M** | `=SUM(B7:G7)`, 14 project ramp models |
 | Transformation CAPEX | -5.95 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | **-$5.95M** | Edge hardware, IoT sensors, gateways |
 | Transformation & Run OPEX | 0.00 | -9.54 | -12.82 | -10.48 | -6.00 | -6.00 | **-$44.84M** | Squad labor, cloud compute, APM SaaS |
 | **Total Cash Outflows** | **-5.95** | **-9.54** | **-12.82** | **-10.48** | **-6.00** | **-6.00** | **-$50.79M** | `=B4+B5`, total transformation spend |
-| **Net Operational Cash Flow** | **-5.95** | **+29.36** | **+118.08** | **+198.02** | **+265.50** | **+308.00** | **+$913.01M** | `=B7-B6`, net P&L cash generation |
+| **Net Operational Cash Flow** | **-5.95** | **-4.41** | **+59.83** | **+173.54** | **+265.50** | **+308.00** | **+$796.51M** | `=B7-B6`, net P&L cash generation |
 | **Group Weighted Discount Factor** | 1.000 | 0.901 | 0.812 | 0.732 | 0.659 | 0.594 | — | `=1/(1+10.98%)^t`, weighted hurdle |
-| **Discounted Cash Flow (DCF)** | **-5.95** | **+26.46** | **+95.87** | **+144.87** | **+175.01** | **+182.93** | **+$619.19M** | **Portfolio 5-Year NPV (@ 10.98%)** |
-| **Cumulative Undiscounted Cash Flow**| **-5.95** | **+23.41** | **+141.49** | **+339.51** | **+605.01** | **+$913.01M** | — | Turns positive at Month 14.5 |
-| **Cumulative Discounted Cash Flow** | **-5.95** | **+20.51** | **+116.38** | **+261.25** | **+436.26** | **+$619.19M** | — | Turns positive at Month 15.6 |
+| **Discounted Cash Flow (DCF)** | **-5.95** | **-3.97** | **+48.58** | **+126.96** | **+175.02** | **+182.95** | **+$523.58M** | **Portfolio 5-Year NPV (@ 10.98%)** |
+| **Cumulative Undiscounted Cash Flow**| **-5.95** | **-10.36** | **+49.47** | **+223.01** | **+488.51** | **+$796.51M** | — | Turns positive at Month 14.1 |
+| **Cumulative Discounted Cash Flow** | **-5.95** | **-9.92** | **+38.65** | **+165.61** | **+340.63** | **+$523.58M** | — | Turns positive at Month 14.6 |
 
 ### Cash Generation Dynamics
 - **Year 0 Commitment ($5.95M Outflow):** Focuses exclusively on non-discretionary foundational infrastructure: sensor procurement and ATEX Zone 1 retrofits for Normandy refinery (P01: $0.25M), drillship satellite telemetry decoders (P03: $0.45M), OCPP smart-charging APIs (P11: $0.50M), and store POS connectors (P13: $1.20M).
-- **Year 1 Turning Point (+ $29.36M Net Cash):** Gross benefits ramp aggressively to $38.90M, driven by rapid recovery of unplanned downtime across Normandy and Antwerp refineries ($3.75M), Cognite virtual metering on operated offshore hubs ($6.13M), renewable availability improvements ($8.83M), Copilot software clawbacks ($7.31M), and procurement duplicate payment recoveries ($3.75M).
+- **Year 1 Disciplined Build & Trough (-$4.41M Net Cash, -$10.36M Cumulative Deficit):** In Year 1, capital is strictly focused on Wave 1 execution (Tier 1 pilots P01, P13, and Enabler E01 generating $5.13M of initial value), while Wave 2 projects remain in preparation. Total net cash bottoms out at -$10.36M, forming an authentic innovation J-curve (Course Session 3).
+- **Year 2 Turning Point (+ $59.83M Net Cash):** Unlocking Wave 2 at Stage Gate 1 (Month 12) drives rapid cash inflection, eliminating the cumulative deficit and reaching full cash breakeven at **Month 14.1** (< 1.2 years).
 - **Years 4–5 Steady State ($308.00M/year Net Cash):** Full operational maturity generates $314.00M/year in recurring gross value against an annual steady-state run OPEX of **$6.00M/year** (ongoing cloud inference hosting, API maintenance, model drift retraining, and Agile Trio rotation).
 
 ---

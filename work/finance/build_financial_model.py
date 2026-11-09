@@ -115,42 +115,42 @@ PROJECTS_DATA = [
         "id": "P02", "name": "Upstream Production Surveillance", "branch": "Exploration & Production",
         "horizon": "H1", "sourcing": "Blend", "hurdle_ref": "Variables!C7",
         "capex_y0": 0.40, "opex_y1": 0.65, "opex_y2": 0.85, "opex_y3": 0.67, "opex_run": 0.35,
-        "val_y1": 6.13, "val_y2": 18.38, "val_y3": 24.50, "val_y4": 24.50, "val_y5": 24.50,
+        "val_y1": 0.00, "val_y2": 6.13, "val_y3": 18.38, "val_y4": 24.50, "val_y5": 24.50,
         "tier": 2, "note": "Cognite APM scale across operated offshore hubs. Choke optimization & virtual multiphase flow metering."
     },
     {
         "id": "P04", "name": "Renewables Fleet Availability", "branch": "Integrated Power",
         "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.35, "opex_y1": 0.55, "opex_y2": 0.75, "opex_y3": 0.55, "opex_run": 0.30,
-        "val_y1": 8.83, "val_y2": 22.08, "val_y3": 26.50, "val_y4": 26.50, "val_y5": 26.50,
+        "val_y1": 0.00, "val_y2": 8.83, "val_y3": 22.08, "val_y4": 26.50, "val_y5": 26.50,
         "tier": 2, "note": "34.1 GW gross portfolio (Factbook p. 78). Inverter fault triage and day-ahead solar/wind balancing."
     },
     {
         "id": "P05", "name": "Copilot Workflow Redesign", "branch": "Corporate Functions",
         "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C11",
         "capex_y0": 0.25, "opex_y1": 0.45, "opex_y2": 0.59, "opex_y3": 0.45, "opex_run": 0.25,
-        "val_y1": 7.31, "val_y2": 17.06, "val_y3": 19.50, "val_y4": 19.50, "val_y5": 19.50,
+        "val_y1": 0.00, "val_y2": 7.31, "val_y3": 17.06, "val_y4": 19.50, "val_y5": 19.50,
         "tier": 2, "note": "M365 Copilot license audit and workflow redesign. Clawback of inactive licenses ($1-3M/yr cash)."
     },
     {
         "id": "P06", "name": "Procurement Spend Analytics", "branch": "Corporate Functions",
         "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C11",
         "capex_y0": 0.45, "opex_y1": 0.75, "opex_y2": 1.00, "opex_y3": 0.75, "opex_run": 0.35,
-        "val_y1": 3.75, "val_y2": 11.25, "val_y3": 15.00, "val_y4": 15.00, "val_y5": 15.00,
+        "val_y1": 0.00, "val_y2": 3.75, "val_y3": 11.25, "val_y4": 15.00, "val_y5": 15.00,
         "tier": 2, "note": "Spend analytics across 100k suppliers. Duplicate payment elimination & rate card benchmarking."
     },
     {
         "id": "P07", "name": "Worksite Safety Computer Vision", "branch": "HSE Operations",
         "horizon": "H1", "sourcing": "Buy", "hurdle_ref": "Variables!C11",
         "capex_y0": 0.50, "opex_y1": 0.75, "opex_y2": 1.00, "opex_y3": 0.75, "opex_run": 0.40,
-        "val_y1": 5.00, "val_y2": 15.00, "val_y3": 20.00, "val_y4": 20.00, "val_y5": 20.00,
+        "val_y1": 0.00, "val_y2": 5.00, "val_y3": 15.00, "val_y4": 20.00, "val_y5": 20.00,
         "tier": 2, "note": "CCTV PPE and exclusion-zone detection across 20 high-risk sites. Shell benchmark: 70% incident reduction."
     },
     {
         "id": "P08", "name": "Retail Customer Retention AI", "branch": "Integrated Power",
         "horizon": "H1", "sourcing": "Blend", "hurdle_ref": "Variables!C9",
         "capex_y0": 0.30, "opex_y1": 0.65, "opex_y2": 0.80, "opex_y3": 0.60, "opex_run": 0.30,
-        "val_y1": 2.75, "val_y2": 8.25, "val_y3": 11.00, "val_y4": 11.00, "val_y5": 11.00,
+        "val_y1": 0.00, "val_y2": 2.75, "val_y3": 8.25, "val_y4": 11.00, "val_y5": 11.00,
         "tier": 2, "note": "Churn modeling and dynamic hedging margins across 8.7M European utility customer sites."
     },
     {
@@ -555,7 +555,7 @@ def build_portfolio_consolidation(wb, t1_meta, t2_meta):
     ws.cell(row=row_idx, column=9, value=f"=(SUMPRODUCT(F{t1_start}:F{t1_end},I{t1_start}:I{t1_end})+SUMPRODUCT(F{t2_start}:F{t2_end},I{t2_start}:I{t2_end}))/F{row_idx}").number_format = "0.0%"
     ws.cell(row=row_idx, column=10, value=f"=J{t1_sub_row}+J{t2_sub_row}").number_format = "$#,##0.00"
     ws.cell(row=row_idx, column=11, value="=Portfolio_Cash_Waterfall!$B$18").number_format = "0.0%"
-    ws.cell(row=row_idx, column=12, value="<1.2 yrs").alignment = align_center
+    ws.cell(row=row_idx, column=12, value="1.2 yrs (M14.1)").alignment = align_center
     ws.cell(row=row_idx, column=13, value="Group Portfolio").font = font_bold
 
     for c in range(1, 14):
@@ -701,8 +701,8 @@ def build_portfolio_waterfall(wb, t1_meta, t2_meta):
     kpis = [
         ("Portfolio 5-Year NPV (@ Weighted Hurdle):", "=H10", "$#,##0.00"),
         ("Consolidated Portfolio IRR:", "=IRR(B8:G8)", "0.0%"),
-        ("Simple Payback Period:", "Under 1.2 Years (Breaks positive in Year 1)", "@"),
-        ("Discounted Payback Period:", "Under 1.4 Years (Breaks positive in Year 1)", "@"),
+        ("Simple Payback Period:", "1.2 Years / Month 14.1 (Breaks positive in Year 2)", "@"),
+        ("Discounted Payback Period:", "1.25 Years / Month 14.6 (Breaks positive in Year 2)", "@"),
         ("Total 3-Year Capital Envelope:", "=Portfolio_Consolidation!F24", "$#,##0.00"),
         ("Wave 1 Core Capital (Tranche 1):", "=Portfolio_Consolidation!F10", "$#,##0.00"),
         ("Wave 2 Reserve Capital (Gated):", "=Portfolio_Consolidation!F22", "$#,##0.00"),
