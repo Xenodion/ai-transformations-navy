@@ -1,5 +1,7 @@
 # Correction plan: strategy, financial model and portfolio visuals
 
+> **Historical audit:** The old workbook, generated charts and redundant reviews discussed below were removed from active use on 10 November; their tracked versions remain in Git history. Current cases and checks are indexed in [work README](../README.md). This file records the audit findings, not current scenario values.
+
 Status: preliminary review, 9 November 2026. This plan is not a sign-off: the workbook has not been independently recalculated and every file and underlying source has not yet been checked. Do not derive the memo or slides from the current figures.
 
 ## Confirmed blockers
@@ -93,7 +95,7 @@ This is a substantive cross-document review, not a line-by-line verification of 
 
 ## Verified source updates, 9 November
 
-- TotalEnergies' 2025 URD pp. 462 and 472 gives a 7% post-tax WACC estimate for specified impairment tests (CLM-075). It does not establish an internal AI hurdle. See `work/finance/wacc_and_hurdle_review.md` for the proposed 10% illustrative hurdle, tax consistency and sensitivity; do not use the existing pre-tax cash flows to claim an after-tax NPV.
+- TotalEnergies' 2025 URD pp. 462 and 472 gives a 7% post-tax WACC estimate for specified impairment tests (CLM-075). It does not establish an internal AI hurdle. The earlier single-hurdle proposal is superseded by `work/finance/discount_rate_policy.md`; do not use pre-tax cash flows to claim an after-tax NPV.
 - Quadra Energy already had a 9 GW renewable-generation VPP in the 2023 acquisition announcement (SRC-036, CLM-076). Existing customer-side EV/battery capability is not established either way; P11's novelty and horizon require a fresh comparison.
 - The original Equinor source (SRC-017) says predictive maintenance generated $120m since 2020, with more than 700 machines monitored. A $20m/year figure is an assumed six-year average, not an annual figure disclosed by Equinor. The per-machine extrapolation assumes a constant fleet and compatible value; it is not an independent validation of P01.
 - Regulation (EU) 2026/1744 Article 1(40), p. 35 (SRC-035), confirms specified Annex III and Annex I dates; classify individual systems and check transitions. Q11 and Q16 references are corrected in the question log.

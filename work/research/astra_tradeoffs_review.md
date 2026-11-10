@@ -25,13 +25,13 @@
 
 ## Discount-rate decision
 
-Follow `../finance/wacc_and_hurdle_review.md`: 7% is a documented historical post-tax impairment reference, not verified current AI policy. The proposed 10% hurdle is an explicit teaching-case assumption, with 7% and 12% comparison. Substituting a new rate cannot repair unsupported benefits or inconsistent tax treatment. Use consistently after-tax nominal cash flows for an after-tax NPV; otherwise clearly label the pre-tax analysis and do not claim post-tax hurdle clearance. Do not equate a spending-weighted rate with the sum of project NPVs at different rates.
+The 7% group reference and the fixed branch/project assumptions are now in `../finance/discount_rate_policy.md`. The earlier recommendation of a single illustrative rate is superseded. Substituting a new rate cannot repair unsupported benefits or inconsistent tax treatment. Use consistently after-tax nominal cash flows for an after-tax NPV; otherwise clearly label the pre-tax analysis and do not claim post-tax hurdle clearance. Do not equate a spending-weighted rate with the sum of project NPVs at different rates.
 
 ## Sources and limits
 
 - `../roadmap.md`: local observation of deliverable sequence, acceptance criteria and tracking rules; current completion marks require reconciliation with known failures.
 - `correction_plan_preliminary.md`: local audit findings and primary-source leads, 9 November 2026; figures are diagnostic, not approved economics.
-- `../finance/wacc_and_hurdle_review.md`: documented reference and assumptions, 9 November 2026.
+- `../finance/discount_rate_policy.md`: documented reference and project assumptions, revised 10 November 2026.
 - `../../AGENTS.md`, `../../README.md`, `../../.agents/README.md`: project conventions.
 
 No external communication or roadmap/issue modification was performed in this review. Primary documents and workbook recalculation still require the responsible validation pass.

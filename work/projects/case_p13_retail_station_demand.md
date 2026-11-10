@@ -1,268 +1,111 @@
-# Full Case Study: Featured Project 4 — P13 Retail Station Demand Forecasting & Loss Optimization
+# P13 — Retail demand forecasting and dynamic pricing
 
-- **Roadmap Step:** 15 — [#15](https://github.com/Xenodion/ai-transformations-navy/issues/15)
-- **Status:** Complete Case Study (Featured Case 4 — Template Model)
-- **Date:** 8 November 2026
-- **Authors:** Vincent Lamy & Alexandre Waerniers, Team 4.
-- **Operating Branch:** Marketing & Services (M&S)
-- **Provisional Horizon:** **Horizon 1** (Core Optimization / Rapid Self-Financing Cash Return)
-- **Delivery Unit:** Agile Delivery Trio (*Trinôme Exécutif*) inside M&S Spoke
-- **Evidence Base:**
-  - `sources/primary/totalenergies_universal-registration-document-2025_2026_en.pdf` (URD 2025, pp. 6, 13, 138)
-  - `sources/primary/totalenergies_factbook-2025_2026_en.xlsx` (Factbook 2025, p. 26, p. 145)
-  - `sources/register.md` (`CLM-004`, `CLM-014`, `CLM-062`, `CLM-066`, `CLM-069`, `CLM-070`, `CLM-071`, `CLM-074`)
-  - Course Framework: Sessions 1–4 (Case Study Standard Template)
+**Decision at a glance:** propose forecasting and controlled markdowns for a hypothetical 100-station French retail pilot, including electronic shelf labels. The model assumes **€1m** one-time investment, **€0.825m/year** gross benefit at full scale and a **9%** hurdle. Its five-year base NPV is **+€0.972m**, with **49.5% IRR** and **2.33-year simple payback**. Inputs are illustrative and require store-level validation before rollout.
 
----
+**Status:** Rebuilt working case, 10 November 2026. Project and scenario figures are assumptions unless explicitly identified as facts or local observations; they require financial and operational validation before submission. The active scenario calculations are in `../finance/portfolio_model_14_revised.xlsx`. The decision does not yet authorise deployment.
 
-## 1. Problem Statement, Operational Scope, and Baseline
+## 1. Decision and existing situation
 
-### 1.1 The Business Problem
-TotalEnergies operates one of the world's largest branded mobility and retail networks, with **12,775 service stations worldwide at year-end 2025** (`Factbook 2025`, p. 145 `[Fact]`; `URD 2025`, p. 13 `[Fact]`), including **5,679 stations across Europe** and **3,256 stations in France** (`Factbook 2025`, p. 145 `[Fact]`). 
+**Proposal [Assumption]:** Pilot demand forecasting and replenishment assistance with electronic shelf labels and controlled dynamic markdowns in 100 large company-operated French service stations. A successful pilot may justify a separately approved expansion. The pilot does not assume the 800- or 1,500-station footprint of the discarded draft.
 
-#### Retail Operating Typology & Scope Discipline: COCO vs CODO / DODO
-In service station network management, three operating models coexist:
-1. **COCO (Company-Owned, Company-Operated):** TotalEnergies owns the real estate assets AND directly manages the station, the shop, and the personnel through its specialized retail operating subsidiary, **Argedis**. TotalEnergies directly holds the store inventory and bears **100% of the inventory shrinkage, food waste, and spoilage risk on its own P&L**. In France, Argedis operates the motorway and high-traffic expressway COCO network, representing approximately **150 to 200 service stations** (`CLM-074` `[Local observation]`).
-2. **CODO (Company-Owned, Dealer-Operated):** TotalEnergies owns the site/pumps, but an independent dealer or commercial franchisee operates the convenience store. The dealer purchases and owns the store inventory at their own risk.
-3. **DODO (Dealer-Owned, Dealer-Operated):** An independent owner operates under the TotalEnergies brand license and fuel supply contract; TotalEnergies has zero involvement in store inventory.
+**Calibration [Assumption]:** For this proposed case, Vincent suggests an indicative **€1m investment for 100 large French COCO stations, including electronic labels**, and a **2–3 year payback objective** (CLM-078, CLM-079). These are inputs informed by local experience, not evidence of an actual project, company budget or realised result. Scope, contracts and operational baseline require validation.
 
-*Operational Scope Boundary:* Because CODO and DODO dealers own their own inventory, **an in-house inventory replenishment AI can only capture direct P&L value where TotalEnergies directly owns the stock—specifically the COCO network operated by Argedis**. On motorway corridors, these ~180 Argedis COCO stations are large-format highway retail plazas operating major food & beverage (F&B) and convenience franchises (*Bonjour*, *Carrefour Express*, *Starbucks*, *Paul*).
+The programme is presented as a **proposed pilot**. Before investment, map existing retail capabilities and funded initiatives, so the business case counts only incremental costs and benefits. TotalEnergies' worldwide retail footprint is not used as the pilot denominator (SRC-002 p.13). The comparative baseline retains existing replenishment, pricing, staff and systems.
 
-As directly observed on the ground (`CLM-074` `[Local observation]`), **convenience store replenishment and perishable inventory management in Argedis COCO stations are currently managed through static, manual min/max reorder rules**. Station managers manually adjust replenishment orders based on subjective intuition. This operational setup creates severe commercial dysfunction:
-1. **Perishable Shrinkage and Food Spoilage:** Highly perishable goods (sandwiches, fresh meals, dairy, bakery) suffer high write-off rates (spoilage) when weekend highway traffic drops due to bad weather or traffic disruptions.
-2. **Stock-Outs during Peak Demand:** During major holiday departures (*chassé-croisé des vacances*), static thresholds fail to anticipate traffic surges, leading to empty shelves on high-margin F&B categories during peak customer footfall.
-3. **Rigid Store Pricing:** Highway retail prices are inflexible; near-expiry items are discarded at 100% loss rather than sold via automated dynamic markdowns.
+## 2. Problem, alternatives and horizon
 
-### 1.2 Baseline Financial and Operational Metrics
-- **Network Footprint in Scope & Corporate Scope Boundary:**
-  - *Divestment Reality (URD 2025, p. 125 [Fact]):* On December 28, 2023, TotalEnergies completed the sale of 100% of its service station network in Germany (~1,200 stations) to Alimentation Couche-Tard, and on January 3, 2024, sold 100% of its network in the Netherlands (~380 stations), while placing Belgian and Luxembourg networks into a 60/40 JV operated by Couche-Tard (`URD 2025`, p. 125 `[Fact]`). Couche-Tard operates those convenience stores under its own proprietary IT and supply chain systems. TotalEnergies does **not** operate retail convenience stores in Germany or the Netherlands.
-  - *Phase 1 Pilot (Year 1):* The core **~100 flagship motorway COCO stations operated by Argedis** in France (`CLM-074` `[Local observation]`).
-  - *Phase 2 Rollout (Years 2–3):* Expansion across the complete **~180 Argedis COCO motorway and expressway network in France**, plus select high-volume company-operated urban flagship stations (~250 COCO stores total).
-- **Revenue Baseline:**
-  - Average non-fuel shop turnover per large motorway COCO station: **$1.50M/yr** `[Assumption]` (high-traffic highway plazas with fresh food and bakery franchises).
-  - Non-fuel retail sales across Phase 1 scope (100 pilot Argedis stations): **$150M/yr** `[Calculation on assumed inputs]`.
-  - Non-fuel retail sales across full Argedis COCO network (180 stations): **$270M/yr** `[Calculation on assumed inputs]`.
-  - Share of perishable food and short shelf-life items in store sales: ~25% = **$67.5M/yr** `[Assumption]`.
-- **Loss / Shrinkage Baseline:**
-  - Current food and perishable write-off rate (spoilage, obsolescence, damage): **4.5% of perishable sales** `[Assumption]`.
-  - Annual perishable food write-off cost borne directly on Argedis COCO P&L: **$3.04M/yr** ($67.5M × 4.5%) `[Calculation on assumed inputs]`.
-- **Branch Capital Base:**
-  - Marketing & Services Net Investments: **$609M in 2025** (`Factbook 2025`, p. 26 `[Fact]`). P13's 3-year cost ($3.90M) represents approximately 0.6% of annual branch capex.
+**Problem [Hypothesis]:** Store-level volatility creates avoidable perishable losses, out-of-stocks and urgent deliveries; static ordering and pricing may not capture local traffic and seasonality. Actual losses and baseline performance across the 100 stores are unknown.
 
----
+| Alternative | Approach | Decision rationale |
+| --- | --- | --- |
+| Existing process | Current ordering, promotions and local adjustments continue | Counterfactual. Measure its actual outcomes; do not assume it is ineffective. |
+| Forecast only | Improve orders and stock visibility; no new labels | Lower hardware spend may make this preferable. Compare pilot cost and benefits before selection. |
+| Forecast + labels | Forecast demand and apply approved markdown recommendations using electronic labels | Working base case: combines the proposed pilot's components. Each label/markdown gain must be incremental to forecasting. |
+| Manual rules | Improve min/max thresholds and expiry rules without ML | Benchmark on the same stores and outcomes; AI is justified only if it adds measurable net value over this option. |
 
-## 2. Why AI and Non-AI Alternatives
+**H1 rationale [Judgment]:** Improve an existing retail workflow for existing customers using established methods. Forecasts and prices remain subject to human control and pricing rules; the first validated benefit is targeted within the pilot, not assumed before it operates.
 
-### 2.1 Why Machine Learning is Required
-Retail highway demand is characterized by extreme non-linear volatility driven by external multi-factor signals that human station managers or linear ERP heuristics cannot process simultaneously:
-- **Corridor Highway Traffic Ingestion:** Real-time and forecasted traffic density feeds (Bison Futé, motorway concessionaires APRR/SANEF/VINCI).
-- **Hyper-Local Weather Forecasts:** 72-hour temperature, precipitation, and storm alerts (e.g. cold beverage sales surge +60% when temperature exceeds 28°C; hot coffee sales surge on rainy mornings).
-- **Multi-Zone School Holiday Calendars:** Multi-country holiday departure curves across European corridors.
-- **Inter-Item Elasticity & Substitution:** Predictive demand modeling across 800+ store SKUs to optimize batch baking and fresh delivery schedules.
+## 3. Scope, dependencies and implementation
 
-### 2.2 Rejection of Non-AI Alternatives
+- **Scope:** 100 selected French company-operated stores. Verify stock ownership, price authority, POS coverage and category mix before funding.
+- **Hard dependencies:** permission to use station/SKU sales and stock history; an eligible POS and label interface; a process for updating shelf prices; data-protection and commercial review. Existing pricing systems and pre-funded label costs are part of the baseline, not repurchased.
+- **Soft dependencies:** weather and traffic feeds. Begin with a representative pilot if they are unavailable; do not wait for a group-wide data platform.
+- **Delivery [Assumption]:** a branch retail owner, data engineer and data scientist work with station managers and finance; buy/partner for label hardware, integrate with existing systems, and build or configure the forecasting layer. Contract terms and data rights determine the final sourcing choice.
+- **Timeline [Assumption]:** Y0 late 2026 decision and setup; Y1 pilot rollout and baseline validation; Y2 expand to the eligible 100 stores after a successful gate; Y3–Y5 operate and measure. These are hypothetical model periods.
 
-| Non-AI Alternative Evaluated | Operational Mechanism | Why It Fails / Is Sub-Optimal |
-| :--- | :--- | :--- |
-| **Option A: Static Min/Max Inventory Rules (Status Quo)** | Station ERP automatically triggers a purchase order when stock drops below fixed safety quantity $S$. | **Fails under traffic volatility:** Causes severe overstocking on Sunday evenings (massive spoilage) and out-of-stock during Friday holiday departures. |
-| **Option B: Central Manual Purchasing Specialists** | Centralized M&S purchasing analysts manually adjust weekly forecast spreadsheets for clusters of stations. | **Too slow and labor-intensive:** Cannot scale across 800+ stations and thousands of daily perishable deliveries; human planners cannot evaluate local micro-weather shifts. |
-| **Option C: Systematic Supplier Consignment (Vendor-Managed Inventory)** | Pass inventory risk to food suppliers (e.g. bakeries or fresh food distributors). | **Higher cost-of-goods:** Suppliers demand 8% to 12% higher wholesale margins to absorb inventory shrinkage risk, eroding net gross margin. |
+## 4. Investment and operating costs
 
----
+Amounts are **€m**, nominal. The €1m one-time investment, allocation, timing, CAPEX treatment and recurring costs are business-case assumptions, not a company quotation. The split must be tested against the proposed scope and supplier contracts.
 
-## 3. Horizon Justification: Why Horizon 1
+| Cost item | Y0 | Y1 | Total one-time | Treatment assumed |
+| --- | ---: | ---: | ---: | --- |
+| Electronic labels, connectivity and eligible software | 0.400 | 0.400 | 0.800 | Capital expenditure, depreciated evenly over five years from Y1 for illustration. |
+| Integration, installation and initial training | 0 | 0.200 | 0.200 | One-time operating expense in Y1. |
+| **Total one-time investment** | **0.400** | **0.600** | **1.000** | Includes labels; do not add them a second time. |
 
-Applying the Course Session 2 Three Horizons framework (Baghai, Coley and White, 1999) using the **Four Placement Questions**:
+Incremental recurring cloud, data, support and store enablement are assumed at €0.060m in Y1, €0.100m in Y2 and €0.120m/year in Y3–Y5, separate from the €1m. Verify supplier fees, replacement hardware, internal capacity and backfill. No expansion cost or benefit beyond the 100 sites is included.
 
-| Placement Question | Project P13 Evaluation | Horizon Implication |
-| :--- | :--- | :---: |
-| **Q1: Does it change the customer?** | **NO.** The customer remains the highway driver, commuter, and traveler visiting existing service stations. | Core (H1) |
-| **Q2: Does it change the business model?** | **NO.** TotalEnergies continues to sell convenience store items, fresh food, coffee, and fuel/charging via existing retail POS. | Core (H1) |
-| **Q3: Is the underlying technology proven?** | **YES.** Time-series demand forecasting (gradient-boosted trees, temporal fusion transformers, SKU-level regression) is commercially mature in retail. | Core (H1) |
-| **Q4: Is time to first value under 12 months?** | **YES.** First verified store shrinkage reduction is captured in **4 to 8 months** at the pilot station cluster. | Core (H1) |
+## 5. Benefit drivers and evidence
 
-*Horizon Verdict:* **Horizon 1 (Core Optimization).** P13 is the fastest cash-flow engine in the entire transformation portfolio. It delivers immediate P&L margin recovery, serving as an operational self-financing cornerstone for the transformation.
+All following amounts are **assumptions**, not reported Argedis results. They are per year at full adoption and refer to the same 100-site perimeter. Finance must verify the baseline and the incremental effect using comparable stores and seasonality before crediting cash.
 
----
+| Non-overlapping lever | Formula | Annual gross benefit |
+| --- | --- | ---: |
+| Perishable waste reduction | 100 stores × €350,000 perishable sales/store × 70% inventory cost/sales × 4% baseline waste × 25% reduction | €245,000 |
+| Dynamic markdowns | 100 stores × 1,000 **distinct, non-overlapping** at-risk items/store × €2 incremental net recovery | €200,000 |
+| Fewer stock-outs | 100 stores × €50,000 baseline missed sales/store × 8% recovered × 35% incremental contribution margin | €140,000 |
+| Urgent deliveries avoided | 100 stores × 80 baseline urgent deliveries/store/year × 50% reduction × €60 variable cost/delivery | €240,000 |
+| **Total** | Sum of distinct cash drivers | **€825,000/year** |
 
-## 4. Data Assets and Dependencies (Hard vs Soft)
+The 1,000 markdown items must be excluded from the waste-reduction pool; if not, subtract the overlap. The assumption of 80 urgent deliveries per store and a 50% reduction is material and must be tested against invoices and store data. Missed sales, avoidable deliveries, the €2 recovery and the 35% margin must be evidenced by station data and supplier contracts. Savings from released inventory working capital are excluded until a separate balance-sheet bridge proves they are incremental and not recurring earnings.
 
-Applying Course Rule 2 (*"Classify every dependency claim: hard, soft, or political"*):
+The model assumes realised benefit ramps to 50% of full scale in Y1, 80% in Y2 and 100% in Y3–Y5. A 25% cash-tax rate and five-year straight-line depreciation of the assumed €0.8m capitalised portion are scenario assumptions; losses generate no immediate tax credit. The applicable tax base, treatment of software and timing must be checked before an investment decision.
 
-```
-[POS Transactional Feed] (Hard)  ---+
-                                    |---> [Feature Store / ML Model] ---> [Automated ERP Order]
-[Highway Traffic API] (Soft)     ---+           (Lightweight Cloud)             (SAP Retail)
-                                    |
-[72h Weather API] (Soft)         ---+
-```
+## 6. Five-year cash flow and J-curve
 
-### 4.1 Data Pipeline Dependencies
-1. **Station POS Transactional Feeds (Hard Dependency):** Real-time hourly sales data per SKU from point-of-sale systems (*Tokheim / Gilbarco / NCR*).  
-   *Audit Status:* Already operational in all Argedis and European company-operated stations (`CLM-074`). Requires an automated daily export to M&S analytics.
-2. **SAP Retail ERP Inventory Master (Hard Dependency):** Stock levels, minimum batch sizes, shelf-life dates, supplier delivery lead times.  
-   *Audit Status:* Standard enterprise database. Data integration is thin-sliced during month 2.
-3. **External Traffic Density Feeds (Soft Dependency):** Public and concessionaire highway traffic density.  
-   *Workaround if unavailable:* Model falls back on historical day-of-week seasonal traffic profiles without blocking deployment.
-4. **Hyper-Local Weather Forecast API (Soft Dependency):** 72-hour temperature and precipitation data.  
-   *Workaround if unavailable:* Model falls back on historical seasonal temperature baselines.
+![P13 scenario J-curves](assets/p13_jcurve.png)
 
----
+**Base [Calculation on assumptions]**, €m. Y0 is the end-2026 decision point; Y1–Y5 are annual model periods. Depreciation is not a cash outflow; it reduces taxable operating surplus. No terminal value is assumed.
 
-## 5. Sourcing Strategy: Build, Buy, or Blend
+| €m | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Gross incremental benefit | 0 | 0.4125 | 0.6600 | 0.8250 | 0.8250 | 0.8250 |
+| Recurring operating cost | 0 | -0.0600 | -0.1000 | -0.1200 | -0.1200 | -0.1200 |
+| One-time implementation expense | 0 | -0.2000 | 0 | 0 | 0 | 0 |
+| Capital expenditure | -0.4000 | -0.4000 | 0 | 0 | 0 | 0 |
+| Cash tax | 0 | 0 | -0.1000 | -0.13625 | -0.13625 | -0.13625 |
+| **Net incremental cash** | **-0.4000** | **-0.2475** | **0.4600** | **0.56875** | **0.56875** | **0.56875** |
+| **Cumulative net cash** | **-0.4000** | **-0.6475** | **-0.1875** | **0.38125** | **0.9500** | **1.51875** |
 
-Applying the Gartner (2025) Sourcing Framework for Horizon 1 (*"Defend: augment productivity — Buy or Blend"*):
+At the fixed P13 hurdle of **9%** (`../finance/discount_rate_policy.md`), the model produces NPV **+€0.972m**, IRR **49.5%**, simple payback **2.33 years**, and discounted payback **2.55 years**. Paybacks interpolate annual cash uniformly and are not observed month-by-month. The result is consistent with the assumed 2–3 year target, but does not validate the inputs.
 
-| Option | Architecture | Strategic Evaluation & Decision |
-| :--- | :--- | :--- |
-| **Buy (Off-the-shelf Retail SaaS)** | License commercial retail replenishment software (e.g. Blue Yonder, RELEX). | *Rejected:* High annual recurring SaaS license fees ($400k+/yr); difficult to integrate with TotalEnergies' proprietary fuel pricing algorithms and proprietary highway station formats. |
-| **Build (100% In-House Custom)** | Build custom forecasting engine and custom ERP connectors from scratch in Paris TDF. | *Rejected:* Re-invents standard retail forecasting algorithms; slow time-to-market (> 14 months), falling into the central delivery funnel. |
-| **BLEND (Preferred Strategy)** | **Cloud ML Foundation + Proprietary Station Connectors.**<br/>• Use standard cloud time-series libraries (LightGBM, Prophet, Azure ML).<br/>• In-house Agile Trio builds custom station-level feature engineering and direct SAP connectors. | **ACCEPTED.** Fast deployment (4–8 months), zero third-party software vendor lock-in, low capex ($250k integration), and full internal IP ownership. |
+## 7. Scenarios, hurdle and sensitivities
 
----
+The downside assumes 90% of the base benefit and 105% of initial and recurring costs. P13 also uses slower 35% / 60% / 80% / 100% / 100% adoption; other cases retain their base ramp. Upside assumes 115% benefits and base costs; P13 uses 65% / 90% / 100% / 100% / 100% adoption. These are illustrative assumptions, not observed probabilities. A separate severe stress uses 65% benefits and 120% costs. Actual stop costs, delays, contract terms and attribution must be validated before approval.
 
-## 6. Pilot, Rollout, Governance, and Schedule
+| Scenario | NPV at project hurdle | IRR | Simple payback (years) |
+| --- | ---: | ---: | ---: |
+| Downside | €+0.422m | 24.8% | 3.32 |
+| Base | €+0.972m | 49.5% | 2.33 |
+| Upside | €+1.434m | 72.1% | 1.81 |
 
-### 6.1 Delivery Engine: The M&S Agile Delivery Trio
-To eliminate the delivery handoff drag identified in Step 09 (`CLM-074` `[Local observation]`), P13 is executed by a dedicated **Agile Delivery Trio**:
-- **Lead Data Scientist (TDF / Hub, Seconded Full-Time):** Time-series model tuning, feature store architecture, MLOps monitoring on Azure ML (`CLM-016` `[Disputed Fact: 300 vs 500 experts]`).
-- **Retail Business Champion (Argedis / M&S Operating Unit, 30% Ring-Fenced Time):** Senior store category manager with direct operational authority over station replenishment. Co-funded by M&S from Day 1 with backfill provision (`CLM-062` `[Fact]`). Accountable for store manager adoption and signing P&L benefits.
-- **Branch Data Engineer (M&S IT Spoke, Dedicated):** Connects POS transaction feeds and SAP Retail ERP; ensures daily automated order generation.
+## 8. Gates, adoption and decision rights
 
-### 6.2 Deployment Phasing and Milestones
+| Gate | Owner | Evidence / action |
+| --- | --- | --- |
+| Baseline and permission, before spend | M&S sponsor, station representatives, finance, IT | Agree 100 eligible stores, existing capabilities and spend, baseline, treatment/control design, data rights, accounting scope and exact €1m components. |
+| Pilot validation, Y1 | Retail product owner, station managers, finance | Track forecast accuracy, inventory losses, markdown event ledger, lost sales, urgent-delivery invoices, adoption and customer impact against comparable stores. Pre-agree sample, threshold and observation window; no assumed 100-store expansion if evidence fails. |
+| Scale release, Y2 | M&S sponsor and finance | Release the next stage only if a prospective after-tax business case clears 9% and operational/safety conditions are met. Assess a forecast-only alternative. |
+| Stop | Sponsor with finance | Stop or redesign if agreed outcomes fail; retain already incurred costs, contract commitments and exit costs. Do not assume all unspent budget is recoverable. |
 
-```
-Month 00-02: Setup & Architecture (POS API connectors, baseline inventory audit, model training on 50 Argedis stations)
-Month 03-06: Pilot Live & Validation (100 Argedis highway stations; Month 6 Kill Gate)
-Month 07-12: Wave 1 Rollout (All ~800 French motorway stations operated by Argedis)
-Month 13-24: Wave 2 Rollout (France flagship company-operated network: +700 stores; total ~1,500 company-operated stores)
-Month 25-36: Wave 3 Optimization (Automated inventory replenishment & dynamic shelf-life markdowns)
-```
+Station staff must retain pricing oversight, receive training during working hours and have a feedback route; ensure no unsafe expiry practices and involve employee representatives when applicable. Baselines, thresholds and detailed worker time remain to be established.
 
-| Milestone Gate | Target Date | Operational Deliverable | Gate Threshold (Go / Stop Rule) |
-| :---: | :---: | :--- | :--- |
-| **Gate 1 (Pilot Live)** | **Month 3** | Model deployed across 50 pilot Argedis stations. | Pipeline uptime $\ge 98\%$; automated forecasts generated daily. |
-| **Gate 2 (Stage Gate 1 / Kill Gate)** | **Month 6** | Audit of food shrinkage across 100 pilot stations over 60 days. | **Stop Rule:** If food write-offs are not reduced by at least **8.0%** vs baseline, project is terminated. |
-| **Gate 3 (Wave 1 Complete)** | **Month 12** | Deployment completed across all ~800 French motorway stations. | Verified P&L net savings $\ge \$5.0\text{M/yr}$ signed by Finance. |
-| **Gate 4 (Wave 2 Complete)** | **Month 24** | Expansion completed across all ~1,500 French company-operated stores. | Verified P&L net savings $\ge \$12.0\text{M/yr}$; adoption rate $\ge 85\%$. |
+**Illustrative financial threshold [Calculation]:** with base costs, timing and tax unchanged, the five-year NPV at 9% reaches zero at about **€0.446m/year of realised gross benefit at full scale**, or 54.0% of the assumed €0.825m. This is not a measured store target. Before further funding, finance should use observed store-level incremental cash and the *remaining* avoidable costs to test whether the prospective continuation case clears 9%.
 
----
+## 9. Sources, limits and next validation
 
-## 7. Economic Model: CAPEX, OPEX, and Benefit Formulas
-
-### 7.1 Three-Year Investment Budget ($3.90M Total)
-
-Costs are built bottom-up using registered labor, hardware, and integration rates across ~1,500 French company-operated stores:
-- Lead Data Scientist: €70k gross × 1.437 employer charges × 1.15 overhead × 1.13 USD/EUR = **$131k/yr** (`CLM-069`, `CLM-070`, `CLM-071` `[Calculation]`).
-- Branch Data Engineer: €58k gross × 1.437 × 1.15 × 1.13 = **$108k/yr** (`CLM-069`, `CLM-070`, `CLM-071` `[Calculation]`).
-- Business Champion (30% time + backfill allowance): $98.5k × 0.30 + $50k backfill = **$79.5k/yr** (`CLM-062` `[Fact]`, `[Calculation]`).
-- Base squad personnel cost: **$318.5k/yr** ($0.96M over 3 years) `[Calculation]`.
-
-| Cost Category | Year 0 ($M) | Year 1 ($M) | Year 2 ($M) | Year 3 ($M) | 3-Year Total ($M) | Classification | Accounting Basis & Assumptions |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Agile Delivery Trio Personnel** | 0.08 | 0.32 | 0.32 | 0.32 | **1.04** | OPEX | 1 Lead DS + 1 Branch DE + 1 Business Champion (co-funded). |
-| **Store Rollout & Field Training** | 0.22 | 0.35 | 0.35 | 0.25 | **1.17** | OPEX | 1,500 store manager trainings, digital tablet onboarding, change coaching. |
-| **Store Hardware & POS Connectors** | 0.90 | 0.15 | 0.15 | 0.10 | **1.30** | CAPEX (Y0) / OPEX | 1,500 rugged store tablets ($0.75M) + SAP POS API connectors ($0.45M). |
-| **Cloud Inference & MLOps Hosting** | 0.00 | 0.13 | 0.13 | 0.13 | **0.39** | OPEX | Azure ML time-series inference & daily automated replenishment. |
-| **TOTAL PROJECT ENVELOPE** | **1.20** | **0.95** | **0.95** | **0.80** | **3.90** | **Band: $3.20M – $4.80M** | Clears within branch authority (`Factbook 2025`, p. 26 `[Fact]`). |
-
-### 7.2 Benefit Quantification Formula
-Annual economic value is calibrated with deliberate conservatism (*au ras des pâquerettes*), acknowledging that convenience store retail is a modest financial contributor at group scale compared to upstream hydrocarbons and power trading:
-
-$$\text{Total Annual Value} = \Delta \text{Value}_{\text{shrinkage}} + \Delta \text{Value}_{\text{logistics}} + \Delta \text{Value}_{\text{markdown}}$$
-
-1. **Lever 1: Food & Perishable Spoilage Reduction ($\Delta \text{Value}_{\text{shrinkage}}$):**
-   $$\Delta \text{Value}_{\text{shrinkage}} = N_{\text{stations}} \times \text{Sales}_{\text{perishables}} \times \text{Rate}_{\text{spoilage}} \times \text{Reduction}_{\text{AI}}$$
-   - Across the core **~180 Argedis COCO motorway and expressway stations** in France (`CLM-074` `[Local observation]`), expanding to flagship company-operated stores (~250 COCO stores total):
-     $$\Delta \text{Value}_{\text{shrinkage}} = 180 \times \$375,000 \times 4.5\% \times 20.0\% \approx \mathbf{\$0.61M/yr} \quad (\text{direct food spoilage reduction; up to } \mathbf{\$0.85M/yr} \text{ across 250 COCO stores})$$
-2. **Lever 2: Emergency Logistics Delivery Avoidance & Peak Stock-Out Recapture ($\Delta \text{Value}_{\text{logistics}}$):**
-   Eliminating emergency rush deliveries from central bakeries on holiday weekends and capturing unfulfilled demand during high-traffic holiday departure surges (*chassé-croisé*):
-   $$\Delta \text{Value}_{\text{logistics}} = \mathbf{\$0.85M/yr} \quad (\text{conservative range: } \$0.5\text{M} – \$1.2\text{M/yr})$$
-3. **Lever 3: Dynamic Expiry Markdowns ($\Delta \text{Value}_{\text{markdown}}$):**
-   Automated short-dated price reductions (-30% at 12 hours, -50% at 4 hours prior to expiry) on near-expiration fresh food, recovering food cost that would otherwise be discarded at 100% loss:
-   $$\Delta \text{Value}_{\text{markdown}} = \mathbf{\$0.80M/yr} \quad (\text{conservative range: } \$0.5\text{M} – \$1.2\text{M/yr})$$
-4. **Total Steady-State Annual Run-Rate:** **$2.50M/yr** (Conservative range: $1.8M – $3.5M/yr) `[Calculation on assumed inputs]`.
-
----
-
-## 8. Multi-Scenario Economics and 5-Year Cash Flows
-
-Applying Course Session 3 financial standards (10.0% M&S hurdle rate, 5-year evaluation window, conservative deployment ramp):
-
-### 8.1 Five-Year Cash Flow Waterfall (Base Case)
-
-- **Investment Phasing:** Year 0 upfront commitment of **$1.20M** (hardware tablets & POS telemetry connectors).
-- **Ramp Assumption:** 20% of steady-state in Year 1 ($0.50M), 60% in Year 2 ($1.50M), 100% in Years 3–5 ($2.50M/yr).
-- **Run-Rate Opex after Year 3:** $0.50M/yr (cloud hosting, model maintenance, and data engineering support).
-
-| Financial Metric ($M) | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 | 5-Year Total |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Gross Value Generated** | 0.00 | 0.50 | 1.50 | 2.50 | 2.50 | 2.50 | **$9.50M** |
-| **Project Expenditure (CAPEX+OPEX)** | -1.20 | -0.95 | -0.95 | -0.80 | -0.50 | -0.50 | **-$4.90M** |
-| **Net Operational Cash Flow** | **-1.20** | **-0.45** | **+0.55** | **+1.70** | **+2.00** | **+2.00** | **+$4.60M** |
-| **Discount Factor (10% M&S Hurdle)**| 1.000 | 0.909 | 0.826 | 0.751 | 0.683 | 0.621 | — |
-| **Discounted Cash Flow (DCF)** | -1.20 | -0.41 | +0.45 | +1.28 | +1.37 | +1.24 | **NPV = +$2.73M** |
-
-*Intra-Year Payback:* Cumulative discounted cash turns positive right at Year 3 (**discounted payback period: 2.9 years**).
-
-### 8.2 Three-Scenario Sensitivity Analysis
-
-| Scenario | Annual Value at Scale ($M/yr) | 5-Year Net Cash Flow | NPV @ 10% Hurdle ($M) | NPV @ 12% Hurdle ($M) | IRR (%) | Payback Period |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Downside Case (Pessimistic)** | $1.80M/yr | +$1.90M | **+$0.78M** | **+$0.57M** | **21.4%** | **3.8 years** |
-| **Base Case (Realistic Target)** | **$2.50M/yr** | **+$4.60M** | **+$2.73M** | **+$2.45M** | **47.1%** | **2.9 years** |
-| **Upside Case (Optimistic)** | $3.50M/yr | +$8.40M | **+$5.52M** | **+$5.14M** | **78.2%** | **2.2 years** |
-
-### 8.3 Strategic Defense: Why Invest Despite Modest Standalone Scale?
-A skeptical CEO or CFO will argue: *"At group scale, $2.5M/yr is a drop in the ocean compared to our $9.3B E&P capex. Why should the Comex care?"*
-1. **The Public Face of TotalEnergies (*Le Visage du Groupe*):** The 13,000 service stations are TotalEnergies' primary daily physical touchpoint with millions of citizens. Highway stations are the brand flagship. A modern, AI-optimized store with zero food waste strengthens corporate brand equity.
-2. **Concession Renewal Mandate (ESG & Anti-Waste Compliance):** Motorway concession tenders (APRR, VINCI, SANEF) in France increasingly evaluate environmental performance, circularity, and food waste reduction. A certified 15% reduction in food waste provides a tangible competitive advantage during multi-million-euro highway station concession renewals.
-3. **The Agile Execution Flywheel Proof:** Delivering a visible operational win to frontline station managers within 6 months proves that Agile Delivery Trios work, creating the organizational credibility required to deploy complex engineering solutions in refining (P01) and offshore drilling (P03).
-
----
-
-## 9. Frontline Adoption, Change Management, Risks, and Kill Rules
-
-### 9.1 Frontline Change Management
-The primary failure mode in retail AI is store manager resistance: station managers override automated orders and revert to manual ordering because they fear stock-outs.
-- **The "Bilingual" Store Interface:** The model output is presented on existing store inventory tablets as a clear recommendation with an explainability card (*"Recommended order: +25 baguettes and +40 cold drinks based on 29°C forecasted Sunday and VINCI highway alert"*).
-- **Incentive Alignment:** Store manager performance bonuses currently penalize stock-outs heavily but do not penalize food spoilage. M&S management aligns station KPIs to reward net gross margin (sales minus spoilage).
-- **Override Tracking:** Store managers retain final authority to override AI orders (respecting `CLM-026` `[Fact]`). If a station overrides > 30% of orders, the Business Champion investigates local operational discrepancies.
-
-### 9.2 Risk Management and Regulatory Controls
-
-| Risk Factor | Severity | Probability | Mitigation Mechanism |
-| :--- | :---: | :---: | :--- |
-| **Store Manager Adoption Drag** | High | Medium | Store tablet UI co-designed with Argedis managers; weekly triage with Business Champion. |
-| **POS API Connectivity Glitches** | Medium | Low | Local station buffer: store tablet caches 48-hour safety orders offline if network disconnects. |
-| **Works-Council (CSE) Inquiries** | Medium | Low | P13 automates commercial store purchasing, not worker surveillance; GDPR-compliant, no employee profiling. |
-| **Food Quality / Safety Standards** | High | Low | Dynamic markdowns respect strict HACCP cold-chain rules; products reaching final expiry are locked out of POS. |
-
-### 9.3 Objective Stage-Gate Kill Rule (Month 6)
-- **Review Date:** Month 6 (end of 100-station pilot).
-- **Accountable Gate Owners:** VP Retail Operations M&S (P&L Owner) and Lead Data Scientist.
-- **Metric Measured:** Audited reduction in perishable food write-offs across pilot stations over 60 consecutive days vs identical pre-pilot baseline period.
-- **Decision Threshold:**
-  - If Spoilage Reduction $\ge 12.0\%$: **Accelerate Wave 1 rollout across all 800 Argedis stations.**
-  - If Spoilage Reduction is between $8.0\%$ and $11.9\%$: **Refine feature engineering; 60-day probation.**
-  - **HARD STOP RULE:** If Spoilage Reduction $< 8.0\%$: **Terminate project immediately.** Remaining $1.3M Year 2–3 capital is canceled and returned to the M&S budget.
-
----
-
-## 10. Precise Sources, Registered Claims, and Limits
-
-- **Primary Filings & Factbook Data:**
-  - `Factbook 2025`, p. 145: 12,775 service stations worldwide; 5,679 in Europe; 3,256 in France (`CLM-066` `[Fact]`).
-  - `Factbook 2025`, p. 26: $609M Marketing & Services net investments in 2025 (`CLM-004` `[Fact]`).
-  - `URD 2025`, p. 13: Worldwide retail network overview (`CLM-066` `[Fact]`).
-  - `URD 2025`, p. 138: Risk disclosure on organizational and skills adaptation pace (`CLM-014` `[Fact]`).
-- **Ground-Level Evidence:**
-  - `CLM-074` `[Local observation]`: First-hand operational observation by Vincent Lamy at Argedis France (~800 motorway stations) documenting manual inventory ordering, delivery latency, and frontline tool disconnects.
-- **Labor Rates and Financial Benchmarks:**
-  - `SRC-030` (Apec 2025 Big Data family, p. 62): €58k / €70k median executive salaries (`CLM-069` `[Fact]`).
-  - `SRC-031` (INSEE 2023, p. 72): +43.7% employer social charges (`CLM-070` `[Fact]`).
-  - `SRC-032` (ECB 2025 average): 1.1300 USD/EUR (`CLM-071` `[Fact]`).
-  - `CLM-062` `[Fact]`: Group average loaded labor cost $98.5k/yr (`URD 2025`, p. 6).
-- **Methodological Limitations:**
-  - Station non-fuel sales and shrinkage rates are based on French motorway station empirical norms (`[Assumption]`); individual station margins vary between highway franchises and rural automated stations.
-  - Spoilage reduction percentage depends on frontline station manager adherence to automated reorder recommendations.
+- **CLM-078 / CLM-079:** Vincent's calibration guidance for the hypothetical case: ~€1m including labels for 100 stations and a 2–3-year target. Neither is a company filing or a verified actual result.
+- **SRC-002 p.13 / CLM-066:** group service-station footprint, context only; it does not establish the 100-store pilot's sales or loss levels.
+- **Rate:** `../finance/discount_rate_policy.md`, P13 9% assumed project hurdle on a 7% group impairment WACC reference.
+- **Calculation:** `../finance/portfolio_model_14_revised.xlsx` and the independent cash-flow checks. Base annual amounts and the break-even sensitivity are illustrative; scenario definitions in the older Python retail model are superseded by the spreadsheet.
+- **Open:** validate cost allocation, supplier contracts, data availability, station mix, contribution margins, tax, labour and baseline. The 100-store scope, €1m investment, 2–3 year objective, benefit drivers and future cash are assumptions for the hypothetical case.
