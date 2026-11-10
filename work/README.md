@@ -7,6 +7,7 @@
 - [Discount-rate policy](finance/discount_rate_policy.md): group reference, branch hurdles and project adjustments.
 - [Four featured case cards](projects/case_rebuild_decisions.md): links and decisions; each card contains its own assumptions, annual flows and scenarios.
 - [Reserve candidate cards](projects/reserve_cards.md): short estimates for the nine additional candidates and the E01 enabler.
+- [Portfolio visuals and methods](projects/portfolio_visuals.md): bubble map, funding and benefit mix, net value contributions and J-curves, generated from the workbook.
 - [Featured-case validation](research/featured_cases_validation.md): arithmetic checks and unresolved evidence.
 - [Portfolio economics](finance/portfolio_economics.md) and [canvas](projects/portfolio_sequencing_canvas.md): consolidation in progress; no approved programme total yet.
 - [Editable 14-initiative model](finance/portfolio_model_14_revised.xlsx) and [model notes](finance/portfolio_model_14_notes.md): annual cash flows, four focus curves, portfolio scenarios, hurdle sensitivity and independent reconciliation tests. The older Python case scripts retain useful base-case cross-checks, but their previous scenario definitions and core-only portfolio are superseded by the workbook.

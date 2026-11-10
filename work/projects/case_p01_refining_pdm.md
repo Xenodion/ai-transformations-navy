@@ -1,5 +1,7 @@
 # P01 — Refining predictive maintenance
 
+**Decision at a glance:** deploy a supervised predictive-maintenance pilot on two assumed refining sites, extending existing capabilities. The model assumes **$1.4m** one-time investment, **$2.116m/year** gross benefit at full scale and a **9.5%** hurdle. Its five-year base NPV is **+$2.116m**, with **57.8% IRR** and **2.40-year simple payback**. Quantities and gains are assumptions; continued investment depends on site-level evidence and prospective economics.
+
 **Status:** Rebuilt working case, 10 November 2026. Economic drivers and unit costs are explicit **assumptions**, not reported TotalEnergies results. Validate the site perimeter, counterfactual, actual costs and tax before approval. Calculation: `../finance/industrial_case_models.py`.
 
 ## 1. Decision, problem and existing capability
@@ -40,6 +42,8 @@ Amounts **$m**, nominal. Y0 is a late-2026 decision point and Y1–Y5 the follow
 Pilot benefit ramp is 20%, 60%, 85%, 100%, 100%. Tax illustration assumes a 25% rate, five-year straight-line depreciation on the assumed $1.0m of capital assets from Y1, and no immediate tax credit on annual losses. Actual taxes, depreciation, internal staff and backfill are unverified. No terminal value, external benefit or expansion beyond the assumed perimeter is included.
 
 ## 5. Annual cash flow and J-curve
+
+![P01 scenario J-curves](assets/p01_jcurve.png)
 
 **Base [Calculation on assumptions]**, $m. Gross benefits are pre-tax incremental contribution and repair savings; net cash includes the assumed operating expense, investment and cash tax.
 

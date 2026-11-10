@@ -1,5 +1,7 @@
 # P03 — Deepwater drilling and well-planning advisory
 
+**Decision at a glance:** test human-supervised drilling advisory on two eligible operated rigs or campaigns. The model assumes **$1.4m** one-time investment, **$2.880m/year** gross benefit at full scale and an **11%** hurdle. Its five-year base NPV is **+$1.859m**, with **43.2% IRR** and **3.09-year simple payback**. Day savings must reduce actual cash payments; site selection, contracts and operator rights are decision gates.
+
 **Status:** Rebuilt working case, 10 November 2026. The two-rig scope, economic inputs, payment mechanism, costs, tax and ramp are assumptions, not TotalEnergies' observed results. Contracts, eligible assets and incremental benefit require validation. Calculation: `../finance/industrial_case_models.py`.
 
 ## 1. Proposal and starting point
@@ -37,6 +39,8 @@ Assumed benefit ramp: 0%, 30%, 70%, 100%, 100% in Y1–Y5. This assumes a pilot,
 
 ## 5. Annual cash flow and J-curve
 
+![P03 scenario J-curves](assets/p03_jcurve.png)
+
 **Base [Calculation on assumptions]**, $m; Y0 late 2026 and Y1–Y5 subsequent annual periods.
 
 | $m | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 |
@@ -62,6 +66,8 @@ The downside assumes 90% of the base benefit and 105% of initial and recurring c
 | Upside | $+2.510m | 52.2% | 2.89 |
 
 **Illustrative financial threshold [Calculation]:** at base costs and timing, approximately **$1.660m/year at full scale** (57.6% of $2.880m) is needed for a zero five-year NPV at 11%. Before proceeding, the drilling lead and finance must verify that day reductions release cash under the actual contract; a schedule improvement alone does not qualify. At the continuation gate, test the remaining cash flows excluding sunk costs, and stop if the prospective NPV is negative or operator/safety permissions fail. The sensitivity is not a guaranteed operational threshold.
+
+**Sequenced decisions:** In Y0, the upstream sponsor confirms two eligible campaigns, data rights and operator/contractor access before approving the assumed $0.4m capital outlay. In Y1, the drilling lead tests advisory recommendations under human control and finance verifies the rig-release or variable-cost mechanism before the assumed $0.4m capital and $0.6m implementation expenditure. At the Y2 review, compare measured cash capture with the agreed baseline and release further activity only if the **remaining** incremental business case clears 11%. If the pilot fails, stop avoidable spending and retain sunk and non-cancellable commitments. These gates do not change the annual cash schedule above; cancellation costs require contract validation.
 
 ## 7. Sources, limitations and challenge
 

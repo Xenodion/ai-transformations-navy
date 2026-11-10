@@ -1,5 +1,7 @@
 # P13 — Retail demand forecasting and dynamic pricing
 
+**Decision at a glance:** propose forecasting and controlled markdowns for a hypothetical 100-station French retail pilot, including electronic shelf labels. The model assumes **€1m** one-time investment, **€0.825m/year** gross benefit at full scale and a **9%** hurdle. Its five-year base NPV is **+€0.972m**, with **49.5% IRR** and **2.33-year simple payback**. Inputs are illustrative and require store-level validation before rollout.
+
 **Status:** Rebuilt working case, 10 November 2026. Project and scenario figures are assumptions unless explicitly identified as facts or local observations; they require financial and operational validation before submission. The active scenario calculations are in `../finance/portfolio_model_14_revised.xlsx`. The decision does not yet authorise deployment.
 
 ## 1. Decision and existing situation
@@ -60,6 +62,8 @@ The 1,000 markdown items must be excluded from the waste-reduction pool; if not,
 The model assumes realised benefit ramps to 50% of full scale in Y1, 80% in Y2 and 100% in Y3–Y5. A 25% cash-tax rate and five-year straight-line depreciation of the assumed €0.8m capitalised portion are scenario assumptions; losses generate no immediate tax credit. The applicable tax base, treatment of software and timing must be checked before an investment decision.
 
 ## 6. Five-year cash flow and J-curve
+
+![P13 scenario J-curves](assets/p13_jcurve.png)
 
 **Base [Calculation on assumptions]**, €m. Y0 is the end-2026 decision point; Y1–Y5 are annual model periods. Depreciation is not a cash outflow; it reduces taxable operating surplus. No terminal value is assumed.
 

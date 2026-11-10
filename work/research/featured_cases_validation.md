@@ -10,7 +10,7 @@ The project models calculate net cash as `incremental benefit − recurring OPEX
 | --- | --- | ---: | --- | ---: | --- |
 | P01 | USD m | 9.5% | +2.219 / +2.116 / +2.017 | 57.8% | Numerical calculation only; two-site throughput and incremental margin need validation. |
 | P03 | USD m | 11.0% | +1.972 / +1.859 / +1.752 | 43.2% | Numerical calculation only; operator authority, rig contracts and cash entitlement are essential. |
-| P11 | USD m | 11.0% | +0.403 / +0.328 / +0.256 | 16.2% | Conditional commercial illustration, not approved H3 option value or guaranteed receipts. |
+| P11 | USD m | 11.0% | +0.403 / +0.328 / +0.256 | 16.1% | Conditional commercial illustration, not approved H3 option value or guaranteed receipts. |
 | P13 | EUR m | 9.0% | +1.022 / +0.972 / +0.924 | 49.5% | Pilot size, investment, target, benefit drivers and cost split are assumptions informed by local experience. |
 
 P13 uses a hypothetical 100-store, approximately €1m pilot including labels (CLM-078) and a 2–3-year modelling objective (CLM-079), informed by Vincent's local experience. They do not describe an actual project or realised result. The model's 2.33-year simple and 2.55-year discounted paybacks are interpolated calculations. Currency must be converted consistently and dated before combining EUR and USD in a portfolio.

@@ -1,6 +1,6 @@
 # Revised project assumptions for financial reconstruction
 
-**Status:** Working decisions for the revised model. These do not establish an approved budget or a forecast. The longer case documents retain earlier material under explicit reconstruction notices; where they conflict, this file takes precedence. All amounts below are USD unless otherwise stated.
+**Status:** Working decision record for the revised model. These do not establish an approved budget or a forecast. The [P01](case_p01_refining_pdm.md), [P03](case_p03_deepwater_drilling.md), [P11](case_p11_virtual_power_plant.md) and [P13](case_p13_retail_station_demand.md) cards now contain the active detailed cases, annual cash and J-curves; the current financial values and scenarios come from `../finance/portfolio_model_14_revised.xlsx`. All amounts below are USD unless otherwise stated.
 
 ## Shared comparison and controls
 

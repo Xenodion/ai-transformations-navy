@@ -1,5 +1,7 @@
 # P11 — Customer-side flexibility option
 
+**Decision at a glance:** test a customer-flexibility service using existing market capabilities and a staged learning investment. The conditional commercial case assumes **$1.5m** one-time investment, **$3.75m/year** retained contribution at 250 MW and an **11%** hurdle. If its assumptions hold, five-year NPV is **+$0.328m** and IRR **16.1%**. This H3 case uses learning gates; no payback or unmodelled post-Y5 value is claimed.
+
 **Status:** Rebuilt conditional case, 10 November 2026. The opportunity is an option to test, not an established new market, a guaranteed revenue stream or a funded rollout. The capacity, margin, costs and customer behavior below are scenario assumptions, not TotalEnergies figures. Active scenarios: `../finance/portfolio_model_14_revised.xlsx`.
 
 ## 1. Proposal and existing capability
@@ -36,6 +38,8 @@ Tax illustration uses 25% of positive operating surplus after straight-line depr
 
 ## 5. Conditional annual cash-flow illustration
 
+![P11 conditional scenario J-curves](assets/p11_jcurve.png)
+
 **Conditional portfolio base, not committed revenue.** $m; Y0 late 2026 and Y1–Y5 subsequent annual model periods. The flows below assume every gate succeeds and the hypothetical capacity and margin materialise.
 
 | $m | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 |
@@ -48,7 +52,7 @@ Tax illustration uses 25% of positive operating surplus after straight-line depr
 | **Net cash** | **-0.4000** | **-1.4500** | **-0.1750** | **0.32125** | **1.0525** | **2.1025** |
 | **Cumulative cash** | **-0.4000** | **-1.8500** | **-2.0250** | **-1.70375** | **-0.65125** | **1.45125** |
 
-Under these conditional assumptions, NPV at the **11% P11 illustrative hurdle** is **+$0.328m** and IRR **16.2%**. They describe one successful commercial scenario, not verified option value or the value of the initial learning tranche. No H3 payback is claimed. The programme base must retain approved pilot spending even if commercial receipts are excluded.
+Under these conditional assumptions, NPV at the **11% P11 illustrative hurdle** is **+$0.328m** and IRR **16.1%**. They describe one successful commercial scenario, not verified option value or the value of the initial learning tranche. No H3 payback is claimed. The programme base must retain approved pilot spending even if commercial receipts are excluded.
 
 ## 6. Scenarios and learning gates
 

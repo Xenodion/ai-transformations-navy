@@ -1,0 +1,225 @@
+{
+  "weights": [
+    0.25,
+    0.5,
+    0.25
+  ],
+  "investment_by_horizon": {
+    "H1": 6.5665000000000004,
+    "H2": 1.9,
+    "H3": 2.5,
+    "Enabler": 0.30000000000000004
+  },
+  "expected_gross_benefits_by_horizon": {
+    "H1": 26.1757609921875,
+    "H2": 10.600875,
+    "H3": 5.90625,
+    "Enabler": 0.0
+  },
+  "one_time_total": 11.2665,
+  "expected_gross_benefits_total": 42.6828859921875,
+  "weighted_net_npv_by_horizon": {
+    "H1": 4.257220334632138,
+    "H2": 2.0939593141642328,
+    "H3": -2.226092528666465,
+    "Enabler": -0.7800078540559076
+  },
+  "projects": [
+    {
+      "id": "P01",
+      "horizon": "H1",
+      "investment": 1.4,
+      "gross": 2.11625,
+      "payback": 2.3975377791677923,
+      "benefit": [
+        6.95188125,
+        7.7243125,
+        8.882959374999999
+      ],
+      "include": 1,
+      "expected": 7.8208664062499995
+    },
+    {
+      "id": "P02",
+      "horizon": "H1",
+      "investment": 0.8999999999999999,
+      "gross": 1.6425,
+      "payback": 2.8699072773250913,
+      "benefit": [
+        4.7304,
+        5.256,
+        6.0443999999999996
+      ],
+      "include": 1,
+      "expected": 5.3217
+    },
+    {
+      "id": "P03",
+      "horizon": "H2",
+      "investment": 1.4,
+      "gross": 2.8800000000000003,
+      "payback": 3.0945205479452054,
+      "benefit": [
+        7.776000000000002,
+        8.64,
+        9.936
+      ],
+      "include": 1,
+      "expected": 8.748000000000001
+    },
+    {
+      "id": "P04",
+      "horizon": "H1",
+      "investment": 0.4,
+      "gross": 0.3942,
+      "payback": 3.357797581158498,
+      "benefit": [
+        1.24173,
+        1.3797,
+        1.586655
+      ],
+      "include": 1,
+      "expected": 1.39694625
+    },
+    {
+      "id": "P05",
+      "horizon": "H1",
+      "investment": 0.30000000000000004,
+      "gross": 0.54,
+      "payback": 2.0647058823529414,
+      "benefit": [
+        1.8711000000000002,
+        2.079,
+        2.39085
+      ],
+      "include": 1,
+      "expected": 2.1049875
+    },
+    {
+      "id": "P06",
+      "horizon": "H1",
+      "investment": 0.5,
+      "gross": 0.5,
+      "payback": 3.795081967213115,
+      "benefit": [
+        1.44,
+        1.6,
+        1.8399999999999999
+      ],
+      "include": 1,
+      "expected": 1.62
+    },
+    {
+      "id": "P07",
+      "horizon": "H1",
+      "investment": 0.6000000000000001,
+      "gross": 0.0,
+      "payback": "beyond Y5",
+      "benefit": [
+        0,
+        0,
+        0
+      ],
+      "include": 1,
+      "expected": 0.0
+    },
+    {
+      "id": "P08",
+      "horizon": "H1",
+      "investment": 0.6000000000000001,
+      "gross": 0.75,
+      "payback": 3.5289017341040463,
+      "benefit": [
+        2.16,
+        2.4,
+        2.76
+      ],
+      "include": 1,
+      "expected": 2.4299999999999997
+    },
+    {
+      "id": "P09",
+      "horizon": "H2",
+      "investment": 0.5,
+      "gross": 0.6,
+      "payback": 3.646666666666667,
+      "benefit": [
+        1.647,
+        1.8299999999999998,
+        2.1045
+      ],
+      "include": 1,
+      "expected": 1.8528749999999998
+    },
+    {
+      "id": "P10",
+      "horizon": "H1",
+      "investment": 0.75,
+      "gross": 0.5,
+      "payback": "beyond Y5",
+      "benefit": [
+        1.35,
+        1.5,
+        1.7249999999999999
+      ],
+      "include": 1,
+      "expected": 1.51875
+    },
+    {
+      "id": "P11",
+      "horizon": "H3",
+      "investment": 1.5,
+      "gross": 3.75,
+      "payback": "n/a",
+      "benefit": [
+        0,
+        7.5,
+        8.625
+      ],
+      "include": 1,
+      "expected": 5.90625
+    },
+    {
+      "id": "P12",
+      "horizon": "H3",
+      "investment": 1.0,
+      "gross": 0,
+      "payback": "n/a",
+      "benefit": [
+        0,
+        0,
+        0
+      ],
+      "include": 1,
+      "expected": 0.0
+    },
+    {
+      "id": "P13",
+      "horizon": "H1",
+      "investment": 1.1165,
+      "gross": 0.9211125,
+      "payback": 2.32967032967033,
+      "benefit": [
+        3.1087546875,
+        3.96078375,
+        4.819721156249999
+      ],
+      "include": 1,
+      "expected": 3.9625108359374996
+    },
+    {
+      "id": "E01",
+      "horizon": "Enabler",
+      "investment": 0.30000000000000004,
+      "gross": 0,
+      "payback": "n/a",
+      "benefit": [
+        0,
+        0,
+        0
+      ],
+      "include": 1,
+      "expected": 0.0
+    }
+  ]
+}
