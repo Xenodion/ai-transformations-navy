@@ -38,7 +38,7 @@ Tax illustration uses 25% of positive operating surplus after straight-line depr
 
 ## 5. Conditional annual cash-flow illustration
 
-![P11 conditional scenario J-curves](assets/p11_jcurve.png)
+![P11 conditional scenario J-curves](assets/notebook_p11_jcurve.png)
 
 **Conditional portfolio base, not committed revenue.** $m; Y0 late 2026 and Y1–Y5 subsequent annual model periods. The flows below assume every gate succeeds and the hypothetical capacity and margin materialise.
 
@@ -76,6 +76,8 @@ For H3, IRR is shown only for the conditional illustration and no payback is cla
 Capacity, commercial margin, hurdle clearance and exit costs are assumptions requiring evidence; do not advance automatically.
 
 **Illustrative financial threshold [Calculation]:** keeping the base costs, timing and proportional capacity ramp unchanged, the full five-year illustration reaches zero NPV at 11% at roughly **$3.418m retained annual contribution at full scale**, equivalent to about **228 MW** at $15,000/MW/year. This is not evidence that either MW or margin is achievable. At each actual gate, recalculate the remaining prospective economics excluding sunk costs; validate non-cancellable commitments and compare against the partner alternative.
+
+**Separate longer-term illustration [Assumption]:** the portfolio notebook explores a possible expansion to 2,000 MW from Y8 at the same assumed $15,000/MW annual contribution, with a 60% assumed probability of post-Y5 continuation. It assumes $4m expansion CAPEX in Y7 and $5m/year total OPEX at mature scale. These unverified inputs support a separate hypothetical 15-year illustration, not the five-year base case or a committed rollout; they require market, customer, cost and contractual evidence before use as an investment claim.
 
 ## 7. Sources and limits
 

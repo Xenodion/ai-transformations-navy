@@ -63,7 +63,7 @@ The model assumes realised benefit ramps to 50% of full scale in Y1, 80% in Y2 a
 
 ## 6. Five-year cash flow and J-curve
 
-![P13 scenario J-curves](assets/p13_jcurve.png)
+![P13 scenario J-curves](assets/notebook_p13_jcurve.png)
 
 **Base [Calculation on assumptions]**, €m. Y0 is the end-2026 decision point; Y1–Y5 are annual model periods. Depreciation is not a cash outflow; it reduces taxable operating surplus. No terminal value is assumed.
 

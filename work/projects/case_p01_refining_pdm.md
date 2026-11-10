@@ -43,7 +43,7 @@ Pilot benefit ramp is 20%, 60%, 85%, 100%, 100%. Tax illustration assumes a 25% 
 
 ## 5. Annual cash flow and J-curve
 
-![P01 scenario J-curves](assets/p01_jcurve.png)
+![P01 scenario J-curves](assets/notebook_p01_jcurve.png)
 
 **Base [Calculation on assumptions]**, $m. Gross benefits are pre-tax incremental contribution and repair savings; net cash includes the assumed operating expense, investment and cash tax.
 

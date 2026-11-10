@@ -25,4 +25,6 @@ The model schedules capital expenditure in Y0–Y1 and one-time implementation i
 
 P07 is a safety-led candidate whose avoided risk is excluded from cash by default; a non-financial safety decision requires its own explicit governance and is not counted as hard cash. P10 does not pass the illustrative base and requires redesign, a changed scope or rejection. P12 is an H3 research option with no fabricated payback. E01 is a shared programme cost. These decisions are not a license to hide costs or force projects to clear the hurdle.
 
+**P12 long-term illustration [Assumption]:** outside the five-year model, the portfolio notebook allows an assumed $12m/year gross contribution from Y10 with a 30% conditional probability, $6m expansion CAPEX in Y8 and $4m/year OPEX at scale. These are scenario placeholders, not verified market or cost estimates; the resulting separate 15-year NPV requires technical, market and IP evidence. It does not change the five-year P12 case.
+
 Source context and already-existing capabilities: [long list](long_list.md), `sources/register.md` CLM-017 to CLM-027, CLM-060/061 and CLM-065 to CLM-068; the per-use-case quantities, rates, benefit lifts and project costs in this table are assumptions unless separately validated.

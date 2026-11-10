@@ -39,7 +39,7 @@ Assumed benefit ramp: 0%, 30%, 70%, 100%, 100% in Y1–Y5. This assumes a pilot,
 
 ## 5. Annual cash flow and J-curve
 
-![P03 scenario J-curves](assets/p03_jcurve.png)
+![P03 scenario J-curves](assets/notebook_p03_jcurve.png)
 
 **Base [Calculation on assumptions]**, $m; Y0 late 2026 and Y1–Y5 subsequent annual periods.
 

@@ -1,31 +1,33 @@
-# Portfolio visuals: method and reconciliation
+# Portfolio charts — method and assumptions
 
-**Scope:** P01–P13 plus E01, the four focus cases and nine simplified project estimates. The financial assumptions are fixed in `../finance/portfolio_model_14_revised.xlsx`; visual generation does not change the workbook. All amounts are nominal USD million except the P13 individual J-curve, which is in EUR. Exchange rate is the workbook's editable 1.1165 USD/EUR assumption. Quantities, effects and scenario weights are business-case assumptions, not TotalEnergies actuals.
+The [portfolio notebook](portfolio_charts.ipynb) generates all current figures with Matplotlib. It reads the cached, recalculated `../finance/portfolio_model_14_revised.xlsx` and never changes it. The four focus cases, 14-initiative five-year cash flows, hurdles and scenario weights remain unchanged. The chart palette reuses the colour values from the former project SVG. The course's 10/20/70 illustration is an approximate external reference, not an observed split for this portfolio.
 
-## Bubble map and H3 timeline
+## One bubble chart, 14 initiatives
 
-![Portfolio map](assets/portfolio_bubble.png)
+![Portfolio bubble chart](assets/notebook_portfolio_bubble.png)
 
-For H1/H2, the **x-axis** is simple payback interpolated from the base annual net cash schedule, the **y-axis** is gross annual benefit at full adoption before recurring OPEX and tax, and **bubble area** is proportional to one-time CAPEX plus launch expense. It is not proportional to radius. P07's safety benefit is not booked as hard cash and P10 has no payback within the modelled five years. E01 is a cost-only enabler. Their absence from the payback coordinates does not remove their costs from the portfolio.
+All 14 initiatives use the same axes: **x** is indicative time to mature operating scale or activation, **not payback**; **y** is conditional gross annual benefit at that scale, before project OPEX and tax. Bubble **area** represents initial CAPEX plus launch expense, and colour represents horizon. H1/H2 scale timing comes from the five-year model's adoption ramps; E01 is shown at Y1 with zero booked benefit. P07 is shown with zero cash benefit because its safety benefit is not booked as hard cash. Identical coordinates can overlap.
 
-P11 and P12 are displayed as purple option bubbles in a **qualitative H3 panel**, with areas on the same investment scale; their horizontal panel positions are not payback dates. P11's $3.75m/year is the assumed conditional contribution at 250 MW before project OPEX and tax. P12 has no monetised benefit. The timeline deliberately continues beyond Y5: neither a commercial maturity date nor post-Y5 value is estimated. It is incorrect to infer that H3 investments end after five years or to give P12 an invented payback.
+P11 and P12 appear on the same chart using separate, unverified long-term scenario assumptions: P11 reaches an assumed 2,000 MW at Y8 with retained contribution of $15,000/MW/year before project OPEX; P12 reaches an assumed $12m/year gross contribution in Y10. Neither amount, timing nor commercial outcome is a validated TotalEnergies forecast. P11's Y0–Y5 financial case remains the separate 250 MW illustration; P12 has no monetised benefit in that model. No H3 payback is inferred.
 
-## Mix: different economic measures, separate charts
+## Three different mixes
 
-![Investment and gross benefit mix](assets/portfolio_mix.png)
+![Three portfolio mixes](assets/notebook_portfolio_mix.png)
 
-The first bar allocates **$11.2665m initial investment** (Y0/Y1 capital expenditure and Y1 launch expense, excluding later recurring OPEX) to H1 **58.3%**, H2 **16.9%**, H3 **22.2%** and shared E01 **2.7%**. Shares use unrounded amounts and total 100% before display rounding. These are modelled allocations, not approved spending.
+1. **Initial investment:** $11.2665m allocated to H1 58.3%, H2 16.9%, H3 22.2% and E01 2.7%; CAPEX plus launch, excluding recurring OPEX.
+2. **Five-year gross benefit:** $42.683m weighted using the workbook's subjective 25% / 50% / 25% downside/base/upside assumptions: H1 61.3%, H2 24.8%, H3 13.8%. This is before costs and tax, not NPV.
+3. **Illustrative 15-year net value:** **+$57.987m**, consisting of H1 **+$21.721m**, H2 **+$9.903m**, H3 **+$27.727m** and E01 **−$1.364m**. On the bar, the positive contributions alone sum to 100%: H1 **36.6%**, H2 **16.7%** and H3 **46.7%**; E01's negative value is shown separately. This is a separate hypothetical scenario, not the approved five-year NPV.
 
-The second bar uses **scenario-weighted gross benefits over Y1–Y5**, before capital spending, OPEX and tax: H1 **$26.176m / 61.3%**, H2 **$10.601m / 24.8%**, H3 **$5.906m / 13.8%**, E01 **$0**. The total is **$42.683m**, using the model's explicit 25% / 50% / 25% downside/base/upside weights. P11's benefit is conditional, P12 is unmonetised and H3's possible post-Y5 benefits are excluded. These are gross benefit shares, not ROI, net cash, NPV, a guaranteed return mix or a 10/20/70 target. The separate severe stress is not included in the weighting.
+The third bar adds **Y6–Y15 net cash discounted at each project's own hurdle** to the workbook's weighted Y0–Y5 project NPVs. Its H3 scenario assumes P11 has 60% conditional post-Y5 continuation, $4m expansion CAPEX in Y7 and $5m/year total OPEX at scale; P12 has 30% continuation, $6m expansion CAPEX in Y8 and $4m/year OPEX at scale. Post-Y5 tax is an assumed 25% on positive operating profit; depreciation of the new capital, tax-loss carryforwards, working capital and terminal value are omitted. Expansion costs are incurred only on the assumed continuation path. H1/H2 and E01 repeat base Y5 net cash for ten years with no benefit decay or replacement investment. The H3 amounts, timing, probabilities and costs are speculative, editable notebook inputs, not sourced facts. H3 leads under these assumptions, which do not establish that it will actually do so or justify the course's illustrative 70% ratio. The initial weighted scenarios and subsequent continuation probabilities may overlap with risk already reflected in hurdle premiums, so do not treat the result as decision-grade without a risk and evidence review.
 
-![Net contribution by horizon](assets/portfolio_net_contributions.png)
+![Five-year net value contribution](assets/notebook_net_contributions.png)
 
-The separate net-value chart weights each scenario's **project NPVs at their respective hurdles** and then sums by horizon: H1 **+$4.257m**, H2 **+$2.094m**, H3 **−$2.226m**, E01 **−$0.780m**. Total **+$3.345m** agrees with the weighted project-NPV sum in the workbook. H3's negative five-year contribution includes the cost-only P12 option and the staged downside; it does not value possible post-Y5 outcomes. Negative values are preserved rather than transformed into positive percentages. The risk of double counting between scenario weights and hurdle premiums requires review before interpreting this as a formal economic expected NPV.
+For net value, the separate chart keeps negative contributions and uses the **sum of five-year project NPVs at their own hurdle rates**, weighted by the workbook scenarios: H1 +$4.257m, H2 +$2.094m, H3 −$2.226m and E01 −$0.780m, totalling +$3.345m. H3's negative five-year result does not value possible post-Y5 benefits. The risk of charging the same uncertainty both in the scenarios and the hurdle premiums needs review before treating this as a formal economic expected NPV.
 
-## Cash-flow curves and reproducibility
+## Curves and regeneration
 
-![Portfolio J-curves](assets/portfolio_jcurve.png)
+![Portfolio J-curve](assets/notebook_portfolio_jcurve.png)
 
-The portfolio and four focus-case J-curves show cumulative **undiscounted** net cash for Y0–Y5; taxes, operating costs and capital expenditure are included in the underlying flows. The H3 conditional success case is not a guaranteed revenue path. The [four detailed cases](case_rebuild_decisions.md) link their own images and list yearly flows, hurdles and continuation criteria.
+The [four detailed case cards](case_rebuild_decisions.md) link their own scenario J-curves. These and the portfolio curve display five-year cumulative **undiscounted net cash**, including modelled costs and tax. The 15-year illustration does not alter them.
 
-To refresh the PNGs, recalculate and save the workbook, then run `python work/projects/generate_portfolio_visuals.py` in an environment with Pillow and openpyxl. The generator reads cached workbook values, writes no spreadsheet data, verifies project coverage, probability weights and the weighted NPV bridge, and saves the data used in `assets/visuals_data.json`. A workbook edited without recalculating its formulas must not be used to regenerate charts. Review the visual output after refresh.
+Install dependencies with `pip install -r work/projects/requirements-notebook.txt`, recalculate and save the workbook, then run all cells of `portfolio_charts.ipynb`. Matplotlib produces PNG and editable SVG versions; `assets/notebook_chart_data.json` records inputs and annual schedules, and `assets/notebook_longterm_cashflows.csv` presents the Y6–Y15 net cash bridge and 15-year NPV by project for review in Excel. The notebook only reads cached spreadsheet values: re-save the workbook after recalculation before refreshing. The separate long-term calculations are currently in the notebook and CSV, not Excel formulas. Review all unverified long-term assumptions before using the third bar in the report, memo or slides.
