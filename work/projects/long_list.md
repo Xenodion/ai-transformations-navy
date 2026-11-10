@@ -1,5 +1,7 @@
 # Long list of candidate AI projects
 
+> **Historical candidate inventory — 10 November:** Project IDs and research leads remain useful, but the monetary estimates, horizons and costs below have not been reconciled with the rebuilt cases. Do not reuse them as portfolio cash flows. The current four cases and [discount-rate policy](../finance/discount_rate_policy.md) take precedence.
+
 - **Step:** 08 — [#8](https://github.com/Xenodion/ai-transformations-navy/issues/8). Drafted 8 November 2026 by Alexandre Waerniers, with Claude Code.
 - **Acceptance criterion:** record business problem, existing capability, provisional horizon, indicative value/cost/time, uncertainty, and rejected ideas.
 - **Inputs:** [strategy synthesis](../../sources/synthesis/2026-11-08_totalenergies_strategy_activities.md) (S04), [AI and organisation synthesis](../../sources/synthesis/2026-11-08_totalenergies_ai_data_organization.md) (S05), [competitor synthesis](../../sources/synthesis/2026-11-08_competitors_benchmarks.md) (S06), [legacy plan audit](../research/legacy_plan_audit.md) (step 07), [register](../../sources/register.md).
