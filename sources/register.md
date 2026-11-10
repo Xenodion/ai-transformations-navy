@@ -150,6 +150,8 @@ Add one row per material fact, calculation, assumption, local observation, or un
 | CLM-078 | Explicit assumption | Pending | Vincent suggests **€1 million**, including electronic shelf labels, as a plausible investment for a hypothetical pilot covering 100 large French company-operated stations. | Proposed French retail case | Vincent's calibration guidance in the project conversation, 10 Nov 2026 | A modelling input informed by local experience, not evidence of an actual project, company budget or procurement quote. Cost scope, phasing and benefits remain assumptions. | P13 reconstruction |
 | CLM-079 | Explicit assumption | Pending | Vincent suggests a **2–3 year payback objective** as a plausible calibration for the hypothetical retail proposal. | Proposed French retail case | Vincent's calibration guidance in the project conversation, 10 Nov 2026 | Modelling objective, not a reported actual result or evidence of an existing initiative. Calculate simple and discounted payback from explicit assumptions. | P13 reconstruction |
 
+| CLM-080 | Fact | Verified | The company identifies a risk to competitiveness and innovation capacity from inadequate skills management, and says competition with high-growth technology and new-energy sectors can complicate recruiting and retaining key skills. | Group sustainability risk assessment, FY2025 | SRC-002, PDF and printed p. 318 | Qualitative company risk assessment; no estimate of AI-specific departures, replacement costs, market-share loss or the effect of the proposed programme. | Portfolio inaction challenge |
+
 ## Contradictions and unresolved questions
 
 | ID | Claim IDs or question | Conflict / missing evidence | Decision affected | Next check and owner | Status |
@@ -169,3 +171,4 @@ Add one row per material fact, calculation, assumption, local observation, or un
 - [ ] Period, organizational/geographic scope, unit, and denominator are explicit where relevant.
 - [ ] Formula and input IDs are present for each derived figure; assumed inputs are labeled.
 - [ ] Limits, contradictions, and unknowns remain visible in downstream work.
+

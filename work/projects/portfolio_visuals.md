@@ -1,6 +1,6 @@
 # Portfolio charts — method and assumptions
 
-The [portfolio notebook](portfolio_charts.ipynb) generates all current figures with Matplotlib. It reads the cached, recalculated `../finance/portfolio_model_14_revised.xlsx` and never changes it. The four focus cases, 14-initiative five-year cash flows, hurdles and scenario weights remain unchanged. The chart palette reuses the colour values from the former project SVG. The course's 10/20/70 illustration is an approximate external reference, not an observed split for this portfolio.
+The [portfolio notebook](portfolio_charts.ipynb) generates all current figures with Matplotlib. All new or revised charts must be produced by the Excel workbook or this notebook; PNG and SVG files are exported chart outputs, not independently authored graphics. Current charts show the original workbook and do not include the separate cost-of-inaction scenario. It reads the cached, recalculated `../finance/portfolio_model_14_revised.xlsx` and never changes it. The four focus cases, 14-initiative five-year cash flows, hurdles and scenario weights remain unchanged. The chart palette reuses the colour values from the former project SVG. The course's 10/20/70 illustration is an approximate external reference, not an observed split for this portfolio.
 
 ## One bubble chart, 14 initiatives
 
@@ -31,3 +31,4 @@ For net value, the separate chart keeps negative contributions and uses the **su
 The [four detailed case cards](case_rebuild_decisions.md) link their own scenario J-curves. These and the portfolio curve display five-year cumulative **undiscounted net cash**, including modelled costs and tax. The 15-year illustration does not alter them.
 
 Install dependencies with `pip install -r work/projects/requirements-notebook.txt`, recalculate and save the workbook, then run all cells of `portfolio_charts.ipynb`. Matplotlib produces PNG and editable SVG versions; `assets/notebook_chart_data.json` records inputs and annual schedules, and `assets/notebook_longterm_cashflows.csv` presents the Y6–Y15 net cash bridge and 15-year NPV by project for review in Excel. The notebook only reads cached spreadsheet values: re-save the workbook after recalculation before refreshing. The separate long-term calculations are currently in the notebook and CSV, not Excel formulas. Review all unverified long-term assumptions before using the third bar in the report, memo or slides.
+

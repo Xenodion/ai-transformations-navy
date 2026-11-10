@@ -1,6 +1,6 @@
 """SUPERSEDED core-only calculation: not the 14-initiative portfolio.
 
-Use portfolio_model_14.xlsx for the complete 14-initiative working scenario.
+Use portfolio_model_14_revised.xlsx for the complete 14-initiative working scenario; the earlier workbook is archived and superseded.
 This file is retained temporarily for comparison with the original four cases.
 
 No reserve candidates are automatically funded. P11's learning/operating costs
@@ -57,3 +57,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

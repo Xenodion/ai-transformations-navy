@@ -22,6 +22,11 @@ Downside assumes 90% of benefit and 105% costs, slower P13 adoption, and H3 stop
 
 The base one-time investment (Y0–Y1 CAPEX plus Y1 launch expenses, excluding recurring OPEX and taxes) is **$11.267m**. It consists of H1 **$6.567m (58.3%)**, H2 **$1.900m (16.9%)**, H3 **$2.500m (22.2%)** and shared E01 governance **$0.300m (2.7%)**. The workbook calculates the unrounded shares to 100%; rounded percentages may not add exactly. This is a modelled programme perimeter, not an approved budget; later running costs and scenario-dependent changes are additional.
 
+## Illustrative inaction-adjusted decision
+
+A separate [portfolio inaction overlay](cost_of_inaction.md) models three unverified exposure pools and assumes the programme avoids 50% of their erosion. On unrounded cached workbook cash at a common 10% rate, avoided loss has PV +$1.571m and the decision NPVs are +$0.197m / +$5.204m / +$8.891m for downside / base / upside; the weighted path has NPV +$4.874m and IRR 23.1%. This overlay is conditional on non-overlap, causal effect and sufficient funding, and differs from the workbook's project-rate NPVs. The spreadsheets remain unchanged.
+
 ## Controls before a decision
 
 The indicative portfolio is an aggregation, not evidence that 14 projects are funded or additive. Validate eligible operational scope and existing capabilities, vendor costs, economic ownership, taxes, working capital, financial capture and contractually unavoidable costs. In particular, P11's conditional revenue and H3 gate timing are decisive. Check overlaps among P01/P10, P03/P06, P02/P03 and P06/P09; confirm no double count with group programmes. All 14 inclusion controls, project assumptions and scenario weights are editable in the workbook. A positive NPV is not an approval.
+

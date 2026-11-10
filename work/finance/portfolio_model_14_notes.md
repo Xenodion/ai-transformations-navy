@@ -2,7 +2,7 @@
 
 `portfolio_model_14_revised.xlsx` is an editable working model, not an approved investment decision. It includes P01–P13 and the E01 shared enabler exactly once. The four focus cases are P01, P03, P11 and P13; E01 is not a fifth focus case. The other nine projects are indicative estimates.
 
-The earlier local `portfolio_model_14.xlsx` is superseded. It was left in place because the file was locked while the revised version was saved; do not use it for the current scenarios.
+The earlier local model is superseded and preserved at [archive/superseded_models/portfolio_model_14.xlsx](../archive/superseded_models/portfolio_model_14.xlsx). It was previously left in finance because it was locked while the revised version was saved. Do not use it for current scenarios.
 
 Use **Focus drivers** for the underlying unit assumptions of the four cases, **Inputs** for costs, hurdles, currency, benefit booking and project inclusion, and **Scenarios** for scenario factors and yearly timing. The **Cash flow build** exposes yearly gross benefits, operating costs, capital, cash tax, net and cumulative cash; **Metrics** shows NPV, IRR, simple and discounted payback where meaningful, and project-rate sensitivities of ±1 percentage point. **Portfolio** shows three cumulative curves over the common five-year financial window; **Focus curves** shows a curve for each of the four detailed cases.
 
@@ -13,3 +13,4 @@ The five-year calculation window does not constrain H3 maturity; no H3 payback i
 Automated checks: existing 30 financial unit tests passed; the workbook's four base-case NPVs and IRRs were reconciled to the project models, and changing the retail store count was checked to change the portfolio curve. This does not validate the commercial assumptions or establish that the project already exists or does not exist at TotalEnergies.
 
 `build_workbook.mjs` regenerates the workbook from its coded defaults and will overwrite edits made directly in Excel. Save a separate copy of any edited workbook before running the builder. The spreadsheet is the current source for scenario definitions; the older Python scripts remain useful base-case references but contain earlier scenario settings.
+
