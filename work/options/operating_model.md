@@ -76,21 +76,25 @@ Course roles: the business signs the benefits, and Finance tracks them.
 
 **Human control:** every high-impact decision stays with an expert, in line with the published principle of no fully autonomous decisions (CLM-026).
 
-### 4b. The Delivery Engine: Agile Delivery Trios (*Trinômes Exécutifs*)
+### 4b. The delivery change: dedicated project trios with dual reporting (V3, 11 November 2026)
 
-To break the execution throttle and delivery latency identified in Step 09 (CLM-074), each project inside a spoke is executed by an **Agile Delivery Trio**:
+**Diagnosis (local observation, CLM-074; to be measured in the pilots).** Branches already own their projects; accountability is not missing, it is dispersed. Each project is split across four actors without a common line: the branch project lead (usually the branch digital-transformation head) who leads; the branch data engineer, who reports to branch IT/data rather than to the lead; the TDF data scientist, who sets data-science rules but carries no financial objective and works like an external consultancy; and the end user, who gives the need and feedback but has no decision power. Result: widely spaced progress reviews, slow feedback loops, few projects per lead.
 
-| Role | Sourcing & Home | Allocation & Accountability | Core Deliverable |
-| :--- | :--- | :--- | :--- |
-| **Lead Data Scientist** | Digital Factory / Hub (seconded) | Full-time on project sprint | Model architecture, algorithmic performance, MLOps standards, code reuse across segments |
-| **Business Champion** | Branch P&L Operating Unit | **20% to 40% protected, ring-fenced time** (branch co-funded Day 1) | Operational specifications, user acceptance testing, frontline change leadership, and signing the P&L benefit |
-| **Branch Data Engineer** | Branch IT / Spoke | Dedicated during data-slice sprint | Branch telemetry ingestion, ERP/POS pipelines, resolving local data latency |
+**Remedy.** One dedicated trio per project:
 
-**Operating Dynamic:** Replaces slow multi-BU weekly status reviews with high-velocity agile sprints (multi-weekly check-ins, joint sprint backlog). The Business Champion is a co-builder with protected time rather than an external spectator, testing whether protected business capacity improves the local delivery friction observed at Argedis (CLM-074); group-wide causality is not established.
+| Role | Home line (kept) | Time on project | Day-to-day reporting | Core contribution |
+| --- | --- | --- | --- | --- |
+| TDF data scientist / AI engineer | Digital Factory (standards, methods, career) | Large share, at least half | Branch project lead | Model design, validation, MLOps standards, reuse |
+| Branch data engineer | Branch IT/data (systems, career) | Large share, at least half | Branch project lead | Data access, pipelines, integration into local systems |
+| Business expert | Operating unit (career) | Large share, at least half, with backfill | Branch project lead | User needs and feedback with real design influence, workflow adoption |
+
+**What changes:** decisions about the solution are taken inside the team in days; short work cycles with frequent user reviews; coordination moves from the lead's agenda into the team, so leads and sponsors steer more projects in parallel (higher deployment capacity); AI practice spreads into branches through trio members.
+**What does not change:** objectives, budgets and continuation gates per project; HSE, cyber, legal and employee-relations vetoes; Digital Factory standards.
+**Test:** interval between progress reviews, lead time to first live use, expert time available, projects per lead, adoption and Finance-verified outcomes, against the existing process in the four featured cases.
 
 ## 5. Funding
 
-The selected programme has a five-operating-year ceiling plus Y0. Each segment sponsor and Finance signs its case; Corporate sponsors P05/E01 and OneTech sponsors the P12 licensing experiment with commercial/IP support. These are proposed responsibilities, not observed funding transfers. Do not apply the course's illustrative 100/60/40 central funding path as a TotalEnergies fact. Actual hub/BU contributions require agreement before release, without changing consolidated cash or counting internal transfers twice.
+The selected programme has a five-operating-year ceiling plus Y0. Each segment sponsor and Finance signs its case; Corporate sponsors P05/E01 and OneTech sponsors the P12 licensing experiment with commercial/IP support. These are proposed responsibilities, not observed funding transfers. V3 proposes branch co-funding of 40% of Y2 costs and 60% of Y3–Y5 run costs, confirmed at Gate 1 and Gate 2; this is a proposal to agree with branches, and internal transfers do not change consolidated cash.
 
 ## 6. Controls
 

@@ -1,6 +1,6 @@
 # Project brief and delivery roadmap — TotalEnergies
 
-**Updated:** 10 November 2026
+**Updated:** 11 November 2026
 **Team:** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
 **Submission deadline:** evening of 10 November 2026, Paris time
 **Oral defense:** 16 November 2026, 15-minute pitch and 5-minute Q&A
@@ -27,6 +27,8 @@ Every material statement is a **verified fact**, **derived calculation**, **expl
 Prepare a bubble chart of the **whole portfolio** to introduce the project cases. Proposed axes, based on the professor's whiteboard sketch as recalled by Vincent: potential gain (vertical), payback time (horizontal), bubble area for cost, color for horizon. Display units, time frame, scope, and uncertainty. Show H3 projects without defensible payback as options with learning gates, rather than assigning an invented coordinate. Beneath the chart, use two separate stacked bars for the **capital mix** and the **expected return mix** across H1/H2/H3. The course's illustrative return split is not a forecast for our portfolio.
 
 **Rework in progress (10 Nov):** Steps 09–20 are open while the diagnosis, cases, financial assumptions, gates and evidence are reconciled. Prior figures are not approved for decision use. See [correction plan](research/correction_plan_preliminary.md).
+
+**V3 report (11 Nov):** [full_strategy_report.md](../deliverables/report/full_strategy_report.md) consolidates steps 09–21, validated by Vincent on 11 November: ten initiatives, 30/50/20 scenario weights (expected NPV $5.62m), cost of inaction at portfolio level only, bottleneck = dispersed delivery responsibility addressed by dedicated project trios. Task list: [v3_task_plan.md](v3_task_plan.md). GitHub issues still to be updated.
 
 ## Checkable roadmap
 
@@ -88,7 +90,7 @@ Steps 11–21 remain open. Active selection is P01/P02/P03/P05/P09/P12/P13/E01; 
 | 18 / #18 | `work/finance/portfolio_model_selected.xlsx`, `work/finance/portfolio_economics.md`; independent arithmetic checks completed, final finance review open |
 | 19 / #19 | `work/finance/cost_of_inaction.md`; no unsupported cash uplift |
 | 20 / #20 | `work/governance/gates_and_adoption.md`; role-based release conditions and committed-exposure limits |
-| 21 / #21 | `deliverables/report/full_strategy_report_draft.md`; revised text/tables, final challenge and graphics pending |
+| 21 / #21 | `deliverables/report/full_strategy_report.md`; revised text/tables, final challenge and graphics pending |
 
 No acceptance box is checked by this refinement. Memo and slides have not been generated.
 

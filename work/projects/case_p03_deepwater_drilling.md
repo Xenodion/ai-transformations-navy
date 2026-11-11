@@ -63,4 +63,4 @@ Downside assumes 80% of full-scale benefits, 110% of investment and operating co
 - Project hurdle: `work/finance/discount_rate_policy.md`. Recompute in the replacement workbook and verify scope, actual contracts, tax, prices, timeline and scenarios. The main CEO question is whether rig-day savings reduce payments under the actual contract.
 
 
-**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report_draft.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.
+**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.

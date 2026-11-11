@@ -1,8 +1,7 @@
-# Active visual methods
+# Report visuals (V3, 11 November 2026)
 
-See [chart production specification](chart_regeneration_spec.md). Rendering is pending. The old visual assets and notebook are archived and are not compatible with the active report.
+- Financial charts: `render_selected_charts.py` (portfolio map, horizon mix, scenario NPV/IRR, portfolio and case J-curves, half-budget, decision-value bridge).
+- V3 charts: `render_v3_charts.py` (operating model before/after, readiness, staged funding and gates).
+- Numeric tables: `render_report_tables.py` from `report_tables.json`; text tables stay in Markdown in the report.
 
-
-## Figure production completed, 11 November 2026
-
-Fourteen PNG/SVG figures were generated from the checked JSON and visually reviewed. Nine figures are embedded in the analytical report; a self-contained HTML reading copy is available. The notebook and CLI share `work/projects/render_selected_charts.py`. See `work/projects/REPRODUCE_CHARTS.md`. Full financial acceptance remains open; no original source PDF or financial assumption was changed for rendering.
+All read `work/finance/selected_chart_data.json`. See [REPRODUCE_CHARTS.md](REPRODUCE_CHARTS.md).

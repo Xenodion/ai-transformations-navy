@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="609.984pt" height="210.055556pt" viewBox="0 0 609.984 210.055556" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="609.984pt" height="210.019931pt" viewBox="0 0 609.984 210.019931" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-11T12:29:05.891256</dc:date>
+    <dc:date>2026-11-11T13:48:55.259836</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.10.7, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -21,8 +21,8 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 210.055556 
-L 609.984 210.055556 
+   <path d="M 0 210.019931 
+L 609.984 210.019931 
 L 609.984 0 
 L 0 0 
 z
@@ -39,7 +39,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_1">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="66.7584" y="64.157847" transform="rotate(-0 66.7584 64.157847)">Year</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="66.7584" y="64.303394" transform="rotate(-0 66.7584 64.303394)">Year</text>
     </g>
     <g id="patch_3">
      <path d="M 72.71424 69.799177 
@@ -50,7 +50,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_2">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="169.198848" y="64.158199" transform="rotate(-0 169.198848 64.158199)">Gross benefit</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="169.198848" y="64.303394" transform="rotate(-0 169.198848 64.303394)">Gross benefit</text>
     </g>
     <g id="patch_4">
      <path d="M 179.91936 69.799177 
@@ -61,7 +61,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_3">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="297.844992" y="64.158199" transform="rotate(-0 297.844992 64.158199)">OPEX + launch</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="297.844992" y="64.303394" transform="rotate(-0 297.844992 64.303394)">OPEX + launch</text>
     </g>
     <g id="patch_5">
      <path d="M 310.94784 69.799177 
@@ -72,7 +72,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_4">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="396.711936" y="64.157847" transform="rotate(-0 396.711936 64.157847)">CAPEX</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="396.711936" y="64.303394" transform="rotate(-0 396.711936 64.303394)">CAPEX</text>
     </g>
     <g id="patch_6">
      <path d="M 406.24128 69.799177 
@@ -83,7 +83,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_5">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="486.64512" y="64.157847" transform="rotate(-0 486.64512 64.157847)">Tax</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="486.64512" y="64.303394" transform="rotate(-0 486.64512 64.303394)">Tax</text>
     </g>
     <g id="patch_7">
      <path d="M 495.57888 69.799177 
@@ -94,7 +94,7 @@ z
 " style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_6">
-     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="586.703232" y="64.158199" transform="rotate(-0 586.703232 64.158199)">Net cash</text>
+     <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="586.703232" y="64.303394" transform="rotate(-0 586.703232 64.303394)">Net cash</text>
     </g>
     <g id="patch_8">
      <path d="M 13.15584 85.757619 
@@ -105,7 +105,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_7">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="80.116289" transform="rotate(-0 66.7584 80.116289)">Y0</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="80.261836" transform="rotate(-0 66.7584 80.261836)">Y0</text>
     </g>
     <g id="patch_9">
      <path d="M 72.71424 85.757619 
@@ -116,7 +116,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_8">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="80.116289" transform="rotate(-0 169.198848 80.116289)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="80.261836" transform="rotate(-0 169.198848 80.261836)">0.000</text>
     </g>
     <g id="patch_10">
      <path d="M 179.91936 85.757619 
@@ -127,7 +127,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_9">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="297.844992" y="80.116289" transform="rotate(-0 297.844992 80.116289)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="297.844992" y="80.261836" transform="rotate(-0 297.844992 80.261836)">0.000</text>
     </g>
     <g id="patch_11">
      <path d="M 310.94784 85.757619 
@@ -138,7 +138,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_10">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="396.711936" y="80.116289" transform="rotate(-0 396.711936 80.116289)">-0.500</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="396.711936" y="80.261836" transform="rotate(-0 396.711936 80.261836)">-0.500</text>
     </g>
     <g id="patch_12">
      <path d="M 406.24128 85.757619 
@@ -149,7 +149,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_11">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="486.64512" y="80.116289" transform="rotate(-0 486.64512 80.116289)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="486.64512" y="80.261836" transform="rotate(-0 486.64512 80.261836)">0.000</text>
     </g>
     <g id="patch_13">
      <path d="M 495.57888 85.757619 
@@ -160,7 +160,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_12">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="586.703232" y="80.116289" transform="rotate(-0 586.703232 80.116289)">-0.500</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="586.703232" y="80.261836" transform="rotate(-0 586.703232 80.261836)">-0.500</text>
     </g>
     <g id="patch_14">
      <path d="M 13.15584 101.71606 
@@ -171,7 +171,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_13">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="96.07473" transform="rotate(-0 66.7584 96.07473)">Y1</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="96.220277" transform="rotate(-0 66.7584 96.220277)">Y1</text>
     </g>
     <g id="patch_15">
      <path d="M 72.71424 101.71606 
@@ -182,7 +182,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_14">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="96.07473" transform="rotate(-0 169.198848 96.07473)">0.375</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="96.220277" transform="rotate(-0 169.198848 96.220277)">0.375</text>
     </g>
     <g id="patch_16">
      <path d="M 179.91936 101.71606 
@@ -193,7 +193,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_15">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="96.07473" transform="rotate(-0 297.844992 96.07473)">-0.600</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="96.220277" transform="rotate(-0 297.844992 96.220277)">-0.600</text>
     </g>
     <g id="patch_17">
      <path d="M 310.94784 101.71606 
@@ -204,7 +204,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_16">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="396.711936" y="96.07473" transform="rotate(-0 396.711936 96.07473)">-0.500</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="396.711936" y="96.220277" transform="rotate(-0 396.711936 96.220277)">-0.500</text>
     </g>
     <g id="patch_18">
      <path d="M 406.24128 101.71606 
@@ -215,7 +215,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_17">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="486.64512" y="96.07473" transform="rotate(-0 486.64512 96.07473)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="486.64512" y="96.220277" transform="rotate(-0 486.64512 96.220277)">0.000</text>
     </g>
     <g id="patch_19">
      <path d="M 495.57888 101.71606 
@@ -226,7 +226,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_18">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="586.703232" y="96.07473" transform="rotate(-0 586.703232 96.07473)">-0.725</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="586.703232" y="96.220277" transform="rotate(-0 586.703232 96.220277)">-0.725</text>
     </g>
     <g id="patch_20">
      <path d="M 13.15584 117.674502 
@@ -237,7 +237,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_19">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="112.033172" transform="rotate(-0 66.7584 112.033172)">Y2</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="112.178719" transform="rotate(-0 66.7584 112.178719)">Y2</text>
     </g>
     <g id="patch_21">
      <path d="M 72.71424 117.674502 
@@ -248,7 +248,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_20">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="112.033172" transform="rotate(-0 169.198848 112.033172)">1.125</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="112.178719" transform="rotate(-0 169.198848 112.178719)">1.125</text>
     </g>
     <g id="patch_22">
      <path d="M 179.91936 117.674502 
@@ -259,7 +259,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_21">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="112.033172" transform="rotate(-0 297.844992 112.033172)">-0.350</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="112.178719" transform="rotate(-0 297.844992 112.178719)">-0.350</text>
     </g>
     <g id="patch_23">
      <path d="M 310.94784 117.674502 
@@ -270,7 +270,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_22">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="112.033172" transform="rotate(-0 396.711936 112.033172)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="112.178719" transform="rotate(-0 396.711936 112.178719)">0.000</text>
     </g>
     <g id="patch_24">
      <path d="M 406.24128 117.674502 
@@ -281,7 +281,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_23">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="112.033172" transform="rotate(-0 486.64512 112.033172)">-0.144</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="112.178719" transform="rotate(-0 486.64512 112.178719)">-0.144</text>
     </g>
     <g id="patch_25">
      <path d="M 495.57888 117.674502 
@@ -292,7 +292,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_24">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="112.033172" transform="rotate(-0 586.703232 112.033172)">0.631</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="112.178719" transform="rotate(-0 586.703232 112.178719)">0.631</text>
     </g>
     <g id="patch_26">
      <path d="M 13.15584 133.632944 
@@ -303,7 +303,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_25">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="127.991613" transform="rotate(-0 66.7584 127.991613)">Y3</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="128.13716" transform="rotate(-0 66.7584 128.13716)">Y3</text>
     </g>
     <g id="patch_27">
      <path d="M 72.71424 133.632944 
@@ -314,7 +314,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_26">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="127.991613" transform="rotate(-0 169.198848 127.991613)">1.593</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="128.13716" transform="rotate(-0 169.198848 128.13716)">1.593</text>
     </g>
     <g id="patch_28">
      <path d="M 179.91936 133.632944 
@@ -325,7 +325,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_27">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="127.991613" transform="rotate(-0 297.844992 127.991613)">-0.400</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="128.13716" transform="rotate(-0 297.844992 128.13716)">-0.400</text>
     </g>
     <g id="patch_29">
      <path d="M 310.94784 133.632944 
@@ -336,7 +336,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_28">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="127.991613" transform="rotate(-0 396.711936 127.991613)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="128.13716" transform="rotate(-0 396.711936 128.13716)">0.000</text>
     </g>
     <g id="patch_30">
      <path d="M 406.24128 133.632944 
@@ -347,7 +347,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_29">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="127.991613" transform="rotate(-0 486.64512 127.991613)">-0.248</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="128.13716" transform="rotate(-0 486.64512 128.13716)">-0.248</text>
     </g>
     <g id="patch_31">
      <path d="M 495.57888 133.632944 
@@ -358,7 +358,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_30">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="127.991613" transform="rotate(-0 586.703232 127.991613)">0.945</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="128.13716" transform="rotate(-0 586.703232 128.13716)">0.945</text>
     </g>
     <g id="patch_32">
      <path d="M 13.15584 149.591385 
@@ -369,7 +369,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_31">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="143.950055" transform="rotate(-0 66.7584 143.950055)">Y4</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="144.095602" transform="rotate(-0 66.7584 144.095602)">Y4</text>
     </g>
     <g id="patch_33">
      <path d="M 72.71424 149.591385 
@@ -380,7 +380,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_32">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="143.950055" transform="rotate(-0 169.198848 143.950055)">1.875</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="144.095602" transform="rotate(-0 169.198848 144.095602)">1.875</text>
     </g>
     <g id="patch_34">
      <path d="M 179.91936 149.591385 
@@ -391,7 +391,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_33">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="143.950055" transform="rotate(-0 297.844992 143.950055)">-0.400</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="144.095602" transform="rotate(-0 297.844992 144.095602)">-0.400</text>
     </g>
     <g id="patch_35">
      <path d="M 310.94784 149.591385 
@@ -402,7 +402,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_34">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="143.950055" transform="rotate(-0 396.711936 143.950055)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="144.095602" transform="rotate(-0 396.711936 144.095602)">0.000</text>
     </g>
     <g id="patch_36">
      <path d="M 406.24128 149.591385 
@@ -413,7 +413,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_35">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="143.950055" transform="rotate(-0 486.64512 143.950055)">-0.319</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="144.095602" transform="rotate(-0 486.64512 144.095602)">-0.319</text>
     </g>
     <g id="patch_37">
      <path d="M 495.57888 149.591385 
@@ -424,7 +424,7 @@ z
 " style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_36">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="143.950055" transform="rotate(-0 586.703232 143.950055)">1.156</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="144.095602" transform="rotate(-0 586.703232 144.095602)">1.156</text>
     </g>
     <g id="patch_38">
      <path d="M 13.15584 165.549827 
@@ -435,7 +435,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_37">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="159.908497" transform="rotate(-0 66.7584 159.908497)">Y5</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="160.054043" transform="rotate(-0 66.7584 160.054043)">Y5</text>
     </g>
     <g id="patch_39">
      <path d="M 72.71424 165.549827 
@@ -446,7 +446,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_38">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="159.908497" transform="rotate(-0 169.198848 159.908497)">1.875</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="160.054043" transform="rotate(-0 169.198848 160.054043)">1.875</text>
     </g>
     <g id="patch_40">
      <path d="M 179.91936 165.549827 
@@ -457,7 +457,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_39">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="159.908497" transform="rotate(-0 297.844992 159.908497)">-0.400</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="160.054043" transform="rotate(-0 297.844992 160.054043)">-0.400</text>
     </g>
     <g id="patch_41">
      <path d="M 310.94784 165.549827 
@@ -468,7 +468,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_40">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="159.908497" transform="rotate(-0 396.711936 159.908497)">0.000</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="160.054043" transform="rotate(-0 396.711936 160.054043)">0.000</text>
     </g>
     <g id="patch_42">
      <path d="M 406.24128 165.549827 
@@ -479,7 +479,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_41">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="159.908497" transform="rotate(-0 486.64512 159.908497)">-0.319</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="160.054043" transform="rotate(-0 486.64512 160.054043)">-0.319</text>
     </g>
     <g id="patch_43">
      <path d="M 495.57888 165.549827 
@@ -490,7 +490,7 @@ z
 " style="fill: #ffffff; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_42">
-     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="159.908497" transform="rotate(-0 586.703232 159.908497)">1.156</text>
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="160.054043" transform="rotate(-0 586.703232 160.054043)">1.156</text>
     </g>
    </g>
    <g id="text_43">

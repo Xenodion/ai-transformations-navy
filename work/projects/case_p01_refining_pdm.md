@@ -77,4 +77,4 @@ The reliability team retains intervention authority; operators and maintenance s
 - Discount rate: `work/finance/discount_rate_policy.md`. Recompute independently in the replacement spreadsheet and validate site baseline, budgets, tax, rates and scenarios before presentation.
 
 
-**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report_draft.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.
+**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.

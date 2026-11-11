@@ -1,6 +1,6 @@
 {
   "source": "work/finance/selected_chart_data.json",
-  "source_sha256": "e2fed24bd8458328bd8cb6005ffe1dc4198adaf8a1c79e0f9328adc1b6138ecb",
+  "source_sha256": "75c0b7e40ba50c8a2d47f53bbd0e26436847e1ab64b7fafa75e685b8217306a1",
   "data_version": "selected-2026-11-10",
   "selected_ids": [
     "P01",
@@ -24,15 +24,15 @@
     "gross_cost_usd_m": 21.937079999999998,
     "y0_gross_cost_usd_m": 2.8966,
     "base_npv_10pct_usd_m": 7.113090821665184,
-    "weighted_npv_10pct_usd_m": 6.299950967256504,
-    "weighted_simple_payback_years": 3.3459191074869397,
+    "weighted_npv_10pct_usd_m": 5.620797867198213,
+    "weighted_simple_payback_years": 3.4220881994857826,
     "half_constrained_gross_cost_usd_m": 11.34708,
     "half_envelope_usd_m": 10.968539999999999,
     "half_remaining_headroom_usd_m": -0.378540000000001,
     "signed_horizon_weighted_npv_usd_m": {
-      "H1": 4.359192913712908,
-      "H2": 2.067579883274553,
-      "H3": -0.1268218297309549
+      "H1": 3.933453790011484,
+      "H2": 1.9281518275266842,
+      "H3": -0.24080775033995483
     },
     "cash_row_identity": "passed for all project/scenario/year rows",
     "portfolio_cash_values_checked": 30,

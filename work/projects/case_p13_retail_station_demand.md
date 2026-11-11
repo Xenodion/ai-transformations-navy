@@ -6,7 +6,7 @@
 
 **Proposal [Assumption]:** Pilot demand forecasting and replenishment assistance with electronic shelf labels and controlled dynamic markdowns in 100 large company-operated French service stations. A successful pilot may justify a separately approved expansion. The pilot does not assume the 800- or 1,500-station footprint of the discarded draft.
 
-**Calibration [Assumption]:** For this proposed case, Vincent suggests an indicative **€1m investment for 100 large French COCO stations, including electronic labels**,  (CLM-078, CLM-079). These are inputs informed by local experience, not evidence of an actual project, company budget or realised result. Scope, contracts and operational baseline require validation.
+**Calibration [Local observation]:** Our insider, drawing on French retail network experience, suggests an indicative **€1m investment for 100 large French company-operated stations, including electronic labels** (CLM-078, CLM-079). This informs our assumptions; it is not evidence of an actual project, company budget or realised result.
 
 The programme is presented as a **proposed pilot**. Before investment, map existing retail capabilities and funded initiatives, so the business case counts only incremental costs and benefits. TotalEnergies' worldwide retail footprint is not used as the pilot denominator (SRC-002 p.13). The comparative baseline retains existing replenishment, pricing, staff and systems.
 
@@ -79,4 +79,4 @@ Downside assumes 90% of full-scale benefits, 105% of investment and operating co
 **Sources and limits:** local calibration CLM-074/078/079 establishes neither a group baseline nor a realized saving. The €1m/100-store envelope is an explicit planning assumption. The source register and retail case preserve these distinctions.
 
 
-**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report_draft.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.
+**Cost allocation:** The detailed planning allocation of this existing envelope across equipment, integration, training, staff and recurring support is maintained in the [full report](../../deliverables/report/full_strategy_report.md#cost-composition-of-the-four-featured-cases). It is an indicative breakdown, not additional spending.

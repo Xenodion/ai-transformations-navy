@@ -1,11 +1,15 @@
-# Selection decision — 10 November 2026
+# Selection decision (updated 11 November 2026, V3)
 
-User-authorized refinement preserves the strongest existing work rather than rebuilding the strategy. Active scope: P01/P02/P03/P05/P09/P12/P13/E01. Featured cases: P01/P03/P12/P13.
+Active scope: **ten initiatives** — P01, P02, P03, P04, P05, P08, P09, P12, P13 and the shared enabler E01. Featured cases: P01, P03, P12, P13. Selection is frozen for the final deliverables.
 
-Selection prioritizes observable cash mechanisms, complementary operating workflows and a bounded external-business experiment. Existing platform investment is the counterfactual. It does not claim every retained scope is validated or every omitted activity lacks value. Detailed rejection reasons are retained only in the archive.
+Selection prioritises observable cash mechanisms, complementary operating workflows and a bounded external-business experiment. Existing platform investment is the counterfactual.
 
-P01 and P03 retain central costs and benefit totals. P03 now exposes economic share and payment avoidability separately. P13 retains the €1m/100-store ceiling but excludes urgent-delivery savings. Markdown attribution remains a decisive condition. P12 retains the laboratory cost envelope and tests external technology licensing; internal research alone is not H3. No commercial H3 receipt is booked.
+Decisions carried into V3:
+- P12 shows its expected central-case return with conditional licence receipts (Y3–Y5); its strong downside (stop after Y2, no receipts, closure cost) covers the uncertainty.
+- Three scenarios only, weighted 30% downside / 50% base / 20% upside.
+- Cost of inaction counted only at portfolio level ([cost_of_inaction.md](../finance/cost_of_inaction.md)).
+- The approximate half-budget option is the four featured cases (51.7% of spend, E01 excluded).
+- Five-year horizon (Y0–Y5): long-cycle heavy industry.
+- Bottleneck: dispersed responsibility across four reporting lines; remedy: dedicated project trios with dual reporting ([operating model §4b](operating_model.md)).
 
-Downside now includes one year of delayed benefits, 25% lower unit gains and 15% higher costs. The base is not optimized to a target IRR. Avoided-inaction cash is zero pending causal evidence. The half-budget response is recomputed from the new envelope, retaining a shorter funded H3 experiment.
-
-The financial model and report are revised drafts. Figure production remains pending under the chart specification. Public evidence cannot validate internal eligibility, contracts or observed project returns; those are explicit pre-release conditions.
+Rejected alternatives and earlier versions are in `work/archive/`.

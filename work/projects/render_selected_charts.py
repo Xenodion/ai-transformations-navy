@@ -13,6 +13,7 @@ REPORT_ASSET = ROOT / 'deliverables/report/assets'
 ASSET.mkdir(parents=True, exist_ok=True)
 REPORT_ASSET.mkdir(parents=True, exist_ok=True)
 D = json.loads(DATA_PATH.read_text(encoding='utf-8'))
+W = D['weights']; WLABEL = f"{W['Downside']:.0%} downside / {W['Base']:.0%} base / {W['Upside']:.0%} upside"
 IDS = ['P01','P02','P03','P05','P09','P12','P13','E01','P04','P08']
 FOCUS = ['P01','P03','P12','P13']
 assert D['version'] == 'selected-2026-11-10'
@@ -104,7 +105,7 @@ ax.axvline(10,color=TEAL,linestyle='--',linewidth=1.5,label='10% portfolio scree
 for bar,v in zip(bars,irrs): ax.text(v+.6,bar.get_y()+bar.get_height()/2,f'{v:.1f}%',va='center',fontweight='bold',color=NAVY)
 ax.set_yticks(y,['Downside','Base','Upside','Expected cash']); ax.invert_yaxis(); ax.set_xlim(0,max(irrs)*1.22)
 ax.set_xlabel('Portfolio IRR (%)'); ax.set_title('Portfolio return | scenario and expected cash',loc='left',pad=14); finish(ax); ax.grid(axis='y',visible=False);ax.grid(axis='x',alpha=.45);ax.legend(frameon=False,loc='lower right')
-fig.text(.15,.025,'Expected cash uses 25% / 50% / 25% weights. IRR is calculated from weighted cash flows.',fontsize=9,color=GREY)
+fig.text(.15,.025,f'Expected cash uses {WLABEL} weights. IRR is calculated from expected cash flows.',fontsize=9,color=GREY)
 fig.subplots_adjust(left=.19,bottom=.20,top=.86);export(fig,'selected_scenario_irr')
 
 # Total discounted net value by scenario and weighted expected cash.
@@ -114,7 +115,7 @@ bars=ax.barh(y,npvs,color=[BLUE,BLUE,BLUE,ORANGE],height=.58)
 for bar,v in zip(bars,npvs): ax.text(v+.15 if v>=0 else v/2,bar.get_y()+bar.get_height()/2,f'${v:+.2f}m',va='center',ha='left' if v>=0 else 'center',fontweight='bold',color=NAVY if v>=0 else 'white')
 ax.axvline(0,color=GREY,lw=1);ax.set_yticks(y,['Downside','Base','Upside','Expected value']);ax.invert_yaxis();ax.set_xlim(min(0,min(npvs)*1.5),max(npvs)*1.25)
 ax.set_xlabel('Net present value at 10% (USD m)');ax.set_title('Portfolio value | five-year scenarios',loc='left',pad=14);finish(ax);ax.grid(axis='y',visible=False);ax.grid(axis='x',alpha=.45)
-fig.text(.15,.025,'After costs and cash tax; expected value uses 25% / 50% / 25% scenario weights.',fontsize=9,color=GREY)
+fig.text(.15,.025,f'After costs and cash tax; expected value uses {WLABEL} weights.',fontsize=9,color=GREY)
 fig.subplots_adjust(left=.19,bottom=.20,top=.86);export(fig,'selected_scenario_npv')
 
 # Incremental deterioration beyond the static baselines, as a separate sensitivity.
@@ -131,8 +132,8 @@ fig,ax=plt.subplots(figsize=(10,5.3));width=.62
 ax.bar(0,base,width,color=BLUE);ax.bar(1,avoided,width,bottom=base,color=ORANGE);ax.bar(2,decision,width,color=TEAL)
 ax.plot([width/2,1-width/2],[base,base],color=GREY,lw=1);ax.plot([1+width/2,2-width/2],[decision,decision],color=GREY,lw=1)
 for x,v,yv in [(0,base,base),(1,avoided,decision),(2,decision,decision)]:ax.text(x,yv+.12,f'${v:+.2f}m',ha='center',fontweight='bold',color=NAVY)
-ax.set_xticks([0,1,2],['Portfolio expected NPV','Additional avoided\nlosses','Illustrative decision value']);ax.set_ylabel('Present value at 10% (USD m)');ax.set_ylim(0,decision*1.25);ax.set_title('Investment value | added cost of inaction',loc='left',pad=14);finish(ax)
-fig.text(.14,.025,'Illustrative deterioration in refining margins, rig costs and retail churn beyond static baselines.\nAssumes scenario-weighted project impact, 25% tax and no incremental spending.',fontsize=9,color=GREY)
+ax.set_xticks([0,1,2],['Expected portfolio NPV\n(projects only)','Avoided cost of inaction\n(portfolio level)','Decision value']);ax.set_ylabel('Present value at 10% (USD m)');ax.set_ylim(0,decision*1.25);ax.set_title('Decision value | investing vs. not investing',loc='left',pad=14);finish(ax)
+fig.text(.14,.025,'Cost of inaction from Y2: higher refining margin at risk, higher rig rates and higher customer churn.\nProject NPVs exclude it; present values at 10% after 25% tax.',fontsize=9,color=GREY)
 fig.subplots_adjust(left=.14,bottom=.24,top=.85);export(fig,'selected_inaction_bridge')
 (ROOT/'work/finance/inaction_overlay_results.json').write_text(json.dumps({'components_pv_usd_m':components,'weighted_after_tax_cash_usd_m':add,'avoided_loss_pv_usd_m':avoided,'expected_portfolio_npv_usd_m':base,'decision_value_usd_m':decision},indent=2),encoding='utf-8')
 

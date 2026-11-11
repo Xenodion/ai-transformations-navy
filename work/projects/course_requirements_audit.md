@@ -1,15 +1,25 @@
-# Course requirements audit
+# Course requirements audit (V3, 11 November 2026)
 
-Basis: *AI Strategy - Albert School - Master 2026.pdf*, particularly its final memo, change-plan and board-defence slides; supported by the two course synthesis documents. The synthesis documents contain interpretations and examples; illustrative Helios figures and prescribed percentages are not automatically binding targets for TotalEnergies.
+Basis: `course/lectures/AI_Strategy_Final_Project_Requirements.md` and `AI_Strategy_Course_Synthesis_Capstone_Playbook.md`. Course frameworks shape the content; the report itself is written as an internal document to the CEO and Board and does not cite the course.
 
-| Topic | Status in the report | Remaining work |
+| Requirement | Where in V3 | Status |
 | --- | --- | --- |
-| Strategic diagnosis and operating model | Covered: existing capabilities, evidence limits, proposed hub-and-spoke delivery and decision rights. | Validate the bottleneck and staffing with business owners. |
-| Three Horizons portfolio and sourcing | Covered: ten initiatives, four detailed cases, investment mix, approximately half-budget alternative and a portfolio-wide sourcing, dependency and owner canvas. | Confirm proposed owner appointments, existing contracts and dependencies. |
-| Costs and financing | Covered: Y0–Y5 spend, CAPEX/OPEX, allocation for the four cases and an indicative six-category Y1–Y3 bridge with Y0 separately. | Replace the top-down classification assumptions with project and supplier evidence before a real commitment; it is not a bottom-up cost estimate. |
-| Scenarios, hurdle and inaction | Covered: probabilities, project hurdles, portfolio scenarios, J-curves and separate inaction sensitivity. | The downside is negative NPV but positive IRR and five-year cumulative cash. The synthesis asserts negative downside IRR; the original course requires an honest downside, not a fabricated negative IRR. The modelled downside is not a guaranteed maximum loss. |
-| Decision and gates | Covered: $21.94m total planning envelope, up to $2.90m Y0, proposed 16 November decision, staged decisions and project-level gates. | Validate feasibility and timing of the proposed tests; commitment limits are not a proven loss cap. |
-| Change management | Covered in report and supporting three-part plan: four risks and owners, stakeholders, consultation, cadence, three training tiers, adoption measures and proposed stop rules. | Final formatting must fit three pages; validate site-specific thresholds and accountable appointments. |
-| Final delivery and defence | Report provides the starting material. | Two-page memo, detailed supporting plans and a 15-minute deck plus five-minute Q&A remain to be prepared. Do not claim the complete submission is finished. |
+| Decision sentence, ask, tranche, date | Executive decision | Done: $21.94m / 5 years / ENPV $5.62m / Tranche 1 $2.90m / 16 Nov 2026 |
+| Readiness (5 dimensions, stage, bottleneck) | §1 table and chart | Done: stage implementing → scaling; bottleneck = dispersed delivery responsibility |
+| Operating model archetype and trade-offs | §2 | Done: strong hub-and-spoke + dedicated trios, dual reporting |
+| Three Horizons mix and deviation | §3 horizon mix | Done: 70.5/19.4/10.2 one-time; 65.6/21.4/13.0 total; H1 tilt justified |
+| Sourcing scored | §3 six-factor table | Done for the four featured cases |
+| Owners and dependencies | §3 ownership table | Done (proposed roles) |
+| Envelope, CAPEX/OPEX, six categories, run cost | §3 spending, allocation | Done: 5-year envelope justified; 3-year view $16.40m; run $2.74–2.79m/yr from Y4 |
+| BU co-funding | §3 | Done: 40% Y2, 60% Y3–Y5 (proposal) |
+| Three scenarios, probabilities, ENPV | §3 portfolio economics | Done: 30/50/20; downside NPV negative, IRR +5.7% |
+| Hurdle = WACC + premium; IRR headroom | §3 discount rate | Done: 10% screen; expected IRR 27.8% |
+| Cost of inaction / decision value | §3 | Done: portfolio level only, +$1.32m → $6.94m |
+| J-curve trough and break-even | §3 J-curve, funding chart | Done: −$10.2m expected trough, break-even 3.4 years |
+| Half-budget answer | §3 | Done (approximate, four featured cases) |
+| Kill criteria (metric, threshold, date, owner, action) | §3 programme gates, §4 project gates | Done |
+| Four failure modes with owners | §5 change risks | Done (+ dual-reporting friction) |
+| Stakeholders, inverted cadence, 3 training tiers, adoption staircase | §5 | Done |
+| Two-page memo, deck | — | Next: derive from V3 |
 
-Interpretive caution: the slide deck's change-plan exercise explicitly requests three pages; the memo examples use seven/eight blocks with a two-to-three-page upper limit. The agreed team target remains a two-page memo. The slide examples do not make an assumed negative IRR, a 70/20/10 allocation, or a specific co-funding schedule compulsory facts.
+Accepted deviation: the downside IRR is positive (5.7%) while NPV is negative at 10%; the team kept three scenarios without an extra stress case.

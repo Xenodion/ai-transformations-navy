@@ -1,8 +1,21 @@
-# Cost of inaction
+# Cost of inaction (V3, 11 November 2026)
 
- Cost of inaction
+**Rule:** the cost of inaction is counted **only at portfolio level**. Project NPVs, IRRs, paybacks and J-curves are pure profitability against today's operating baseline and never include it.
 
-The baseline includes existing AI, maintenance, trading, retail and research programmes. Doing nothing here means not funding these incremental experiments, not abandoning AI. Potential consequences are slower capture of eligible operating margin, delayed learning and difficulty retaining scarce delivery capability. The magnitude and programme-specific causality are unverified.
+**Mechanism:** project benefits are measured against a static baseline. Without investment the baseline itself deteriorates; the avoided part of that deterioration is a separate effect, added once in the portfolio decision bridge.
 
-**Decision treatment:** zero additional avoided-erosion cash is booked. The project benefits already compare against continuation; adding the same missed margin as an inaction loss would double count. Talent and customer losses require distinct cohorts, causal effects, economic ownership and incremental prevention costs before any uplift is recognized. A course example or a percentage of group revenue does not validate these inputs. Present the opportunity cost qualitatively and the unadjusted scenarios quantitatively. This meets the inaction discussion without manufacturing a positive downside.
+| Exposure from Y2 (assumption) | Linked scope | Additional gross benefit at full adoption, $m/year |
+| --- | --- | ---: |
+| Refining margin per unrecovered barrel +$1/bbl | P01 sites | 0.287 |
+| Avoidable rig spread cost +$0.05m/day | P03 campaigns | 0.360 |
+| Churn +1 pp on 1.2m eligible accounts | P08 | 0.162 |
 
+Cash is scaled by each project's scenario-weighted benefit ramp (30/50/20), taxed at 25% and discounted at 10%.
+
+| Item | PV at 10%, $m |
+| --- | ---: |
+| Expected portfolio NPV (projects only) | 5.62 |
+| Avoided cost of inaction (P01 0.51, P03 0.54, P08 0.27) | 1.32 |
+| **Decision value** | **6.94** |
+
+Separate timing view: delaying the base programme one year costs $0.65m of NPV. Inputs: [inaction_overlay.json](inaction_overlay.json); results: [inaction_overlay_results.json](inaction_overlay_results.json), produced by `work/projects/render_selected_charts.py`. The three exposures are assumptions tracked as leading indicators, not forecasts.

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {marked} from 'marked';
 const dir='deliverables/report';
-const md=await fs.readFile(`${dir}/full_strategy_report_draft.md`,'utf8');
+const md=await fs.readFile(`${dir}/${process.argv[2]??"full_strategy_report.md"}`,"utf8");
 let html=marked.parse(md,{gfm:true});
 const toc=[];
 html=html.replace(/<h2>(.*?)<\/h2>/g,(_,title)=>{const id=`section-${toc.length+1}`;toc.push({id,title});return `<h2 id="${id}">${title}</h2>`;});
