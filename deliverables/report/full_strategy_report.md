@@ -544,15 +544,15 @@ Each project lead records eligible, trained and active users, with a target and 
 
 ### Change risks, early warning and ownership
 
-**Specialist capacity and retention — CHRO and Digital Factory lead.** Monitor vacancies, unfilled secondments and single points of failure monthly. Record a named deputy and handover plan for each trio member before pilots begin; cross-train and reschedule deployments if capacity is unavailable. Line managers keep staffing authority and agree each secondment.
+**Specialist capacity and retention.** *Owners: CHRO and Digital Factory lead.* Monitor vacancies, unfilled secondments and single points of failure monthly. Record a named deputy and handover plan for each trio member before pilots begin; cross-train and reschedule deployments if capacity is unavailable. Line managers keep staffing authority and agree each secondment.
 
-**Manager and frontline adoption — branch sponsors and site managers.** Track protected expert time, attendance at pilot reviews, active use and operator feedback. When a team cannot release its expert, the branch sponsor arranges backfill within the allowance or returns for a revised scope and budget. No deployment displaces safety procedures or human operational authority.
+**Manager and frontline adoption.** *Owners: branch sponsors and site managers.* Track protected expert time, attendance at pilot reviews, active use and operator feedback. When a team cannot release its expert, the branch sponsor arranges backfill within the allowance or returns for a revised scope and budget. No deployment displaces safety procedures or human operational authority.
 
-**Dual-reporting friction — project leads and line managers.** Agree each trio member's objectives jointly before launch: project objectives with the project lead, professional standards with the line manager. Conflicts on priorities escalate to the branch sponsor within a week.
+**Dual-reporting friction.** *Owners: project leads and line managers.* Agree each trio member's objectives jointly before launch: project objectives with the project lead, professional standards with the line manager. Conflicts on priorities escalate to the branch sponsor within a week.
 
-**Governance and employee trust — General Counsel, DPO, HSE and employee-relations leads.** Before pilot release, assess data rights, security, privacy, operational safety and required employee-representative consultation. Missing clearance or an unsafe incident pauses the affected deployment immediately; the relevant control owner determines remediation and approves restart.
+**Governance and employee trust.** *Owners: General Counsel, DPO, HSE and employee-relations leads.* Before pilot release, assess data rights, security, privacy, operational safety and required employee-representative consultation. Missing clearance or an unsafe incident pauses the affected deployment immediately; the relevant control owner determines remediation and approves restart.
 
-**Premature cancellation or escalation — CFO and portfolio sponsor.** Review the investment trough alongside spend, adoption and leading operating indicators quarterly. Follow the agreed gates instead of cancelling solely because early cash flow is negative; stop or redesign when prospective economics, safety or contractual conditions fail.
+**Premature cancellation or escalation.** *Owners: CFO and portfolio sponsor.* Review the investment trough alongside spend, adoption and leading operating indicators quarterly. Follow the agreed gates instead of cancelling solely because early cash flow is negative; stop or redesign when prospective economics, safety or contractual conditions fail.
 
 ### Stakeholders and communication
 

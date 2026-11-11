@@ -231,3 +231,4 @@ work/finance/*.inspect.ndjson
 # Local plotting dependencies and Office lock files
 work/projects/.plot-deps/
 ~$*
+work/docx_build/node_modules/
