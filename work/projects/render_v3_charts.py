@@ -12,7 +12,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
-from render_selected_charts import (D, NAVY, BLUE, TEAL, ORANGE, GREY, RED, PALE, export, finish)
+from render_selected_charts import (D, NAVY, BLUE, TEAL, ORANGE, GREY, RED, PALE, WLABEL, export, finish)
 
 # --- Operating model: today vs proposed -------------------------------------------------
 fig, axes = plt.subplots(1, 2, figsize=(13, 6.2))
@@ -79,24 +79,41 @@ fig.subplots_adjust(left=.24, bottom=.17, top=.86)
 export(fig, 'v3_readiness')
 
 # --- Funding tranches and gates ----------------------------------------------------------------
-cost = D['portfolio']['annual_cost']
-cum_exp = np.cumsum(D['portfolio']['Weighted']['cash'])
-fig, ax = plt.subplots(figsize=(11.5, 5.4)); years = np.arange(6)
-bars = ax.bar(years, cost, color=[ORANGE] + [BLUE] * 5, width=.55, label='Gross spend released (USD m)')
-for b, v in zip(bars, cost):
-    ax.text(b.get_x() + b.get_width() / 2, v + .15, f'${v:.2f}m', ha='center', fontsize=9, weight='bold', color=NAVY)
-ax.plot(years, cum_exp, color=TEAL, marker='o', lw=2.3, label='Expected cumulative net cash (USD m)')
-ax.axhline(0, color=GREY, lw=1)
-top = max(cum_exp) + 2.5
-ax.text(0, cost[0] + 1.0, 'Tranche 1\napproved now', ha='center', fontsize=8.5, color=ORANGE, weight='bold')
+# Base case (the plan): rows per project are [benefit, operating cost, capex, cash tax, net cash].
+GREEN, TAX = '#84C225', '#F4A6A9'
+rows = sum(np.array(c['scenarios']['Base']['rows'], float) for c in D['projects'].values())
+benefit, spend, tax = rows[:, 0], rows[:, 1] + rows[:, 2], rows[:, 3]
+cum_base = np.cumsum(rows[:, 4])
+assert np.allclose(rows[:, 4], D['portfolio']['Base']['cash'])
+fig, ax = plt.subplots(figsize=(11.5, 6)); years = np.arange(6); w = .55
+ax.bar(years, benefit, w, color=GREEN, label='Benefits (cash gains)')
+ax.bar(years, -spend, w, color=RED, label='Investment and run costs')
+ax.bar(years, -tax, w, bottom=-spend, color=TAX, label='Cash tax on gains')
+for x, b, s, t in zip(years, benefit, spend, tax):
+    # ponytail: labels sit inside the bars next to zero, clear of the J-curve line
+    if b > 0: ax.text(x, .3, f'+{b:.1f}', ha='center', va='bottom', fontsize=9, weight='bold', color=NAVY)
+    ax.text(x, -.3, f'-{s:.1f}', ha='center', va='top', fontsize=9, weight='bold', color='white')
+ax.plot(years, cum_base, color=NAVY, marker='o', lw=2.6, zorder=4, label='Cumulative net cash (J-curve)')
+ax.axhline(0, color=NAVY, lw=1)
+low = int(np.argmin(cum_base))
+ax.annotate(f'Trough -${-cum_base[low]:.1f}m\n(end Y{low})', (low, cum_base[low]), xytext=(low + .45, cum_base[low] - 2.3),
+            fontsize=9, weight='bold', color=NAVY, bbox=dict(fc='white', ec='none', pad=1), arrowprops=dict(arrowstyle='-', color=NAVY, lw=.8))
+k = int(np.argmax(cum_base > 0)); be = k - 1 + -cum_base[k - 1] / (cum_base[k] - cum_base[k - 1])
+ax.scatter([be], [0], s=70, color='white', edgecolors=NAVY, linewidths=2, zorder=5)
+ax.annotate(f'Break-even\nafter {be:.1f} years', (be, 0), xytext=(be - 1.0, 4.2), fontsize=9, weight='bold', color=NAVY,
+            arrowprops=dict(arrowstyle='-', color=NAVY, lw=.8))
+top = max(benefit.max(), cum_base.max()) + 4
 for x, label in [(0.5, 'Gate 0\n~day 90'), (1.5, 'Gate 1\nmonth 12'), (2.5, 'Gate 2\nmonth 24'), (3.5, 'Review\nmonth 36')]:
-    ax.axvline(x, color=RED, ls='--', lw=1.2)
-    ax.text(x + .04, top - .3, label, fontsize=8.5, color=NAVY, va='top')
-ax.set_xticks(years, [f'Y{i}' for i in years]); ax.set_ylim(min(cum_exp) - 1.5, top)
-ax.set_ylabel('USD m'); ax.set_title('Staged funding | each release follows a verified gate', loc='left', pad=14)
-finish(ax); ax.legend(frameon=False, loc='lower right', fontsize=9)
-fig.text(.07, .02, f'Expected trough -${-min(cum_exp):.1f}m at end Y1; expected break-even after {D["portfolio"]["Weighted"]["payback"]:.1f} years. '
-         'Gates release funding project by project; a failed gate stops further avoidable spend.', fontsize=8.5, color=GREY)
-fig.subplots_adjust(bottom=.15, top=.86)
+    ax.axvline(x, color=GREY, ls=(0, (4, 3)), lw=1)
+    ax.text(x + .04, top - .3, label, fontsize=8.5, color=GREY, va='top')
+ax.text(0, top - .3, 'Tranche 1\napproved now', ha='center', va='top', fontsize=8.5, color=NAVY, weight='bold')
+ax.set_xticks(years, [f'Y{i}' for i in years]); ax.set_ylim(min(cum_base.min(), -(spend + tax).max()) - 4, top)
+ax.set_ylabel('USD m (base case)'); ax.set_title('Staged funding | costs first, gains from Y2, gates at each release', loc='left', pad=14)
+finish(ax); ax.legend(frameon=False, loc='upper left', bbox_to_anchor=(0, -.08), ncol=4, fontsize=9)
+wc = np.cumsum(D['portfolio']['Weighted']['cash'])
+fig.text(.07, .015, f'Base case, undiscounted, after tax. Expected value ({WLABEL}): trough -${-wc.min():.1f}m, '
+         f'\nbreak-even after {D["portfolio"]["Weighted"]["payback"]:.1f} years. A failed gate stops further avoidable spend.',
+         fontsize=8.5, color=GREY)
+fig.subplots_adjust(bottom=.2, top=.88)
 export(fig, 'v3_funding_gates')
 print('V3 charts exported')

@@ -70,15 +70,15 @@ export(fig,'selected_portfolio_map')
 labels=['H1','H2','H3']
 parts=[sum(sum(c['annual_cost']) for c in D['projects'].values() if ('H1' if c['horizon']=='Enabler' else c['horizon'])==h) for h in labels]
 total=sum(parts)
-fig, ax=plt.subplots(figsize=(11,4.2)); left=0
+fig, ax=plt.subplots(figsize=(11,2.0)); left=0
 for h,v in zip(labels,parts):
-    ax.barh(0,v/total*100,left=left,color=HORIZON[h],height=.45,edgecolor='white',linewidth=1)
-    ax.text(left+v/total*50,0,f'{h}\n{v/total:.1%}',ha='center',va='center',color='white',fontsize=11,fontweight='bold')
+    ax.barh(0,v/total*100,left=left,color=HORIZON[h],height=.6,edgecolor='white',linewidth=1)
+    ax.text(left+v/total*50,0,f'{h}\n{v/total:.1%}',ha='center',va='center',color='white',fontsize=10,fontweight='bold')
     left+=v/total*100
 ax.set_yticks([0],['Y0–Y5']); ax.set_xlim(0,100); ax.set_xlabel('Share of total gross spending (%)')
 ax.set_title('Portfolio investment | horizon mix',loc='left',pad=14); finish(ax); ax.grid(axis='x',alpha=.45); ax.grid(axis='y',visible=False)
-fig.text(.14,.04,f'Total gross programme cost: ${total:.2f}m. Shared controls are included in H1.',fontsize=9,color=GREY)
-fig.subplots_adjust(left=.14,bottom=.32,top=.78)
+fig.text(.14,-.08,f'Total gross programme cost: ${total:.2f}m. Shared controls are included in H1.',fontsize=9,color=GREY)
+ax.set_ylim(-.5,.5); fig.subplots_adjust(left=.14,bottom=.3,top=.72)
 export(fig,'selected_horizon_mix')
 
 # Signed weighted NPV contribution by horizon, undiscounted? common 10% screen using weighted annual net cash.
@@ -112,7 +112,7 @@ fig.subplots_adjust(left=.19,bottom=.20,top=.86);export(fig,'selected_scenario_i
 npvs=[D['portfolio'][sc]['npv'] for sc in scenarios]
 fig,ax=plt.subplots(figsize=(10,5.2)); y=np.arange(len(scenarios))
 bars=ax.barh(y,npvs,color=[BLUE,BLUE,BLUE,ORANGE],height=.58)
-for bar,v in zip(bars,npvs): ax.text(v+.15 if v>=0 else v/2,bar.get_y()+bar.get_height()/2,f'${v:+.2f}m',va='center',ha='left' if v>=0 else 'center',fontweight='bold',color=NAVY if v>=0 else 'white')
+for bar,v in zip(bars,npvs): ax.text(max(v,0)+.15,bar.get_y()+bar.get_height()/2,f"{'+' if v>=0 else '−'}${abs(v):.2f}m",va='center',ha='left',fontweight='bold',color=NAVY)
 ax.axvline(0,color=GREY,lw=1);ax.set_yticks(y,['Downside','Base','Upside','Expected value']);ax.invert_yaxis();ax.set_xlim(min(0,min(npvs)*1.5),max(npvs)*1.25)
 ax.set_xlabel('Net present value at 10% (USD m)');ax.set_title('Portfolio value | five-year scenarios',loc='left',pad=14);finish(ax);ax.grid(axis='y',visible=False);ax.grid(axis='x',alpha=.45)
 fig.text(.15,.025,f'After costs and cash tax; expected value uses {WLABEL} weights.',fontsize=9,color=GREY)
