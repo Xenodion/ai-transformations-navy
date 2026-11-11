@@ -1,27 +1,11 @@
-# Strategic thesis and featured project selection
+# Selection decision — 10 November 2026
 
-**Status:** Under reconstruction, 10 November 2026; [issue #11](https://github.com/Xenodion/ai-transformations-navy/issues/11) remains open. The case studies use explicit scenarios that require validation, not approved TotalEnergies investment decisions.
+User-authorized refinement preserves the strongest existing work rather than rebuilding the strategy. Active scope: P01/P02/P03/P05/P09/P12/P13/E01. Featured cases: P01/P03/P12/P13.
 
-## Working hypothesis and proposed operating model
+Selection prioritizes observable cash mechanisms, complementary operating workflows and a bounded external-business experiment. Existing platform investment is the counterfactual. It does not claim every retained scope is validated or every omitted activity lacks value. Detailed rejection reasons are retained only in the archive.
 
-TotalEnergies already has digital and AI capabilities and industrial data programmes. The hypothesis is that selected operational workflows can capture additional value when a branch owner, data specialists and frontline users deliver and measure a specific use case together. The group-wide bottleneck remains to be tested; Vincent's Argedis experience is a local observation (CLM-074), not proof about every branch. See [readiness](readiness_bottleneck.md) and [operating models](operating_model.md).
+P01 and P03 retain central costs and benefit totals. P03 now exposes economic share and payment avoidability separately. P13 retains the €1m/100-store ceiling but excludes urgent-delivery savings. Markdown attribution remains a decisive condition. P12 retains the laboratory cost envelope and tests external technology licensing; internal research alone is not H3. No commercial H3 receipt is booked.
 
-## Featured cases
+Downside now includes one year of delayed benefits, 25% lower unit gains and 15% higher costs. The base is not optimized to a target IRR. Avoided-inaction cash is zero pending causal evidence. The half-budget response is recomputed from the new envelope, retaining a shorter funded H3 experiment.
 
-| ID | Working case | Primary question | Rate and financial basis |
-| --- | --- | --- | --- |
-| P01 | [Refining predictive maintenance](../projects/case_p01_refining_pdm.md) | Can incremental alerts prevent downtime and recover saleable production? | H1; 9.5% assumed hurdle; verify site contribution and existing capability. |
-| P03 | [Deepwater drilling advisory](../projects/case_p03_deepwater_drilling.md) | Can contractually avoidable rig days reduce attributable cash cost? | H2 provisional; 11% assumed hurdle; validate operator, data and contractor rights. |
-| P11 | [Customer-side flexibility](../projects/case_p11_virtual_power_plant.md) | Can an incremental customer offer be built on existing aggregation capabilities? | H3 provisional; 11% for conditional commercial illustration; learning gates first. |
-| P13 | [Retail forecasting and dynamic pricing](../projects/case_p13_retail_station_demand.md) | Can the proposed 100-station pilot deliver incremental benefits on a €1m indicative investment? | H1; 9% assumed hurdle; 2–3 year assumed payback objective (CLM-078, CLM-079). |
-
-The common value register E01 is a governance enabler, not a separate guaranteed cash generator. All projects and scenarios need independent review before portfolio consolidation. Branch reference rates and project adjustments are fixed in [discount rate policy](../finance/discount_rate_policy.md).
-
-## Alternatives and objections
-
-- **New group-wide data platform first:** not the working priority because AspenTech and Cognite initiatives already exist. A specific missing data slice remains a legitimate investment if a use case demonstrates the need.
-- **Standalone administrative AI/headcount case:** not a featured case; time saved is not automatically cash. Retain P05 for a short candidate estimate and quantify real cost avoidance separately.
-- **Autonomous industrial operations:** rejected as a featured operating assumption; maintain human operating and safety authority.
-- **Different portfolio:** the chosen cases are provisional, and a better-evidenced project can replace one if the economic or operational case fails. Diversity of branches or the course mix alone does not prove value.
-
-Before closing this step, compare the revised cases against existing capabilities, alternatives, operator rights and downside scenarios, then reconcile the selection and sequencing canvas with the financial model.
+The financial model and report are revised drafts. Figure production remains pending under the chart specification. Public evidence cannot validate internal eligibility, contracts or observed project returns; those are explicit pre-release conditions.

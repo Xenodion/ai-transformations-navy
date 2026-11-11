@@ -172,3 +172,9 @@ Add one row per material fact, calculation, assumption, local observation, or un
 - [ ] Formula and input IDs are present for each derived figure; assumed inputs are labeled.
 - [ ] Limits, contradictions, and unknowns remain visible in downstream work.
 
+
+## Additional H3 qualification sources, 10 November 2026
+
+- SRC-H3-01: TotalEnergies, “Innovating to Accelerate the Energy Transition”, https://totalenergies.com/company/strength/innovation-rd, accessed 10 Nov 2026; sections on six strategic R&T programmes and SAF partnerships. Verified public disclosure of existing capabilities, not proof of a new licensing gap.
+- SRC-H3-02: Infinium, “Projects”, https://infinium.energy/projects, accessed 10 Nov 2026, Southeast Asia section describing April 2026 technology licensing. Company announcement; no independently verified financial return. Supports a business-model archetype only.
+- H3 proposal, buyer economics, novelty, IP rights and the $2.85m feasibility ceiling remain explicit assumptions/unknowns. See `sources/synthesis/2026-11-10_h3_licensing_option.md`.

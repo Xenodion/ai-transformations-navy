@@ -1,32 +1,41 @@
-# Indicative 14-initiative portfolio economics
+# Selected portfolio economics
 
-**Working version — 10 November 2026.** Four detailed cases (P01, P03, P11, P13), nine rough candidate estimates, and shared enabler E01 are included once. No portfolio is approved. The financial source of truth is `portfolio_model_14_revised.xlsx`; branch and project rates are in `discount_rate_policy.md`. P13 is modelled in EUR then converted to USD at the editable 1.1165 USD/EUR assumption. All material project quantities and operating economics are assumptions, not verified company results.
+ Consolidated financial decision
 
-## Annual cash and decision scenarios
+**Calculation on assumptions:** gross base programme cost **$16.287m**, covering Y0 and five operating years. Y0 is the decision period; Y1–Y5 are annual periods after it. Gross cost excludes cash tax; NPV includes modelled tax. All cash is nominal, post-tax, unlevered and translated at the unchanged 1.1165 USD/EUR assumption. The 10% common screen is a team assumption (7% published impairment WACC proxy plus 3pp), not a disclosed corporate investment hurdle. Project screens retain 9–12% rates.
 
-USD million, year-end periods, no terminal value. The NPV is the **sum of individual project NPVs at their respective hurdles**, not a single-rate portfolio NPV.
+| Scenario | NPV at 10%, USD m | IRR |
+| --- | --- | --- |
+| Downside | -5.370 | -12.3% |
+| Base | +3.491 | 26.4% |
+| Upside | +6.884 | 41.6% |
+| Weighted | +2.124 | 19.6% |
+| Severe stress | -8.045 | -26.9% |
 
-| Scenario | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 | Sum project NPVs |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Downside | -3.881 | -8.879 | +0.835 | +3.521 | +5.555 | +5.555 | -1.307 |
-| Base | -3.697 | -8.140 | +1.822 | +4.530 | +7.055 | +8.055 | +3.671 |
-| Upside | -3.697 | -7.828 | +2.516 | +5.600 | +8.528 | +9.697 | +7.346 |
 
-Illustrative weights of 25% / 50% / 25% give a weighted NPV of **$+3.345m**. These weights are subjective team assumptions, not empirical probabilities; edit them in the workbook. A separate **severe stress of $-11.624m** uses 65% benefits, 120% costs and continued H3 spending without P11 receipts. It is not included in the weighted calculation. The near-zero downside is a milder, gated scenario and is not a worst-case guarantee.
+**Scenario assumptions:** downside has 75% of central unit benefits, 115% of capital, launch and recurring costs, and benefits delayed one year (no catch-up outside Y5). Base retains the original ramp. Upside has 115% unit benefits and each central adoption fraction multiplied by 1.15, capped at 100%, at base costs. These are judgments, not calibrated frequencies. The H3 downside stops after Y2 and retains a $0.10m Y3 exit allowance. H1/H2 downside conservatively retains full operating spending: gate savings are not assumed. A separate severe stress also delays benefits one year, uses 65% benefits and 120% costs, and retains H3 spending. It measures failed cost control, not the expected gated response.
 
-Because scenario weights already reflect uncertainty while hurdle premiums also adjust for project risk, finance must review possible double counting before interpreting this weighted measure as an economic expected NPV. The three outcomes do not model all possible losses; the separate stress is a challenge, not a fourth probability-weighted scenario.
+Weights are subjective 25%/50%/25%. Weighted IRR is computed from weighted annual cash, never an average of IRRs. No terminal value, H3 receipts or avoided-inaction uplift is booked. H3 costs are retained in base and upside even though revenue is zero. The severe stress is unweighted and is not a maximum-loss estimate.
 
-Downside assumes 90% of benefit and 105% costs, slower P13 adoption, and H3 stop after Y2 with $0.15m P11 and $0.10m P12 Y3 exit costs. Both stop feasibility and exit allowances require contractual validation. Base assumes the conditional P11 250 MW commercial case succeeds; upside increases benefits by 15%. H3 may mature beyond the five-year valuation window, so no H3 payback or terminal value is invented. The absence of P12 receipts is not proof of no future option value. P07 expected avoided incidents are excluded from hard cash and E01 costs are counted once.
+| Annual cash, USD m | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Downside | -2.641 | -6.666 | -1.239 | 0.741 | 2.417 | 3.460 |
+| Base | -2.297 | -4.748 | 1.649 | 3.417 | 4.758 | 4.708 |
+| Upside | -2.297 | -4.409 | 2.579 | 4.854 | 5.707 | 5.657 |
+| Weighted | -2.383 | -5.143 | 1.160 | 3.107 | 4.410 | 4.633 |
 
-## Illustrative initial budget mix
+| Base gross cost | Y0 | Y1 | Y2 | Y3 | Y4 | Y5 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Annual release ceiling | 2.297 | 5.797 | 1.762 | 2.094 | 2.144 | 2.194 |
 
-The base one-time investment (Y0–Y1 CAPEX plus Y1 launch expenses, excluding recurring OPEX and taxes) is **$11.267m**. It consists of H1 **$6.567m (58.3%)**, H2 **$1.900m (16.9%)**, H3 **$2.500m (22.2%)** and shared E01 governance **$0.300m (2.7%)**. The workbook calculates the unrounded shares to 100%; rounded percentages may not add exactly. This is a modelled programme perimeter, not an approved budget; later running costs and scenario-dependent changes are additional.
 
-## Illustrative inaction-adjusted decision
+Weighted cumulative cash trough is −$7.526m; simple interpolated payback is 3.74 years. Fund the trough, not just CAPEX. A base gross ceiling is not a promise that overruns are funded: the downside quantifies an overrun requiring a stop, resize or new approval.
 
-A separate [portfolio inaction overlay](cost_of_inaction.md) models three unverified exposure pools and assumes the programme avoids 50% of their erosion. On unrounded cached workbook cash at a common 10% rate, avoided loss has PV +$1.571m and the decision NPVs are +$0.197m / +$5.204m / +$8.891m for downside / base / upside; the weighted path has NPV +$4.874m and IRR 23.1%. This overlay is conditional on non-overlap, causal effect and sufficient funding, and differs from the workbook's project-rate NPVs. The spreadsheets remain unchanged.
+**Accounting limits:** 25% cash tax on positive annual surplus after straight-line depreciation of CAPEX over five years; no loss carry-forward, working capital, financing or terminal value. This simplified tax convention and unchanged cost assumptions need jurisdictional and procurement validation. Costs include launch training but do not prove all staff backfill is funded. Before G0, reconcile vendor quotes and staff days against the ceiling; do not treat existing employee time as free. The initial spending is not a contractual loss cap.
 
-## Controls before a decision
+#
+## Reproduction and limits
 
-The indicative portfolio is an aggregation, not evidence that 14 projects are funded or additive. Validate eligible operational scope and existing capabilities, vendor costs, economic ownership, taxes, working capital, financial capture and contractually unavoidable costs. In particular, P11's conditional revenue and H3 gate timing are decisive. Check overlaps among P01/P10, P03/P06, P02/P03 and P06/P09; confirm no double count with group programmes. All 14 inclusion controls, project assumptions and scenario weights are editable in the workbook. A positive NPV is not an approval.
+Run `node work/finance/build_workbook.mjs`, then bundled Python `work/finance/reconcile_selected.py`. The checker independently recomputes all 960 annual benefit/OPEX/CAPEX/tax/net cells from workbook inputs and scenarios, checks the 18 consolidated cumulative flows, scans cached formula errors and verifies the half-budget limit. JSON is a derived chart export, not an editable second model. Re-run after any change. Native Excel recalculation has not been performed for this version.
 
+**Why the half-budget portfolio is not simply the four featured cases.** The featured cases were selected to explain the strategy and its different decision mechanisms, not to fit a 50% spending limit. P01 + P03 + P12 + P13 cost **$11.347m**; retaining the required E01 controls brings that to **$12.287m**, or **75.4%** of the full envelope, against **$8.144m** available. Even limiting P12 to Y0–Y2 plus closure gives **$11.037m**. Keeping all four at half budget would therefore require redesigned asset/store scopes, fixed-versus-variable costs and benefit ramps. Proportional scaling would be misleading. The constrained alternative instead preserves complete, costed operating cases and one bounded H3 experiment. It is a feasible response, not a claim of an optimized subset across all possible scope redesigns.

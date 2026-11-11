@@ -1,0 +1,24 @@
+{
+  "description": "Illustrative deterioration beyond static project baselines, not a forecast",
+  "discount_rate": 0.1,
+  "tax_rate": 0.25,
+  "first_year": 2,
+  "last_year": 5,
+  "items": [
+    {
+      "project": "P01",
+      "description": "Refining additional cash margin per recovered barrel",
+      "incremental_gross_full_scale_usd_m": 0.2874375
+    },
+    {
+      "project": "P03",
+      "description": "Additional avoidable rig cost versus $0.4m/day baseline",
+      "incremental_gross_full_scale_usd_m": 0.36
+    },
+    {
+      "project": "P08",
+      "description": "Additional churn of one percentage point, 9% retained",
+      "incremental_gross_full_scale_usd_m": 0.162
+    }
+  ]
+}

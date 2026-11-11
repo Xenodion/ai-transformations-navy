@@ -1,25 +1,17 @@
-# Step 20 — Governance, Change Enablement, and Stage-Gate Kill Criteria
+# Gates and adoption
 
-> **Review status (9 November 2026): Under reconstruction. Figures, gates and claims in this draft are not approved for decision use; see [independent review](../research/astra_tradeoffs_review.md) and [correction plan](../research/correction_plan_preliminary.md).
+ Release gates, accountability and adoption
 
-## Revised release rules
+Segment sponsors own operating change; Finance signs baseline and incremental cash; Digital Line/Digital Factory owns reusable technical controls; HSE, cyber and Legal retain veto rights. P01 belongs to refining, P02/P03 to upstream, P09 to LNG, P13 to Marketing & Services, P05/E01 to Corporate and P12 to OneTech with a commercial/IP sponsor. These are proposed roles, not claimed internal appointments.
 
-This section supersedes conflicting release rules in the historical draft below. Project owners and finance must agree actual dates, measurable thresholds and spending authority before the first release; neither the old annual model nor public sources establish them.
+| Gate | Metric, threshold and deadline | Owner and action |
+| --- | --- | --- |
+| G0 before each Y0 purchase order | 100% selected scopes have existing-solution inventory, economic/data rights, vendor/staff cost build and signed comparison protocol | Segment sponsor + Finance; no order for an unready scope. P12 also needs a distinct external licensing hypothesis and usable IP. |
+| G1 before Y2 release | Zero unresolved critical safety/privacy issues; at least 90% pilot users trained and 60% eligible decisions recorded over the last four weeks, or a workflow-specific threshold agreed before launch | Operations + HSE; pause new spend for unsafe or unused workflows. Finance records cash separately from usage. |
+| Cash scale gate before each expansion | Positive prospective NPV at the project's hurdle using measured effects and remaining avoidable costs; no duplicate benefit pools | Sponsor + Finance; stop or resize on failure. No automatic rollout from a positive original NPV. |
+| P12 before Y3 | Technical replication, IP clearance and documented third-party paid-evaluation interest as defined in §6.3 | OneTech + Legal + commercial sponsor; stop or reclassify when the external-business thesis fails. |
+| Quarterly portfolio review | Actual spending, commitments, cash attribution, adoption, exceptions and cost-to-complete | Finance and sponsors; unapproved overruns receive no next tranche. Retain sunk and non-cancellable costs in the forecast. |
 
-| Gate | Evidence before decision | Responsible roles | Continue or stop |
-| --- | --- | --- | --- |
-| G0: eligibility and baseline | Eligible asset or station perimeter, existing solutions, data and contract rights, comparison group, safety checks, full pilot cost and cancellable commitments. | Business owner, finance, data/security and legal where applicable | Authorise only the bounded pilot. No automatic approval of the reserve. |
-| G1: pilot and operational safety | Data quality, user adoption, measured operational outcome versus counterfactual, safety incidents, incurred and committed costs. Thresholds and sample are agreed before the trial. | Operational owner, finance, HSE and workforce representatives where applicable | Continue, extend or stop on evidence; record already paid and unavoidable costs. |
-| G2: conditional scaling | Eligible sites or rigs, attribution to TotalEnergies, verified incremental cash mechanism, complete rollout and run costs, tax treatment, dependency checks and a prospective investment case. | Branch sponsor and finance | Release only the next authorised increment when future benefits justify future costs and risk. |
-| H3 learning | Validate the offer's novelty, customer participation, technical and regulatory conditions and cost of reaching the next test. | Venture owner, commercial, risk and finance | Continue the learning budget or stop. Exclude speculative receipts from the funded base; retain all approved spend. |
+Monthly business dashboards and quarterly portfolio reviews track the J-curve and leading indicators. Protect 20–40% champion time only where priced into the project staffing plan; managers approve participation and backfill before pilot launch. Staff practice, employee consultation and safe exception handling precede live deployment. Dates are relative to investment approval, not claims of signed internal schedules.
 
-In a stopped project, previous expenditure remains sunk, non-cancellable future obligations and exit costs remain in the programme forecast, and only avoidable spend and post-stop benefits are removed. Do not stop unrelated projects without a demonstrated dependency. For each gate record date, metric, measured baseline, threshold, owner, evidence, decision and financial effect. Thresholds cannot require more cash than the same scenario models producing by that date.
-
-
-## Adoption and accountability
-
-The branch sponsor owns the business objective, funding and gate decision. The operational lead owns safe use and workflow changes; finance establishes the baseline and signs realised benefits; the data/IT lead owns data access, cyber and support. Appoint the actual people and verify their available time before launch.
-
-For each case, involve frontline users during design, train them on the workflow and collect feedback. Measure usage, operational behavior and verified financial or learning outcomes separately; usage alone is not cash. Allocate training, backfill and support either as incremental project cash or as a clearly identified existing resource, without counting the same cost twice. Consult employee representatives and legal teams when applicable. The project-level cases define the candidate gates; dates, thresholds and training budgets remain open pending the pilot design.
-
-The previous numerical programme budgets, statutory claims and automatic cancellation figures are removed from this active document; tracked versions remain in Git history. This step remains open until gate criteria, cost and responsibilities reconcile with the completed portfolio.
+**Downside discipline:** the model does not assume that general gates magically avoid every loss. H1/H2 downside retains planned spending; P12 explicitly stops with exit cost. Before contracts, obtain cancellation schedules and calculate committed exposure at each gate. Y0 authorisation limits initial purchases, but is not a guarantee of total programme loss. A production plant, new hardware estate or commercial warranty outside these scopes requires a separate approval.

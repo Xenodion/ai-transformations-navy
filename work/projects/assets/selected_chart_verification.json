@@ -1,0 +1,60 @@
+{
+  "source": "work/finance/selected_chart_data.json",
+  "source_sha256": "e2fed24bd8458328bd8cb6005ffe1dc4198adaf8a1c79e0f9328adc1b6138ecb",
+  "data_version": "selected-2026-11-10",
+  "selected_ids": [
+    "P01",
+    "P02",
+    "P03",
+    "P05",
+    "P09",
+    "P12",
+    "P13",
+    "E01",
+    "P04",
+    "P08"
+  ],
+  "focus_cases": [
+    "P01",
+    "P03",
+    "P12",
+    "P13"
+  ],
+  "checks": {
+    "gross_cost_usd_m": 21.937079999999998,
+    "y0_gross_cost_usd_m": 2.8966,
+    "base_npv_10pct_usd_m": 7.113090821665184,
+    "weighted_npv_10pct_usd_m": 6.299950967256504,
+    "weighted_simple_payback_years": 3.3459191074869397,
+    "half_constrained_gross_cost_usd_m": 11.34708,
+    "half_envelope_usd_m": 10.968539999999999,
+    "half_remaining_headroom_usd_m": -0.378540000000001,
+    "signed_horizon_weighted_npv_usd_m": {
+      "H1": 4.359192913712908,
+      "H2": 2.067579883274553,
+      "H3": -0.1268218297309549
+    },
+    "cash_row_identity": "passed for all project/scenario/year rows",
+    "portfolio_cash_values_checked": 30,
+    "project_cash_rows_checked": 240
+  },
+  "figures": [
+    "selected_focus_jcurves.png",
+    "selected_half_budget.png",
+    "selected_horizon_mix.png",
+    "selected_inaction_bridge.png",
+    "selected_net_contributions.png",
+    "selected_p01_cash_table.png",
+    "selected_p01_jcurve.png",
+    "selected_p03_cash_table.png",
+    "selected_p03_jcurve.png",
+    "selected_p12_cash_table.png",
+    "selected_p12_jcurve.png",
+    "selected_p13_cash_table.png",
+    "selected_p13_jcurve.png",
+    "selected_portfolio_jcurve.png",
+    "selected_portfolio_map.png",
+    "selected_scenario_irr.png",
+    "selected_scenario_npv.png"
+  ]
+}

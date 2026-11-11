@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="605.610937pt" height="355.413609pt" viewBox="0 0 605.610937 355.413609" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-11T12:29:02.907468</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 355.413609 
+L 605.610937 355.413609 
+L 605.610937 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 87.210938 280.5315 
+L 598.410937 280.5315 
+L 598.410937 33.4275 
+L 87.210938 33.4275 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 87.210938 280.5315 
+L 87.210938 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m09671f3908" d="M 0 0 
+L 0 3.5 
+" style="stroke: #667788; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m09671f3908" x="87.210938" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="87.210938" y="295.129156" transform="rotate(-0 87.210938 295.129156)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 174.064794 280.5315 
+L 174.064794 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m09671f3908" x="174.064794" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="174.064794" y="295.129156" transform="rotate(-0 174.064794 295.129156)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 260.91865 280.5315 
+L 260.91865 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m09671f3908" x="260.91865" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="260.91865" y="295.129156" transform="rotate(-0 260.91865 295.129156)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 347.772507 280.5315 
+L 347.772507 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m09671f3908" x="347.772507" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="347.772507" y="295.129156" transform="rotate(-0 347.772507 295.129156)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 434.626363 280.5315 
+L 434.626363 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m09671f3908" x="434.626363" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="434.626363" y="295.129156" transform="rotate(-0 434.626363 295.129156)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 521.48022 280.5315 
+L 521.48022 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke: #dce5eb; stroke-opacity: 0.45; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m09671f3908" x="521.48022" y="280.5315" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="521.48022" y="295.129156" transform="rotate(-0 521.48022 295.129156)">50</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="342.810937" y="309.129937" transform="rotate(-0 342.810937 309.129937)">Portfolio IRR (%)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <defs>
+       <path id="m89b83ae747" d="M 0 0 
+L -3.5 0 
+" style="stroke: #667788; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m89b83ae747" x="87.210938" y="62.856595" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #667788" x="80.210938" y="66.655814" transform="rotate(-0 80.210938 66.655814)">Downside</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m89b83ae747" x="87.210938" y="125.605198" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #667788" x="80.210938" y="129.404026" transform="rotate(-0 80.210938 129.404026)">Base</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m89b83ae747" x="87.210938" y="188.353802" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #667788" x="80.210938" y="192.15302" transform="rotate(-0 80.210938 192.15302)">Upside</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m89b83ae747" x="87.210938" y="251.102405" style="fill: #667788; stroke: #667788; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #667788" x="80.210938" y="254.901624" transform="rotate(-0 80.210938 254.901624)">Expected cash</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 87.210938 44.6595 
+L 136.551209 44.6595 
+L 136.551209 81.05369 
+L 87.210938 81.05369 
+z
+" clip-path="url(#pe7a116e613)" style="fill: #00509e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 87.210938 107.408103 
+L 369.920705 107.408103 
+L 369.920705 143.802293 
+L 87.210938 143.802293 
+z
+" clip-path="url(#pe7a116e613)" style="fill: #00509e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 87.210938 170.156707 
+L 506.227331 170.156707 
+L 506.227331 206.550897 
+L 87.210938 206.550897 
+z
+" clip-path="url(#pe7a116e613)" style="fill: #00509e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 87.210938 232.90531 
+L 347.393211 232.90531 
+L 347.393211 269.2995 
+L 87.210938 269.2995 
+z
+" clip-path="url(#pe7a116e613)" style="fill: #f37021"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 174.064794 280.5315 
+L 174.064794 33.4275 
+" clip-path="url(#pe7a116e613)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #00a3e0; stroke-width: 1.5"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 87.210938 280.5315 
+L 87.210938 33.4275 
+" style="fill: none; stroke: #b5c2cc; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 87.210938 280.5315 
+L 598.410937 280.5315 
+" style="fill: none; stroke: #b5c2cc; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="141.762441" y="65.454251" transform="rotate(-0 141.762441 65.454251)">5.7%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="375.131936" y="128.202855" transform="rotate(-0 375.131936 128.202855)">32.6%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="511.438562" y="190.951458" transform="rotate(-0 511.438562 190.951458)">48.2%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="352.604443" y="253.700061" transform="rotate(-0 352.604443 253.700061)">30.0%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="87.210938" y="19.4275" transform="rotate(-0 87.210938 19.4275)">Portfolio return | scenario and expected cash</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_18">
+     <path d="M 457.773437 265.629156 
+L 467.773437 265.629156 
+L 477.773437 265.629156 
+" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #00a3e0; stroke-width: 1.5"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="485.773437" y="269.129156" transform="rotate(-0 485.773437 269.129156)">10% portfolio screen</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #667788" x="58.410937" y="346.0515" transform="rotate(-0 58.410937 346.0515)">Expected cash uses 25% / 50% / 25% weights. IRR is calculated from weighted cash flows.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe7a116e613">
+   <rect x="87.210938" y="33.4275" width="511.2" height="247.104"/>
+  </clipPath>
+ </defs>
+</svg>

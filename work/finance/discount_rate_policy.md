@@ -34,19 +34,13 @@ All percentages are **nominal annual post-tax**. `pp` means percentage points. T
 | P01 | Refining predictive maintenance | Refining & Chemicals / 9.5% | 7.0% | +2.5 pp | +0.0 pp | **9.5%** | Representative brownfield industrial use; site rollout and integration are already in the branch reference. |
 | P02 | Upstream production surveillance | E&P / 10.0% | 7.0% | +3.0 pp | +0.0 pp | **10.0%** | Typical operated-asset data and production-workflow integration risk. |
 | P03 | Deepwater drilling advisory | E&P / 10.0% | 7.0% | +3.0 pp | +1.0 pp | **11.0%** | Additional deepwater contractor, operator/partner approval and cash-attribution uncertainty. |
-| P04 | Renewable fleet availability | Integrated Power / 9.5% | 7.0% | +2.5 pp | +0.5 pp | **10.0%** | Additional multi-OEM telemetry and dispersed-fleet execution risk. |
 | P05 | Copilot workflow redesign | Corporate / 9.0% | 7.0% | +2.0 pp | +0.0 pp | **9.0%** | Established software; ordinary workflow adoption and license-realisation risk. |
-| P06 | Procurement analytics | Corporate / 9.0% | 7.0% | +2.0 pp | +0.5 pp | **9.5%** | Additional supplier-data, sourcing and benefit-attribution complexity. |
-| P07 | Safety computer vision | Corporate / 9.0% (cross-functional HSE) | 7.0% | +2.0 pp | +1.0 pp | **10.0%** | Additional site safety, privacy and acceptance requirements. |
-| P08 | Power and gas customer retention | Integrated Power / 9.5% | 7.0% | +2.5 pp | +0.0 pp | **9.5%** | Representative customer-data and adoption risk for the branch. |
 | P09 | LNG voyage optimisation | Integrated LNG / 9.5% | 7.0% | +2.5 pp | +0.5 pp | **10.0%** | Additional controlled-voyage, charter and route-execution uncertainty. |
-| P10 | Steam-cracker optimisation | Refining & Chemicals / 9.5% | 7.0% | +2.5 pp | +0.5 pp | **10.0%** | Additional process integration and operational safety constraints. |
-| P11 | Customer-side flexibility | Integrated Power / 9.5% | 7.0% | +2.5 pp | +1.5 pp | **11.0%** | Additional enrolment, dispatch, market-access and business-model risk; conditional H3 illustration only. |
-| P12 | e-SAF catalyst discovery | Corporate / 9.0% (cross-functional OneTech R&D) | 7.0% | +2.0 pp | +3.0 pp | **12.0%** | Additional scientific, scale-up and commercialisation uncertainty; conditional H3 illustration only. |
+| P12 | e-SAF technology licensing option | Corporate / 9.0% (cross-functional OneTech R&D) | 7.0% | +2.0 pp | +3.0 pp | **12.0%** | Additional scientific, scale-up and commercialisation uncertainty; conditional H3 illustration only. |
 | P13 | Retail demand forecasting | Marketing & Services / 9.0% | 7.0% | +2.0 pp | +0.0 pp | **9.0%** | Representative retail adoption and POS risk; proposed pilot assumes 100 French COCO stations, per CLM-078. |
 | E01 | AI value register | Corporate / 9.0% | 7.0% | +2.0 pp | +0.0 pp | **9.0%** | Representative enterprise governance and adoption risk. Include its costs in the programme. |
 
-The full list covers P01–P13 and E01, including reserve candidates. Rates are set even if a candidate is not funded; this does not imply its costs or returns are included in the base portfolio. P12 carries a total +5 pp premium, demonstrating that the reference grid permits high-risk options. A further +6 pp / 13% rate is possible for a specifically justified project, but is not assigned automatically. P11/P12 rates are applicable to clearly labelled conditional commercial illustrations, not evidence that the H3 options have a defensible payback.
+The grid covers the selected initiatives. H3 discounting measures learning cost, not a validated commercial option value.
 
 ## 4. Calculation and decision rules
 
@@ -54,7 +48,7 @@ The full list covers P01–P13 and E01, including reserve candidates. Rates are 
 2. For conventional H1/H2 cases, calculate NPV, project IRR and discounted payback at the project rate; an IRR must be compared to that same hurdle. If no IRR or payback exists, report it. A base case that clears the hurdle by a modest, plausible margin is acceptable; no target return is imposed.
 3. For H3, include authorised learning costs in the programme and use learning milestones and option value. A commercial NPV or IRR may be shown only as an explicitly conditional illustration with its project hurdle; do not invent H3 payback or book speculative proceeds as assured base cash.
 4. For a portfolio NPV, sum appropriately attributed project NPVs at their project hurdles, counting shared costs once. If a single-rate portfolio comparison is desired, choose and disclose a separate common rate; an investment-weighted average hurdle is not generally equivalent to the sum of NPVs at different rates. Portfolio IRR is calculated from consolidated dated cash flows; its comparison hurdle must be separately defined and justified, not averaged silently.
-5. Sensitivity: vary the common WACC proxy to **6%, 7%, 8%** while retaining the branch and project premiums. For example P01 uses 8.5%, 9.5%, 10.5%; P03 uses 10%, 11%, 12%; P13 uses 8%, 9%, 10%; conditional P11 uses 10%, 11%, 12%; conditional P12 uses 11%, 12%, 13%. Also vary operational drivers, timing and costs separately. These are team sensitivity assumptions, not sourced 2026 market rates.
+5. Sensitivity: vary the common WACC proxy to **6%, 7%, 8%** while retaining the branch and project premiums. For example P01 uses 8.5%, 9.5%, 10.5%; P03 uses 10%, 11%, 12%; P13 uses 8%, 9%, 10%; conditional P12 uses 11%, 12%, 13%. Also vary operational drivers, timing and costs separately. These are team sensitivity assumptions, not sourced 2026 market rates.
 6. No blanket country surcharge is added. If material country risk is not already captured in project cash scenarios or the project premium, identify it and justify a separate adjustment, avoiding double counting.
 
-**Implementation status:** the old workbook and core-only portfolio scenario are superseded. `portfolio_model_14_revised.xlsx` is a working, editable 14-initiative model using this grid and the 100-station retail pilot. Its assumptions, portfolio overlap and H3 treatment still require review before use in the report, memo or slides.
+**Implementation status:** `portfolio_model_selected.xlsx` is the active eight-line model. See `portfolio_economics.md` for assumptions and verification.

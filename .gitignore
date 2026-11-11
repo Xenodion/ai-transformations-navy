@@ -222,3 +222,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local artifact runtime and review previews
+work/finance/node_modules/
+work/finance/*preview*.png
+work/finance/*.inspect.ndjson
+
+# Local plotting dependencies and Office lock files
+work/projects/.plot-deps/
+~$*

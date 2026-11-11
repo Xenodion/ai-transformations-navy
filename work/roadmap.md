@@ -1,6 +1,6 @@
 # Project brief and delivery roadmap — TotalEnergies
 
-**Updated:** 9 November 2026
+**Updated:** 10 November 2026
 **Team:** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
 **Submission deadline:** evening of 10 November 2026, Paris time
 **Oral defense:** 16 November 2026, 15-minute pitch and 5-minute Q&A
@@ -26,7 +26,7 @@ Every material statement is a **verified fact**, **derived calculation**, **expl
 
 Prepare a bubble chart of the **whole portfolio** to introduce the project cases. Proposed axes, based on the professor's whiteboard sketch as recalled by Vincent: potential gain (vertical), payback time (horizontal), bubble area for cost, color for horizon. Display units, time frame, scope, and uncertainty. Show H3 projects without defensible payback as options with learning gates, rather than assigning an invented coordinate. Beneath the chart, use two separate stacked bars for the **capital mix** and the **expected return mix** across H1/H2/H3. The course's illustrative return split is not a forecast for our portfolio.
 
-**Rework in progress (9 Nov):** Steps 09–20 are open while the diagnosis, cases, financial assumptions, gates and evidence are reconciled. Prior figures are not approved for decision use. See [correction plan](research/correction_plan_preliminary.md).
+**Rework in progress (10 Nov):** Steps 09–20 are open while the diagnosis, cases, financial assumptions, gates and evidence are reconciled. Prior figures are not approved for decision use. See [correction plan](research/correction_plan_preliminary.md).
 
 ## Checkable roadmap
 
@@ -71,3 +71,30 @@ Issues 12–15 cover: (1) problem, scope, baseline; (2) why AI and non-AI altern
 ## Issue tracking
 
 All 27 numbered issues have been created and linked. **Ownership requires reconciliation:** several closed issues had no GitHub assignee while the table named owners; the table does not by itself establish a GitHub assignment. Record agreed assignments in both places, then remove `needs-owner` where appropriate. Steps 09–20 are open for correction as of 9 November. Use the output labels above, plus `research`, `finance`, or `project` when helpful. External AI tools may generate bounded research leads; read and verify the underlying sources. Keep issue status, owner, scope, dependencies, and outputs synchronized with this roadmap in both directions.
+
+## Authorized refinement, 10 November 2026
+
+Steps 11–21 remain open. Active selection is P01/P02/P03/P05/P09/P12/P13/E01; featured cases are P01/P03/P12/P13. Previous selection and graphics are archived. Scope is a selective programme, not all five branches by construction. Owners and dependencies in the table remain unchanged; role assignments do not claim internal TotalEnergies approval.
+
+| Step / issue | Current output and remaining acceptance work |
+| --- | --- |
+| 11 / #11 | `work/options/selected_portfolio_decision.md`; challenge selection and H3 novelty |
+| 12 / #12 | `work/projects/case_p01_refining_pdm.md`; revised scenario check |
+| 13 / #13 | `work/projects/case_p03_deepwater_drilling.md`; economic share and avoidable payment assumptions explicit |
+| 14 / #14 | `work/projects/case_p12_esaf_licensing.md`; external licensing hypothesis and learning gates |
+| 15 / #15 | `work/projects/case_p13_retail_station_demand.md`; delivery cash excluded, markdown attribution sensitivity |
+| 16 / #16 | `work/projects/reserve_cards.md`; selected complementary cases only |
+| 17 / #17 | `work/projects/portfolio_sequencing_canvas.md`, `work/projects/chart_regeneration_spec.md`; chart rendering pending |
+| 18 / #18 | `work/finance/portfolio_model_selected.xlsx`, `work/finance/portfolio_economics.md`; independent arithmetic checks completed, final finance review open |
+| 19 / #19 | `work/finance/cost_of_inaction.md`; no unsupported cash uplift |
+| 20 / #20 | `work/governance/gates_and_adoption.md`; role-based release conditions and committed-exposure limits |
+| 21 / #21 | `deliverables/report/full_strategy_report_draft.md`; revised text/tables, final challenge and graphics pending |
+
+No acceptance box is checked by this refinement. Memo and slides have not been generated.
+
+**Issue synchronization pending:** on 10 Nov, the connected GitHub tool returned HTTP 403. The CLI read succeeded, but automatic approval review rejected the proposed bulk issue edit as insufficiently verified disclosure to the remote destination. No issue closure or accepted status change occurred. Local scope/output changes above are pending remote synchronization; do not treat the remote issue bodies as current until that operation is authorized and completed.
+
+
+## Figure production completed, 11 November 2026
+
+Fourteen PNG/SVG figures were generated from the checked JSON and visually reviewed. Nine figures are embedded in the analytical report; a self-contained HTML reading copy is available. The notebook and CLI share `work/projects/render_selected_charts.py`. See `work/projects/REPRODUCE_CHARTS.md`. Full financial acceptance remains open; no original source PDF or financial assumption was changed for rendering.

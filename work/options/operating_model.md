@@ -86,23 +86,11 @@ To break the execution throttle and delivery latency identified in Step 09 (CLM-
 | **Business Champion** | Branch P&L Operating Unit | **20% to 40% protected, ring-fenced time** (branch co-funded Day 1) | Operational specifications, user acceptance testing, frontline change leadership, and signing the P&L benefit |
 | **Branch Data Engineer** | Branch IT / Spoke | Dedicated during data-slice sprint | Branch telemetry ingestion, ERP/POS pipelines, resolving local data latency |
 
-**Operating Dynamic:** Replaces slow multi-BU weekly status reviews with high-velocity agile sprints (multi-weekly check-ins, joint sprint backlog). The Business Champion is a co-builder with protected time rather than an external spectator, directly resolving the frontline adoption lag and Shadow AI bypass observed in downstream operations (CLM-074).
+**Operating Dynamic:** Replaces slow multi-BU weekly status reviews with high-velocity agile sprints (multi-weekly check-ins, joint sprint backlog). The Business Champion is a co-builder with protected time rather than an external spectator, testing whether protected business capacity improves the local delivery friction observed at Argedis (CLM-074); group-wide causality is not established.
 
 ## 5. Funding
 
-- **Model:** the course's three-year phasing (Microsoft AI Transformation Office example):
-
-  | Year | Hub (central) | Segments | Phase |
-  | --- | --- | --- | --- |
-  | 1 | 100% | 0% | Build capabilities |
-  | 2 | 60% | 40% | Accelerate |
-  | 3 | 40% | 60% | Scale |
-
-- **How it would apply** (assumption, to test with Q01):
-  - The hub pays for the register (E01), the thin data slices and the first pilot of each featured use case.
-  - Segments co-fund the rollout of use cases that clear their gate. Co-funding is the segments' "skin in the game".
-  - The hub keeps 40% in year 3 to keep a decisive seat at the table and to fund H3 bets (P11, P12). H3 bets stay central because no segment would fund an option without payback.
-- **Approval:** the envelope is ring-fenced for 3 years and released in annual tranches against gates (course session 3). It sits within the Executive Committee's capex authority. The Board reviews commitments above 1% of shareholders' equity and approves them above 3% (S04); equity is not registered yet, so step 18 checks whether the envelope comes anywhere near these thresholds.
+The selected programme has a five-operating-year ceiling plus Y0. Each segment sponsor and Finance signs its case; Corporate sponsors P05/E01 and OneTech sponsors the P12 licensing experiment with commercial/IP support. These are proposed responsibilities, not observed funding transfers. Do not apply the course's illustrative 100/60/40 central funding path as a TotalEnergies fact. Actual hub/BU contributions require agreement before release, without changing consolidated cash or counting internal transfers twice.
 
 ## 6. Controls
 
@@ -114,7 +102,7 @@ To break the execution throttle and delivery latency identified in Step 09 (CLM-
 
 ## 7. Evolution path and gates
 
-**Course path:** experiment → centralise → hub-and-spoke → federated or advisory, once governance is embedded in the platform. TotalEnergies is at hub-and-spoke.
+**Course path:** experiment → centralise → hub-and-spoke → federated or advisory, once governance is embedded in the platform. Strong hub-and-spoke is the proposed delivery arrangement; current internal decision rights remain unverified.
 
 **Gates to federate a segment** (thresholds are assumptions for step 20):
 1. The segment's shared platform slice is live across its target sites: Cognite for upstream, AspenTech for industrial sites (expected 2027–2028).

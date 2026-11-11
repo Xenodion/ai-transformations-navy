@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 180" width="770" height="180">
+  <style>
+    .label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333333; }
+    .hex { font-family: monospace; font-size: 12px; fill: #666666; }
+  </style>
+
+  <!-- Red -->
+  <rect x="20" y="20" width="90" height="90" rx="12" fill="#E30613" />
+  <text x="65" y="130" text-anchor="middle" class="label">Rouge</text>
+  <text x="65" y="150" text-anchor="middle" class="hex">#E30613</text>
+
+  <!-- Orange -->
+  <rect x="125" y="20" width="90" height="90" rx="12" fill="#F37021" />
+  <text x="170" y="130" text-anchor="middle" class="label">Orange</text>
+  <text x="170" y="150" text-anchor="middle" class="hex">#F37021</text>
+
+  <!-- Yellow -->
+  <rect x="230" y="20" width="90" height="90" rx="12" fill="#FFD400" />
+  <text x="275" y="130" text-anchor="middle" class="label">Jaune</text>
+  <text x="275" y="150" text-anchor="middle" class="hex">#FFD400</text>
+
+  <!-- Green -->
+  <rect x="335" y="20" width="90" height="90" rx="12" fill="#84C225" />
+  <text x="380" y="130" text-anchor="middle" class="label">Vert</text>
+  <text x="380" y="150" text-anchor="middle" class="hex">#84C225</text>
+
+  <!-- Cyan -->
+  <rect x="440" y="20" width="90" height="90" rx="12" fill="#00A3E0" />
+  <text x="485" y="130" text-anchor="middle" class="label">Cyan</text>
+  <text x="485" y="150" text-anchor="middle" class="hex">#00A3E0</text>
+
+  <!-- Blue -->
+  <rect x="545" y="20" width="90" height="90" rx="12" fill="#00509E" />
+  <text x="590" y="130" text-anchor="middle" class="label">Bleu</text>
+  <text x="590" y="150" text-anchor="middle" class="hex">#00509E</text>
+
+  <!-- Purple -->
+  <rect x="650" y="20" width="90" height="90" rx="12" fill="#3F2B86" />
+  <text x="695" y="130" text-anchor="middle" class="label">Violet</text>
+  <text x="695" y="150" text-anchor="middle" class="hex">#3F2B86</text>
+</svg>
