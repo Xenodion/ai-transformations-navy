@@ -9,7 +9,7 @@ import { marked } from 'marked';
 import sizeOf from 'image-size';
 import {
   Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, WidthType, ShadingType,
-  AlignmentType, HeadingLevel, BorderStyle, Header, Footer, PageNumber, TableOfContents, LevelFormat,
+  AlignmentType, HeadingLevel, BorderStyle, Footer, PageNumber, TableOfContents, LevelFormat,
   ExternalHyperlink, PageBreak, TabStopType, VerticalAlign,
 } from 'docx';
 
@@ -79,13 +79,13 @@ function nativeTable(id) {
   ...table(marked.lexer(mdTable)[0])];
 }
 
-function image(href, alt) {
+function image(href, alt, pct) {
   const id = path.basename(href, '.png');
   if (TABLES[id]) return nativeTable(id);
   const file = path.resolve(srcDir, href);
   const buf = fs.readFileSync(file);
   const { width, height } = sizeOf(buf);
-  const w = Math.min(MAX_IMG_W, Math.round(width * 0.42));
+  const w = Math.min(Math.round(MAX_IMG_W * (Number(pct) || 100) / 100), Math.round(width * 0.42));
   const h = Math.round((height / width) * w);
   figure += 1;
   return [
@@ -147,7 +147,7 @@ function list(t, level = 0) {
 }
 
 const HEAD = { 2: HeadingLevel.HEADING_1, 3: HeadingLevel.HEADING_2, 4: HeadingLevel.HEADING_3 };
-let title = '', subtitle = [], started = !CFG.cover;
+let title = '', subtitle = [], started = !CFG.cover, kpiNext = false;
 const body = [];
 for (const t of tokens) {
   if (t.type === 'heading' && t.depth === 1) { title = plain(t.tokens); if (!CFG.cover) body.push(memoTitle(title)); continue; }
@@ -162,16 +162,37 @@ for (const t of tokens) {
     case 'paragraph': {
       const imgs = t.tokens.filter((x) => x.type === 'image');
       if (imgs.length && t.tokens.every((x) => x.type === 'image' || (x.type === 'text' && !x.text.trim()))) {
-        for (const im of imgs) body.push(...image(im.href, im.text));
+        for (const im of imgs) body.push(...image(im.href, im.text, im.title));
       } else body.push(new Paragraph({ spacing: SPACING, children: runs(t.tokens) }));
       break;
     }
     case 'list': body.push(...list(t)); break;
-    case 'table': body.push(...table(t)); break;
-    case 'html': if (/pagebreak/.test(t.raw)) body.push(new Paragraph({ children: [new PageBreak()] })); break;
+    case 'table': body.push(...(kpiNext ? kpiBand(t) : table(t))); kpiNext = false; break;
+    case 'html':
+      if (/pagebreak/.test(t.raw)) body.push(new Paragraph({ children: [new PageBreak()] }));
+      if (/kpi/.test(t.raw)) kpiNext = true;
+      break;
     case 'hr': body.push(new Paragraph({ border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: RULE, space: 1 } }, children: [] })); break;
     default: break;
   }
+}
+
+// Headline figures: large value, label above, short note below; no grid lines.
+function kpiBand(t) {
+  const n = t.header.length, w = Math.floor(CONTENT_W / n);
+  const none = { style: BorderStyle.NONE, size: 0, color: 'FFFFFF' };
+  const line = (text, size, color, bold) => new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 0, line: 240 },
+    children: [new TextRun({ text, font: FONT, size, color, bold })] });
+  const cells = t.header.map((h, c) => {
+    const value = plain(t.rows[0][c].tokens);
+    return new TableCell({ width: { size: w, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill: ZEBRA, color: 'auto' },
+      margins: { top: 60, bottom: 60, left: 60, right: 60 },
+      borders: { top: { style: BorderStyle.SINGLE, size: 18, color: c === n - 1 ? RED : BLUE }, bottom: none, left: { style: BorderStyle.SINGLE, size: 12, color: 'FFFFFF' }, right: none },
+      children: [line(plain(h.tokens), 14, GREY, true), line(value, 30, c === n - 1 ? RED : NAVY, true),
+        ...(t.rows[1] ? [line(plain(t.rows[1][c].tokens), 14, GREY)] : [])] });
+  });
+  return [new Table({ width: { size: w * n, type: WidthType.DXA }, columnWidths: Array(n).fill(w), rows: [new TableRow({ cantSplit: true, children: cells })] }),
+    new Paragraph({ spacing: { after: 0, line: 160 }, children: [] })];
 }
 
 function memoTitle(text) {
@@ -183,14 +204,16 @@ const band = fs.readFileSync(path.join(HERE, 'brand_band.png'));
 const logo = fs.readFileSync(path.join(ROOT, 'sources/assets/Logo_TotalEnergies.svg.png'));
 const bandW = MAX_IMG_W;
 function cover() {
-  const meta = subtitle.map((s) => s.replace(/\*\*/g, ''));
+  const meta = subtitle.map((s) => s.replace(/\*\*/g, '')).filter((s) => !s.startsWith('Fictional')); // the cover disclaimer says it
   return [
     new Paragraph({ spacing: { after: 600 }, children: [new ImageRun({ type: 'png', data: logo, transformation: { width: 150, height: Math.round(150 * 1012 / 1280) } })] }),
-    new Paragraph({ spacing: { before: 1800, after: 200 }, children: [new TextRun({ text: 'INTERNAL | FOR BOARD DISCUSSION', font: FONT, size: 18, bold: true, color: RED, characterSpacing: 40 })] }),
+    new Paragraph({ spacing: { before: 1800, after: 200 }, children: [new TextRun({ text: ACADEMIC_TAG, font: FONT, size: 18, bold: true, color: RED })] }),
     new Paragraph({ spacing: { after: 300 }, children: [new TextRun({ text: title, font: FONT, size: 56, bold: true, color: NAVY })] }),
     new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text: 'AI transformation programme 2027–2031: strategy, portfolio, investment case and delivery model', font: FONT, size: 26, color: BLUE })] }),
     new Paragraph({ spacing: { after: 2400 }, children: [new ImageRun({ type: 'png', data: band, transformation: { width: 260, height: 3 } })] }),
     ...meta.map((m) => new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: m, font: FONT, size: 19, color: GREY })] })),
+    new Paragraph({ spacing: { before: 600 }, border: { top: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 6 } },
+      children: [new TextRun({ text: DISCLAIMER, font: FONT, size: 16, italics: true, color: GREY })] }),
     new Paragraph({ children: [new PageBreak()] }),
     new Paragraph({ spacing: { after: 200 }, children: [new TextRun({ text: 'Contents', font: FONT, size: 32, bold: true, color: NAVY })] }),
     new TableOfContents('Contents', { hyperlink: true, headingStyleRange: '1-2' }),
@@ -198,7 +221,11 @@ function cover() {
   ];
 }
 
-const running = MODE === 'memo' ? 'Executive memo | AI transformation programme' : 'AI transformation programme | Full strategy report';
+const running = MODE === 'memo' ? 'Executive memo' : 'Full strategy report';
+const ACADEMIC_TAG = 'Fictional academic document | AI Transformation Strategies course, Albert School';
+const DISCLAIMER = 'Fictional academic document written by students for the AI Transformation Strategies course at Albert School (November 2026). '
+  + 'It is not a TotalEnergies document and does not reflect the views or decisions of TotalEnergies. Company facts come from public sources; '
+  + 'the internal role-play, figures and recommendations are the authors’ own assumptions and calculations.';
 const doc = new Document({
   creator: 'TotalEnergies digital transformation team', title, features: { updateFields: CFG.cover },
   styles: {
@@ -223,19 +250,18 @@ const doc = new Document({
       style: { paragraph: { indent: { left: 360 * (l + 1), hanging: 300 } } } })) },
   ] },
   sections: [{
-    properties: { page: { size: { width: PAGE_W, height: 16838 }, margin: { top: CFG.margin + (CFG.cover ? 150 : 0), bottom: CFG.margin, left: CFG.margin, right: CFG.margin, header: 500, footer: 450 } },
+    properties: { page: { size: { width: PAGE_W, height: 16838 }, margin: { top: CFG.margin, bottom: CFG.margin, left: CFG.margin, right: CFG.margin, header: 400, footer: 400 } },
       titlePage: CFG.cover },
-    headers: { default: new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: CONTENT_W }],
-      border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 4 } },
-      children: [new TextRun({ text: 'TotalEnergies', font: FONT, size: 15, bold: true, color: RED }), new TextRun({ text: `  ${running}`, font: FONT, size: 15, color: GREY }),
-        new TextRun({ text: '\tInternal', font: FONT, size: 15, color: GREY })] })] }) },
-    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT,
-      children: [new TextRun({ font: FONT, size: 15, color: GREY, children: [PageNumber.CURRENT, ' / ', PageNumber.TOTAL_PAGES] })] })] }) },
+    footers: { default: new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: CONTENT_W }],
+      border: { top: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 4 } }, spacing: { after: 0 },
+      children: [new TextRun({ text: `${running}  |  `, font: FONT, size: 14, bold: true, color: NAVY }),
+        new TextRun({ text: 'Fictional academic document for the AI Transformation Strategies course, Albert School. Not a TotalEnergies document.', font: FONT, size: 14, color: GREY }),
+        new TextRun({ font: FONT, size: 14, color: GREY, children: ['	', PageNumber.CURRENT, ' / ', PageNumber.TOTAL_PAGES] })] })] }) },
     children: [...(CFG.cover ? cover() : []), ...body],
   }],
 });
 
-const outPath = path.join(ROOT, CFG.out);
+const outPath = process.env.DOCX_OUT || path.join(ROOT, CFG.out); // DOCX_OUT: preview copy when Word holds the file
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, await Packer.toBuffer(doc));
 console.log(`Wrote ${CFG.out} (${figure} figures)`);

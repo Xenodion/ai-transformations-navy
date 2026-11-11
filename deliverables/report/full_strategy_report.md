@@ -1,7 +1,10 @@
 # Accelerating AI value across TotalEnergies
 
-**Strategic proposal to the Chief Executive Officer and the Board | Internal document | 11 November 2026**
+**Strategic proposal to the Chief Executive Officer and the Board | 11 November 2026**
+
 **Prepared by the digital transformation team:** Alexandre Waerniers, Vincent Lamy, Yoni Mahieddine, Nahel Bachriri
+
+*Fictional academic document for the AI Transformation Strategies course, Albert School. Not a TotalEnergies document.*
 
 ## Strategic context and recommendation
 

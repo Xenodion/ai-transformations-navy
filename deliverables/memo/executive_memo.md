@@ -2,11 +2,18 @@
 
 **To:** Chief Executive Officer and Board of Directors | **From:** Digital transformation team | **Date:** 11 November 2026 | **Decision requested:** 16 November 2026
 
+<!-- kpi -->
+
+| Decision today | Five-year envelope | Expected NPV at 10% | Expected IRR | Downside NPV |
+| :---: | :---: | :---: | :---: | :---: |
+| $2.90m | $21.94m | +$5.62m | 27.8% | −$1.30m |
+| Tranche 1 (Y0) | ceiling, released by gates | 30/50/20 scenarios | vs 10% hurdle | 30% probability |
+
 ## 1. Decision
 
-**Invest $21.94m over five years (Y0–Y5) in ten AI initiatives delivered by dedicated branch–Digital Factory teams, to create an expected NPV of $5.62m at 10% (IRR 27.8%), with a downside NPV of −$1.30m, only $2.90m committed before the first gate, and every later release conditional on Finance-verified gates.**
+**Invest $21.94m over five years (Y0–Y5) in ten AI initiatives run by dedicated branch–Digital Factory teams, to create an expected NPV of $5.62m at 10% (IRR 27.8%), with a downside NPV of −$1.30m, only $2.90m committed before the first gate, and every later release conditional on Finance-verified gates.**
 
-TotalEnergies already runs more than 10,000 AI models, about 100 Digital Factory solutions and industrial data platforms rolling out to 2027–2028. We are at the implementing stage, approaching scale. What holds value back is not technology or branch ownership but how project work is organised. Each project is split across four people on different reporting lines: the branch project lead, a branch data engineer who does not report to the lead, a TDF data scientist without a financial objective, and an end user without decision power. Reviews are spaced out, iterations are slow and each lead steers few projects. Now that the platforms exist, the return depends on how fast solutions reach daily operating decisions; each year of delay costs $0.65m of NPV. **We request formal approval of Tranche 1 ($2.90m) at this meeting.**
+TotalEnergies already runs more than 10,000 AI models and about 100 Digital Factory solutions; we are at the implementing stage, approaching scale. What slows value is how project work is organised: each project is split across four reporting lines (branch project lead, branch data engineer, TDF data scientist, end user), so iterations are slow and each lead steers few projects. Each year of delay costs $0.65m of NPV. **We ask for approval of Tranche 1 ($2.90m) at this meeting.**
 
 ## 2. Portfolio
 
@@ -19,7 +26,7 @@ TotalEnergies already runs more than 10,000 AI models, about 100 Digital Factory
 | P02, P04, P05, P08, P09 | H1/H2 | 9.65 | Production, generation, licences, retention, fuel | Blend or existing tools | Branch sponsors |
 | E01 Shared value and model controls | H1 | 0.94 | Register, baselines, controls | Reuse | Finance + Digital Line |
 
-One-time investment splits **70.5% H1, 19.4% H2, 10.2% H3** (65.6 / 21.4 / 13.0 on total spend), a deliberate 70/20/10 balance. On long-lived industrial assets, reliability and cost improvements pay back fastest and fund the J-curve; H3 is a bounded option that stops if its gates fail. No proprietary model is built: we combine market tools and partners with our own data and expertise.
+One-time investment splits **70.5% H1, 19.4% H2, 10.2% H3**, a deliberate 70/20/10 mix: reliability and cost gains on long-lived assets pay back fastest and fund the J-curve; H3 is a bounded option. No proprietary model is built.
 
 ## 3. Investment envelope
 
@@ -34,7 +41,7 @@ One-time investment splits **70.5% H1, 19.4% H2, 10.2% H3** (65.6 / 21.4 / 13.0 
 | **Total** | **2.90** | **8.55** | **2.31** | **2.64** | **16.40** |
 | of which capital expenditure | 2.90 | 2.80 | 0.00 | 0.00 | 5.69 |
 
-Y1 is the build year: integration and talent take 25% each. By Y3 model operations reach 22% and governance 8%, while integration falls to 12%. From Y4 the programme runs at **$2.74–2.79m a year**, almost entirely operating expense (software, cloud, support, model operations), for **$21.94m** over Y0–Y5. Five years fit long-cycle assets whose benefits ramp over two to three years. Branches co-fund **40% of Y2 costs and 60% of Y3–Y5 run costs**.
+Y1 is the build year (integration and talent 25% each); by Y3 model operations reach 22%. From Y4 the run cost is **$2.74–2.79m a year**, for **$21.94m** over Y0–Y5. Branches co-fund **40% of Y2 and 60% of Y3–Y5 run costs**.
 
 ## 4. Scenarios and expected value
 
@@ -49,21 +56,23 @@ Y1 is the build year: integration and talent take 25% each. By Y3 model operatio
 
 ## 5. Return, break-even and cost of inaction
 
-Our screen is **10%**: the group's 7% post-tax WACC plus a 3-point AI execution premium; project hurdles range from 9% to 12%. The expected IRR of **27.8%** clears it by almost 18 points and the expected NPV at 10% is positive (+$5.62m). Cumulative cash bottoms at **−$10.2m at end Y1** (−$11.5m in the downside) and breaks even after **3.4 years** (about 4.6 years in the downside). Not investing is not neutral: refining margin at risk, rig rates and customer churn are expected to rise from Y2. Avoiding part of that deterioration is worth **$1.32m**, so investing creates **$6.94m of decision value** against not investing. With half the budget, the four featured cases alone ($11.35m) keep a 34.8% base IRR but drop five complementary cases and rely on existing controls.
+Our hurdle is **10%** (7% WACC + 3-point AI premium): the expected IRR of **27.8%** clears it by 18 points. Not investing is not neutral: avoiding part of the expected deterioration in refining margin, rig rates and customer churn is worth **$1.32m**, so the decision value is **$6.94m**. Half the budget (four featured cases, $11.35m) keeps a 34.8% base IRR but drops five cases.
+
+![Base case: cash bottoms at −$9.8m (end Y1) and breaks even after 3.3 years. Expected value: −$10.2m and 3.4 years; downside: −$11.5m and about 4.6 years.](../report/assets/memo_funding_gates.png "88")
 
 ## 6. Risks and stop rules
 
 | Risk | Stop rule (metric, threshold, date, action) | Owner |
 | --- | --- | --- |
-| Value | No Finance-verified incremental benefit, or negative prospective NPV at the project hurdle, at month 12 → pause expansion, redesign or stop | CFO + branch sponsor |
+| Value | No Finance-verified incremental benefit, or negative prospective NPV at the project hurdle, at month 12 → pause, redesign or stop | CFO + branch sponsor |
 | Delivery | Contract does not allow capture of rig payments at Gate 0 (P03), or labels do not beat forecast-only at month 12 (P13) → stop that scope | Digital Factory lead + project lead |
-| Trust and compliance | Any critical safety, cyber or privacy incident, or missing employee consultation, at any time → immediate pause until the control owner approves restart | General Counsel, DPO, HSE |
-| People and adoption | Fewer than 40% of eligible users active at month 6 → remediate or stop within 30 days; fewer than 60% of decisions recorded through the tool at month 12 → no expansion | Branch sponsor + CHRO |
+| Trust and compliance | Any critical safety, cyber or privacy incident, or missing employee consultation → immediate pause until the control owner approves restart | General Counsel, DPO, HSE |
+| People and adoption | Under 40% of eligible users active at month 6 → remediate or stop within 30 days; under 60% of decisions recorded in the tool at month 12 → no expansion | Branch sponsor + CHRO |
 | H3 option | No IP clearance and two qualified developers by Y2, or no paid-evaluation interest by Y3 → stop; $0.10m closure | OneTech + commercial lead |
 
 ## 7. Delivery model and change
 
-We keep the **hub-and-spoke** model: the Digital Line and Digital Factory own platforms, standards and security; branches own use cases and results. The change is inside each project: a **dedicated trio** (TDF data scientist, branch data engineer, business expert) works together for a large share of its time, reports day to day to the branch project lead and keeps line reporting for standards and careers. Objectives and gates are unchanged; cycles are shorter, each lead steers more projects in parallel and AI practice spreads into the branches. We test it on lead time, review intervals, projects per lead and adoption.
+We keep **hub-and-spoke**: the Digital Line and Digital Factory own platforms and standards; branches own use cases and results. Inside each project, a **dedicated trio** (TDF data scientist, branch data engineer, business expert) reports day to day to the branch project lead and keeps line reporting for standards and careers. Objectives and gates are unchanged.
 
 | Failure mode | Early warning | Owner |
 | --- | --- | --- |
@@ -72,14 +81,14 @@ We keep the **hub-and-spoke** model: the Digital Line and Digital Factory own pl
 | Governance lag | Consultation or clearance missing before release | General Counsel, DPO |
 | Board impatience in the J-curve | Budget questioned before month 12 | CEO + CFO |
 
-Communication runs bottom-up: weekly two-way sessions with users, a monthly one-page dashboard to the sponsor, quarterly gate reviews to the Executive Committee. Training has three tiers: AI literacy for all affected staff; workflow, validation and oversight for trio members and managers; portfolio and gate decisions for executives.
+Weekly sessions with users, a monthly one-page dashboard to sponsors, quarterly gate reviews; training in three tiers (all affected staff, trio members and managers, executives).
 
 ## 8. The ask
 
 1. **Approve the $21.94m five-year envelope** as a planning ceiling, not a commitment to deploy every project.
 2. **Release Tranche 1 today: $2.90m (Y0)**, case by case after existing-solution, rights and safety checks.
 3. **Gate 0 (about day 90)** releases Y1 ($8.55m) per case once its trio is staffed and Finance has signed its baseline.
-4. **Gate 1 (month 12)** releases Y2 ($2.31m) against Finance-verified benefit, adoption at or above the thresholds, spend within 10% of plan and 40% branch co-funding.
-5. **Gate 2 (month 24)** releases Y3–Y5 run funding only if annual benefits cover annual run costs and branches co-fund 60%.
+4. **Gate 1 (month 12)** releases Y2 ($2.31m) against verified benefit, adoption thresholds, spend within 10% of plan and 40% co-funding.
+5. **Gate 2 (month 24)** releases Y3–Y5 run funding only if annual benefits cover run costs and branches co-fund 60%.
 
 **Decision date: 16 November 2026.**
