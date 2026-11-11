@@ -175,8 +175,8 @@ for pid in FOCUS:
     table.auto_set_font_size(False);table.set_fontsize(9);table.scale(1,1.6)
     for (r,col),cl in table.get_celld().items():
         cl.set_edgecolor('#DCE5EB');cl.set_linewidth(.6)
-        if r==0: cl.set_facecolor(NAVY);cl.get_text().set_color('white');cl.get_text().set_fontweight('bold')
-        elif r%2: cl.set_facecolor('#F3F7F9')
+        if r==0: cl.set_facecolor(BLUE);cl.get_text().set_color('white');cl.get_text().set_fontweight('bold')
+        elif r%2: cl.set_facecolor('#F2F5F9')
         else: cl.set_facecolor('white')
         if r>0 and col>0 and float(cell[r-1][col])<0: cl.get_text().set_color(RED)
     if pid=='P12': ax.text(.01,.03,'Base licensing receipts are conditional on commercial success.',transform=ax.transAxes,color=GREY,fontsize=9)

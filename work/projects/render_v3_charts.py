@@ -15,47 +15,61 @@ from matplotlib.patches import FancyBboxPatch
 from render_selected_charts import (D, NAVY, BLUE, TEAL, ORANGE, GREY, RED, PALE, WLABEL, export, finish)
 
 # --- Operating model: today vs proposed -------------------------------------------------
-fig, axes = plt.subplots(1, 2, figsize=(13, 6.2))
+GOOD = '#4E7A12'; TRIO_BG = '#E6F4FB'; LINE_BG = '#F2F5F9'
+fig, axes = plt.subplots(1, 2, figsize=(13, 6.8))
 
 
-def box(ax, x, y, w, h, text, face, edge=NAVY, color=NAVY, weight='normal', size=9.5, ls='-'):
-    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0.012,rounding_size=0.02',
-                                facecolor=face, edgecolor=edge, linewidth=1.3, linestyle=ls))
-    ax.text(x + w / 2, y + h / 2, text, ha='center', va='center', fontsize=size, color=color, weight=weight, wrap=True)
+def card(ax, x, y, w, h, title, desc=None, face=PALE, tcolor=NAVY, dcolor=GREY, edge='none', size=10):
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0,rounding_size=0.018',
+                                facecolor=face, edgecolor=edge, linewidth=1))
+    if desc:
+        ax.text(x + w / 2, y + h * .62, title, ha='center', va='center', fontsize=size, weight='bold', color=tcolor)
+        ax.text(x + w / 2, y + h * .34, desc, ha='center', va='center', fontsize=8.6, color=dcolor, linespacing=1.3)
+    else:
+        ax.text(x + w / 2, y + h / 2, title, ha='center', va='center', fontsize=size, weight='bold', color=tcolor, linespacing=1.3)
 
 
-def arrow(ax, a, b, color=GREY, ls='-', lw=1.4, both=False):
-    ax.annotate('', xy=b, xytext=a, arrowprops=dict(arrowstyle='<->' if both else '->', color=color, lw=lw, linestyle=ls))
+def link(ax, a, b, color=GREY, lw=1, ls=(0, (3, 3)), head=None):
+    ax.annotate('', xy=b, xytext=a, arrowprops=dict(arrowstyle=head or '-', color=color, lw=lw, linestyle=ls, shrinkA=0, shrinkB=0))
 
 
-ax = axes[0]; ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off')
-ax.set_title('Today | one project, four separate lines', loc='left', fontsize=14, weight='bold', color=NAVY)
-actors = [
-    (.05, .64, 'Branch project lead\nleads the project', PALE),
-    (.55, .64, 'Branch data engineer\nreports to branch IT/data,\nnot to the lead', PALE),
-    (.05, .26, 'TDF data scientist\nsets data-science rules,\nno financial objective', PALE),
-    (.55, .26, 'End user\ngives need and feedback,\nno decision power', PALE),
-]
-for x, y, t, f in actors:
-    box(ax, x, y, .40, .2, t, f)
-for a, b in [((.45, .74), (.55, .74)), ((.25, .64), (.25, .46)), ((.75, .64), (.75, .46)), ((.45, .36), (.55, .36)), ((.43, .64), (.57, .46))]:
-    arrow(ax, a, b, color=GREY, ls=(0, (3, 3)), lw=1.1, both=True)
-ax.text(.0, .08, 'Each actor answers to a different manager and objective.\nProgress reviews are spaced out; feedback loops are slow;\neach lead can follow only a few projects.', fontsize=9.5, color=RED)
+def panel(ax, tag, heading, result, rcolor):
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off')
+    ax.text(0, 1.0, tag, fontsize=9, weight='bold', color=GREY, va='bottom')
+    ax.text(0, .955, heading, fontsize=13, weight='bold', color=NAVY, va='top')
+    ax.text(0, -.035, result, fontsize=9.5, color=rcolor, weight='bold', va='top', linespacing=1.4)
 
-ax = axes[1]; ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis('off')
-ax.set_title('Proposed | one dedicated trio per project', loc='left', fontsize=14, weight='bold', color=NAVY)
-box(ax, .15, .78, .70, .13, 'Branch project lead\n(usually the branch digital-transformation head)', BLUE, color='white', weight='bold', size=9)
-ax.add_patch(FancyBboxPatch((.05, .30), .90, .36, boxstyle='round,pad=0.012,rounding_size=0.03', facecolor='#E6F4FB', edgecolor=TEAL, linewidth=1.8))
-ax.text(.5, .62, 'Dedicated project trio | large share of working time | daily contact', ha='center', fontsize=9.5, color=NAVY, weight='bold')
-for x, t in [(.08, 'TDF\ndata scientist'), (.375, 'Branch\ndata engineer'), (.67, 'Business\nexpert')]:
-    box(ax, x, .36, .25, .17, t, 'white', edge=TEAL, weight='bold')
-arrow(ax, (.5, .66), (.5, .78), color=BLUE, lw=2.2)
-ax.text(.52, .715, 'day-to-day reporting\nand project objectives', fontsize=8.5, color=BLUE)
-for x, t in [(.205, 'Digital Factory\nstandards'), (.5, 'Branch IT/data\nline'), (.795, 'Operations\nline')]:
-    box(ax, x - .12, .08, .24, .12, t, 'white', edge=GREY, color=GREY, size=8.5, ls='--')
-    arrow(ax, (x, .36), (x, .20), color=GREY, ls=(0, (3, 3)), lw=1.1)
-ax.text(.0, -.02, 'Dual reporting: project lead for delivery, line managers for standards and careers.\nObjectives and continuation gates unchanged; shorter work cycles; more projects per lead.', fontsize=9.5, color=NAVY)
-fig.subplots_adjust(left=.03, right=.98, top=.9, bottom=.07, wspace=.08)
+
+ax = axes[0]
+panel(ax, 'TODAY', 'One project, four separate reporting lines',
+      'Responsibility is dispersed: progress reviews are spaced out,\niterations are slow and each lead follows only a few projects.', RED)
+cells = [(.02, .52, 'Branch project lead', 'leads the project'),
+         (.52, .52, 'Branch data engineer', 'reports to branch IT/data,\nnot to the project lead'),
+         (.02, .14, 'TDF data scientist', 'sets data-science rules,\nno financial objective'),
+         (.52, .14, 'End user', 'gives the need and feedback,\nno decision power')]
+for x, y, t, d in cells:
+    card(ax, x, y, .44, .25, t, d)
+for a, b in [((.46, .645), (.52, .645)), ((.46, .265), (.52, .265)), ((.24, .52), (.24, .39)), ((.74, .52), (.74, .39)), ((.46, .52), (.52, .39))]:
+    link(ax, a, b)
+
+ax = axes[1]
+panel(ax, 'PROPOSED', 'One dedicated trio per project',
+      'Shorter work cycles, more projects per lead, and AI practice\nspreads into the branches. Objectives and gates unchanged.', GOOD)
+card(ax, .18, .74, .64, .14, 'Branch project lead', 'usually the branch digital-transformation head', face=BLUE, tcolor='white', dcolor='#D6E4F2')
+ax.add_patch(FancyBboxPatch((.02, .30), .96, .34, boxstyle='round,pad=0,rounding_size=0.02', facecolor=TRIO_BG, edgecolor='none'))
+ax.text(.5, .595, 'Dedicated trio  ·  large share of working time  ·  daily contact', ha='center', fontsize=9, weight='bold', color=BLUE)
+for x, t in [(.05, 'TDF\ndata scientist'), (.365, 'Branch\ndata engineer'), (.68, 'Business\nexpert')]:
+    card(ax, x, .35, .27, .18, t, face='white', edge=TEAL)
+link(ax, (.5, .64), (.5, .74), color=BLUE, lw=2.2, ls='-', head='-|>')
+ax.text(.53, .69, 'day-to-day reporting, project objectives', fontsize=8.5, color=BLUE, va='center')
+for x, t in [(.185, 'Digital Factory\nstandards'), (.5, 'Branch IT/data\nline'), (.815, 'Operations\nline')]:
+    card(ax, x - .135, .10, .27, .11, t, face=LINE_BG, tcolor=GREY, size=8.6)
+    link(ax, (x, .35), (x, .21))
+ax.text(.343, .28, 'line reporting:\nstandards, careers', fontsize=8.2, color=GREY, ha='center', va='center', style='italic')
+
+fig.suptitle('Delivery model | from four separate lines to one dedicated trio', x=.03, y=.995, ha='left', fontsize=17, fontweight='bold', color=NAVY)
+fig.add_artist(plt.Line2D([.505, .505], [.1, .9], color='#DCE5EB', lw=1))
+fig.subplots_adjust(left=.03, right=.98, top=.89, bottom=.13, wspace=.12)
 export(fig, 'v3_operating_model')
 
 # --- Readiness: current score and range vs programme target ---------------------------------

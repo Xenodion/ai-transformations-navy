@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-11T13:48:57.365556</dc:date>
+    <dc:date>2026-11-11T14:41:38.875051</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -36,7 +36,7 @@ L 72.71424 69.799177
 L 72.71424 53.840736 
 L 13.15584 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_1">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="66.7584" y="64.303394" transform="rotate(-0 66.7584 64.303394)">Year</text>
@@ -47,7 +47,7 @@ L 179.91936 69.799177
 L 179.91936 53.840736 
 L 72.71424 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_2">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="169.198848" y="64.303394" transform="rotate(-0 169.198848 64.303394)">Gross benefit</text>
@@ -58,7 +58,7 @@ L 310.94784 69.799177
 L 310.94784 53.840736 
 L 179.91936 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_3">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="297.844992" y="64.303394" transform="rotate(-0 297.844992 64.303394)">OPEX + launch</text>
@@ -69,7 +69,7 @@ L 406.24128 69.799177
 L 406.24128 53.840736 
 L 310.94784 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_4">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="396.711936" y="64.303394" transform="rotate(-0 396.711936 64.303394)">CAPEX</text>
@@ -80,7 +80,7 @@ L 495.57888 69.799177
 L 495.57888 53.840736 
 L 406.24128 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_5">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="486.64512" y="64.303394" transform="rotate(-0 486.64512 64.303394)">Tax</text>
@@ -91,7 +91,7 @@ L 596.82816 69.799177
 L 596.82816 53.840736 
 L 495.57888 53.840736 
 z
-" style="fill: #0b1f3a; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #00509e; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_6">
      <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #ffffff" x="586.703232" y="64.303394" transform="rotate(-0 586.703232 64.303394)">Net cash</text>
@@ -102,7 +102,7 @@ L 72.71424 85.757619
 L 72.71424 69.799177 
 L 13.15584 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_7">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="80.261836" transform="rotate(-0 66.7584 80.261836)">Y0</text>
@@ -113,7 +113,7 @@ L 179.91936 85.757619
 L 179.91936 69.799177 
 L 72.71424 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_8">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="80.261836" transform="rotate(-0 169.198848 80.261836)">0.000</text>
@@ -124,7 +124,7 @@ L 310.94784 85.757619
 L 310.94784 69.799177 
 L 179.91936 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_9">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="297.844992" y="80.261836" transform="rotate(-0 297.844992 80.261836)">0.000</text>
@@ -135,7 +135,7 @@ L 406.24128 85.757619
 L 406.24128 69.799177 
 L 310.94784 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_10">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="396.711936" y="80.261836" transform="rotate(-0 396.711936 80.261836)">-0.400</text>
@@ -146,7 +146,7 @@ L 495.57888 85.757619
 L 495.57888 69.799177 
 L 406.24128 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_11">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="486.64512" y="80.261836" transform="rotate(-0 486.64512 80.261836)">0.000</text>
@@ -157,7 +157,7 @@ L 596.82816 85.757619
 L 596.82816 69.799177 
 L 495.57888 69.799177 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_12">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="586.703232" y="80.261836" transform="rotate(-0 586.703232 80.261836)">-0.400</text>
@@ -234,7 +234,7 @@ L 72.71424 117.674502
 L 72.71424 101.71606 
 L 13.15584 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_19">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="112.178719" transform="rotate(-0 66.7584 112.178719)">Y2</text>
@@ -245,7 +245,7 @@ L 179.91936 117.674502
 L 179.91936 101.71606 
 L 72.71424 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_20">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="112.178719" transform="rotate(-0 169.198848 112.178719)">0.508</text>
@@ -256,7 +256,7 @@ L 310.94784 117.674502
 L 310.94784 101.71606 
 L 179.91936 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_21">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="112.178719" transform="rotate(-0 297.844992 112.178719)">-0.100</text>
@@ -267,7 +267,7 @@ L 406.24128 117.674502
 L 406.24128 101.71606 
 L 310.94784 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_22">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="112.178719" transform="rotate(-0 396.711936 112.178719)">0.000</text>
@@ -278,7 +278,7 @@ L 495.57888 117.674502
 L 495.57888 101.71606 
 L 406.24128 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_23">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="112.178719" transform="rotate(-0 486.64512 112.178719)">-0.062</text>
@@ -289,7 +289,7 @@ L 596.82816 117.674502
 L 596.82816 101.71606 
 L 495.57888 101.71606 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_24">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="112.178719" transform="rotate(-0 586.703232 112.178719)">0.346</text>
@@ -366,7 +366,7 @@ L 72.71424 149.591385
 L 72.71424 133.632944 
 L 13.15584 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_31">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="66.7584" y="144.095602" transform="rotate(-0 66.7584 144.095602)">Y4</text>
@@ -377,7 +377,7 @@ L 179.91936 149.591385
 L 179.91936 133.632944 
 L 72.71424 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_32">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="169.198848" y="144.095602" transform="rotate(-0 169.198848 144.095602)">0.635</text>
@@ -388,7 +388,7 @@ L 310.94784 149.591385
 L 310.94784 133.632944 
 L 179.91936 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_33">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="297.844992" y="144.095602" transform="rotate(-0 297.844992 144.095602)">-0.120</text>
@@ -399,7 +399,7 @@ L 406.24128 149.591385
 L 406.24128 133.632944 
 L 310.94784 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_34">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="396.711936" y="144.095602" transform="rotate(-0 396.711936 144.095602)">0.000</text>
@@ -410,7 +410,7 @@ L 495.57888 149.591385
 L 495.57888 133.632944 
 L 406.24128 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_35">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #e30613" x="486.64512" y="144.095602" transform="rotate(-0 486.64512 144.095602)">-0.089</text>
@@ -421,7 +421,7 @@ L 596.82816 149.591385
 L 596.82816 133.632944 
 L 495.57888 133.632944 
 z
-" style="fill: #f3f7f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
+" style="fill: #f2f5f9; stroke: #dce5eb; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_36">
      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #0b1f3a" x="586.703232" y="144.095602" transform="rotate(-0 586.703232 144.095602)">0.426</text>

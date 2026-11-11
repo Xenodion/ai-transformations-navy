@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="910.784375pt" height="410.997006pt" viewBox="0 0 910.784375 410.997006" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="903.6pt" height="472.351641pt" viewBox="0 0 903.6 472.351641" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-11T13:48:58.685819</dc:date>
+    <dc:date>2026-11-11T14:41:13.511837</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,350 +21,325 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 410.997006 
-L 910.784375 410.997006 
-L 910.784375 0 
-L 0 0 
+   <path d="M 0 472.351641 
+L 903.6 472.351641 
+L 903.6 -0 
+L 0 -0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 31.995 161.729527 
-L 196.155 161.729527 
-Q 204.705 161.729527 204.705 154.319287 
-L 204.705 86.145079 
-Q 204.705 78.734839 196.155 78.734839 
-L 31.995 78.734839 
-Q 23.445 78.734839 23.445 86.145079 
-L 23.445 154.319287 
-Q 23.445 161.729527 31.995 161.729527 
+    <path d="M 23.138491 237.21408 
+L 192.589811 237.21408 
+Q 200.139623 237.21408 200.139623 230.516352 
+L 200.139623 150.887808 
+Q 200.139623 144.19008 192.589811 144.19008 
+L 23.138491 144.19008 
+Q 15.588679 144.19008 15.588679 150.887808 
+L 15.588679 230.516352 
+Q 15.588679 237.21408 23.138491 237.21408 
 z
-" clip-path="url(#p18d59dc752)" style="fill: #eaf1f5; stroke: #0b1f3a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p3e31e5a089)" style="fill: #eaf1f5"/>
    </g>
    <g id="patch_3">
-    <path d="M 245.745 161.729527 
-L 409.905 161.729527 
-Q 418.455 161.729527 418.455 154.319287 
-L 418.455 86.145079 
-Q 418.455 78.734839 409.905 78.734839 
-L 245.745 78.734839 
-Q 237.195 78.734839 237.195 86.145079 
-L 237.195 154.319287 
-Q 237.195 161.729527 245.745 161.729527 
+    <path d="M 232.855472 237.21408 
+L 402.306792 237.21408 
+Q 409.856604 237.21408 409.856604 230.516352 
+L 409.856604 150.887808 
+Q 409.856604 144.19008 402.306792 144.19008 
+L 232.855472 144.19008 
+Q 225.30566 144.19008 225.30566 150.887808 
+L 225.30566 230.516352 
+Q 225.30566 237.21408 232.855472 237.21408 
 z
-" clip-path="url(#p18d59dc752)" style="fill: #eaf1f5; stroke: #0b1f3a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p3e31e5a089)" style="fill: #eaf1f5"/>
    </g>
    <g id="patch_4">
-    <path d="M 31.995 302.524087 
-L 196.155 302.524087 
-Q 204.705 302.524087 204.705 295.113847 
-L 204.705 226.939639 
-Q 204.705 219.529399 196.155 219.529399 
-L 31.995 219.529399 
-Q 23.445 219.529399 23.445 226.939639 
-L 23.445 295.113847 
-Q 23.445 302.524087 31.995 302.524087 
+    <path d="M 23.138491 378.61056 
+L 192.589811 378.61056 
+Q 200.139623 378.61056 200.139623 371.912832 
+L 200.139623 292.284288 
+Q 200.139623 285.58656 192.589811 285.58656 
+L 23.138491 285.58656 
+Q 15.588679 285.58656 15.588679 292.284288 
+L 15.588679 371.912832 
+Q 15.588679 378.61056 23.138491 378.61056 
 z
-" clip-path="url(#p18d59dc752)" style="fill: #eaf1f5; stroke: #0b1f3a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p3e31e5a089)" style="fill: #eaf1f5"/>
    </g>
    <g id="patch_5">
-    <path d="M 245.745 302.524087 
-L 409.905 302.524087 
-Q 418.455 302.524087 418.455 295.113847 
-L 418.455 226.939639 
-Q 418.455 219.529399 409.905 219.529399 
-L 245.745 219.529399 
-Q 237.195 219.529399 237.195 226.939639 
-L 237.195 295.113847 
-Q 237.195 302.524087 245.745 302.524087 
+    <path d="M 232.855472 378.61056 
+L 402.306792 378.61056 
+Q 409.856604 378.61056 409.856604 371.912832 
+L 409.856604 292.284288 
+Q 409.856604 285.58656 402.306792 285.58656 
+L 232.855472 285.58656 
+Q 225.30566 285.58656 225.30566 292.284288 
+L 225.30566 371.912832 
+Q 225.30566 378.61056 232.855472 378.61056 
 z
-" clip-path="url(#p18d59dc752)" style="fill: #eaf1f5; stroke: #0b1f3a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p3e31e5a089)" style="fill: #eaf1f5"/>
    </g>
    <g id="text_1">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(67.648203 117.534628)">Branch project lead</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(74.133437 128.17255)">leads the project</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #667788" x="7.2" y="56.736281" transform="rotate(-0 7.2 56.736281)">TODAY</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(276.274883 112.215667)">Branch data engineer</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(266.924805 122.853589)">reports to branch IT/data,</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(292.784844 133.491511)">not to the lead</text>
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="7.2" y="85.230289" transform="rotate(-0 7.2 85.230289)">One project, four separate reporting lines</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(71.208477 253.010227)">TDF data scientist</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(57.846133 263.648149)">sets data-science rules,</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(63.36207 274.286071)">no financial objective</text>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #e30613" transform="translate(7.2 450.945876)">Responsibility is dispersed: progress reviews are spaced out,</text>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #e30613" transform="translate(7.2 463.101719)">iterations are slow and each lead follows only a few projects.</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(306.927969 253.010227)">End user</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(266.613086 263.648149)">gives need and feedback,</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(284.626719 274.286071)">no decision power</text>
-   </g>
-   <g id="patch_6">
-    <path d="M 202.806134 120.232183 
-Q 220.948346 120.232183 239.090557 120.232183 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 206.806134 122.232183 
-L 202.806134 120.232183 
-L 206.806134 118.232183 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 235.090557 118.232183 
-L 239.090557 120.232183 
-L 235.090557 122.232183 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-   </g>
-   <g id="patch_7">
-    <path d="M 114.075 160.511868 
-Q 114.075 190.627822 114.075 220.743776 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 112.075 164.511868 
-L 114.075 160.511868 
-L 116.075 164.511868 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 116.075 216.743776 
-L 114.075 220.743776 
-L 112.075 216.743776 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-   </g>
-   <g id="patch_8">
-    <path d="M 327.825 160.511868 
-Q 327.825 190.627822 327.825 220.743776 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 325.825 164.511868 
-L 327.825 160.511868 
-L 329.825 164.511868 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 329.825 216.743776 
-L 327.825 220.743776 
-L 325.825 216.743776 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-   </g>
-   <g id="patch_9">
-    <path d="M 202.806134 261.026743 
-Q 220.948346 261.026743 239.090557 261.026743 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 206.806134 263.026743 
-L 202.806134 261.026743 
-L 206.806134 259.026743 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 235.090557 259.026743 
-L 239.090557 261.026743 
-L 235.090557 263.026743 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 193.18156 159.686485 
-Q 220.948821 190.628149 248.716082 221.569813 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 194.364645 163.999292 
-L 193.18156 159.686485 
-L 197.341657 161.327701 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 247.532997 217.257005 
-L 248.716082 221.569813 
-L 244.555984 219.928596 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="107.864151" y="182.259512" transform="rotate(-0 107.864151 182.259512)">Branch project lead</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #e30613" transform="translate(7.2 343.494259)">Each actor answers to a different manager and objective.</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #e30613" transform="translate(7.2 354.132181)">Progress reviews are spaced out; feedback loops are slow;</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #e30613" transform="translate(7.2 364.770103)">each lead can follow only a few projects.</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #667788" x="107.864151" y="207.958982" transform="rotate(-0 107.864151 207.958982)">leads the project</text>
    </g>
    <g id="text_6">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="7.2" y="17.899063" transform="rotate(-0 7.2 17.899063)">Today | one project, four separate lines</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="317.581132" y="182.259512" transform="rotate(-0 317.581132 182.259512)">Branch data engineer</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(262.450429 202.81719)">reports to branch IT/data,</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(269.571632 213.100775)">not to the project lead</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="107.864151" y="323.695055" transform="rotate(-0 107.864151 323.695055)">TDF data scientist</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(56.962229 344.21367)">sets data-science rules,</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(61.955604 354.497255)">no financial objective</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="317.581132" y="323.695055" transform="rotate(-0 317.581132 323.695055)">End user</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(253.744945 344.21367)">gives the need and feedback,</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(278.47532 354.497255)">no decision power</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 200.139623 190.70208 
+Q 212.722642 190.70208 225.30566 190.70208 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 200.139623 332.09856 
+Q 212.722642 332.09856 225.30566 332.09856 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 107.864151 237.21408 
+Q 107.864151 261.40032 107.864151 285.58656 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 317.581132 237.21408 
+Q 317.581132 261.40032 317.581132 285.58656 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 200.139623 237.21408 
+Q 212.722642 261.40032 225.30566 285.58656 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
    </g>
   </g>
   <g id="axes_2">
    <g id="patch_11">
-    <path d="M 536.445 109.857846 
-L 828.855 109.857846 
-Q 837.405 109.857846 837.405 102.447607 
-L 837.405 60.209239 
-Q 837.405 52.798998 828.855 52.798998 
-L 536.445 52.798998 
-Q 527.895 52.798998 527.895 60.209239 
-L 527.895 102.447607 
-Q 527.895 109.857846 536.445 109.857846 
+    <path d="M 560.013962 155.35296 
+L 813.352075 155.35296 
+Q 820.901887 155.35296 820.901887 148.655232 
+L 820.901887 109.957248 
+Q 820.901887 103.25952 813.352075 103.25952 
+L 560.013962 103.25952 
+Q 552.464151 103.25952 552.464151 109.957248 
+L 552.464151 148.655232 
+Q 552.464151 155.35296 560.013962 155.35296 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #00509e; stroke: #0b1f3a; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #00509e"/>
    </g>
    <g id="patch_12">
-    <path d="M 497.97 287.703607 
-L 867.33 287.703607 
-Q 880.155 287.703607 880.155 276.588247 
-L 880.155 156.542359 
-Q 880.155 145.426999 867.33 145.426999 
-L 497.97 145.426999 
-Q 485.145 145.426999 485.145 156.542359 
-L 485.145 276.588247 
-Q 485.145 287.703607 497.97 287.703607 
+    <path d="M 493.743396 319.0752 
+L 879.622642 319.0752 
+Q 888.011321 319.0752 888.011321 311.63328 
+L 888.011321 200.00448 
+Q 888.011321 192.56256 879.622642 192.56256 
+L 493.743396 192.56256 
+Q 485.354717 192.56256 485.354717 200.00448 
+L 485.354717 311.63328 
+Q 485.354717 319.0752 493.743396 319.0752 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #e6f4fb; stroke: #00a3e0; stroke-width: 1.8; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #e6f4fb"/>
    </g>
    <g id="patch_13">
-    <path d="M 506.52 265.472887 
-L 606.555 265.472887 
-Q 615.105 265.472887 615.105 258.062647 
-L 615.105 201.003799 
-Q 615.105 193.593559 606.555 193.593559 
-L 506.52 193.593559 
-Q 497.97 193.593559 497.97 201.003799 
-L 497.97 258.062647 
-Q 497.97 265.472887 506.52 265.472887 
+    <path d="M 505.487547 300.4704 
+L 603.635094 300.4704 
+Q 611.184906 300.4704 611.184906 293.772672 
+L 611.184906 240.190848 
+Q 611.184906 233.49312 603.635094 233.49312 
+L 505.487547 233.49312 
+Q 497.937736 233.49312 497.937736 240.190848 
+L 497.937736 293.772672 
+Q 497.937736 300.4704 505.487547 300.4704 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke: #00a3e0; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #ffffff; stroke: #00a3e0; stroke-linejoin: miter"/>
    </g>
    <g id="patch_14">
-    <path d="M 632.6325 265.472887 
-L 732.6675 265.472887 
-Q 741.2175 265.472887 741.2175 258.062647 
-L 741.2175 201.003799 
-Q 741.2175 193.593559 732.6675 193.593559 
-L 632.6325 193.593559 
-Q 624.0825 193.593559 624.0825 201.003799 
-L 624.0825 258.062647 
-Q 624.0825 265.472887 632.6325 265.472887 
+    <path d="M 637.609245 300.4704 
+L 735.756792 300.4704 
+Q 743.306604 300.4704 743.306604 293.772672 
+L 743.306604 240.190848 
+Q 743.306604 233.49312 735.756792 233.49312 
+L 637.609245 233.49312 
+Q 630.059434 233.49312 630.059434 240.190848 
+L 630.059434 293.772672 
+Q 630.059434 300.4704 637.609245 300.4704 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke: #00a3e0; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #ffffff; stroke: #00a3e0; stroke-linejoin: miter"/>
    </g>
    <g id="patch_15">
-    <path d="M 758.745 265.472887 
-L 858.78 265.472887 
-Q 867.33 265.472887 867.33 258.062647 
-L 867.33 201.003799 
-Q 867.33 193.593559 858.78 193.593559 
-L 758.745 193.593559 
-Q 750.195 193.593559 750.195 201.003799 
-L 750.195 258.062647 
-Q 750.195 265.472887 758.745 265.472887 
+    <path d="M 769.730943 300.4704 
+L 867.878491 300.4704 
+Q 875.428302 300.4704 875.428302 293.772672 
+L 875.428302 240.190848 
+Q 875.428302 233.49312 867.878491 233.49312 
+L 769.730943 233.49312 
+Q 762.181132 233.49312 762.181132 240.190848 
+L 762.181132 293.772672 
+Q 762.181132 300.4704 769.730943 300.4704 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke: #00a3e0; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #ffffff; stroke: #00a3e0; stroke-linejoin: miter"/>
    </g>
    <g id="patch_16">
-    <path d="M 508.6575 369.216247 
-L 604.4175 369.216247 
-Q 612.9675 369.216247 612.9675 361.806007 
-L 612.9675 323.272759 
-Q 612.9675 315.862519 604.4175 315.862519 
-L 508.6575 315.862519 
-Q 500.1075 315.862519 500.1075 323.272759 
-L 500.1075 361.806007 
-Q 500.1075 369.216247 508.6575 369.216247 
+    <path d="M 505.487547 393.4944 
+L 603.635094 393.4944 
+Q 611.184906 393.4944 611.184906 386.796672 
+L 611.184906 359.261568 
+Q 611.184906 352.56384 603.635094 352.56384 
+L 505.487547 352.56384 
+Q 497.937736 352.56384 497.937736 359.261568 
+L 497.937736 386.796672 
+Q 497.937736 393.4944 505.487547 393.4944 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #f2f5f9"/>
    </g>
    <g id="patch_17">
-    <path d="M 634.77 369.216247 
-L 730.53 369.216247 
-Q 739.08 369.216247 739.08 361.806007 
-L 739.08 323.272759 
-Q 739.08 315.862519 730.53 315.862519 
-L 634.77 315.862519 
-Q 626.22 315.862519 626.22 323.272759 
-L 626.22 361.806007 
-Q 626.22 369.216247 634.77 369.216247 
+    <path d="M 637.609245 393.4944 
+L 735.756792 393.4944 
+Q 743.306604 393.4944 743.306604 386.796672 
+L 743.306604 359.261568 
+Q 743.306604 352.56384 735.756792 352.56384 
+L 637.609245 352.56384 
+Q 630.059434 352.56384 630.059434 359.261568 
+L 630.059434 386.796672 
+Q 630.059434 393.4944 637.609245 393.4944 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.3; stroke-linejoin: miter"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #f2f5f9"/>
    </g>
    <g id="patch_18">
-    <path d="M 760.8825 369.216247 
-L 856.6425 369.216247 
-Q 865.1925 369.216247 865.1925 361.806007 
-L 865.1925 323.272759 
-Q 865.1925 315.862519 856.6425 315.862519 
-L 760.8825 315.862519 
-Q 752.3325 315.862519 752.3325 323.272759 
-L 752.3325 361.806007 
-Q 752.3325 369.216247 760.8825 369.216247 
+    <path d="M 769.730943 393.4944 
+L 867.878491 393.4944 
+Q 875.428302 393.4944 875.428302 386.796672 
+L 875.428302 359.261568 
+Q 875.428302 352.56384 867.878491 352.56384 
+L 769.730943 352.56384 
+Q 762.181132 352.56384 762.181132 359.261568 
+L 762.181132 386.796672 
+Q 762.181132 393.4944 769.730943 393.4944 
 z
-" clip-path="url(#p1d1767b0be)" style="fill: #ffffff; stroke-dasharray: 4.81,2.08; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.3; stroke-linejoin: miter"/>
-   </g>
-   <g id="text_7">
-    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(632.95875 78.702532)">Branch project lead</text>
-    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(559.262109 88.850876)">(usually the branch digital-transformation head)</text>
-   </g>
-   <g id="text_8">
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b1f3a" x="682.65" y="164.693623" transform="rotate(-0 682.65 164.693623)">Dedicated project trio | large share of working time | daily contact</text>
-   </g>
-   <g id="text_9">
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(546.109023 226.835668)">TDF</text>
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(519.93207 237.47359)">data scientist</text>
-   </g>
-   <g id="text_10">
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(663.903086 226.798558)">Branch</text>
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(645.116094 237.43648)">data engineer</text>
-   </g>
-   <g id="text_11">
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(785.048125 226.835668)">Business</text>
-    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(791.242422 237.47359)">expert</text>
-   </g>
-   <g id="patch_19">
-    <path d="M 682.65 147.873138 
-Q 682.65 127.641497 682.65 109.869532 
-" style="fill: none; stroke: #00509e; stroke-width: 2.2; stroke-linecap: round"/>
-    <path d="M 680.65 113.869532 
-L 682.65 109.869532 
-L 684.65 113.869532 
-" style="fill: none; stroke: #00509e; stroke-width: 2.2; stroke-linecap: round"/>
+" clip-path="url(#p40b1536cd5)" style="fill: #f2f5f9"/>
    </g>
    <g id="text_12">
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #00509e" transform="translate(691.2 119.976842)">day-to-day reporting</text>
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #00509e" transform="translate(691.2 129.494982)">and project objectives</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #667788" x="476.966038" y="56.736281" transform="rotate(-0 476.966038 56.736281)">PROPOSED</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(525.876406 340.125781)">Digital Factory</text>
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(535.472109 349.643922)">standards</text>
-   </g>
-   <g id="patch_20">
-    <path d="M 556.5375 263.027652 
-Q 556.5375 290.666509 556.5375 317.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 558.5375 313.075528 
-L 556.5375 317.075528 
-L 554.5375 313.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="476.966038" y="85.230289" transform="rotate(-0 476.966038 85.230289)">One dedicated trio per project</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(651.453672 340.125781)">Branch IT/data</text>
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(674.980078 349.643922)">line</text>
-   </g>
-   <g id="patch_21">
-    <path d="M 682.65 263.027652 
-Q 682.65 290.666509 682.65 317.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 684.65 313.075528 
-L 682.65 317.075528 
-L 680.65 313.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #4e7a12" transform="translate(476.966038 450.945876)">Shorter work cycles, more projects per lead, and AI practice</text>
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #4e7a12" transform="translate(476.966038 463.101719)">spreads into the branches. Objectives and gates unchanged.</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(785.397461 340.125781)">Operations</text>
-    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(801.092578 349.643922)">line</text>
-   </g>
-   <g id="patch_22">
-    <path d="M 808.7625 263.027652 
-Q 808.7625 290.666509 808.7625 317.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
-    <path d="M 810.7625 313.075528 
-L 808.7625 317.075528 
-L 806.7625 313.075528 
-" style="fill: none; stroke-dasharray: 3.3,3.3; stroke-dashoffset: 0; stroke: #667788; stroke-width: 1.1; stroke-linecap: round"/>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="686.683019" y="125.77534" transform="rotate(-0 686.683019 125.77534)">Branch project lead</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(468.9 391.183381)">Dual reporting: project lead for delivery, line managers for standards and careers.</text>
-    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(468.9 401.821303)">Objectives and continuation gates unchanged; shorter work cycles; more projects per lead.</text>
+    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d6e4f2" x="686.683019" y="140.014253" transform="rotate(-0 686.683019 140.014253)">usually the branch digital-transformation head</text>
    </g>
    <g id="text_17">
-    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="468.9" y="17.899063" transform="rotate(-0 468.9 17.899063)">Proposed | one dedicated trio per project</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #00509e" x="686.683019" y="209.30688" transform="rotate(-0 686.683019 209.30688)">Dedicated trio  ·  large share of working time  ·  daily contact</text>
    </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(543.583977 263.762307)">TDF</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(516.02929 275.719963)">data scientist</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(666.949425 263.723244)">Branch</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(647.173644 275.680901)">data engineer</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(793.842217 263.762307)">Business</text>
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; fill: #0b1f3a" transform="translate(800.362529 275.719963)">expert</text>
+   </g>
+   <g id="patch_19">
+    <path d="M 686.683019 192.56256 
+Q 686.683019 173.95776 686.683019 157.812635 
+" style="fill: none; stroke: #00509e; stroke-width: 2.2; stroke-linecap: round"/>
+    <path d="M 684.683019 161.812635 
+L 686.683019 157.812635 
+L 688.683019 161.812635 
+z
+" style="fill: #00509e; stroke: #00509e; stroke-width: 2.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #00509e" x="699.266038" y="176.303229" transform="rotate(-0 699.266038 176.303229)">day-to-day reporting, project objectives</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(518.968743 370.226797)">Digital Factory</text>
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(530.246836 380.577568)">standards</text>
+   </g>
+   <g id="patch_20">
+    <path d="M 554.561321 300.4704 
+Q 554.561321 326.51712 554.561321 352.56384 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(651.174425 370.26039)">Branch IT/data</text>
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(677.757159 380.543975)">line</text>
+   </g>
+   <g id="patch_21">
+    <path d="M 686.683019 300.4704 
+Q 686.683019 326.51712 686.683019 352.56384 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(792.028483 370.26039)">Operations</text>
+    <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(809.878858 380.543975)">line</text>
+   </g>
+   <g id="patch_22">
+    <path d="M 818.804717 300.4704 
+Q 818.804717 326.51712 818.804717 352.56384 
+" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #667788; stroke-linecap: round"/>
+   </g>
+   <g id="text_25">
+    <text style="font-style: italic; font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(591.795559 324.188704)">line reporting:</text>
+    <text style="font-style: italic; font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #667788" transform="translate(582.512902 333.370911)">standards, careers</text>
+   </g>
+  </g>
+  <g id="line2d_1">
+   <path d="M 451.8 445.392 
+L 451.8 53.712 
+" style="fill: none; stroke: #dce5eb; stroke-linecap: square"/>
+  </g>
+  <g id="text_26">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #0b1f3a" x="7.2" y="20.191719" transform="rotate(-0 7.2 20.191719)">Delivery model | from four separate lines to one dedicated trio</text>
   </g>
  </g>
  <defs>
-  <clipPath id="p18d59dc752">
-   <rect x="7.2" y="23.899063" width="427.5" height="370.512"/>
+  <clipPath id="p3e31e5a089">
+   <rect x="7.2" y="58.608" width="419.433962" height="372.096"/>
   </clipPath>
-  <clipPath id="p1d1767b0be">
-   <rect x="468.9" y="23.899063" width="427.5" height="370.512"/>
+  <clipPath id="p40b1536cd5">
+   <rect x="476.966038" y="58.608" width="419.433962" height="372.096"/>
   </clipPath>
  </defs>
 </svg>

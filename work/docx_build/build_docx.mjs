@@ -23,7 +23,7 @@ const CFG = {
     body: 19, table: 16, margin: 850, cover: false },
 }[MODE];
 
-const BLUE = '00509E', NAVY = '0B1F3A', RED = 'E30613', GREY = '5F6B7A', ZEBRA = 'F2F5F9', RULE = 'C9D3DE';
+const BLUE = '00509E', NAVY = '0B1F3A', RED = 'E30613', GREY = '5F6B7A', ZEBRA = 'F2F5F9', RULE = 'DCE5EB';
 const FONT = 'Arial';
 const PAGE_W = 11906, CONTENT_W = PAGE_W - 2 * CFG.margin;
 const PX_PER_DXA = 96 / 1440;
@@ -116,7 +116,7 @@ function table(t) {
       width: { size: widths[c], type: WidthType.DXA },
       verticalAlign: VerticalAlign.CENTER,
       shading: head ? { type: ShadingType.CLEAR, fill: BLUE, color: 'auto' } : r % 2 ? { type: ShadingType.CLEAR, fill: ZEBRA, color: 'auto' } : undefined,
-      margins: { top: 50, bottom: 50, left: 90, right: 90 },
+      margins: MODE === 'memo' ? { top: 20, bottom: 20, left: 80, right: 80 } : { top: 50, bottom: 50, left: 90, right: 90 },
       borders: { top: border, bottom: border, left: border, right: border },
       children: [new Paragraph({ alignment: right ? AlignmentType.RIGHT : AlignmentType.LEFT, spacing: { after: 0, line: 240 },
         children: runs(inl, { size: CFG.table, bold: head || undefined, color: head ? 'FFFFFF' : '1A1A1A' }) })],
@@ -128,7 +128,7 @@ function table(t) {
       rows: [new TableRow({ tableHeader: true, children: t.header.map((h, c) => cell(h.tokens, c, -1)) }),
         ...t.rows.map((row, r) => new TableRow({ cantSplit: true, children: row.map((x, c) => cell(x.tokens, c, r)) }))],
     }),
-    new Paragraph({ spacing: { after: 120 }, children: [] }),
+    new Paragraph({ spacing: { after: MODE === 'memo' ? 0 : 120, line: MODE === 'memo' ? 120 : undefined }, children: [] }),
   ];
 }
 
@@ -168,6 +168,7 @@ for (const t of tokens) {
     }
     case 'list': body.push(...list(t)); break;
     case 'table': body.push(...table(t)); break;
+    case 'html': if (/pagebreak/.test(t.raw)) body.push(new Paragraph({ children: [new PageBreak()] })); break;
     case 'hr': body.push(new Paragraph({ border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: RULE, space: 1 } }, children: [] })); break;
     default: break;
   }
